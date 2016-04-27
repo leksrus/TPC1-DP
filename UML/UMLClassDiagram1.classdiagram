@@ -727,6 +727,19 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="49a29ee5-4fc8-4971-b7fd-fda6409341d5" name="GetDefault" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="92e2dc8c-2451-48f6-a348-d8cabdc319a7" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="16225c4d-d9c5-4fd8-aae0-dc8c8c7a6b09" direction="Return" isUnique="false">
+                        <elementDefinition Id="30fe0f04-904a-46e6-b256-a5ab1e29c4eb" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a8cff755-9801-474f-aac3-31296f5038f9" LastKnownName="language" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -939,6 +952,12 @@
     <logicalClassDesignerModelHasPackages>
       <package Id="80c3291b-ae0b-48b2-8cbe-17a67e5a252b" name="DAL">
         <elementDefinition Id="4bc31975-038c-4932-8eb5-50cf85b86fa0" />
+        <suppliersInternal>
+          <dependency Id="a48dd2d5-6f8a-46d6-872b-ff604946293f">
+            <packageMoniker Id="96d28a2e-4624-4b65-a09a-dfb11d43ac49" LastKnownName="BE" />
+            <elementDefinition Id="b7c05ed1-071b-44ab-87c6-5d85ac166595" />
+          </dependency>
+        </suppliersInternal>
         <packagedElements>
           <packageHasNamedElement>
             <class Id="30f81d09-6a61-4c0b-a0bb-7239043594d4" name="DataAcces" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -1172,6 +1191,19 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="ef6b643f-d99d-4a4f-90e0-cd85232c2a33" name="GetDefault" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="51c3a19f-9d32-41b5-ab28-b37013d7084d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="098c4da3-e7e3-4f6f-8c7c-80e478724d04" direction="Return" isUnique="false">
+                        <elementDefinition Id="6326222e-96e0-48c8-884b-b1ca2154dde2" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a8cff755-9801-474f-aac3-31296f5038f9" LastKnownName="language" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -1221,6 +1253,11 @@
     <packageHasNamedElement>
       <referencedType Id="939a94ce-0cef-4007-b029-860c50db6d92" name="backuplog[]" isAbstract="false" isLeaf="false" cachedFullName="backuplog[]">
         <elementDefinition Id="abd92020-4223-4e5b-8d7e-600bf2c2d51d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a8cff755-9801-474f-aac3-31296f5038f9" name="language" isAbstract="false" isLeaf="false" cachedFullName="language">
+        <elementDefinition Id="fac4b8f8-41a1-4976-907e-9f05ef69c3c0" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

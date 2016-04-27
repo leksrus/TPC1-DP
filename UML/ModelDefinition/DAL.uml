@@ -3,6 +3,15 @@
   dslVersion="1.0.0.0"
   Id="4bc31975-038c-4932-8eb5-50cf85b86fa0"
   name="DAL" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="b7c05ed1-071b-44ab-87c6-5d85ac166595">
+      <packageMoniker
+        Id="873cc8ba-53db-4947-89fa-5a42c0466015"
+        LastKnownName="BE"
+        LastKnownLocation="BE.uml" />
+    </dependency>
+  </suppliersInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
@@ -394,6 +403,30 @@
                       Id="e999be38-3ff1-4663-b169-92ef92567037"
                       LastKnownName="boolean"
                       LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="51c3a19f-9d32-41b5-ab28-b37013d7084d"
+            name="GetDefault"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6326222e-96e0-48c8-884b-b1ca2154dde2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fac4b8f8-41a1-4976-907e-9f05ef69c3c0"
+                      LastKnownName="language"
+                      LastKnownLocation="UML.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
