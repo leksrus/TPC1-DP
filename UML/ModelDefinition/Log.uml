@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="be2f6bae-60c3-40f5-a053-761db1b46aa8"
+  name="Logs" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="e2ff306d-4105-4243-b9a8-fbe23db523fb"
+        name="Log"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c910be66-09ff-48cc-ad53-f023aa243965"
+            isDerived="false"
+            sourceEndRoleName="Log"
+            targetEndRoleName="User"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="29f70c55-194b-4ba0-ba70-d139a97c79ad"
+              LastKnownName="User"
+              LastKnownLocation="Profile.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="530d14f8-ba3d-4f00-a458-edbce87242f5"
+                  name="Log"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0ba873b3-ebb1-4353-beab-383303e1d902"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8568b90c-d820-4d5e-ab45-e2bd8a46e5c7"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6f8e3fc-8e34-47bb-8a8e-cd0b733b6aee"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3d4d3c6d-775c-4222-837a-28513dd2cc98"
+                      name="Lower"
+                      value="1,1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="560f0556-a37d-4001-b78c-c008e7cdbd4c"
+                      name="Upper"
+                      value="1,1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="dbd7702a-56e7-4ad4-9bdc-f2e0bc57846c"
+            name="date"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9c766853-8712-4260-b0be-df1560120f5f"
+            name="time"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="db20f5e3-2c2e-4ee7-be11-9c2bc8efd79a"
+            name="detalls"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="f6f252bc-b7c0-4800-a2fc-05bba5828d8e"
+        name="TypeOfEvent"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="3d322f33-d802-48c5-b5a3-e5d75fd2e6b9"
+            isDerived="false"
+            sourceEndRoleName="TypeOfEvent"
+            targetEndRoleName="Log"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e2ff306d-4105-4243-b9a8-fbe23db523fb"
+              LastKnownName="Log"
+              LastKnownLocation="Log.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="980792e3-8931-40ad-90a2-724fbc162164"
+                  name="TypeOfEvent"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ff653f8-44fd-4cd6-8f7c-b5ca73e9e83d"
+                  name="Log"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="2c2f647c-5704-4c63-8791-e5a1bbc837d1"
+            name="warning" />
+          <enumerationLiteral
+            Id="147212e8-8d35-4fca-9ba2-de9599405954"
+            name="error" />
+          <enumerationLiteral
+            Id="36060549-4854-497d-bf0d-bb03e19b94f5"
+            name="message" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

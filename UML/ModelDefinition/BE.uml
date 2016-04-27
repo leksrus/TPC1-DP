@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="873cc8ba-53db-4947-89fa-5a42c0466015"
+  name="BE" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c3051cc4-66c5-41d9-a9f0-1614a9d54ebe"
+        LastKnownName="Profiles"
+        LastKnownLocation="Profile.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="be2f6bae-60c3-40f5-a053-761db1b46aa8"
+        LastKnownName="Logs"
+        LastKnownLocation="Log.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1e075f6a-5e93-472c-af6a-7727dc175b8f"
+        LastKnownName="Multilanguages"
+        LastKnownLocation="Language.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="48623bcf-445b-44eb-b2df-4905bf767559"
+        LastKnownName="Backups-Restores"
+        LastKnownLocation="Backup.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

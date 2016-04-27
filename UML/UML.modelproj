@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d534f1c9-65af-4c8a-9d99-ec19b87cc412}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>UML</Name>
+    <RootNamespace>UML</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="ModelDefinition\Log.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Language.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Backup.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\BE.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\BLL.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\DAL.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\SEC.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Profile.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram1.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram1.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLClassDiagram1.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceBackup.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceBackup.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceBackup.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceEncription.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceEncription.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceEncription.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceLaguages.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceLaguages.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceLaguages.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceLog.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceLog.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceLog.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceLogIn.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceLogIn.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceLogIn.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceLogOut.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceLogOut.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceLogOut.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceRestore.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceRestore.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceRestore.sequencediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\UML.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

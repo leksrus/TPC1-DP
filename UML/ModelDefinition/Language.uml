@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="1e075f6a-5e93-472c-af6a-7727dc175b8f"
+  name="Multilanguages" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="27c5ef9d-4060-4cd2-8934-e87f0efa387e"
+        name="Language"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c967a194-c6b0-49e9-a564-44f05d04aff3"
+            isDerived="false"
+            sourceEndRoleName="Language"
+            targetEndRoleName="Text"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a05d4913-5dfa-4e35-b07a-6187aa8dc106"
+              LastKnownName="Text"
+              LastKnownLocation="Language.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3b2786b1-5f39-4126-8c34-a75c10e1241c"
+                  name="Language"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d30857c6-4bdc-47f4-89dd-3943a07036a7"
+                      name="Lower"
+                      value="1,1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5090db17-933e-4cbd-8396-111f59a740d2"
+                      name="Upper"
+                      value="1,1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93d0f2d0-c2ec-4b42-be73-8763de3438ba"
+                  name="Text"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="73c7c290-98d3-4ca9-b5c2-2c7fd6df1845"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5fc6122c-7f0a-407e-a792-76b623e68ace"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="6352d1d2-bac1-4b48-8cd9-7da0ef237f69"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f8d0809d-0d80-4315-8fd4-54bcc56c06a6"
+            name="text"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fd6a668e-c4b4-4926-b438-98c16ade13bf"
+                LastKnownName="text[]"
+                LastKnownLocation="Language.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3cb5d2b9-55cc-4368-b091-9bd14dede7b0"
+            name="status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a05d4913-5dfa-4e35-b07a-6187aa8dc106"
+        name="Text"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="740c2cfa-21da-4311-b568-9876c6225cf8"
+            name="control"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="21635d3c-9649-4afa-8d53-71c751fd2347"
+            name="text"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fd6a668e-c4b4-4926-b438-98c16ade13bf"
+        name="text[]" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

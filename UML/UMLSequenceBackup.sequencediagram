@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="c8d96253-d7d6-4295-a9fb-9c597c31bc3f" name="UMLSequenceBackup" linkedPackageId="65d01664-76dd-466f-9c7f-0352f5f879fc" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="83cb485e-a1ba-447c-8ee2-74a7298f1345" name="UMLSequenceBackup" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="18eac876-bdfd-43d2-980e-f75d0d92010f" />
+        <fragments>
+          <behaviorExecutionSpecification Id="460534e7-9146-46da-83d5-8bd7bce8f664" name="BehaviorExecutionSpecification1">
+            <elementDefinition Id="c27c8df6-7d36-4e21-9647-66ca7963a25a" />
+            <coveredLifelines>
+              <lifelineMoniker Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" LastKnownName="Frm Backup - Restore" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="d33e9750-4b94-475e-ba5f-60a1e69dc902" LastKnownName="ExecutionOccurrenceSpecification2" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="9a49bfd0-9fe7-459b-8e8d-57819661e20e" LastKnownName="ExecutionOccurrenceSpecification1" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="8bf81bd7-2b10-4fe4-90af-4b9e5c865c04" LastKnownName="MessageOccurrenceSpecification2" />
+              <messageOccurrenceSpecificationMoniker Id="4f205d8f-7396-4414-ba7a-8ba61e384449" LastKnownName="MessageOccurrenceSpecification5" />
+              <messageOccurrenceSpecificationMoniker Id="446d92e0-2d87-4bed-8df7-946acb3f2666" LastKnownName="MessageOccurrenceSpecification8" />
+              <messageOccurrenceSpecificationMoniker Id="bdefe847-6918-40f7-9433-dec1d6b99095" LastKnownName="MessageOccurrenceSpecification3" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="9a49bfd0-9fe7-459b-8e8d-57819661e20e" name="ExecutionOccurrenceSpecification1">
+            <elementDefinition Id="4fd0ceb2-4401-4164-b800-5129f038f027" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="4fe9b600-b7b8-4b87-b3e0-0b12dc129ba9" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" LastKnownName="Frm Backup - Restore" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2d487946-c5e3-445a-96d1-b40e5def5278" name="MessageOccurrenceSpecification1">
+            <elementDefinition Id="833e5a80-5f13-4cc8-8594-c7e601b2e55b" />
+            <covered>
+              <lifelineMoniker Id="2e35d3de-8445-402a-9e27-3bf81828c685" LastKnownName="User" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8bf81bd7-2b10-4fe4-90af-4b9e5c865c04" name="MessageOccurrenceSpecification2">
+            <elementDefinition Id="cf8d9737-ceb3-4024-ba2e-bf6df86ec67c" />
+            <covered>
+              <lifelineMoniker Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" LastKnownName="Frm Backup - Restore" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="480f6735-bdee-4bc3-96ac-5032ba63c991" name="BehaviorExecutionSpecification2">
+            <elementDefinition Id="7da2532d-adcc-451d-824c-8f23d49054e8" />
+            <coveredLifelines>
+              <lifelineMoniker Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" LastKnownName="BLL : Bk_RestManagement" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="f31129c0-fdb8-44a3-94ca-2755187a6c60" LastKnownName="ExecutionOccurrenceSpecification4" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="48260bf4-879c-44aa-b065-e0de31a46ab1" LastKnownName="ExecutionOccurrenceSpecification3" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="0fc88934-f925-48e4-9c7f-6fb63fa754cc" LastKnownName="MessageOccurrenceSpecification6" />
+              <messageOccurrenceSpecificationMoniker Id="e909ebbe-b856-4f22-a1a1-7895b2415b50" LastKnownName="MessageOccurrenceSpecification9" />
+              <messageOccurrenceSpecificationMoniker Id="b69d84bc-6fdd-4466-b05e-1fd53617f385" LastKnownName="MessageOccurrenceSpecification12" />
+              <messageOccurrenceSpecificationMoniker Id="1b67a5d8-473d-44df-83ee-c5a647d445d2" LastKnownName="MessageOccurrenceSpecification7" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="48260bf4-879c-44aa-b065-e0de31a46ab1" name="ExecutionOccurrenceSpecification3">
+            <elementDefinition Id="54d30a48-8b2d-4037-9ba7-1efd44eb2bb1" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="832eedf6-4c5d-4ac5-89b6-a076abe901cd" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" LastKnownName="BLL : Bk_RestManagement" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4f205d8f-7396-4414-ba7a-8ba61e384449" name="MessageOccurrenceSpecification5">
+            <elementDefinition Id="32ddf093-8cde-472d-b0cc-10bc0a79036e" />
+            <covered>
+              <lifelineMoniker Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" LastKnownName="Frm Backup - Restore" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="0fc88934-f925-48e4-9c7f-6fb63fa754cc" name="MessageOccurrenceSpecification6">
+            <elementDefinition Id="b0b71bf5-7aa4-4a83-a4dc-3ac2a72973fd" />
+            <covered>
+              <lifelineMoniker Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" LastKnownName="BLL : Bk_RestManagement" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="75239f75-649b-40b0-9c47-b5aee37f8991" name="BehaviorExecutionSpecification3">
+            <elementDefinition Id="7c35dd2b-89cf-475c-9ff9-76f1699feb04" />
+            <coveredLifelines>
+              <lifelineMoniker Id="e89e33e7-d988-4f5e-b326-036c3ca0ce3e" LastKnownName="DAL : DataAcces" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="ce022d8b-569f-419d-aa1b-c99dc9d09083" LastKnownName="ExecutionOccurrenceSpecification6" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="fbf1d695-ef78-4c46-9610-35d56ba2f60d" LastKnownName="ExecutionOccurrenceSpecification5" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="7645db29-87c2-408c-ab70-76ce73230bec" LastKnownName="MessageOccurrenceSpecification10" />
+              <messageOccurrenceSpecificationMoniker Id="ccdc67e8-e7f7-4c4b-a4c2-d3ffc202329e" LastKnownName="MessageOccurrenceSpecification11" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="fbf1d695-ef78-4c46-9610-35d56ba2f60d" name="ExecutionOccurrenceSpecification5">
+            <elementDefinition Id="297e918b-8090-4f42-beb7-45e3c281e9e8" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="ec05ecce-8d6f-4f6b-b65a-a04aabc921ca" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e89e33e7-d988-4f5e-b326-036c3ca0ce3e" LastKnownName="DAL : DataAcces" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="7645db29-87c2-408c-ab70-76ce73230bec" name="MessageOccurrenceSpecification10">
+            <elementDefinition Id="88cccda6-b662-4c5c-b126-c59d516cc60a" />
+            <covered>
+              <lifelineMoniker Id="e89e33e7-d988-4f5e-b326-036c3ca0ce3e" LastKnownName="DAL : DataAcces" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e909ebbe-b856-4f22-a1a1-7895b2415b50" name="MessageOccurrenceSpecification9">
+            <elementDefinition Id="7289ab09-2d8f-42f9-aaeb-18a001acfb7a" />
+            <covered>
+              <lifelineMoniker Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" LastKnownName="BLL : Bk_RestManagement" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b69d84bc-6fdd-4466-b05e-1fd53617f385" name="MessageOccurrenceSpecification12">
+            <elementDefinition Id="9ba57e63-c86e-41dc-97fa-aa91628f2e57" />
+            <covered>
+              <lifelineMoniker Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" LastKnownName="BLL : Bk_RestManagement" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ccdc67e8-e7f7-4c4b-a4c2-d3ffc202329e" name="MessageOccurrenceSpecification11">
+            <elementDefinition Id="b0ffbb04-744d-4d70-9eaa-6e00133b9607" />
+            <covered>
+              <lifelineMoniker Id="e89e33e7-d988-4f5e-b326-036c3ca0ce3e" LastKnownName="DAL : DataAcces" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="ce022d8b-569f-419d-aa1b-c99dc9d09083" name="ExecutionOccurrenceSpecification6">
+            <elementDefinition Id="7fef048a-e3b8-4496-90aa-2d6448fcaa90" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="8905a2e3-e587-4d94-b492-b065681b1f04" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e89e33e7-d988-4f5e-b326-036c3ca0ce3e" LastKnownName="DAL : DataAcces" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="446d92e0-2d87-4bed-8df7-946acb3f2666" name="MessageOccurrenceSpecification8">
+            <elementDefinition Id="997446f8-141f-4f2b-9727-0e5f00edd11c" />
+            <covered>
+              <lifelineMoniker Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" LastKnownName="Frm Backup - Restore" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1b67a5d8-473d-44df-83ee-c5a647d445d2" name="MessageOccurrenceSpecification7">
+            <elementDefinition Id="873c9b2b-190e-4e7c-94e6-3ca8d6eef2c8" />
+            <covered>
+              <lifelineMoniker Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" LastKnownName="BLL : Bk_RestManagement" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="f31129c0-fdb8-44a3-94ca-2755187a6c60" name="ExecutionOccurrenceSpecification4">
+            <elementDefinition Id="16ff9f2e-b3d3-43db-9b23-3cd32335221a" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="95d8c034-4854-4e9a-a3f8-0403f142718a" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" LastKnownName="BLL : Bk_RestManagement" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="bdefe847-6918-40f7-9433-dec1d6b99095" name="MessageOccurrenceSpecification3">
+            <elementDefinition Id="2e434c97-16b5-4b5b-95c6-341ee0d9595e" />
+            <covered>
+              <lifelineMoniker Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" LastKnownName="Frm Backup - Restore" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e7ee2806-284a-4cfc-89f6-ac35ee007783" name="MessageOccurrenceSpecification4">
+            <elementDefinition Id="05872a30-2c23-48fc-9fd1-ee9e62c76011" />
+            <covered>
+              <lifelineMoniker Id="2e35d3de-8445-402a-9e27-3bf81828c685" LastKnownName="User" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="d33e9750-4b94-475e-ba5f-60a1e69dc902" name="ExecutionOccurrenceSpecification2">
+            <elementDefinition Id="530c660a-bae4-46df-91ed-89d21d4b6b13" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="22ad8555-8546-45cb-a32c-ab38f9d0c590" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" LastKnownName="Frm Backup - Restore" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="2e35d3de-8445-402a-9e27-3bf81828c685" name="User" isActor="false" lifelineDisplayName="User">
+            <elementDefinition Id="eef589ac-a509-4904-b9b8-fdb335e915c8" />
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="2d487946-c5e3-445a-96d1-b40e5def5278" LastKnownName="MessageOccurrenceSpecification1" />
+              <messageOccurrenceSpecificationMoniker Id="e7ee2806-284a-4cfc-89f6-ac35ee007783" LastKnownName="MessageOccurrenceSpecification4" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="51d32eb5-3a42-4bd1-ac1a-1d904d2677ec" name="Frm Backup - Restore" isActor="false" lifelineDisplayName="Frm Backup - Restore">
+            <elementDefinition Id="b50d6b9c-07ab-47bd-a3e2-5e5d24a7b3f4" />
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="9a49bfd0-9fe7-459b-8e8d-57819661e20e" LastKnownName="ExecutionOccurrenceSpecification1" />
+              <executionOccurrenceSpecificationMoniker Id="d33e9750-4b94-475e-ba5f-60a1e69dc902" LastKnownName="ExecutionOccurrenceSpecification2" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="9615b9a1-7fbd-4076-b9b4-2a4016d382a9" name="BLL : Bk_RestManagement" isActor="false" lifelineDisplayName="BLL : Bk_RestManagement">
+            <elementDefinition Id="3e7488ea-760c-428b-9dc5-893cc8045d34" />
+            <represents>
+              <propertyMoniker Id="8cc3ccdb-ebb4-4d4e-b593-9e6a7f203376" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="48260bf4-879c-44aa-b065-e0de31a46ab1" LastKnownName="ExecutionOccurrenceSpecification3" />
+              <executionOccurrenceSpecificationMoniker Id="f31129c0-fdb8-44a3-94ca-2755187a6c60" LastKnownName="ExecutionOccurrenceSpecification4" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="e89e33e7-d988-4f5e-b326-036c3ca0ce3e" name="DAL : DataAcces" isActor="false" lifelineDisplayName="DAL : DataAcces">
+            <elementDefinition Id="3f01fdce-8ff6-41eb-839f-59a1545e8887" />
+            <represents>
+              <propertyMoniker Id="110449aa-c541-481e-9a6f-16d45ab8d54f" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="fbf1d695-ef78-4c46-9610-35d56ba2f60d" LastKnownName="ExecutionOccurrenceSpecification5" />
+              <executionOccurrenceSpecificationMoniker Id="ce022d8b-569f-419d-aa1b-c99dc9d09083" LastKnownName="ExecutionOccurrenceSpecification6" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="0a6137d7-0e16-4c56-86de-4ad18f4ebcb6" name="Hacer Backup()" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+            <elementDefinition Id="a226e957-bf53-4047-a582-90cebe7cbf51" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="2d487946-c5e3-445a-96d1-b40e5def5278" LastKnownName="MessageOccurrenceSpecification1" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="8bf81bd7-2b10-4fe4-90af-4b9e5c865c04" LastKnownName="MessageOccurrenceSpecification2" />
+            </receiveEvent>
+          </message>
+          <message Id="c64a702e-64aa-4774-aab3-67f4a6d64961" name="DoBackup():string" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ DoBackup() : string">
+            <elementDefinition Id="3378aff0-276e-4171-b2f2-b79879b87af1" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="4f205d8f-7396-4414-ba7a-8ba61e384449" LastKnownName="MessageOccurrenceSpecification5" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="0fc88934-f925-48e4-9c7f-6fb63fa754cc" LastKnownName="MessageOccurrenceSpecification6" />
+            </receiveEvent>
+          </message>
+          <message Id="6fe54593-2919-40aa-a75c-fbb0b52da806" name="DoBackup():boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ DoBackup() : boolean">
+            <elementDefinition Id="501002be-9390-4d24-b9b8-4a1937c54187" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="e909ebbe-b856-4f22-a1a1-7895b2415b50" LastKnownName="MessageOccurrenceSpecification9" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="7645db29-87c2-408c-ab70-76ce73230bec" LastKnownName="MessageOccurrenceSpecification10" />
+            </receiveEvent>
+          </message>
+          <message Id="0be2ec2f-1d15-4d01-a8c4-3a0752e2cc08" name="&lt;&lt;return: boolean&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="92984433-8207-4cbe-a443-7bf1020f23cb" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="ccdc67e8-e7f7-4c4b-a4c2-d3ffc202329e" LastKnownName="MessageOccurrenceSpecification11" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="b69d84bc-6fdd-4466-b05e-1fd53617f385" LastKnownName="MessageOccurrenceSpecification12" />
+            </receiveEvent>
+          </message>
+          <message Id="193b8458-0754-417f-9425-4a62f5adeabd" name="&lt;&lt;return: &quot;Se realizo el backup&quot;&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="3da68ffb-ce1d-41ac-bf44-2c35293e0a18" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1b67a5d8-473d-44df-83ee-c5a647d445d2" LastKnownName="MessageOccurrenceSpecification7" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="446d92e0-2d87-4bed-8df7-946acb3f2666" LastKnownName="MessageOccurrenceSpecification8" />
+            </receiveEvent>
+          </message>
+          <message Id="9804e9bf-5c77-450f-ba70-abd68e986c38" name="&lt;&lt;return:  &quot;Se realizo el backup&quot;&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="24b7d2c9-d5b8-4e14-8556-e805f50013ec" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="bdefe847-6918-40f7-9433-dec1d6b99095" LastKnownName="MessageOccurrenceSpecification3" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="e7ee2806-284a-4cfc-89f6-ac35ee007783" LastKnownName="MessageOccurrenceSpecification4" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property Id="8cc3ccdb-ebb4-4d4e-b593-9e6a7f203376" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f287de6e-5b69-449f-9cac-f19e23f3e3ad" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3f40ae93-87fc-4de4-a1c6-9e3885b5ee87" LastKnownName="Bk_RestManagement" />
+            </type_NamedElement>
+          </property>
+          <property Id="110449aa-c541-481e-9a6f-16d45ab8d54f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="57eea898-5fe7-4338-b896-df640d98daf1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b9b67e5f-f913-48f0-99b9-9d52feffde80" LastKnownName="DataAcces" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3f40ae93-87fc-4de4-a1c6-9e3885b5ee87" name="Bk_RestManagement" isAbstract="false" isLeaf="false" cachedFullName="UML::BLL::Bk_RestManagement">
+        <elementDefinition Id="5ef96ec4-55d0-49c2-a5f2-be89b5732961" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b9b67e5f-f913-48f0-99b9-9d52feffde80" name="DataAcces" isAbstract="false" isLeaf="false" cachedFullName="UML::DAL::DataAcces">
+        <elementDefinition Id="f70289f2-0477-4062-aa98-3835589512d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="4fe9b600-b7b8-4b87-b3e0-0b12dc129ba9" name="ExecutionEvent">
+        <elementDefinition Id="3297e537-249d-44d3-b185-7057e1c1e407" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="22ad8555-8546-45cb-a32c-ab38f9d0c590" name="ExecutionEvent">
+        <elementDefinition Id="a446b0b2-8240-4298-ab42-467d0af3c778" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="832eedf6-4c5d-4ac5-89b6-a076abe901cd" name="ExecutionEvent">
+        <elementDefinition Id="fbda7db6-9a0e-4a82-8e02-873f22886764" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="95d8c034-4854-4e9a-a3f8-0403f142718a" name="ExecutionEvent">
+        <elementDefinition Id="742373e8-50d2-4a79-9605-7e984bece9f4" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="ec05ecce-8d6f-4f6b-b65a-a04aabc921ca" name="ExecutionEvent">
+        <elementDefinition Id="0df87bbe-895f-4890-aada-9c05212aaf6a" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="8905a2e3-e587-4d94-b492-b065681b1f04" name="ExecutionEvent">
+        <elementDefinition Id="0f2f401b-00e1-4898-be14-7fdebb6dfe2d" />
+      </executionEvent>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="65d01664-76dd-466f-9c7f-0352f5f879fc" name="UML">
+    <elementDefinition Id="c3db1c35-4d50-4ac6-bfd0-5b5a118686c0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5267a7e7-6c82-4f8c-95cf-310e6aa6f1a3">
+        <profileInstance Id="9034b3dc-b36c-4ca3-86e9-7dc00d17cd1d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="c0820ef3-e40c-4748-8204-1fcf3556bd18">
+        <profileInstance Id="6c1e0696-a9da-4030-9524-f1d69b9137a0" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</SequenceDesignerModel>
