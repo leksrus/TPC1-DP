@@ -313,37 +313,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="8a8a25cc-f33b-4cda-a1a0-53f2dbafed34"
-            name="InsertNew"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="9a719204-9d12-438f-8cc2-9e1873d90fd0"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="1e653444-a71d-4595-8422-6811bc23a638"
-                      LastKnownName="string"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="af905472-8a2a-42c4-a9ef-39c5d37488da"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="a13bb7a0-cd1d-4fff-b2bb-bea27f659d65"
             name="GetLanguage"
             isLeaf="false"
@@ -369,6 +338,44 @@
                       Id="fd6a668e-c4b4-4926-b438-98c16ade13bf"
                       LastKnownName="text[]"
                       LastKnownLocation="Language.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fb463b9c-6d1e-4f5f-be94-1be7f6db8748"
+            name="InsertNew"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5792e787-8576-4ba2-bd5a-5081ed150efd"
+                  name="text[]"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ea73e15e-d5a8-4af1-ae1e-38ce674f4752"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c2e74d8-28e1-4cf7-880e-0ea68926060a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

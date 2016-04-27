@@ -686,24 +686,6 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="57d4d3db-37ae-4b0c-976a-87e7e3feac8c" name="InsertNew" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="8a8a25cc-f33b-4cda-a1a0-53f2dbafed34" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="fb2dc736-d1aa-4e1e-8cea-5e40d16242a2" direction="Return" isUnique="false">
-                        <elementDefinition Id="9a719204-9d12-438f-8cc2-9e1873d90fd0" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="531bfea8-2242-417c-bbd8-f7c1661c196c" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="af905472-8a2a-42c4-a9ef-39c5d37488da" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="11156a02-26e1-469d-98a3-b3fc48d5cce0" name="GetLanguage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="a13bb7a0-cd1d-4fff-b2bb-bea27f659d65" />
                   <ownedParameters>
@@ -717,6 +699,29 @@
                         <elementDefinition Id="e49340f7-cbbd-40e5-bd48-d938c1f6bef8" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="8575b3e7-29d8-4d46-bcde-470dc927b2c5" LastKnownName="text[]" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d6fc3c00-4470-4632-95d3-9c2e7e8153f1" name="InsertNew" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="fb463b9c-6d1e-4f5f-be94-1be7f6db8748" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e9c61c7a-a52a-45d0-9669-794732acb9bc" name="text[]" direction="In" isUnique="false">
+                        <elementDefinition Id="5792e787-8576-4ba2-bd5a-5081ed150efd" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8e18f0bd-f431-4597-9541-814de95904ec" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="ea73e15e-d5a8-4af1-ae1e-38ce674f4752" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="63c6716a-8404-4252-87ee-56736b0c1b09" direction="Return" isUnique="false">
+                        <elementDefinition Id="4c2e74d8-28e1-4cf7-880e-0ea68926060a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -1036,24 +1041,6 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="c8ccc89c-db66-4ff0-aceb-f8caefc9344d" name="InsertNew" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="3689e813-a490-47e3-a57c-d6b2a2e917b3" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="1f429d19-dee9-470a-8ed0-7ccef7d877e2" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="69596349-7924-4bb8-9464-8e9b3109f340" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="c747f1a0-30b1-4c44-b854-2da6c4a7ddbc" direction="Return" isUnique="false">
-                        <elementDefinition Id="948eaa81-9336-4165-b5a5-76a691a4fa40" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="a95a6b43-a0c5-4679-a0f7-ca96a5012f09" LastKnownName="boolean" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="1407df74-ee31-46bf-80c6-868e6b4ed875" name="SetDefault" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="558680d4-19e3-44cc-9170-b59a58db1161" />
                   <ownedParameters>
@@ -1157,6 +1144,29 @@
                         <elementDefinition Id="2d13e9d6-042d-4ea6-bcec-fbf9d360eb9e" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="8575b3e7-29d8-4d46-bcde-470dc927b2c5" LastKnownName="text[]" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="62098969-be01-4fde-9cff-7fa16c7149b9" name="InsertNew" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ab12aa75-304a-47c2-a56b-ae82d544b7c9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ff0c1a14-b697-4511-b25f-bafba2b3b72a" name="text[]" direction="In" isUnique="false">
+                        <elementDefinition Id="5f9704e8-9ff1-4ea9-917e-74bc3c9563fc" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0e5bf512-57e4-4d43-8001-f3d3e79ac94b" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="9d339c21-49c5-44b4-b8de-dec131d2f909" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0b16eac5-0a21-40eb-801d-6b777809ce2a" direction="Return" isUnique="false">
+                        <elementDefinition Id="6c3fed14-a621-44a1-8b59-e07f861c04f7" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a95a6b43-a0c5-4679-a0f7-ca96a5012f09" LastKnownName="boolean" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
