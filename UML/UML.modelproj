@@ -95,6 +95,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceLogOut.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceProfile.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceProfile.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceProfile.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLSequenceRestore.sequencediagram">
       <SubType>Content</SubType>
     </Content>

@@ -424,42 +424,37 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="142582b6-569c-4a51-8171-55327738cfbe" name="Decript" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="e05f9bb1-0b9d-420f-9fe4-17f01c29c256" />
+                <operation Id="c7bd9a69-72e9-44f0-a230-98b2984a8fc1" name="ComparteTo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d0565dbe-7460-49da-8cff-570f1cf4a0d6" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="ee0801dd-6f98-4379-8c83-5070d484eefb" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="88394d5f-b5c9-49ab-b6db-ece1fb8335c7" />
+                      <parameter Id="6354c739-3ade-4b08-88ea-e7d8ac0e4e06" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="1043b2f2-1fef-4642-b88e-bd787742b3fb" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="910481d3-e3d0-47cc-8b4d-36c26193796b" direction="Return" isUnique="false">
-                        <elementDefinition Id="52f0199d-b1b3-4e59-bf58-b81a6c21d841" />
+                      <parameter Id="7dc3cf0c-c35f-41fb-94f0-22d9cfbc0a87" direction="Return" isUnique="false">
+                        <elementDefinition Id="6d73690a-79fb-4b83-ba67-4611a49bff67" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
+                          <referencedTypeMoniker Id="a95a6b43-a0c5-4679-a0f7-ca96a5012f09" LastKnownName="boolean" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="27b0faa7-6723-4dc0-b5ad-07f471d1d876" name="ComparteTo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="4d47ce3e-f979-46ab-bd49-49c5347a5c95" />
+                <operation Id="5e203cb4-08f9-4600-b7b3-bd2f9ce778fa" name="Decript" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4f9ea5f4-3f65-49c6-a4ad-bdd704c0802e" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="03b49b18-cf41-48df-ad0d-e8b9f8ed3894" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="464ed1e9-1639-49d8-aeb7-176669a27d98" />
+                      <parameter Id="fcd31cf3-88cc-40fb-942a-22b407481ef7" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="404a80c4-c6c6-491c-83f3-cf79520e0db2" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="3cd45965-8a37-44d1-9224-6a84d6b84e8c" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="594c0b05-1412-4b2d-ba8a-21f22232b935" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="10ee9bde-e050-4a60-8e21-6699ba624ace" direction="Return" isUnique="false">
-                        <elementDefinition Id="6246b503-9818-4a3a-b7cf-e8f8c1944595" />
+                      <parameter Id="2d0aec85-8732-4439-89e9-75fae0d44e33" direction="Return" isUnique="false">
+                        <elementDefinition Id="22e39afd-43bd-481a-9f4a-b094a486bf5f" />
                         <type_NamedElement>
-                          <referencedTypeMoniker Id="a95a6b43-a0c5-4679-a0f7-ca96a5012f09" LastKnownName="boolean" />
+                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -532,16 +527,16 @@
                   <elementDefinition Id="005e91b8-ab20-4788-a53c-ac124ca3cda4" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="f1224062-41c9-48ae-bb4e-0c1a119666c8" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="9c57190b-77a8-406e-9855-82ef2cc3c898" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
                       <parameter Id="343cfec6-ee6a-4e56-af16-ad71f60ab6ca" direction="Return" isUnique="false">
                         <elementDefinition Id="927d0d3e-a3ad-46ed-8d16-769796533b28" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="5ff17bc1-90ca-469b-bf8c-25873e1556f3" LastKnownName="user" />
                         </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="733053d0-35bb-46a6-a0de-e12696221715" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="8cd55f59-be5b-4721-aa68-35c169894b1c" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -628,35 +623,30 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="8b498e7d-90e7-4981-b7bf-644e1b16d4ed" name="Login" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="f491f586-0939-463f-9f29-d24bed40766b" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="116a9686-7b01-4417-a44a-6cad25fa4348" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="93164862-b81d-4969-ba5b-3c74dffb9e22" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="579f65c2-ccca-4f50-b4af-05e90fd1bae9" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="143c027a-6b8f-42de-b299-7a760d8ad22d" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="06371276-9ab2-42f1-8e84-734cd7860785" direction="Return" isUnique="false">
-                        <elementDefinition Id="ad2f744e-80c1-4e4c-ad7f-fae79bd31b6b" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="0f79ca41-4113-47f6-a454-9917a3c87f24" name="Logout" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="fa589661-2669-484a-81a2-cacc163ba28c" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
                       <parameter Id="3ee27466-c78f-4750-bd0b-dda15109bbd2" name="user" direction="In" isUnique="false">
                         <elementDefinition Id="71519f48-c08b-4afc-8a48-7e3269c50803" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="807f03cc-04c2-49df-bad9-e1711f5ebc10" name="LogIn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0037a3e1-c06d-4765-95a0-2b559e3c0909" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0052e069-c797-4f1c-bf7b-b1845131862f" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="de0b233b-668c-4d66-9076-fe9835fd9b96" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d68925b2-2e99-4816-87a0-65065510bd36" direction="Return" isUnique="false">
+                        <elementDefinition Id="be9257f7-7d9c-4759-b17a-18a7f8226755" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
+                        </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -866,24 +856,6 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="659071d5-3c99-43ee-9fd1-57f5afeecd46" name="AsignGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="6143fd06-0b94-47cf-8c89-e1434e80b886" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="3524ea70-e653-4ed6-a60b-ae27260df2b1" name="user" direction="In" isUnique="false">
-                        <elementDefinition Id="92f7b815-2935-455f-b281-b84035ffb5fd" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="c805ec37-a309-4b67-b9ff-0c21b33b2293" direction="Return" isUnique="false">
-                        <elementDefinition Id="f1b7e90b-ad72-45da-bea1-65231a6650dd" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="4dda71c9-3ff5-49fa-978f-8da2543546aa" name="DeleteFromGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="10f53c9d-33cb-4714-9f1e-973b511742bb" />
                   <ownedParameters>
@@ -914,13 +886,13 @@
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="f9ea4bb4-44d0-4d2d-9bec-75e3e46010f1" name="group" direction="In" isUnique="false">
-                        <elementDefinition Id="bbe68137-660f-4de7-a82c-7eb8a17545f4" />
+                      <parameter Id="56757a59-a782-46bd-9342-d831d0e292de" name="group" direction="In" isUnique="false">
+                        <elementDefinition Id="a96c015e-3076-4f57-95c3-7c689c76acdb" />
                       </parameter>
                     </operationHasOwnedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="57d1f9fa-f5cf-4251-90f2-04a44098787d" name="group" direction="In" isUnique="false">
-                        <elementDefinition Id="b4bd869d-9145-4e9e-ba41-3f3f5e63e825" />
+                      <parameter Id="f2452b21-1d22-4aa6-ac71-b1815d82c7a3" name="role" direction="In" isUnique="false">
+                        <elementDefinition Id="add6d4e0-655c-47ef-9174-11481b64fbd9" />
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
@@ -938,6 +910,47 @@
                         <elementDefinition Id="87254f37-2162-4beb-9de4-3f47f914a00d" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="ec147f6d-fec5-487f-b510-d6c995b3bcd6" name="AsignGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0d91cf83-d004-42a2-ba36-d5b1f96e6992" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f811c33e-0413-4e14-b40e-adc48c213941" name="group" direction="In" isUnique="false">
+                        <elementDefinition Id="58d0c07f-6898-452b-9f6e-bc8ef055b6c4" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3158a8bb-e605-4f4b-af04-d86c044b01f6" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="7314a394-f511-4f75-bf38-698f35ddc372" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="06cb8f6b-dc08-49ca-9858-39b44b262650" direction="Return" isUnique="false">
+                        <elementDefinition Id="d1bfcf77-0bc7-4677-a19f-e0aea7207cb4" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="e1104348-fd7c-46d1-b74e-d77b9b9e033d" LastKnownName="string" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="bb623dc0-5f92-4764-9876-8ddae09b33c2" name="ShowAsignGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bf16cfe4-e009-4233-9923-792274c06aee" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e75dbe76-376f-4440-a63a-ba3f03fba9d8" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="7debdf04-958d-4e48-9ad6-787ba06ccceb" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7d16fc18-bc08-4fc2-aa6f-c772bf3924d2" direction="Return" isUnique="false">
+                        <elementDefinition Id="6ec5dda6-c5cc-4753-b333-d77f0459b19a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c6c8701f-9c36-4672-87f2-2aa42e0444b9" LastKnownName="grop[]" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -963,24 +976,6 @@
             <class Id="30f81d09-6a61-4c0b-a0bb-7239043594d4" name="DataAcces" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="f70289f2-0477-4062-aa98-3835589512d9" />
               <ownedOperationsInternal>
-                <operation Id="5a18bed1-2861-482d-9e1c-848072012962" name="GetUser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="cf7e5ab9-eca5-4316-b991-302b8f0180a9" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="b0e93bfc-5ad1-4c4d-817c-e50594f5bef1" direction="Return" isUnique="false">
-                        <elementDefinition Id="8d4d96b1-238e-4a70-87ff-3fa7d84d3e62" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="5ff17bc1-90ca-469b-bf8c-25873e1556f3" LastKnownName="user" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="96b91321-55d1-4e9e-853b-76aded15b404" name="string" direction="In" isUnique="false">
-                        <elementDefinition Id="7f410dc7-81c3-482e-9d47-f2d5d0eaace2" />
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
                 <operation Id="aad30ec6-5d1b-42f6-b6b9-953d8e0282f1" name="DoRestore" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="50e6ab2a-33d7-4fbe-9c2e-7247808ecf8e" />
                   <ownedParameters>
@@ -1204,6 +1199,78 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="eb23d8b7-edab-4c4b-8aef-a6878df24aec" name="GetUser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c82bec2e-53ac-4ad3-809a-2e6f4c2ae686" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="04bc86e7-124b-4fd7-8c52-0dd8d6b49049" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="b19e4cb1-284b-4a19-8a39-e76a966050e3" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="91e420c1-e1e7-4490-b5ca-279cf5fdd61f" direction="Return" isUnique="false">
+                        <elementDefinition Id="b82ba12a-e7e2-4c03-8db7-70867e2b736e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5ff17bc1-90ca-469b-bf8c-25873e1556f3" LastKnownName="user" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="1040a4f2-9ba3-4944-a3e0-055fa2f77db4" name="SearchGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c818b095-cd60-4181-8bd1-f734daa342eb" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="241871de-c61c-4a23-b5b6-88a3eddf65b6" direction="Return" isUnique="false">
+                        <elementDefinition Id="7d183017-1bba-4a3a-b3bf-052508c84308" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f93cb895-50c6-4abe-a655-5a24370e72e9" LastKnownName="group[]" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="16067e1f-0ffa-43e3-ba27-6f0bf62980a5" name="AsignGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b0a8033d-22a8-4989-ac00-6e02a5a9e961" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="88876dca-bb7a-4f0a-97d2-68aac3467a78" name="group" direction="In" isUnique="false">
+                        <elementDefinition Id="772dd9d2-0e15-49ca-95d7-c79b060e673d" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="62d7f30d-812e-4180-af23-7454fb2afa3c" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="e01a1f07-5a65-4376-b42c-0d84a3eaa24b" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="517903d2-b5de-4f4f-a4ad-f80b728f79db" direction="Return" isUnique="false">
+                        <elementDefinition Id="2ea27867-ade8-4841-a8f1-ef882fc20eda" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a95a6b43-a0c5-4679-a0f7-ca96a5012f09" LastKnownName="boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="854653d4-442c-4433-ab1a-044e38f76ade" name="ShowAsignGroup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="764cece8-71f0-4a1b-a353-1e47ac8f82d4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0c43ef05-abd0-4386-a016-3c94afabf1a2" name="user" direction="In" isUnique="false">
+                        <elementDefinition Id="8593a9d0-e998-4cba-be49-91696197f435" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="eaa71334-e798-49dc-a557-458387ec9ba8" direction="Return" isUnique="false">
+                        <elementDefinition Id="b528188c-1448-40ad-a914-2571d95bf593" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f93cb895-50c6-4abe-a655-5a24370e72e9" LastKnownName="group[]" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -1258,6 +1325,11 @@
     <packageHasNamedElement>
       <referencedType Id="a8cff755-9801-474f-aac3-31296f5038f9" name="language" isAbstract="false" isLeaf="false" cachedFullName="language">
         <elementDefinition Id="fac4b8f8-41a1-4976-907e-9f05ef69c3c0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c6c8701f-9c36-4672-87f2-2aa42e0444b9" name="grop[]" isAbstract="false" isLeaf="false" cachedFullName="grop[]">
+        <elementDefinition Id="5bd0c312-f3af-4a89-a00d-17e6cf65e86d" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

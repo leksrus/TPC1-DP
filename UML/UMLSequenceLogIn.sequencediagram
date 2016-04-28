@@ -137,16 +137,16 @@
               <lifelineMoniker Id="2b1cda35-5cab-4e5e-981b-882e9e697267" LastKnownName="DAL : DataAcces" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="e6aa8ec4-087c-4bba-9962-32f07f6e6605" name="MessageOccurrenceSpecification51">
-            <elementDefinition Id="ed2d7ecb-fe46-4cc9-98ee-54c8b7db4afc" />
-            <covered>
-              <lifelineMoniker Id="a6445b34-3938-4975-ab21-caef5aaaad23" LastKnownName="BLL : UserManagement" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="1ea59c55-5432-481a-946e-d8e2b589a36b" name="MessageOccurrenceSpecification52">
             <elementDefinition Id="7ce3ca75-b47b-4023-9796-ed10215181fc" />
             <covered>
               <lifelineMoniker Id="2b1cda35-5cab-4e5e-981b-882e9e697267" LastKnownName="DAL : DataAcces" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e6aa8ec4-087c-4bba-9962-32f07f6e6605" name="MessageOccurrenceSpecification51">
+            <elementDefinition Id="ed2d7ecb-fe46-4cc9-98ee-54c8b7db4afc" />
+            <covered>
+              <lifelineMoniker Id="a6445b34-3938-4975-ab21-caef5aaaad23" LastKnownName="BLL : UserManagement" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="6604dd6c-4aff-4945-a839-0499c2135094" name="MessageOccurrenceSpecification53">
@@ -510,7 +510,7 @@
               <messageOccurrenceSpecificationMoniker Id="4fa557b2-ff12-4ef6-bbb7-e94eb5cff427" LastKnownName="MessageOccurrenceSpecification44" />
             </receiveEvent>
           </message>
-          <message Id="eeae9636-f3d8-460c-8fa7-41cebc7b23a1" name="Login(string,string):string" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ Login(string, string) : string">
+          <message Id="eeae9636-f3d8-460c-8fa7-41cebc7b23a1" name="LogIn(user):string" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ LogIn(user) : string">
             <elementDefinition Id="320a281c-ee45-4dba-a256-85f359044e35" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="e8158575-9ed9-455f-aaaa-8f170406c829" LastKnownName="MessageOccurrenceSpecification47" />
@@ -519,7 +519,7 @@
               <messageOccurrenceSpecificationMoniker Id="45329f2a-c17b-4af5-8720-1deb557a0e00" LastKnownName="MessageOccurrenceSpecification48" />
             </receiveEvent>
           </message>
-          <message Id="fd07d4b1-bf88-4975-aaa4-8262ee21e2b9" name="GetUser(string):user" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ GetUser(string) : user">
+          <message Id="fd07d4b1-bf88-4975-aaa4-8262ee21e2b9" name="GetUser(user):user" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ GetUser(user) : user">
             <elementDefinition Id="99fea17e-a6a7-4a94-a7c7-6963e39c552a" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="e6aa8ec4-087c-4bba-9962-32f07f6e6605" LastKnownName="MessageOccurrenceSpecification51" />
@@ -537,7 +537,7 @@
               <messageOccurrenceSpecificationMoniker Id="e0e0be89-88b6-4194-a135-244b848bb7c6" LastKnownName="MessageOccurrenceSpecification54" />
             </receiveEvent>
           </message>
-          <message Id="7e697a1b-5ddf-45d6-a3c6-d7b10e774bc5" name="ComparteTo(string,string):boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ ComparteTo(string, string) : boolean">
+          <message Id="7e697a1b-5ddf-45d6-a3c6-d7b10e774bc5" name="ComparteTo(user):boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ ComparteTo(user) : boolean">
             <elementDefinition Id="81cf4383-97b2-4659-992d-c900401c3ac9" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="cd815b29-1ec8-42c5-a318-6ae7b506557c" LastKnownName="MessageOccurrenceSpecification55" />
@@ -546,7 +546,7 @@
               <messageOccurrenceSpecificationMoniker Id="b73d6897-37af-47c0-84bc-d92f6140ec78" LastKnownName="MessageOccurrenceSpecification56" />
             </receiveEvent>
           </message>
-          <message Id="7ef368d2-3917-4333-92c7-b3b25bfee1f0" name="Decript(string):string" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="true" signatureText="+ Decript(string) : string">
+          <message Id="7ef368d2-3917-4333-92c7-b3b25bfee1f0" name="Decript(user):string" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="true" signatureText="+ Decript(user) : string">
             <elementDefinition Id="b32ae5af-9cd6-41ea-aa33-8885d4a031eb" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="a5980c4d-2ff6-4230-826d-b9c84891d6da" LastKnownName="MessageOccurrenceSpecification59" />
@@ -564,7 +564,7 @@
               <messageOccurrenceSpecificationMoniker Id="bf1de7d9-2887-4a39-a89f-f6689f47d851" LastKnownName="MessageOccurrenceSpecification58" />
             </receiveEvent>
           </message>
-          <message Id="5d17e3a6-8e35-471b-bdba-6f2c07904a2e" name="LogIn(user): boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="5d17e3a6-8e35-471b-bdba-6f2c07904a2e" name="LogIn(user): boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ LogIn(user) : boolean">
             <elementDefinition Id="cbcf4c6f-b3b4-444a-bfa5-24f1b06cbbfa" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="1e7bdccb-4ecc-442e-85af-670934744d4f" LastKnownName="MessageOccurrenceSpecification67" />

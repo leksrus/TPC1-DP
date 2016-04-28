@@ -46,13 +46,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="9c57190b-77a8-406e-9855-82ef2cc3c898"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="927d0d3e-a3ad-46ed-8d16-769796533b28"
                   direction="Return"
                   isUnique="false">
@@ -63,6 +56,13 @@
                       LastKnownLocation="BLL.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8cd55f59-be5b-4721-aa68-35c169894b1c"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -205,44 +205,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="f491f586-0939-463f-9f29-d24bed40766b"
-            name="Login"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="93164862-b81d-4969-ba5b-3c74dffb9e22"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="143c027a-6b8f-42de-b299-7a760d8ad22d"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ad2f744e-80c1-4e4c-ad7f-fae79bd31b6b"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="1e653444-a71d-4595-8422-6811bc23a638"
-                      LastKnownName="string"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="fa589661-2669-484a-81a2-cacc163ba28c"
             name="Logout"
             isLeaf="false"
@@ -257,6 +219,37 @@
                   name="user"
                   direction="In"
                   isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0037a3e1-c06d-4765-95a0-2b559e3c0909"
+            name="LogIn"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="de0b233b-668c-4d66-9076-fe9835fd9b96"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="be9257f7-7d9c-4759-b17a-18a7f8226755"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -649,37 +642,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="6143fd06-0b94-47cf-8c89-e1434e80b886"
-            name="AsignGroup"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="92f7b815-2935-455f-b281-b84035ffb5fd"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f1b7e90b-ad72-45da-bea1-65231a6650dd"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="1e653444-a71d-4595-8422-6811bc23a638"
-                      LastKnownName="string"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="10f53c9d-33cb-4714-9f1e-973b511742bb"
             name="DeleteFromGroup"
             isLeaf="false"
@@ -734,15 +696,15 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="bbe68137-660f-4de7-a82c-7eb8a17545f4"
+                  Id="a96c015e-3076-4f57-95c3-7c689c76acdb"
                   name="group"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b4bd869d-9145-4e9e-ba41-3f3f5e63e825"
-                  name="group"
+                  Id="add6d4e0-655c-47ef-9174-11481b64fbd9"
+                  name="role"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -774,6 +736,75 @@
                       Id="1e653444-a71d-4595-8422-6811bc23a638"
                       LastKnownName="string"
                       LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0d91cf83-d004-42a2-ba36-d5b1f96e6992"
+            name="AsignGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="58d0c07f-6898-452b-9f6e-bc8ef055b6c4"
+                  name="group"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7314a394-f511-4f75-bf38-698f35ddc372"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d1bfcf77-0bc7-4677-a19f-e0aea7207cb4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bf16cfe4-e009-4233-9923-792274c06aee"
+            name="ShowAsignGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7debdf04-958d-4e48-9ad6-787ba06ccceb"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6ec5dda6-c5cc-4753-b333-d77f0459b19a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5bd0c312-f3af-4a89-a00d-17e6cf65e86d"
+                      LastKnownName="grop[]"
+                      LastKnownLocation="UML.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
