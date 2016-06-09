@@ -72,11 +72,65 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Administrativo.Designer.vb">
+      <DependentUpon>Administrativo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="AltaCliente.Designer.vb">
+      <DependentUpon>AltaCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup.Designer.vb">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacora.Designer.vb">
+      <DependentUpon>Bitacora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinacion.Designer.vb">
+      <DependentUpon>Coordinacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curso.Designer.vb">
+      <DependentUpon>Curso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Curso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Idioma.Designer.vb">
+      <DependentUpon>Idioma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Idioma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento.Designer.vb">
+      <DependentUpon>Mantenimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI.Designer.vb">
+      <DependentUpon>MDI.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -94,13 +148,73 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Ofertas.Designer.vb">
+      <DependentUpon>Ofertas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ofertas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesor.Designer.vb">
+      <DependentUpon>Profesor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profesor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recepcion.Designer.vb">
+      <DependentUpon>Recepcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recepcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro.Designer.vb">
+      <DependentUpon>Registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rutina.Designer.vb">
+      <DependentUpon>Rutina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rutina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.vb">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AltaCliente.resx">
+      <DependentUpon>AltaCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curso.resx">
+      <DependentUpon>Curso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recepcion.resx">
+      <DependentUpon>Recepcion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro.resx">
+      <DependentUpon>Registro.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -40,6 +40,9 @@
     <Content Include="ModelDefinition\DAL.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1537.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\SEC.uml">
       <SubType>Content</SubType>
     </Content>
@@ -108,6 +111,13 @@
     <Content Include="UMLSequenceRestore.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceRestore.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagramAll.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagramAll.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagramAll.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\UML.uml">
