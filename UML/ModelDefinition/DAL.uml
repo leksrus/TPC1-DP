@@ -77,38 +77,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="76a78b91-1103-4db4-b74b-d0fe347c8ece"
-            name="SaveLog"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="054f1a2f-7b64-4ce2-b88a-ccb935e61242"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="19673942-0d85-4571-b3bf-b34d66c724cf"
-                  name="array"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="bc0088b1-5e1b-4d67-bbb8-4683332b1128"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="6c8b71df-d3a3-4670-9059-77f5a0956875"
             name="SearchLog"
             isLeaf="false"
@@ -150,37 +118,6 @@
                   name="string"
                   direction="In"
                   isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="558680d4-19e3-44cc-9170-b59a58db1161"
-            name="SetDefault"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="c7cc6480-977d-47ed-96ef-85887e5457cd"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="157c2169-70bb-4b94-881d-f8f8f18e5e02"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e999be38-3ff1-4663-b169-92ef92567037"
-                      LastKnownName="boolean"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -248,37 +185,6 @@
                       Id="e999be38-3ff1-4663-b169-92ef92567037"
                       LastKnownName="boolean"
                       LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="e04ea660-8eb4-4e4c-a399-bfa427d3e291"
-            name="ValidateProfile"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="147b6247-4c64-429b-86a5-4887d728cbb0"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2cb2c53f-f2b4-4709-b3c0-3877457884fc"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e421dec8-8a3c-4afb-beb9-7e1b1937911a"
-                      LastKnownName="group[]"
-                      LastKnownLocation="Profile.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -378,30 +284,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="51c3a19f-9d32-41b5-ab28-b37013d7084d"
-            name="GetDefault"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6326222e-96e0-48c8-884b-b1ca2154dde2"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="fac4b8f8-41a1-4976-907e-9f05ef69c3c0"
-                      LastKnownName="language"
-                      LastKnownLocation="UML.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="c82bec2e-53ac-4ad3-809a-2e6f4c2ae686"
             name="GetUser"
             isLeaf="false"
@@ -426,209 +308,6 @@
                     <undefinedTypeMoniker
                       Id="a99607d7-7595-4d3b-b530-3236badcaeab"
                       LastKnownName="user"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="c818b095-cd60-4181-8bd1-f734daa342eb"
-            name="SearchGroup"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7d183017-1bba-4a3a-b3bf-052508c84308"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e421dec8-8a3c-4afb-beb9-7e1b1937911a"
-                      LastKnownName="group[]"
-                      LastKnownLocation="Profile.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="b0a8033d-22a8-4989-ac00-6e02a5a9e961"
-            name="AsignGroup"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="772dd9d2-0e15-49ca-95d7-c79b060e673d"
-                  name="group"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e01a1f07-5a65-4376-b42c-0d84a3eaa24b"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2ea27867-ade8-4841-a8f1-ef882fc20eda"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e999be38-3ff1-4663-b169-92ef92567037"
-                      LastKnownName="boolean"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="764cece8-71f0-4a1b-a353-1e47ac8f82d4"
-            name="ShowAsignGroup"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8593a9d0-e998-4cba-be49-91696197f435"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b528188c-1448-40ad-a914-2571d95bf593"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e421dec8-8a3c-4afb-beb9-7e1b1937911a"
-                      LastKnownName="group[]"
-                      LastKnownLocation="Profile.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="a0cf1347-c36f-491e-9b21-a532b07d8ecd"
-            name="ShowGroup"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1dbe0cc0-f0c9-452c-902c-e78c568c9e77"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e421dec8-8a3c-4afb-beb9-7e1b1937911a"
-                      LastKnownName="group[]"
-                      LastKnownLocation="Profile.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="a0cab72b-7414-4daf-a58a-93f3a8d065e5"
-            name="ShowRole"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ba564f34-292d-4808-83ff-d0f6379ab0e0"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="d0446969-38ad-41f4-9a68-82ba6edb7a44"
-                      LastKnownName="[]"
-                      LastKnownLocation="UML.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="b061aa6b-b07a-482e-a2b4-7fca2d853dd4"
-            name="ShowRole"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e43a2c84-f199-4be8-b70e-e7080fef0a8c"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e60b1ed5-8e88-40b4-8212-c65d0e99b964"
-                      LastKnownName="role[]"
-                      LastKnownLocation="Profile.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="34767983-eeca-4178-b54c-d2093817456b"
-            name="CreateGroup"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d13d1eae-a17c-4559-b024-5716fa5d6c23"
-                  name="group"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="4b115bb6-dcc4-43e0-9662-01f3b0a120ed"
-                  name="role"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6f4fb151-a004-4a35-9794-4bfc4bac78e3"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="e999be38-3ff1-4663-b169-92ef92567037"
-                      LastKnownName="boolean"
                       LastKnownLocation="BLL.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -893,6 +572,527 @@
                       Id="02eee518-08ed-4ce2-818c-63ea6af42e73"
                       LastKnownName="GYM"
                       LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e8c6faf1-59d1-45cb-8a17-7536e21febad"
+            name="GuardarOferta"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="078de4fc-8aa5-45b1-8326-075189c12bb6"
+                  name="oferta"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e52cc9c-4bd2-4526-ada5-77f9d6529373"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4f10bc03-4835-4f50-ba4f-ca52c0d2e9c0"
+            name="BuscarOfertasPendientes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="834e3ccb-4074-4d94-bb20-4eb067344b62"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="370978e4-fb6a-41c0-a923-a1ca95b3b999"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c6f2d2b6-fcf7-4f05-ae20-4e1ed0ba626a"
+                      LastKnownName="oferta[]"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="44c20c2d-68e9-4020-8288-dada544b1157"
+            name="AprobarOferta"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd7bec3f-6ad2-4f55-a25d-30b39d4bb5f9"
+                  name="oferta"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4b96c456-f387-43e4-9cee-49b66edf83ce"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="21aaa500-4115-4835-a2ef-ec7b0c7ae395"
+            name="BuscarOfertasPendientes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ad48544-c219-465a-8a39-1005b99e9108"
+                  name="date"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b4e495dd-cad9-432c-a683-53cc6ce018bc"
+                  name="date"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3e58b659-a359-45c9-8053-c66de46a5316"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c6f2d2b6-fcf7-4f05-ae20-4e1ed0ba626a"
+                      LastKnownName="oferta[]"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f9b69c88-96c1-4c8f-8870-b20139ffe8b3"
+            name="Searchpatente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53e5d47d-0abc-43a9-8dec-8aeb0795934c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dae31767-c3ec-475a-b17d-3a4616c6c403"
+                      LastKnownName="patente[]"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a3ddcafb-e7cd-4a45-8782-ca52ed0a2713"
+            name="ShowAsignPatente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60f929b1-d3f5-44c2-a669-04fd55657129"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0eaa64df-8bf1-4ca1-861a-b567a1e243b4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dae31767-c3ec-475a-b17d-3a4616c6c403"
+                      LastKnownName="patente[]"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="725109ea-54f8-41d6-be38-924f8a66936a"
+            name="AsignPatente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="23c40ad0-2fb2-4bdb-8a68-8f2d4c3e643b"
+                  name="patente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0127bcdc-d113-4df2-98f0-b3be69d53ebf"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c18ea2f2-ce79-4666-a1bf-9c648a620508"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e8ca1c8b-6a08-41db-8b66-7a6d28e5ebe1"
+            name="ShowGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e6ca94d-3b45-407c-a78c-ed0aac7ad97d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="78b651cb-85d2-4920-ba04-7208596f0b4a"
+                      LastKnownName="familia[]"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0731fec0-3188-4dbf-8fba-a45ed8cf3253"
+            name="ShowRole"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1294e1ec-d469-4f69-b46f-12bbac2d3af3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dae31767-c3ec-475a-b17d-3a4616c6c403"
+                      LastKnownName="patente[]"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a616b0be-5d63-4ccd-9b8a-314b85724083"
+            name="CreateGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="62262671-fb46-4ead-9284-a62f34e476cb"
+                  name="familia"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0fa97af6-b0ec-460c-928a-84628f069336"
+                  name="patente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6b162df-11be-42cf-a4d5-c4af61c1d466"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3de33d69-f5bc-4696-bdd6-c02914e2a113"
+            name="SearchFamilia"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fdb79bbf-333c-45ce-b9ac-aa1b1dd6b3e9"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="78b651cb-85d2-4920-ba04-7208596f0b4a"
+                      LastKnownName="familia[]"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="29d28156-9550-4ace-8180-45cb9823ff1c"
+            name="ShowAsignFamilia"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6417ade4-8f0f-452d-b3e5-f1d8f9f7ee35"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad4211b1-a426-4660-985a-f457183a79d4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="78b651cb-85d2-4920-ba04-7208596f0b4a"
+                      LastKnownName="familia[]"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="003d3139-6989-4bc3-bd42-8c153a258b57"
+            name="AsignGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="caca5188-f547-4ec7-ab15-31fd61b0a704"
+                  name="familia"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e8fdb0c2-2ede-41a4-900c-923a5aa6ac2f"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd6bb727-7bd4-48e7-b9aa-e8ee068ae1ce"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7d785eb8-f6ae-452f-bf08-c48e3d6125f1"
+            name="SetDefaultLang"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf0b7bfc-dfd7-440a-8f4c-3abb1b4e5226"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2e9e011f-18d6-47f6-91ee-5ee83c0ad40e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="36a89435-ab13-4436-906c-14347ce6d9c8"
+            name="SaveLog"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b6085549-7f0b-4b15-8938-92cdcc5403a2"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1e1a228d-e50c-4a7c-991d-2e54c2ee9fe7"
+                  name="log"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1192e409-c6ac-4ef7-9da9-0f24ac2d9fa0"
+                  name="user"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="14180bf9-5983-4789-a9d9-1e442517baeb"
+            name="GrabarDVH"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e6316c1-ac45-4792-9292-4ede658f893d"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c96cc23a-4e49-4ab3-ae8d-ef5dd5716f93"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="238c51a8-898e-49b2-a023-e3d36e4e5a29"
+            name="TraerDVH"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b007f0de-07b0-4daf-b1c9-674f6a470f65"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

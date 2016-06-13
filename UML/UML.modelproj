@@ -56,6 +56,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLClassDiagram1.classdiagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceAprobarOferta.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceAprobarOferta.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceAprobarOferta.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLSequenceBackup.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -70,6 +77,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceCargarCliente.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceDVH-DVV.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceDVH-DVV.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceDVH-DVV.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLSequenceEncription.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -83,6 +97,13 @@
     <Content Include="UMLSequenceFicharIngreso.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceFicharIngreso.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceGenerarOferta.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceGenerarOferta.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceGenerarOferta.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UMLSequenceInscribirCliente.sequencediagram">
       <SubType>Content</SubType>
