@@ -75,9 +75,7 @@
     <Compile Include="Administrativo.Designer.vb">
       <DependentUpon>Administrativo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrativo.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administrativo.vb" />
     <Compile Include="AltaCliente.Designer.vb">
       <DependentUpon>AltaCliente.vb</DependentUpon>
     </Compile>
