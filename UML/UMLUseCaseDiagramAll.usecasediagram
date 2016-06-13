@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="206bb292-9d5e-4d32-ad11-1181189bf525" name="UMLUseCaseDiagramAll" linkedPackageId="bc200e1b-de22-413d-b301-e37a53626ddc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="1527c751-828c-4847-b87b-d542c0e85dfb" name="                   Personal de Recepción" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a18d7665-bdb8-4210-b577-71c94a0a6993" />
+        <targetEnds>
+          <association Id="5227aa41-8055-45ea-a59e-276919cd917d" isDerived="false" sourceEndRoleName="Personal de Recepción" targetEndRoleName="UseCase1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8e111dce-bcff-42a3-90b0-5b3c5d919a57" LastKnownName="Cargar Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="376ecdff-e192-4d2c-ac04-9c3429ead9b6" name="Personal de Recepción" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a0484ca1-a95a-43c2-93a4-1945c82c1851" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="914a4cff-7046-4505-ab2d-adec67a47283" name="UseCase1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="35534010-9eea-44c8-bf0f-cf5268b28d80" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="391a2a5d-f501-468d-8135-3c327651658a" />
+          </association>
+          <association Id="ad9f09b3-0d1e-45e9-aee4-0e82081ee0b6" isDerived="false" sourceEndRoleName="                   Personal de Recepción" targetEndRoleName="Inscribir Cliente" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="37f2bf44-f0c6-44f8-9f49-11545ab77674" LastKnownName="Inscribir Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52eb4eb7-4c7c-45a2-89ff-a31b828b6b6d" name="                   Personal de Recepción" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ed8fde08-97f5-4618-ab8b-8e9765660eac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="86304686-01a8-4187-bc3f-3f49ba24acb7" name="Inscribir Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="385cbf41-c94d-488a-bf8e-4ea6c1ec333e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a73f5f81-666d-4fea-af77-77432a58bb65" />
+          </association>
+          <association Id="3d14feb3-c2d1-4b7d-80fe-bf04e626fc14" isDerived="false" sourceEndRoleName="                   Personal de Recepción" targetEndRoleName="Registrar Pago" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3904305f-fdfa-4882-8660-9c935e5dd7a6" LastKnownName="Registrar Pago" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a473210d-9b76-4259-bc87-cd1c8b005671" name="                   Personal de Recepción" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4059a438-fd53-493d-91eb-0326a51b4b1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="76a3367a-c911-479d-aa3b-b7e4c7603936" name="Registrar Pago" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9a10e3f1-61c6-4219-a89e-f74821f10117" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="37e4fdef-5f1f-4f80-89b3-20801e5adeb7" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="4fa54dc8-c9a7-4e48-a59c-5e70f7e0ff8d" name="Cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95b1ec6e-9d18-4b1d-95b0-e9ee177dbc7c" />
+        <generalsInternal>
+          <generalization Id="950e670e-4648-4bf9-b2c9-b608edfc44e9" isSubstitutable="false">
+            <actorMoniker Id="1527c751-828c-4847-b87b-d542c0e85dfb" LastKnownName="                   Personal de Recepción" />
+            <elementDefinition Id="bf5f2d56-e3d6-45d3-a63a-b97573557e27" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="77d04ed6-0f85-4fdc-9b88-742233e04a35" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Fichar Ingreso" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e2160d6c-dca1-4fcc-9cd5-ab96f44484c5" LastKnownName="Fichar Ingreso" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d0d46d6-f9bb-4da1-bdc6-cb38bbf226aa" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a14def54-eb2b-44c0-b251-b7ee41525d8d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc038453-1756-48c7-b28e-90db4c673c6d" name="Fichar Ingreso" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="05e094e2-3f51-45f4-8bd5-234cf44aaf97" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dcaebd1f-2821-43fa-a8df-c9a3a6c4a201" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="7aca846d-d3c0-43e2-ba07-82e727c6a69d" name="Personal Administrativo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ff8ad66e-0d34-4b0f-904c-de79a456c1c3" />
+        <targetEnds>
+          <association Id="d6b004ec-98ba-494f-98b3-461b6144743a" isDerived="false" sourceEndRoleName="Personal Administrativo" targetEndRoleName="Generar Oferta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2c0a1bdf-b611-4d4d-99de-d7593a9c76ae" LastKnownName="Generar Oferta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="692c3831-8c3e-4aec-b9d3-128ef837685b" name="Personal Administrativo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2a1d2e7d-85f3-426e-a237-842db78dbf5c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="85296cf1-eeed-4039-8037-0e73532f8cf1" name="Generar Oferta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="da59f692-5343-4a1e-b775-8b289596ec28" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f0229a78-0c30-4532-9694-679a94624e40" />
+          </association>
+          <association Id="16f1991a-884a-4790-bb48-ad0b446fe37a" isDerived="false" sourceEndRoleName="Personal Administrativo" targetEndRoleName="Registrar Items Deteriorados" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2191bfa9-a136-43e9-ba61-5148f9e0fe98" LastKnownName="Registrar Items Deteriorados" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3653134e-ff4c-4eff-a3e5-5976dd5b362c" name="Personal Administrativo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d807f76c-1ee9-41ff-9cfb-6530dab6a655" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="70ea63a2-81f9-4d64-a3d5-abdca3a9da58" name="Registrar Items Deteriorados" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4b988695-d3b8-4945-9103-35cf0238f1eb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9aae37d7-1a90-408f-9efb-a7af5449c0e4" />
+          </association>
+          <association Id="d5aa033f-7023-44f2-a52c-3150a002bdd7" isDerived="false" sourceEndRoleName="Personal Administrativo" targetEndRoleName="Generar Orden de Compra" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9acdd454-b2be-4531-ba90-ce39752bd564" LastKnownName="Generar Orden de Compra" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbbd4af1-a320-471f-93a6-617c1efdbe33" name="Personal Administrativo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a1757d9e-fcce-45ca-879c-635b5ceab657" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1072b239-a04d-405b-bf6a-34bf5b34b282" name="Generar Orden de Compra" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="103bfde5-06fc-4aec-bee2-84b66a04590d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="110b2e84-c944-4e9e-880e-c68db660f0f6" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="34d732e3-f140-47ce-b58f-fbfdd920765d" name="Coordinador" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2e62f031-4aa4-4052-8636-46b97ea10211" />
+        <targetEnds>
+          <association Id="b56f49b9-d995-4bf6-9bdc-5d8db1352938" isDerived="false" sourceEndRoleName="Coordinador" targetEndRoleName="Revisar Oferta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8e84fbe8-ef7d-4f17-bf4e-3cb40abc7485" LastKnownName="Revisar Oferta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="30bb9399-c900-463f-a446-98c943fabefc" name="Coordinador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9f58cc70-dba3-4b2d-adc9-02b44641323a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7471abd-dc17-4ffa-a7f4-1cedc78ea4ee" name="Revisar Oferta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d6465b4a-50aa-4f8c-b59b-af0b390a545c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f867663-1d88-402d-b61c-2c21c4ef8e85" />
+          </association>
+          <association Id="1f094986-8af0-449e-aa14-81eab14dd342" isDerived="false" sourceEndRoleName="Coordinador" targetEndRoleName="Aprobar Orden de Compra" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c9711995-1ab6-4057-a8ca-00e55240572f" LastKnownName="Aprobar Orden de Compra" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="02b1c3bc-98f5-4e97-8b1d-efc017f9a98d" name="Coordinador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e0dd974b-fc43-4a1d-a179-4559d054b12d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="38582f82-357e-4198-b8a7-24b45110b8d4" name="Aprobar Orden de Compra" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f4a46c06-1533-454f-89ff-582a81abde6b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a13d076d-cb74-47c5-a4a5-a259b41ee302" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="db83eb12-bedb-4344-920d-b89d49f7e054" name="Staff profesores GYM" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1200dd6c-8ad8-4ec3-9b88-9f98caf7bc09" />
+        <targetEnds>
+          <association Id="6aafc36d-fea4-4741-a6d2-4b4cf6dc3bfe" isDerived="false" sourceEndRoleName="Staff profesores GYM" targetEndRoleName="Buscar Cliente" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="29e027fe-e490-4461-8050-22da97d0088a" LastKnownName="Buscar Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="910e722f-c91b-4b6c-85bf-9044cc0703dc" name="Staff profesores GYM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="db840cd4-e47e-4fdd-a03b-6afe6c591e07" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e13ce3d1-1e4e-48f7-a06e-f1e061dc7dc0" name="Buscar Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bfcd309e-4c25-41a4-afc1-64490dd1366d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9cd9e79e-cae1-4d76-82b0-15377613ed26" />
+          </association>
+          <association Id="74c11cf1-7068-4307-ba04-c3760dfc1239" isDerived="false" sourceEndRoleName="Staff profesores GYM" targetEndRoleName="Cargar Rutina" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="53f13834-4803-4b55-9802-ef07c294acb7" LastKnownName="Cargar Rutina" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="606ab0bf-f70e-4f64-a2a6-baf0d2d223fc" name="Staff profesores GYM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c9e38369-fbdd-467a-9ae3-5730624ac871" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf537f82-f5e4-4d8b-82b5-0b8e89ae4969" name="Cargar Rutina" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45c05e2e-9520-4dc3-bb0d-8a76f1eac790" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="941e2f7e-1810-4091-ba43-f827b3e5dd30" />
+          </association>
+          <association Id="e78e40c8-d438-490d-8e3b-96a4b267eef4" isDerived="false" sourceEndRoleName="Staff profesores GYM" targetEndRoleName="Modificar Rutina" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dac30186-f80a-445c-84f5-29ff0d848ad9" LastKnownName="Modificar Rutina" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6e5bdb7-80c1-472f-9a89-ef7632761b34" name="Staff profesores GYM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="618eff16-63ca-4f7f-9ae5-13de5af69c23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d1d26a64-556a-4442-bde4-93d6611b4e58" name="Modificar Rutina" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bbdb6ae3-a464-4fb0-85a0-285d82dcbf3b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b175063a-0c7d-4644-8af9-028c728442d0" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8e111dce-bcff-42a3-90b0-5b3c5d919a57" name="Cargar Cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="468471ab-8561-4e6b-a361-1b0f747f151d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="37f2bf44-f0c6-44f8-9f49-11545ab77674" name="Inscribir Cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4749e83b-0dee-489b-91bb-d82394bc1616" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3904305f-fdfa-4882-8660-9c935e5dd7a6" name="Registrar Pago" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cc79cf2a-5918-45e1-a5dc-3fea883af930" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e2160d6c-dca1-4fcc-9cd5-ab96f44484c5" name="Fichar Ingreso" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c52ad99a-e909-4142-8fff-8cf15086ce23" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2c0a1bdf-b611-4d4d-99de-d7593a9c76ae" name="Generar Oferta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3ec0a796-a4ad-4a65-8ef4-b9f854a53427" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8e84fbe8-ef7d-4f17-bf4e-3cb40abc7485" name="Revisar Oferta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="468d47b4-27cf-4738-b978-362a44a40126" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2191bfa9-a136-43e9-ba61-5148f9e0fe98" name="Registrar Items Deteriorados" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="70af1096-6112-4cda-b3e9-e44ffd771a2c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9acdd454-b2be-4531-ba90-ce39752bd564" name="Generar Orden de Compra" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d7b11798-ab24-4177-9f09-76fc6de62c5d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c9711995-1ab6-4057-a8ca-00e55240572f" name="Aprobar Orden de Compra" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7820881e-3715-47df-bcdf-f61dd1f47320" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="29e027fe-e490-4461-8050-22da97d0088a" name="Buscar Cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ea524319-ef1c-4bb3-94c5-ad89bf2bcc16" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="53f13834-4803-4b55-9802-ef07c294acb7" name="Cargar Rutina" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0e807863-d915-4bf5-8b6f-6a9e333a8e8b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dac30186-f80a-445c-84f5-29ff0d848ad9" name="Modificar Rutina" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="45c68d09-fb0f-482b-a8fc-5ca7790ac316" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="bc200e1b-de22-413d-b301-e37a53626ddc" name="UML">
+    <elementDefinition Id="c3db1c35-4d50-4ac6-bfd0-5b5a118686c0" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a7ef4f8e-c52a-4750-8a9b-182af2f0087f">
+        <profileInstance Id="37af0e67-c5da-4a4b-837f-2480ecbcfc5a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f2b4b8ef-8576-48bd-a7fb-bc4ad6cc7da6">
+        <profileInstance Id="f2265286-1c5f-45a7-b3b5-041189832e6d" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

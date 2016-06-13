@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.5" name="UMLSequenceRegistrarPago">
+  <SequenceDesignerModelMoniker Id="d69793f5-4b40-4e4c-9cb9-3350efe40ac9" />
+  <nestedChildShapes>
+    <lifelineShape Id="7869c55d-cd0d-4ef3-a55e-4af2e8c924f4" absoluteBounds="1.09375, 1, 0.15, 9.26666666666667" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="ee522875-30b2-4c8e-8c0e-7857214362d6" LastKnownName="User" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="3e46af47-e016-49ca-b1ba-f05cb41338cc" absoluteBounds="0.66875, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="ee522875-30b2-4c8e-8c0e-7857214362d6" LastKnownName="User" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="24bcdbf4-6f10-4fa0-afda-ebff56e6d334" absoluteBounds="1.09375, 1, 0, 9.25">
+          <lifelineMoniker Id="ee522875-30b2-4c8e-8c0e-7857214362d6" LastKnownName="User" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <lifelineShape Id="458d56ee-74bf-4fc0-b16d-548da5c040df" absoluteBounds="2.9791667461395264, 1, 0.15, 9.26666666666667" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="44fe45dc-f278-49c0-b8d0-9f39b9ec205c" absoluteBounds="2.5541667461395265, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="f7424a0a-8ecf-4625-a83e-34a3db12fff8" absoluteBounds="2.9791667461395264, 1, 0, 9.25">
+          <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
+        </lifelineHoverShape>
+        <umlExecutionSpecificationShape Id="adde01b2-0700-45b7-a8f0-384418105bd9" absoluteBounds="2.9791667461395264, 1.6458333333333333, 0.15, 8.3208333333333346" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="804bd71f-1378-4da5-aa17-c793b4fdb92b" LastKnownName="BehaviorExecutionSpecification1" />
+          <relativeChildShapes>
+            <umlExecutionSpecificationShape Id="9d9352cf-f7de-4565-8332-32efc09dd134" absoluteBounds="3.0541667461395265, 6.8166666666666655, 0.15, 2.8500000000000023" customColor="184, 204, 215" visualStyleMode="Modified">
+              <behaviorExecutionSpecificationMoniker Id="645e5a34-d9b2-4892-9e9c-e0f305bc8fab" LastKnownName="BehaviorExecutionSpecification9" />
+              <relativeChildShapes>
+                <umlExecutionSpecificationShape Id="f9567504-c2e6-47d8-8166-aacfd474a55e" absoluteBounds="3.1291667461395267, 8.8166666666666664, 0.15, 0.55000000000000071" customColor="184, 204, 215" visualStyleMode="Modified">
+                  <behaviorExecutionSpecificationMoniker Id="73648521-0193-4dc0-a3cb-3b88bd121d18" LastKnownName="BehaviorExecutionSpecification13" />
+                </umlExecutionSpecificationShape>
+              </relativeChildShapes>
+            </umlExecutionSpecificationShape>
+          </relativeChildShapes>
+        </umlExecutionSpecificationShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <lifelineShape Id="18c964a0-abae-4f65-bcf9-053611b48907" absoluteBounds="5.6583334128061935, 1, 0.15, 9.2083333333333339" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="5395f088-6eff-4c4a-8f2f-669d05cab831" absoluteBounds="5.1557133428255719, 0.6, 1.1552401399612426, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="a11ef633-e088-42a8-b357-8d4f578b1a15" absoluteBounds="5.6583334128061935, 1, 0, 9.25">
+          <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
+        </lifelineHoverShape>
+        <umlExecutionSpecificationShape Id="505a11ff-8408-4599-a42a-0b7aa7a2d686" absoluteBounds="5.6583334128061935, 1.9458333333333333, 0.15, 1.1499999999999995" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="a74f9c91-7a86-41b7-8924-8f951afd03b2" LastKnownName="BehaviorExecutionSpecification2" />
+        </umlExecutionSpecificationShape>
+        <umlExecutionSpecificationShape Id="5c11cba6-7be9-4fdd-bb51-9a407ecce955" absoluteBounds="5.6583334128061935, 3.395833333333333, 0.15, 2.8708333333333327" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="0faee546-82cf-42db-bde6-7c7a07f565b8" LastKnownName="BehaviorExecutionSpecification4" />
+          <relativeChildShapes>
+            <umlExecutionSpecificationShape Id="fa66d37a-d449-47b7-b507-98c6fcb9c052" absoluteBounds="5.7333334128061937, 3.9458333333333329, 0.15, 1.1499999999999995" customColor="184, 204, 215" visualStyleMode="Modified">
+              <behaviorExecutionSpecificationMoniker Id="a5a71f52-18bb-478e-a5b5-b69d43b823da" LastKnownName="BehaviorExecutionSpecification5" />
+            </umlExecutionSpecificationShape>
+          </relativeChildShapes>
+        </umlExecutionSpecificationShape>
+        <umlExecutionSpecificationShape Id="17c62b20-4c25-4207-870b-462e75b2f339" absoluteBounds="5.6583334128061935, 7.1166666666666654, 0.15, 1.1500000000000004" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="0e0140d1-5ed5-43b6-a60a-a844c80d5849" LastKnownName="BehaviorExecutionSpecification10" />
+        </umlExecutionSpecificationShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <lifelineShape Id="3a2a8151-ec81-4a8d-bca8-89752e941fa5" absoluteBounds="8.4637041338284824, 1, 0.15, 9.2395833333333339" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="a7542e9b-267b-4229-8969-1515f5c1ab23" LastKnownName="DAL : DataAcces" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="7d17258f-5447-4694-8f06-c97ac38465e0" absoluteBounds="7.9470324178536744, 0.6, 1.1833434319496154, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="a7542e9b-267b-4229-8969-1515f5c1ab23" LastKnownName="DAL : DataAcces" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="864d94bc-6722-4877-b397-e96079aff8f6" absoluteBounds="8.4637041338284824, 1, 0, 9.25">
+          <lifelineMoniker Id="a7542e9b-267b-4229-8969-1515f5c1ab23" LastKnownName="DAL : DataAcces" />
+        </lifelineHoverShape>
+        <umlExecutionSpecificationShape Id="6e15da1c-585a-464d-91e5-76a56957ea17" absoluteBounds="8.4637041338284824, 2.2458333333333331, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="cce9253b-24ce-45ef-8dc5-d4832eaf03eb" LastKnownName="BehaviorExecutionSpecification3" />
+        </umlExecutionSpecificationShape>
+        <umlExecutionSpecificationShape Id="a2bbc7e4-0173-4ad4-8d13-b620607a6725" absoluteBounds="8.4637041338284824, 4.2458333333333327, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="973d1f67-ac6e-4212-8f02-5e9de86e8af5" LastKnownName="BehaviorExecutionSpecification6" />
+        </umlExecutionSpecificationShape>
+        <umlExecutionSpecificationShape Id="5aee2697-9430-463e-b572-caa656670952" absoluteBounds="8.4637041338284824, 5.4166666666666661, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="0094d18e-ba4c-495e-b80e-e9e6d79782db" LastKnownName="BehaviorExecutionSpecification7" />
+        </umlExecutionSpecificationShape>
+        <umlExecutionSpecificationShape Id="ab0490dc-b79e-451a-99ad-c435104c98df" absoluteBounds="8.4637041338284824, 7.4166666666666652, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="4c4fbfcd-4b37-4bac-b21d-b83bc509950e" LastKnownName="BehaviorExecutionSpecification11" />
+        </umlExecutionSpecificationShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <syncMessageConnector edgePoints="[(1.16875 : 1.64583333333333); (2.97916674613953 : 1.64583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <lifelineShapeMoniker Id="7869c55d-cd0d-4ef3-a55e-4af2e8c924f4" />
+        <umlExecutionSpecificationShapeMoniker Id="adde01b2-0700-45b7-a8f0-384418105bd9" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(2.97916674613953 : 9.96666666666667); (1.16875 : 9.96666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="adde01b2-0700-45b7-a8f0-384418105bd9" />
+        <lifelineShapeMoniker Id="7869c55d-cd0d-4ef3-a55e-4af2e8c924f4" />
+      </nodes>
+    </returnMessageConnector>
+    <syncMessageConnector edgePoints="[(3.12916674613953 : 1.94583333333333); (5.65833341280619 : 1.94583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="adde01b2-0700-45b7-a8f0-384418105bd9" />
+        <umlExecutionSpecificationShapeMoniker Id="505a11ff-8408-4599-a42a-0b7aa7a2d686" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(5.65833341280619 : 3.09583333333333); (3.12916674613953 : 3.09583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="505a11ff-8408-4599-a42a-0b7aa7a2d686" />
+        <umlExecutionSpecificationShapeMoniker Id="adde01b2-0700-45b7-a8f0-384418105bd9" />
+      </nodes>
+    </returnMessageConnector>
+    <syncMessageConnector edgePoints="[(5.80833341280619 : 2.24583333333333); (8.46370413382848 : 2.24583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="505a11ff-8408-4599-a42a-0b7aa7a2d686" />
+        <umlExecutionSpecificationShapeMoniker Id="6e15da1c-585a-464d-91e5-76a56957ea17" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(8.46370413382848 : 2.79583333333333); (5.80833341280619 : 2.79583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="6e15da1c-585a-464d-91e5-76a56957ea17" />
+        <umlExecutionSpecificationShapeMoniker Id="505a11ff-8408-4599-a42a-0b7aa7a2d686" />
+      </nodes>
+    </returnMessageConnector>
+    <syncMessageConnector edgePoints="[(3.12916674613953 : 3.39583333333333); (5.65833341280619 : 3.39583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="adde01b2-0700-45b7-a8f0-384418105bd9" />
+        <umlExecutionSpecificationShapeMoniker Id="5c11cba6-7be9-4fdd-bb51-9a407ecce955" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(5.65833341280619 : 6.26666666666667); (3.12916674613953 : 6.26666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="5c11cba6-7be9-4fdd-bb51-9a407ecce955" />
+        <umlExecutionSpecificationShapeMoniker Id="adde01b2-0700-45b7-a8f0-384418105bd9" />
+      </nodes>
+    </returnMessageConnector>
+    <asyncSelfMessageConnector edgePoints="[(5.80833341280619 : 3.69583333333333); (6.05833341280619 : 3.69583333333333); (6.05833341280619 : 3.94583333333333); (5.88333341280619 : 3.94583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="5c11cba6-7be9-4fdd-bb51-9a407ecce955" />
+        <umlExecutionSpecificationShapeMoniker Id="fa66d37a-d449-47b7-b507-98c6fcb9c052" />
+      </nodes>
+    </asyncSelfMessageConnector>
+    <syncMessageConnector edgePoints="[(5.88333341280619 : 4.24583333333333); (8.46370413382848 : 4.24583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="fa66d37a-d449-47b7-b507-98c6fcb9c052" />
+        <umlExecutionSpecificationShapeMoniker Id="a2bbc7e4-0173-4ad4-8d13-b620607a6725" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(8.46370413382848 : 4.79583333333333); (5.88333341280619 : 4.79583333333333)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="a2bbc7e4-0173-4ad4-8d13-b620607a6725" />
+        <umlExecutionSpecificationShapeMoniker Id="fa66d37a-d449-47b7-b507-98c6fcb9c052" />
+      </nodes>
+    </returnMessageConnector>
+    <syncMessageConnector edgePoints="[(5.80833341280619 : 5.41666666666667); (8.46370413382848 : 5.41666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="5c11cba6-7be9-4fdd-bb51-9a407ecce955" />
+        <umlExecutionSpecificationShapeMoniker Id="5aee2697-9430-463e-b572-caa656670952" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(8.46370413382848 : 5.96666666666667); (5.80833341280619 : 5.96666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="5aee2697-9430-463e-b572-caa656670952" />
+        <umlExecutionSpecificationShapeMoniker Id="5c11cba6-7be9-4fdd-bb51-9a407ecce955" />
+      </nodes>
+    </returnMessageConnector>
+    <asyncSelfMessageConnector edgePoints="[(3.12916674613953 : 6.56666666666667); (3.37916674613953 : 6.56666666666667); (3.37916674613953 : 6.81666666666667); (3.20416674613953 : 6.81666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="adde01b2-0700-45b7-a8f0-384418105bd9" />
+        <umlExecutionSpecificationShapeMoniker Id="9d9352cf-f7de-4565-8332-32efc09dd134" />
+      </nodes>
+    </asyncSelfMessageConnector>
+    <syncMessageConnector edgePoints="[(3.20416674613953 : 7.11666666666667); (5.65833341280619 : 7.11666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="9d9352cf-f7de-4565-8332-32efc09dd134" />
+        <umlExecutionSpecificationShapeMoniker Id="17c62b20-4c25-4207-870b-462e75b2f339" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(5.65833341280619 : 8.26666666666667); (3.20416674613953 : 8.26666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="17c62b20-4c25-4207-870b-462e75b2f339" />
+        <umlExecutionSpecificationShapeMoniker Id="9d9352cf-f7de-4565-8332-32efc09dd134" />
+      </nodes>
+    </returnMessageConnector>
+    <syncMessageConnector edgePoints="[(5.80833341280619 : 7.41666666666667); (8.46370413382848 : 7.41666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="17c62b20-4c25-4207-870b-462e75b2f339" />
+        <umlExecutionSpecificationShapeMoniker Id="ab0490dc-b79e-451a-99ad-c435104c98df" />
+      </nodes>
+    </syncMessageConnector>
+    <returnMessageConnector edgePoints="[(8.46370413382848 : 7.96666666666667); (5.80833341280619 : 7.96666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="ab0490dc-b79e-451a-99ad-c435104c98df" />
+        <umlExecutionSpecificationShapeMoniker Id="17c62b20-4c25-4207-870b-462e75b2f339" />
+      </nodes>
+    </returnMessageConnector>
+    <asyncSelfMessageConnector edgePoints="[(3.20416674613953 : 8.56666666666667); (3.45416674613953 : 8.56666666666667); (3.45416674613953 : 8.81666666666667); (3.27916674613953 : 8.81666666666667)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="e24617ce-6c7e-4c7d-802a-63014f02e313" customColor="Black" visible="true" visualStyleMode="Modified" messageId="00000000-0000-0000-0000-000000000000">
+      <relativeChildShapes />
+      <nodes>
+        <umlExecutionSpecificationShapeMoniker Id="9d9352cf-f7de-4565-8332-32efc09dd134" />
+        <umlExecutionSpecificationShapeMoniker Id="f9567504-c2e6-47d8-8166-aacfd474a55e" />
+      </nodes>
+    </asyncSelfMessageConnector>
+  </nestedChildShapes>
+</sequenceDesignerDiagram>

@@ -40,6 +40,9 @@
     <Content Include="ModelDefinition\DAL.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1537.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\SEC.uml">
       <SubType>Content</SubType>
     </Content>
@@ -60,12 +63,33 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceBackup.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceCargarCliente.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceCargarCliente.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceCargarCliente.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLSequenceEncription.sequencediagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UMLSequenceEncription.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceEncription.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceFicharIngreso.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceFicharIngreso.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceFicharIngreso.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceInscribirCliente.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceInscribirCliente.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceInscribirCliente.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UMLSequenceLaguages.sequencediagram">
       <SubType>Content</SubType>
@@ -102,12 +126,26 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceProfile.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceRegistrarPago.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceRegistrarPago.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceRegistrarPago.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLSequenceRestore.sequencediagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UMLSequenceRestore.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceRestore.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLUseCaseDiagramAll.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagramAll.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagramAll.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\UML.uml">
