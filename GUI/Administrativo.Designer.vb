@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Mantenimiento
+Partial Class Administrativo
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,51 +24,39 @@ Partial Class Mantenimiento
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(32, 28)
+        Me.Button1.Location = New System.Drawing.Point(24, 20)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 44)
+        Me.Button1.Size = New System.Drawing.Size(116, 49)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Gestion Backup"
+        Me.Button1.Text = "Cargar Oferta"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(32, 95)
+        Me.Button2.Location = New System.Drawing.Point(24, 106)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(114, 44)
+        Me.Button2.Size = New System.Drawing.Size(116, 49)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Gestion Bitacora"
+        Me.Button2.Text = "Cargar Orden de Compra"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(32, 162)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(114, 44)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Gestion Perfiles"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Mantenimiento
+        'Administrativo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(258, 242)
-        Me.Controls.Add(Me.Button3)
+        Me.ClientSize = New System.Drawing.Size(349, 193)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "Mantenimiento"
-        Me.Text = "Mantenimiento"
+        Me.Name = "Administrativo"
+        Me.Text = "Administrativo"
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
 End Class

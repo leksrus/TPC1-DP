@@ -41,7 +41,7 @@ Partial Class MDI
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.IdiomasToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(942, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(938, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -55,7 +55,7 @@ Partial Class MDI
         'RecepcionToolStripMenuItem
         '
         Me.RecepcionToolStripMenuItem.Name = "RecepcionToolStripMenuItem"
-        Me.RecepcionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RecepcionToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.RecepcionToolStripMenuItem.Text = "&Recepcion"
         '
         'ToolStripMenuItem2
@@ -106,15 +106,15 @@ Partial Class MDI
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'Form1
+        'MDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(942, 710)
+        Me.ClientSize = New System.Drawing.Size(938, 632)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Form1"
+        Me.Name = "MDI"
         Me.Text = "CCCP GYM & Fitness"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)

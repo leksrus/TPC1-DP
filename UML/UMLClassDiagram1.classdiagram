@@ -572,6 +572,12 @@
                       <property Id="e10ebb16-d2bb-4932-af29-c071345ed947" name="detalle" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="8da2f439-50f5-4516-9882-df2cf759da28" />
                       </property>
+                      <property Id="7916c64d-bb0f-41f2-b491-94515cc09dc9" name="estado" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="efb8412b-3019-4739-a596-078c739eb46d" />
+                      </property>
+                      <property Id="72641049-5d84-4fe1-8bfa-a030fcb64ccc" name="precio" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="bc304daf-70dd-4e94-8379-0467743ff79b" />
+                      </property>
                     </ownedAttributesInternal>
                   </class>
                 </packageHasNamedElement>
@@ -626,7 +632,7 @@
                       <property Id="7769f5f7-d434-4ea1-8081-e16fac0dcb3e" name="estado" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="e0a23120-5b0d-4eb0-a62b-bb7f6a1c67bd" />
                       </property>
-                      <property Id="2361fb08-d49a-4896-a1a3-0ebd20f11066" name="numero" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                      <property Id="2361fb08-d49a-4896-a1a3-0ebd20f11066" name="id_orden" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="cd1b8b00-e943-4a04-a4aa-cc069e8709cf" />
                       </property>
                     </ownedAttributesInternal>

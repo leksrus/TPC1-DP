@@ -75,7 +75,9 @@
     <Compile Include="Administrativo.Designer.vb">
       <DependentUpon>Administrativo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrativo.vb" />
+    <Compile Include="Administrativo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AltaCliente.Designer.vb">
       <DependentUpon>AltaCliente.vb</DependentUpon>
     </Compile>
@@ -152,6 +154,12 @@
     <Compile Include="Ofertas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OrdenCompra.Designer.vb">
+      <DependentUpon>OrdenCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Profesor.Designer.vb">
       <DependentUpon>Profesor.vb</DependentUpon>
     </Compile>
@@ -202,6 +210,12 @@
     <EmbeddedResource Include="AltaCliente.resx">
       <DependentUpon>AltaCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Backup.resx">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bitacora.resx">
+      <DependentUpon>Bitacora.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Coordinacion.resx">
       <DependentUpon>Coordinacion.vb</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +228,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento.resx">
+      <DependentUpon>Mantenimiento.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ofertas.resx">
       <DependentUpon>Ofertas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenCompra.resx">
+      <DependentUpon>OrdenCompra.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profesor.resx">
       <DependentUpon>Profesor.vb</DependentUpon>

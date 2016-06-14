@@ -440,6 +440,28 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="efb8412b-3019-4739-a596-078c739eb46d"
+            name="estado"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bc304daf-70dd-4e94-8379-0467743ff79b"
+            name="precio"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -553,7 +575,7 @@
             isComposite="false" />
           <property
             Id="cd1b8b00-e943-4a04-a4aa-cc069e8709cf"
-            name="numero"
+            name="id_orden"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
