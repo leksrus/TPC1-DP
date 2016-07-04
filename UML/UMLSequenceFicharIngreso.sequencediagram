@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="45a60b8e-f2fb-447e-8ee9-e5f7d2068819" name="UMLSequenceFicharIngreso" linkedPackageId="e4f7b25c-61c6-4f61-a652-fee7d9a55fd7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="45a60b8e-f2fb-447e-8ee9-e5f7d2068819" name="UMLSequenceFicharIngreso" linkedPackageId="e4f7b25c-61c6-4f61-a652-fee7d9a55fd7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="7d361995-8c14-4833-9e00-d2340da533ff" name="UMLSequenceFicharIngreso" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -90,16 +90,16 @@
               <lifelineMoniker Id="68e151a5-1f87-438e-94cc-652f60d4138f" LastKnownName="DAL : DataAcces" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="59ccc4bf-1ee3-4bb4-9eae-8ac2d9274123" name="MessageOccurrenceSpecification9">
-            <elementDefinition Id="ce40deac-bd17-4a4b-9fba-d01423f95018" />
-            <covered>
-              <lifelineMoniker Id="68e151a5-1f87-438e-94cc-652f60d4138f" LastKnownName="DAL : DataAcces" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="7b5ae0f2-e51f-480f-8abb-6471b0b4ac7f" name="MessageOccurrenceSpecification10">
             <elementDefinition Id="8c4598d5-cbf9-4b6a-857a-8a37a9d9aab5" />
             <covered>
               <lifelineMoniker Id="83ff3f15-ee23-4f45-a763-0082047f42c2" LastKnownName="BLL : Recepcion" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="59ccc4bf-1ee3-4bb4-9eae-8ac2d9274123" name="MessageOccurrenceSpecification9">
+            <elementDefinition Id="ce40deac-bd17-4a4b-9fba-d01423f95018" />
+            <covered>
+              <lifelineMoniker Id="68e151a5-1f87-438e-94cc-652f60d4138f" LastKnownName="DAL : DataAcces" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="09062dba-1efd-45ae-9ba8-80bbafa9e46c" name="ExecutionOccurrenceSpecification6">
@@ -254,16 +254,16 @@
               <lifelineMoniker Id="68e151a5-1f87-438e-94cc-652f60d4138f" LastKnownName="DAL : DataAcces" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="3b03a0a2-e2a9-42cb-b425-ce1d3a253086" name="MessageOccurrenceSpecification20">
-            <elementDefinition Id="3f593223-04e4-41d9-9e63-83b7bb502359" />
-            <covered>
-              <lifelineMoniker Id="83ff3f15-ee23-4f45-a763-0082047f42c2" LastKnownName="BLL : Recepcion" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="570f77af-17f3-4c52-ba6d-4c958c7e6f73" name="MessageOccurrenceSpecification19">
             <elementDefinition Id="e84fed9b-dcb1-43b6-a28c-d3d9df54ee5b" />
             <covered>
               <lifelineMoniker Id="68e151a5-1f87-438e-94cc-652f60d4138f" LastKnownName="DAL : DataAcces" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="3b03a0a2-e2a9-42cb-b425-ce1d3a253086" name="MessageOccurrenceSpecification20">
+            <elementDefinition Id="3f593223-04e4-41d9-9e63-83b7bb502359" />
+            <covered>
+              <lifelineMoniker Id="83ff3f15-ee23-4f45-a763-0082047f42c2" LastKnownName="BLL : Recepcion" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="612bd286-96ac-44eb-9b75-3be02217d317" name="ExecutionOccurrenceSpecification12">
@@ -482,6 +482,12 @@
             <elementDefinition Id="040a290e-5206-4d7c-9ea2-ba1136c1e1ce" />
             <type_NamedElement>
               <referencedTypeMoniker Id="44738e6a-47d1-4fcf-bed6-9db8d1a75981" LastKnownName="DataAcces" />
+            </type_NamedElement>
+          </property>
+          <property Id="18f454c7-f941-4e17-ba8b-8e84a148b41a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b2919310-c2da-498a-9c1b-9106498d4f12" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a90dc7a2-ad8d-4ee5-bea7-5ce333baa425" LastKnownName="Recepcion" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
