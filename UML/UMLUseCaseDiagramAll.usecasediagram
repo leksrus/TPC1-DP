@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="206bb292-9d5e-4d32-ad11-1181189bf525" name="UMLUseCaseDiagramAll" linkedPackageId="bc200e1b-de22-413d-b301-e37a53626ddc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="206bb292-9d5e-4d32-ad11-1181189bf525" name="UMLUseCaseDiagramAll" linkedPackageId="bc200e1b-de22-413d-b301-e37a53626ddc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="1527c751-828c-4847-b87b-d542c0e85dfb" name="                   Personal de Recepción" isAbstract="false" isLeaf="false">
@@ -100,7 +100,7 @@
             <elementDefinition Id="f0229a78-0c30-4532-9694-679a94624e40" />
           </association>
           <association Id="16f1991a-884a-4790-bb48-ad0b446fe37a" isDerived="false" sourceEndRoleName="Personal Administrativo" targetEndRoleName="Registrar Items Deteriorados" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="2191bfa9-a136-43e9-ba61-5148f9e0fe98" LastKnownName="Pedir Utiles" />
+            <useCaseMoniker Id="2191bfa9-a136-43e9-ba61-5148f9e0fe98" LastKnownName="Cargar Utiles" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="3653134e-ff4c-4eff-a3e5-5976dd5b362c" name="Personal Administrativo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -177,22 +177,6 @@
       <actor Id="db83eb12-bedb-4344-920d-b89d49f7e054" name="Staff profesores GYM" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1200dd6c-8ad8-4ec3-9b88-9f98caf7bc09" />
         <targetEnds>
-          <association Id="6aafc36d-fea4-4741-a6d2-4b4cf6dc3bfe" isDerived="false" sourceEndRoleName="Staff profesores GYM" targetEndRoleName="Buscar Cliente" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="29e027fe-e490-4461-8050-22da97d0088a" LastKnownName="Buscar Cliente" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="910e722f-c91b-4b6c-85bf-9044cc0703dc" name="Staff profesores GYM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="db840cd4-e47e-4fdd-a03b-6afe6c591e07" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="e13ce3d1-1e4e-48f7-a06e-f1e061dc7dc0" name="Buscar Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="bfcd309e-4c25-41a4-afc1-64490dd1366d" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="9cd9e79e-cae1-4d76-82b0-15377613ed26" />
-          </association>
           <association Id="74c11cf1-7068-4307-ba04-c3760dfc1239" isDerived="false" sourceEndRoleName="Staff profesores GYM" targetEndRoleName="Cargar Rutina" isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="53f13834-4803-4b55-9802-ef07c294acb7" LastKnownName="Ingresar Rutina" />
             <relationshipOwnedElementsInternal>
@@ -243,7 +227,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="2191bfa9-a136-43e9-ba61-5148f9e0fe98" name="Pedir Utiles" isAbstract="false" isLeaf="false">
+      <useCase Id="2191bfa9-a136-43e9-ba61-5148f9e0fe98" name="Cargar Utiles" isAbstract="false" isLeaf="false">
         <elementDefinition Id="70af1096-6112-4cda-b3e9-e44ffd771a2c" />
       </useCase>
     </useCaseModelRootHasTypes>
@@ -255,11 +239,6 @@
     <useCaseModelRootHasTypes>
       <useCase Id="c9711995-1ab6-4057-a8ca-00e55240572f" name="Aprobar Orden de Compra" isAbstract="false" isLeaf="false">
         <elementDefinition Id="7820881e-3715-47df-bcdf-f61dd1f47320" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="29e027fe-e490-4461-8050-22da97d0088a" name="Buscar Cliente" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="ea524319-ef1c-4bb3-94c5-ad89bf2bcc16" />
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>

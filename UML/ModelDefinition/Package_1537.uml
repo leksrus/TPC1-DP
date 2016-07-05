@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="0857414f-256f-4bd6-aa58-8cc9b091020c"
   name="Clases - negocio" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -78,20 +78,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="8f7fa61f-2e77-4891-8a56-f3ae9a7bb5a3"
+            Id="d2ac0ffd-0fde-4b3b-961b-94a04194e354"
             isDerived="false"
             sourceEndRoleName="Cliente"
-            targetEndRoleName="GYM"
+            targetEndRoleName="Deporte"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="d75b2079-f4a3-4a93-9566-bdab4e7830ae"
-              LastKnownName="GYM"
+              Id="e07a06f1-2c8e-4779-8bb4-c92cf03e4846"
+              LastKnownName="Deporte"
               LastKnownLocation="Package_1537.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5c5dd513-863b-4def-bf67-0fffffff7e24"
+                  Id="68042584-798a-4b25-8924-0df46673557c"
                   name="Cliente"
                   isLeaf="false"
                   isStatic="false"
@@ -103,13 +103,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="d62d014f-c678-468c-88a8-4af422fc6bb7"
+                      Id="2fe13365-53e2-4bd7-9953-d0b5996f2a0a"
                       name="Lower"
                       value="1,N" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="7a344d52-8631-4786-9e7b-f74fb1724f89"
+                      Id="24939c61-f143-4a1e-814c-7e483bcd4a7d"
                       name="Upper"
                       value="1,N" />
                   </upperValueInternal>
@@ -117,8 +117,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="d09b8eb2-d836-4274-806c-95ff72a1a9a5"
-                  name="GYM"
+                  Id="86c3d9b6-df61-42cd-ab47-fee4b0726678"
+                  name="Deporte"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -128,80 +128,15 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="abb631d4-e7df-4242-86d3-9547d379cda3"
+                      Id="9fd5ed65-1c4c-4bb8-9c99-407eb87233ee"
                       name="Lower"
                       value="0,1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="169b87d9-89d9-4be4-86dc-949df18d07f4"
+                      Id="0cd7c5fa-fb4d-4a0b-9ebc-367fb0ecc177"
                       name="Upper"
                       value="0,1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="590aba6d-527d-4cd2-8638-72801c952b34"
-            isDerived="false"
-            sourceEndRoleName="Cliente"
-            targetEndRoleName="Fitness"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="d70663f0-d0d4-411a-a5c5-a464bd5d42cc"
-              LastKnownName="Fitness"
-              LastKnownLocation="Package_1537.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="78579d3c-e4cb-4817-8fb7-eb2058627941"
-                  name="Cliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="7646a3cd-8d47-4d52-a357-63276003abfb"
-                      name="Lower"
-                      value="1,N" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="b7ffa56c-5db1-4b5f-a8a0-6fc5aa98dfb7"
-                      name="Upper"
-                      value="1,N" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="26efb54d-cf04-4b8e-a76a-f0aa528708ab"
-                  name="Fitness"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="29ed7952-ee56-4dc5-bf35-56b327bc4be0"
-                      name="Lower"
-                      value="0,N" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="c3593fc0-9f62-48d7-b0f9-459fc0e318c8"
-                      name="Upper"
-                      value="0,N" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -631,6 +566,17 @@
           <property
             Id="cd1b8b00-e943-4a04-a4aa-cc069e8709cf"
             name="id_orden"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a1fe32e9-a94a-45f9-9b9b-264524c3e39d"
+            name="detalles"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

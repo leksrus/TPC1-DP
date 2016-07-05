@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="4c1afff4-531c-4cb7-9919-5ecfd7114710" name="UMLSequenceCargarCliente" linkedPackageId="6897f9bf-2e16-4ac9-81ff-517a6b306065" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="4c1afff4-531c-4cb7-9919-5ecfd7114710" name="UMLSequenceCargarCliente" linkedPackageId="6897f9bf-2e16-4ac9-81ff-517a6b306065" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="cd4288ce-0162-4a52-8113-666bae2d7e21" name="UMLSequenceCargarCliente" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -230,16 +230,16 @@
               <lifelineMoniker Id="8c74918a-8c1a-42bb-bc1e-209f9e3cc2ee" LastKnownName="DAL : MP_Cliente" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="9d759b3c-13a7-4d5a-a4b7-4ffddb1ba040" name="MessageOccurrenceSpecification54">
-            <elementDefinition Id="2058b032-a56a-4c0c-a067-ba1a3a6154bf" />
-            <covered>
-              <lifelineMoniker Id="8c74918a-8c1a-42bb-bc1e-209f9e3cc2ee" LastKnownName="DAL : MP_Cliente" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="7fdf1b40-2eb6-41ca-83eb-eea662ba958d" name="MessageOccurrenceSpecification53">
             <elementDefinition Id="aeeafcce-6ecc-4ebe-8538-b067bb3c4651" />
             <covered>
               <lifelineMoniker Id="ca75be8f-534c-420a-a508-cd6a3f4704ab" LastKnownName="DAL : Acceso" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="9d759b3c-13a7-4d5a-a4b7-4ffddb1ba040" name="MessageOccurrenceSpecification54">
+            <elementDefinition Id="2058b032-a56a-4c0c-a067-ba1a3a6154bf" />
+            <covered>
+              <lifelineMoniker Id="8c74918a-8c1a-42bb-bc1e-209f9e3cc2ee" LastKnownName="DAL : MP_Cliente" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="6ddc5f53-1830-45f1-bbe9-cd523ecf2750" name="ExecutionOccurrenceSpecification30">
@@ -343,17 +343,6 @@
               <messageOccurrenceSpecificationMoniker Id="5e3aad2e-3387-4deb-b55f-642bf2c369fb" LastKnownName="MessageOccurrenceSpecification59" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification Id="552d93aa-60fd-4035-873a-cba57a980e1c" name="ExecutionOccurrenceSpecification26">
-            <elementDefinition Id="9e149ae7-c159-40e8-a686-0748b9eff97d" />
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="fcb21982-aac4-434e-b1c1-5eeaf72d487d" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker Id="59dc35ae-17dc-403e-bb1b-1d60b310bfda" LastKnownName="BLL : Recepcion" />
-            </covered>
-          </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="68c37849-22ab-4865-b50e-c4501bcdbb6a" name="ExecutionOccurrenceSpecification33">
             <elementDefinition Id="0eceb4db-4fe6-4465-a093-88277ccd94ae" />
             <event>
@@ -363,6 +352,17 @@
             </event>
             <covered>
               <lifelineMoniker Id="1d75e40d-578b-4aa4-8794-3bd789b7c314" LastKnownName="DAL : MP_Log" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="552d93aa-60fd-4035-873a-cba57a980e1c" name="ExecutionOccurrenceSpecification26">
+            <elementDefinition Id="9e149ae7-c159-40e8-a686-0748b9eff97d" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="fcb21982-aac4-434e-b1c1-5eeaf72d487d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="59dc35ae-17dc-403e-bb1b-1d60b310bfda" LastKnownName="BLL : Recepcion" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="835408c6-1a00-41b2-bfc3-dbd0a4089098" name="MessageOccurrenceSpecification57">
@@ -581,7 +581,7 @@
               <messageOccurrenceSpecificationMoniker Id="8e5f06b0-089f-4734-9f81-90b693df18c3" LastKnownName="MessageOccurrenceSpecification44" />
             </receiveEvent>
           </message>
-          <message Id="e941f523-be6d-4109-baf0-5435a4cd434c" name="Insertar(cliente): string" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ Insertar(cliente) : string">
+          <message Id="e941f523-be6d-4109-baf0-5435a4cd434c" name="Insertar(cliente): boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ Insertar(cliente) : boolean">
             <elementDefinition Id="9f10b637-6b73-44d1-a33f-89e6a084a099" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="b6556739-d7fe-4b5d-8fb0-4ff823aff552" LastKnownName="MessageOccurrenceSpecification47" />

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2fbf4433-f821-49fa-8a6e-ccdc0d2bc0b9" name="UMLComponentSistema" linkedPackageId="d056f800-f043-48f4-850c-b571737da09a" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="eaad9b3e-5cfc-43bb-976b-68a4b6dacda5">
+      <profileInstance Id="d3a8b455-e0d0-4468-8c2e-71bb96376374" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e1beaa65-2173-43ae-820b-2205e3c71fc6">
+      <profileInstance Id="3cc44a25-696b-4a52-b912-67dd394a68fb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="9b26aa69-8ffb-45be-958e-fe8a442127fe" name="BLL" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b1058a0e-7967-452b-af6f-916ad27b7af5" />
+        <suppliersInternal>
+          <dependency Id="7b751a21-56e8-4ad3-a3b2-a5d71eb54d0f">
+            <componentMoniker Id="dfd83251-06bc-4683-a03b-914213f0fad1" LastKnownName="DAL" />
+            <elementDefinition Id="a3d2f71b-0dc7-4b3b-bd4d-41a5c795590b" />
+          </dependency>
+          <dependency Id="68948c59-4f1e-4f9f-9bdb-8cdde21b1699">
+            <componentMoniker Id="df40afa8-9b1f-4be2-adf9-772651f2c5f2" LastKnownName="BE" />
+            <elementDefinition Id="6b65c22e-3cb1-42fe-97ea-0751d936e3fd" />
+          </dependency>
+          <dependency Id="36796d38-841c-49ce-9fa8-89c45900eaee">
+            <componentMoniker Id="a1cc3d66-e386-4d2a-ada9-5c18e0a88234" LastKnownName="Seg" />
+            <elementDefinition Id="9e372068-2460-40b3-90b5-f89de3214823" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="dfd83251-06bc-4683-a03b-914213f0fad1" name="DAL" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e2744275-b4d8-4045-b37b-794da5d19850" />
+        <suppliersInternal>
+          <dependency Id="bea27ab2-4dfa-4ee4-9ea1-e3b4faf28d5f">
+            <componentMoniker Id="df40afa8-9b1f-4be2-adf9-772651f2c5f2" LastKnownName="BE" />
+            <elementDefinition Id="2f22533b-e195-4d92-9aa3-2c53449109b2" />
+          </dependency>
+          <dependency Id="a91b22ef-25d0-4ba3-9a67-3a88ee7f4e29">
+            <componentMoniker Id="a1cc3d66-e386-4d2a-ada9-5c18e0a88234" LastKnownName="Seg" />
+            <elementDefinition Id="f002e0d7-faba-4f7c-beab-2a76402849cc" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="df40afa8-9b1f-4be2-adf9-772651f2c5f2" name="BE" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a9dbb49-599a-4a3a-aca2-cd986cf753f6" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="a1cc3d66-e386-4d2a-ada9-5c18e0a88234" name="Seg" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d499d29e-01b6-48d6-8dca-44fdcdeafa71" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="cebf46a7-6d30-4b63-a0aa-20079eafea75" name="GUI" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="00a185ae-2207-4dfa-b929-6321b7ff6942" />
+        <suppliersInternal>
+          <dependency Id="584b795d-4a39-4435-a69d-ac7621df8f96">
+            <componentMoniker Id="9b26aa69-8ffb-45be-958e-fe8a442127fe" LastKnownName="BLL" />
+            <elementDefinition Id="5d454a80-a280-4c38-a57c-9594a26a88f3" />
+          </dependency>
+          <dependency Id="91a66f87-5c7a-4399-92f6-9919e7ef40ea">
+            <componentMoniker Id="df40afa8-9b1f-4be2-adf9-772651f2c5f2" LastKnownName="BE" />
+            <elementDefinition Id="6f3824a5-858a-41e4-b426-827a15db99b2" />
+          </dependency>
+          <dependency Id="02fc25a8-f912-47a6-840a-ee608807dff9">
+            <componentMoniker Id="a1cc3d66-e386-4d2a-ada9-5c18e0a88234" LastKnownName="Seg" />
+            <elementDefinition Id="510db095-7d39-4be5-9637-8ba4cbbc0a4e" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="d056f800-f043-48f4-850c-b571737da09a" name="UML">
+    <elementDefinition Id="c3db1c35-4d50-4ac6-bfd0-5b5a118686c0" />
+  </package>
+</componentModel>

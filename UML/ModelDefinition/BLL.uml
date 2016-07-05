@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="021d619f-7aeb-4de6-a49f-0b9a51238531"
   name="BLL" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -521,13 +521,6 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a27a57c9-4343-4087-8616-30430dfde261"
-                  name="date"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
                   Id="2080c7de-889f-45a8-9383-781a8bf96864"
                   direction="Return"
                   isUnique="false">
@@ -538,6 +531,13 @@
                       LastKnownLocation="BLL.uml" />
                   </type_NamedElement>
                 </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a5418be2-af0a-4604-9732-86298ac48117"
+                  name="backup"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -680,61 +680,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="de3afb53-1cba-4331-83f6-5d6f2ab6e0ac"
-            name="ShowPatents"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="bc722807-8955-424c-bb60-91523556859c"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="dae31767-c3ec-475a-b17d-3a4616c6c403"
-                      LastKnownName="patente[]"
-                      LastKnownLocation="UML.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="a6706f0d-640a-47ca-af23-b8d6dfc1a7bd"
-            name="ShowAsignPatente"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="097c1774-e689-4fe6-8785-2426f8a10032"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="53ccc4fe-802a-43ea-baa0-6ad309f66035"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="dae31767-c3ec-475a-b17d-3a4616c6c403"
-                      LastKnownName="patente[]"
-                      LastKnownLocation="UML.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="2ffd487e-5c1f-43ec-bdd9-c34cb6b9707b"
             name="AsignPatente"
             isLeaf="false"
@@ -834,37 +779,6 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation
-            Id="a2bbb377-14b3-4d14-b1b7-129d8f125ce3"
-            name="ShowAsignFamilia"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5192d413-06a6-4b0a-89c5-9e7f457cb9d7"
-                  name="user"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="63a673e2-38a5-443e-a0f6-081dfab1ed8c"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="78b651cb-85d2-4920-ba04-7208596f0b4a"
-                      LastKnownName="familia[]"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -891,24 +805,6 @@
         isLeaf="false"
         isActiveClass="false">
         <ownedOperationsInternal>
-          <operation
-            Id="67b0ecae-a307-466f-9a1b-bbe8348a6f74"
-            name="RegistrarCliente"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b34237b8-be7f-4b42-a3b9-8b047c1aa530"
-                  name="cliente"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="7f201a5e-d717-4281-b977-174ceae39798"
             name="BuscarCliente"
@@ -979,44 +875,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="77e0aa0f-5ffd-488f-b7d4-e3e7d265c07d"
-            name="InscribirCliente"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ee536b6a-3d5e-4ba1-9651-17e473a2e850"
-                  name="cliente"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1a3a7077-46f7-405b-bc63-cce120305da2"
-                  name="sala"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="6a2c89b3-b32a-4878-900c-2cf03dd161c0"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="1e653444-a71d-4595-8422-6811bc23a638"
-                      LastKnownName="string"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="a1e5a4e7-18ec-46b2-a546-a06d6686b539"
             name="InscribirClienteGYM"
             isLeaf="false"
@@ -1049,37 +907,6 @@
                       Id="1e653444-a71d-4595-8422-6811bc23a638"
                       LastKnownName="string"
                       LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="44f5026f-6ea7-4996-94aa-af74e0d7a0e2"
-            name="ValidarOfertas"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="14d5d6be-2f75-438c-9fcc-9e04b3b3796e"
-                  name="cliente"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="05794db6-da4f-4842-8a9a-6e2a36682d48"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="0a2fcb9d-4c5a-41ef-a393-fb22cf01a8f6"
-                      LastKnownName="oferta"
-                      LastKnownLocation="UML.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1241,6 +1068,144 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="d6c2b96f-c16b-4736-86a1-b69eec839c83"
+            name="ValidarOfertas"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="45c091c5-c455-4cfc-995e-82b57f005fe5"
+                  name="deporte"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e206b44e-255c-40cc-87df-0cefeb02fc16"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c6f2d2b6-fcf7-4f05-ae20-4e1ed0ba626a"
+                      LastKnownName="oferta[]"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="33db7c9e-85fc-4b7f-9218-8b95fe9fc0ad"
+            name="RealizarPago"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="24482758-831b-4605-bb08-9f14328cccd6"
+                  name="cliente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="52f5773c-2986-48b5-93bd-46e0aefbffc2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bc3a4898-4b5b-473c-a0b9-82a55168849b"
+            name="CalcularMonto"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="74aa2fa3-8b8a-4ad6-b9b2-0ba039dd6e35"
+                  name="oferta"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1be3e01-8c1c-490a-b4ca-1d04c70699fe"
+                  name="deporte"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0931508-c4a7-446c-9123-1a3afc197eb3"
+                  name="single"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b317f24b-3749-43b4-b0d1-eed21a99b9b3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="53c7eaee-1631-4100-bbc2-209296b2bd21"
+                      LastKnownName="deporte"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cde99489-734e-4359-b941-e86da54862c7"
+            name="ActualizarFicha"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad46da1f-fd8d-4cd1-bca1-b48225b9a560"
+                  name="cliente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17f5e775-7b87-4d85-bd21-b16321b9b077"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="af6b1f26-ba04-4bc0-a424-7acb54d9ed22"
+                      LastKnownName="membresia"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1253,7 +1218,7 @@
         isActiveClass="false">
         <ownedOperationsInternal>
           <operation
-            Id="d07f68e2-0519-4832-a3ff-2dfd53d17acb"
+            Id="f84ac8f6-6147-42f4-bfa9-47451ed3a797"
             name="GuardarOferta"
             isLeaf="false"
             isStatic="false"
@@ -1263,14 +1228,114 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="bd2e4b5d-325d-4ec7-aea3-43d677400a56"
+                  Id="f81253ac-fab6-416f-9325-dd52d6b540cb"
                   name="oferta"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="4ea2296d-3d17-4cf8-907d-e78bbf2a1eea"
+                  Id="ffb13ae8-6354-4c3e-8905-b593f1e4521b"
+                  name="deporte"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2cbb793a-6a6e-4d34-9767-015b31f51298"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="18dc081c-a3b3-4f68-819d-f13081638eca"
+            name="GenerarOrden"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="59883277-ad04-4bdd-8fb9-30d37feff2e0"
+                  name="orden"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d6e73cd3-480d-40bb-b66b-8bd3714a6c1f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b9e43c0b-d870-4b51-a36a-b0476b43f8f0"
+            name="ListarUtil"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a5f296f4-2f3c-459a-bcea-25b124706ab5"
+                  name="sala"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7caf4b6c-293f-4f88-889b-4eaddf5ee4af"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dbe4a87d-0740-4436-a918-cc0ade0cb4d6"
+                      LastKnownName="item[]"
+                      LastKnownLocation="DAL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="01b041be-c5ad-4330-966e-3b7a903ee21c"
+            name="CambiarEstado"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c1755854-745e-4b65-881b-d7651f9621e4"
+                  name="util"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="01b7eeb4-28f2-4ca7-bd60-43267e52473a"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -1389,6 +1454,61 @@
                       Id="c6f2d2b6-fcf7-4f05-ae20-4e1ed0ba626a"
                       LastKnownName="oferta[]"
                       LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6fef2198-46c4-4c77-86b2-75cbfcfdc2fe"
+            name="ListarOrdenesPendientes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="14c409e2-54f1-46ef-b062-f7cc3317096d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="93d93c0e-0715-437d-96ef-a5047ce305cf"
+                      LastKnownName="orden[]"
+                      LastKnownLocation="DAL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d0ce0ccb-b13a-442c-9c55-cf476791629c"
+            name="AprobarOrdenCompra"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="205d8607-9741-4cb5-b6c9-7fe7d41e35b8"
+                  name="orden"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1937d34a-26f4-46de-a2a0-661c31aaeee7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

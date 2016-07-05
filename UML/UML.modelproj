@@ -56,6 +56,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLClassDiagram1.classdiagram</DependentUpon>
     </Content>
+    <Content Include="UMLComponentSistema.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLComponentSistema.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLComponentSistema.componentdiagram</DependentUpon>
+    </Content>
     <Content Include="UMLSequenceAprobarOferta.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -76,6 +83,13 @@
     <Content Include="UMLSequenceCargarCliente.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceCargarCliente.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceCargarItems.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceCargarItems.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceCargarItems.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UMLSequenceDVH-DVV.sequencediagram">
       <SubType>Content</SubType>
@@ -139,6 +153,13 @@
     <Content Include="UMLSequenceLogOut.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceLogOut.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLSequenceOrdenDeCompra.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceOrdenDeCompra.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceOrdenDeCompra.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UMLSequenceProfile.sequencediagram">
       <SubType>Content</SubType>
