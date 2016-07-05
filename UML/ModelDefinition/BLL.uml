@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="021d619f-7aeb-4de6-a49f-0b9a51238531"
   name="BLL" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1172,6 +1172,75 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="6339127d-6590-4871-9c97-a3fbd9647e2f"
+            name="RegistrarCliente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c93caf21-f428-4ebb-a4d2-a4ccebf480d1"
+                  name="cliente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7d2df5d1-b246-4b02-8f9c-3f47cf351777"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e69575f0-a01d-472b-9508-cff207c85163"
+            name="InscribirCliente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="13119cff-022a-482c-b285-77c6367439eb"
+                  name="cliente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ed5a3da-665b-4f74-880c-4d707697cecb"
+                  name="turno"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ead9fa25-d104-419e-a7a8-802d9ee7eea8"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1336,13 +1405,68 @@
     <packageHasNamedElement>
       <class
         Id="0345a311-1714-4ece-8db3-121b975026d9"
-        name="DV"
+        name="Gestor_DV"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <ownedOperationsInternal>
           <operation
-            Id="cd92ea79-e793-475e-950f-3b70cb6c4143"
+            Id="139e87b9-fb9f-4ef1-82bc-26be7c6ffabd"
+            name="ValidarIntegridad"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="639371f4-7b7e-4b25-bbe3-5df8989585d7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="132efb0c-0b83-4d02-95d0-2dea4cf04b27"
+            name="GrabarDVV"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="67c796f2-acab-496e-b227-61950c4dd545"
+                  name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9edd5123-7635-4265-818a-d37e0319b9dd"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e999be38-3ff1-4663-b169-92ef92567037"
+                      LastKnownName="boolean"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8485bd61-8fb5-486f-9144-f2a417bf4ab8"
             name="GrabarDVH"
             isLeaf="false"
             isStatic="false"
@@ -1352,14 +1476,14 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f57836a2-3331-422d-8dce-2611d247defa"
+                  Id="f9e265f9-cafa-425a-81cf-94d864a64401"
                   name="string"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b0a32600-a38d-44d4-94df-4cf9b9737fd5"
+                  Id="0f35a733-ea21-4cd6-ac70-ad0fefa64d38"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
