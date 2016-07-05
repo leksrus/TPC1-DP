@@ -423,42 +423,6 @@
                         </relationshipOwnedElementsInternal>
                         <elementDefinition Id="eb313b45-747e-4447-9476-67755f289592" />
                       </association>
-                      <association Id="8431dbe2-9b82-420e-a222-332fad09f17c" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Fitness" isLeaf="false" isAbstract="false">
-                        <classMoniker Id="7699389d-f6e8-47ee-a652-d358ac05a403" LastKnownName="Fitness" />
-                        <relationshipOwnedElementsInternal>
-                          <associationHasOwnedEnds>
-                            <memberEnd Id="c291e037-e83c-4904-83c0-1e34572c5b15" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                              <lowerValueInternal>
-                                <literalString Id="fea43b5f-730c-4e5d-905a-0c0fc0351bd6" name="Lower" value="1,1">
-                                  <elementDefinition Id="3d13f179-179d-4da0-8055-dfade7eaded9" />
-                                </literalString>
-                              </lowerValueInternal>
-                              <upperValueInternal>
-                                <literalString Id="066aa0bd-31a6-4c58-a882-f2f7a3a5494e" name="Upper" value="1,1">
-                                  <elementDefinition Id="e4ee1f21-c4dc-4597-ae21-efb2709065f1" />
-                                </literalString>
-                              </upperValueInternal>
-                              <elementDefinition Id="8f0936b1-c40d-47d5-9d17-9211d3b273e7" />
-                            </memberEnd>
-                          </associationHasOwnedEnds>
-                          <associationHasOwnedEnds>
-                            <memberEnd Id="710bffe4-139b-40bc-9189-c2bf84570435" name="Fitness" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                              <lowerValueInternal>
-                                <literalString Id="51bdbc6e-4519-4d76-af87-c2e7e3ed8ed0" name="Lower" value="1,N">
-                                  <elementDefinition Id="de887e3c-e3d4-4c1f-a8a3-eea39e5e3862" />
-                                </literalString>
-                              </lowerValueInternal>
-                              <upperValueInternal>
-                                <literalString Id="cfde2129-0f0b-4616-8c85-2a5ee04313de" name="Upper" value="1,N">
-                                  <elementDefinition Id="b66f1103-fc58-468c-a696-e65cfd1d7f84" />
-                                </literalString>
-                              </upperValueInternal>
-                              <elementDefinition Id="2d5b959b-a249-40bc-b6a3-71f5a948d413" />
-                            </memberEnd>
-                          </associationHasOwnedEnds>
-                        </relationshipOwnedElementsInternal>
-                        <elementDefinition Id="5bf8932d-eb9f-4628-bd50-fdbb1181ef8a" />
-                      </association>
                       <association Id="6a72e433-fa1b-4315-9961-def52e3838d0" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Rutina" isLeaf="false" isAbstract="false">
                         <classMoniker Id="06bf0096-3cb9-4f11-9708-29885430c6c1" LastKnownName="Rutina" />
                         <relationshipOwnedElementsInternal>
@@ -651,12 +615,6 @@
                 <packageHasNamedElement>
                   <class Id="7699389d-f6e8-47ee-a652-d358ac05a403" name="Fitness" isAbstract="false" isLeaf="false" isActiveClass="false">
                     <elementDefinition Id="d70663f0-d0d4-411a-a5c5-a464bd5d42cc" />
-                    <generalsInternal>
-                      <generalization Id="0f330085-85fe-4fa6-8f02-816cd121851d" isSubstitutable="false">
-                        <classMoniker Id="20a865a2-cb71-4b2c-b062-efe125fcd426" LastKnownName="GYM" />
-                        <elementDefinition Id="188b3693-8488-467b-9d80-ec3d6f8c4302" />
-                      </generalization>
-                    </generalsInternal>
                     <ownedAttributesInternal>
                       <property Id="c3d51819-2508-4000-a074-5e9b1c724119" name="cantClase" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="e5d5fad2-62a7-4160-9411-289b183cc96e" />

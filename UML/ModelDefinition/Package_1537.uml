@@ -78,71 +78,6 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="5bf8932d-eb9f-4628-bd50-fdbb1181ef8a"
-            isDerived="false"
-            sourceEndRoleName="Cliente"
-            targetEndRoleName="Fitness"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="d70663f0-d0d4-411a-a5c5-a464bd5d42cc"
-              LastKnownName="Fitness"
-              LastKnownLocation="Package_1537.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8f0936b1-c40d-47d5-9d17-9211d3b273e7"
-                  name="Cliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="3d13f179-179d-4da0-8055-dfade7eaded9"
-                      name="Lower"
-                      value="1,1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="e4ee1f21-c4dc-4597-ae21-efb2709065f1"
-                      name="Upper"
-                      value="1,1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="2d5b959b-a249-40bc-b6a3-71f5a948d413"
-                  name="Fitness"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="de887e3c-e3d4-4c1f-a8a3-eea39e5e3862"
-                      name="Lower"
-                      value="1,N" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="b66f1103-fc58-468c-a696-e65cfd1d7f84"
-                      name="Upper"
-                      value="1,N" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="52bd7db0-6b50-4e93-80fa-6d98998d1746"
             isDerived="false"
             sourceEndRoleName="Cliente"
@@ -616,16 +551,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="188b3693-8488-467b-9d80-ec3d6f8c4302"
-            isSubstitutable="false">
-            <classMoniker
-              Id="d75b2079-f4a3-4a93-9566-bdab4e7830ae"
-              LastKnownName="GYM"
-              LastKnownLocation="Package_1537.uml" />
-          </generalization>
-        </generalsInternal>
         <ownedAttributesInternal>
           <property
             Id="e5d5fad2-62a7-4160-9411-289b183cc96e"
