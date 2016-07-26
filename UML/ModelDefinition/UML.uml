@@ -40155,7 +40155,7 @@
           <operationMoniker
             Id="48ced4cd-1542-4d5e-854a-e41a6791d4bb"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40166,7 +40166,7 @@
           <operationMoniker
             Id="48ced4cd-1542-4d5e-854a-e41a6791d4bb"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -40311,7 +40311,7 @@
           <operationMoniker
             Id="d516ed3c-5389-4076-a35d-ecf01c18396d"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40322,7 +40322,7 @@
           <operationMoniker
             Id="d516ed3c-5389-4076-a35d-ecf01c18396d"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -40355,7 +40355,7 @@
           <operationMoniker
             Id="9925174c-9d65-4b05-90c6-5339357e6343"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40366,7 +40366,7 @@
           <operationMoniker
             Id="9925174c-9d65-4b05-90c6-5339357e6343"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -40465,7 +40465,7 @@
           <operationMoniker
             Id="d6c2b96f-c16b-4736-86a1-b69eec839c83"
             LastKnownName="ValidarOfertas"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40476,7 +40476,7 @@
           <operationMoniker
             Id="d6c2b96f-c16b-4736-86a1-b69eec839c83"
             LastKnownName="ValidarOfertas"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -40487,7 +40487,7 @@
           <operationMoniker
             Id="33db7c9e-85fc-4b7f-9218-8b95fe9fc0ad"
             LastKnownName="RealizarPago"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40498,7 +40498,7 @@
           <operationMoniker
             Id="33db7c9e-85fc-4b7f-9218-8b95fe9fc0ad"
             LastKnownName="RealizarPago"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -40514,7 +40514,7 @@
           <operationMoniker
             Id="bc3a4898-4b5b-473c-a0b9-82a55168849b"
             LastKnownName="CalcularMonto"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40525,7 +40525,7 @@
           <operationMoniker
             Id="bc3a4898-4b5b-473c-a0b9-82a55168849b"
             LastKnownName="CalcularMonto"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -40734,7 +40734,7 @@
           <operationMoniker
             Id="9925174c-9d65-4b05-90c6-5339357e6343"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40745,7 +40745,7 @@
           <operationMoniker
             Id="9925174c-9d65-4b05-90c6-5339357e6343"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -40778,7 +40778,7 @@
           <operationMoniker
             Id="afa8d747-a088-4b0d-9a4d-4f8597625b24"
             LastKnownName="Insertar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -40789,7 +40789,7 @@
           <operationMoniker
             Id="afa8d747-a088-4b0d-9a4d-4f8597625b24"
             LastKnownName="Insertar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -41022,7 +41022,7 @@
           <operationMoniker
             Id="cde99489-734e-4359-b941-e86da54862c7"
             LastKnownName="ActualizarFicha"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -41033,7 +41033,7 @@
           <operationMoniker
             Id="cde99489-734e-4359-b941-e86da54862c7"
             LastKnownName="ActualizarFicha"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -41044,7 +41044,7 @@
           <operationMoniker
             Id="9925174c-9d65-4b05-90c6-5339357e6343"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -41055,7 +41055,7 @@
           <operationMoniker
             Id="9925174c-9d65-4b05-90c6-5339357e6343"
             LastKnownName="Actualizar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -41110,7 +41110,7 @@
           <operationMoniker
             Id="f84ac8f6-6147-42f4-bfa9-47451ed3a797"
             LastKnownName="GuardarOferta"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -41121,7 +41121,7 @@
           <operationMoniker
             Id="f84ac8f6-6147-42f4-bfa9-47451ed3a797"
             LastKnownName="GuardarOferta"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -41374,7 +41374,7 @@
           <operationMoniker
             Id="9fc77e9b-1629-4848-84e9-1d159b99c561"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -41385,7 +41385,7 @@
           <operationMoniker
             Id="9fc77e9b-1629-4848-84e9-1d159b99c561"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -41418,7 +41418,7 @@
           <operationMoniker
             Id="48ced4cd-1542-4d5e-854a-e41a6791d4bb"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -41429,7 +41429,7 @@
           <operationMoniker
             Id="48ced4cd-1542-4d5e-854a-e41a6791d4bb"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -41620,7 +41620,7 @@
           <operationMoniker
             Id="48ced4cd-1542-4d5e-854a-e41a6791d4bb"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -41631,7 +41631,7 @@
           <operationMoniker
             Id="48ced4cd-1542-4d5e-854a-e41a6791d4bb"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -41886,7 +41886,7 @@
           <operationMoniker
             Id="c470d99c-0a87-4bed-a5ba-fe45ff357738"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -41897,7 +41897,7 @@
           <operationMoniker
             Id="c470d99c-0a87-4bed-a5ba-fe45ff357738"
             LastKnownName="Seleccionar"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="DAL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -45320,7 +45320,7 @@
           <operationMoniker
             Id="18dc081c-a3b3-4f68-819d-f13081638eca"
             LastKnownName="GenerarOrden"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -45331,7 +45331,7 @@
           <operationMoniker
             Id="18dc081c-a3b3-4f68-819d-f13081638eca"
             LastKnownName="GenerarOrden"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -45362,7 +45362,7 @@
           <operationMoniker
             Id="6fef2198-46c4-4c77-86b2-75cbfcfdc2fe"
             LastKnownName="ListarOrdenesPendientes"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -45373,7 +45373,7 @@
           <operationMoniker
             Id="6fef2198-46c4-4c77-86b2-75cbfcfdc2fe"
             LastKnownName="ListarOrdenesPendientes"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -45424,7 +45424,7 @@
           <operationMoniker
             Id="d0ce0ccb-b13a-442c-9c55-cf476791629c"
             LastKnownName="AprobarOrdenCompra"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -45435,7 +45435,7 @@
           <operationMoniker
             Id="d0ce0ccb-b13a-442c-9c55-cf476791629c"
             LastKnownName="AprobarOrdenCompra"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -45572,7 +45572,7 @@
           <operationMoniker
             Id="6fef2198-46c4-4c77-86b2-75cbfcfdc2fe"
             LastKnownName="ListarOrdenesPendientes"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -45583,7 +45583,7 @@
           <operationMoniker
             Id="6fef2198-46c4-4c77-86b2-75cbfcfdc2fe"
             LastKnownName="ListarOrdenesPendientes"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -46897,7 +46897,7 @@
           <operationMoniker
             Id="b9e43c0b-d870-4b51-a36a-b0476b43f8f0"
             LastKnownName="ListarUtil"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -46908,7 +46908,7 @@
           <operationMoniker
             Id="b9e43c0b-d870-4b51-a36a-b0476b43f8f0"
             LastKnownName="ListarUtil"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
@@ -46919,7 +46919,7 @@
           <operationMoniker
             Id="01b041be-c5ad-4330-966e-3b7a903ee21c"
             LastKnownName="CambiarEstado"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -46930,7 +46930,7 @@
           <operationMoniker
             Id="01b041be-c5ad-4330-966e-3b7a903ee21c"
             LastKnownName="CambiarEstado"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>

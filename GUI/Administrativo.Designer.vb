@@ -24,6 +24,7 @@ Partial Class Administrativo
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -44,11 +45,21 @@ Partial Class Administrativo
         Me.Button2.Text = "Cargar Orden de Compra"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(24, 188)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(116, 49)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Administrar Stock"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Administrativo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(349, 193)
+        Me.ClientSize = New System.Drawing.Size(180, 258)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Administrativo"
@@ -59,4 +70,5 @@ Partial Class Administrativo
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

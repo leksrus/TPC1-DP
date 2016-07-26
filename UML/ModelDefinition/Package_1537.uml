@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
   dslVersion="1.0.0.0"
   Id="0857414f-256f-4bd6-aa58-8cc9b091020c"
   name="Clases - negocio" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -78,20 +78,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="d2ac0ffd-0fde-4b3b-961b-94a04194e354"
+            Id="8b014978-ed75-4413-ba40-5d5efb3eead7"
             isDerived="false"
             sourceEndRoleName="Cliente"
-            targetEndRoleName="Deporte"
+            targetEndRoleName="Ticket"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="e07a06f1-2c8e-4779-8bb4-c92cf03e4846"
-              LastKnownName="Deporte"
+              Id="9d645a35-9733-4fd5-a1ec-48f04c86ffaa"
+              LastKnownName="Ticket"
               LastKnownLocation="Package_1537.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="68042584-798a-4b25-8924-0df46673557c"
+                  Id="dfb04535-6afb-481d-a01f-60a5f711d695"
                   name="Cliente"
                   isLeaf="false"
                   isStatic="false"
@@ -103,22 +103,22 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="2fe13365-53e2-4bd7-9953-d0b5996f2a0a"
+                      Id="f40933c1-d4d5-4711-80b9-6260292a5f69"
                       name="Lower"
-                      value="1,N" />
+                      value="1,1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="24939c61-f143-4a1e-814c-7e483bcd4a7d"
+                      Id="a08f04ee-6d7d-4042-9832-3a2783260d97"
                       name="Upper"
-                      value="1,N" />
+                      value="1,1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="86c3d9b6-df61-42cd-ab47-fee4b0726678"
-                  name="Deporte"
+                  Id="fda708f7-b706-4edb-b576-281855923751"
+                  name="Ticket"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -128,15 +128,80 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="9fd5ed65-1c4c-4bb8-9c99-407eb87233ee"
+                      Id="7639bdca-2c7d-45f8-a3de-6fc8eaeebf12"
                       name="Lower"
-                      value="0,1" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="0cd7c5fa-fb4d-4a0b-9ebc-367fb0ecc177"
+                      Id="65a1028c-be08-4260-89b8-adc61953a69a"
                       name="Upper"
-                      value="0,1" />
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6fcd5ab7-7787-43ba-9267-2edef15f3758"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Membresia"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c46e2fa2-b16e-42a8-81af-3a85c1164ba1"
+              LastKnownName="Membresia"
+              LastKnownLocation="Package_1537.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c0a9b457-7d37-4960-a721-7fb3975e29db"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f03255cf-5ec9-4b5e-a3d6-0cbd345c2fc9"
+                      name="Lower"
+                      value="1,1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8f208e93-febc-4ad0-8943-55cf2ad01dac"
+                      name="Upper"
+                      value="1,1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ac61508-56fa-4cab-abc3-f720b1407af5"
+                  name="Membresia"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="aaff154b-d06b-49af-b5f5-7d57798a2ee6"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e952b287-c6a8-4ba2-a31a-eaf6209360ce"
+                      name="Upper"
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -147,6 +212,7 @@
           <property
             Id="c7956380-5a48-4e6d-9203-5da8cd250444"
             name="nombre"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -158,6 +224,7 @@
           <property
             Id="71c700fa-71c1-4df1-b7ef-2245b7dfda62"
             name="apellido"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -169,6 +236,7 @@
           <property
             Id="b20ef928-8ed0-475b-a3fd-cc0e55bbdfed"
             name="fecha de nacimiento"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -180,6 +248,7 @@
           <property
             Id="0ba49843-e4de-423d-83a4-cbc0ba610137"
             name="direccion"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -191,6 +260,7 @@
           <property
             Id="cb586c13-a92d-40cd-8131-3832108f2193"
             name="mail"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -202,6 +272,7 @@
           <property
             Id="95c64524-7b00-40f5-a06b-67b7ffc19065"
             name="telefono"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -213,6 +284,7 @@
           <property
             Id="0b8181ee-c0c1-4551-98b6-9ef7656754b0"
             name="email"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -224,6 +296,7 @@
           <property
             Id="77ad0c2b-0848-41d1-8ac9-639136b03f4a"
             name="DNI"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -235,6 +308,7 @@
           <property
             Id="ec52594d-6197-4a7a-bef3-3a029777b886"
             name="idtarjeta"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -287,10 +361,10 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="388adf02-4684-41a7-bcb9-97f95b5e9126"
+            Id="554ae683-fcbb-4b89-ad69-7b08469afd25"
             isDerived="false"
             sourceEndRoleName="Oferta"
-            targetEndRoleName="Deporte"
+            targetEndRoleName="Actividad"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -300,7 +374,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="43644066-43bc-4931-9f3e-1d381e5291ac"
+                  Id="ac0754e3-da3f-4536-a5b5-5321c8ed3da6"
                   name="Oferta"
                   isLeaf="false"
                   isStatic="false"
@@ -312,22 +386,22 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="dd4464f0-7d82-48bf-806e-df29338b37b7"
+                      Id="2461c7ad-7dab-4903-ad11-2021541a61f5"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="072e8f8d-06c9-4785-9be2-216f2f9de0a8"
+                      Id="5c5687a5-572b-41b6-bd7e-db1a31290c1b"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="e8e15630-7fb6-4cb8-a3c4-9b66c460821a"
-                  name="Deporte"
+                  Id="ac710e35-3244-4bdb-a63e-e0a8b2131a69"
+                  name="Actividad"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -337,15 +411,15 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="3157be51-3da8-481d-b89c-f6f85ab9a208"
+                      Id="a09e6c4d-8105-4cb2-b0ca-dd2b2ef33acb"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="b8f8e88e-57c4-4b09-b56c-f9ce524d592f"
+                      Id="fa414647-8824-49c2-8c1b-57f99ebf912a"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -356,6 +430,7 @@
           <property
             Id="1554733f-b261-47f0-bb2a-6594b4eeb8d0"
             name="tipo"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -367,6 +442,7 @@
           <property
             Id="558092d5-10dc-4a85-b6b2-b470aa055d51"
             name="fechaDesde"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -378,6 +454,7 @@
           <property
             Id="1f2a91d5-edfe-4b00-81d3-bfa332ba0839"
             name="fechaHasta"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -389,6 +466,7 @@
           <property
             Id="6fa06c42-bf45-44a4-b374-5f3e6ca8c832"
             name="estado"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -411,6 +489,7 @@
           <property
             Id="46574f4c-4434-4042-ac95-2cb6be862054"
             name="nombre"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -422,6 +501,7 @@
           <property
             Id="8da2f439-50f5-4516-9882-df2cf759da28"
             name="detalle"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -433,6 +513,7 @@
           <property
             Id="efb8412b-3019-4739-a596-078c739eb46d"
             name="estado"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -444,6 +525,7 @@
           <property
             Id="bc304daf-70dd-4e94-8379-0467743ff79b"
             name="precio"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -516,13 +598,13 @@
                     <literalString
                       Id="63b5c06d-bda1-42f2-bbe2-509ba6f38f25"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="2a35a615-af67-4cc8-bac7-62b910715c30"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -533,6 +615,7 @@
           <property
             Id="0a0ff107-d955-478d-844d-b5ccc58e10da"
             name="monto"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -544,6 +627,7 @@
           <property
             Id="06cad0d3-d7bc-4739-92fd-0e4fb25de89c"
             name="fechaPedido"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -555,6 +639,7 @@
           <property
             Id="e0a23120-5b0d-4eb0-a62b-bb7f6a1c67bd"
             name="estado"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -566,6 +651,7 @@
           <property
             Id="cd1b8b00-e943-4a04-a4aa-cc069e8709cf"
             name="id_orden"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -577,6 +663,7 @@
           <property
             Id="a1fe32e9-a94a-45f9-9b9b-264524c3e39d"
             name="detalles"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -595,10 +682,78 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="82bb0097-c343-4b63-a0bd-dd09d80fe82a"
+            isDerived="false"
+            sourceEndRoleName="Ejercicio"
+            targetEndRoleName="Rutina"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="72cd9d46-7890-4866-97f5-029a081e35fb"
+              LastKnownName="Ejercicio"
+              LastKnownLocation="Package_1537.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb76039b-6108-4c32-90c6-08bb1cfd3a24"
+                  name="Ejercicio"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="751c8377-59a6-49fd-bf9e-4b98081d0337"
+                      name="Lower"
+                      value="1,1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c7e7c427-186c-44ca-b255-43877d16a29d"
+                      name="Upper"
+                      value="1,1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45d114cf-81d5-4151-8d3b-1c8814f1fd64"
+                  name="Rutina"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b5bdc905-8d4d-4162-a33e-d3db65d8818d"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2277c333-0b64-497d-816c-553b55e9bad0"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="973225cc-8b4e-417b-8b2a-d22b473c7cf2"
             name="tipo"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -617,16 +772,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <generalsInternal>
-          <generalization
-            Id="709fe4f6-2b0c-4acb-8cb7-fc7487118b1b"
-            isSubstitutable="false">
-            <classMoniker
-              Id="e07a06f1-2c8e-4779-8bb4-c92cf03e4846"
-              LastKnownName="Deporte"
-              LastKnownLocation="Package_1537.uml" />
-          </generalization>
-        </generalsInternal>
         <ownedAttributesInternal>
           <property
             Id="e5d5fad2-62a7-4160-9411-289b183cc96e"
@@ -671,77 +816,11 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="82bb0097-c343-4b63-a0bd-dd09d80fe82a"
-            isDerived="false"
-            sourceEndRoleName="Ejercicio"
-            targetEndRoleName="Rutina"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="94045e1b-eb1f-4be4-a782-46183b241acd"
-              LastKnownName="Rutina"
-              LastKnownLocation="Package_1537.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="cb76039b-6108-4c32-90c6-08bb1cfd3a24"
-                  name="Ejercicio"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="751c8377-59a6-49fd-bf9e-4b98081d0337"
-                      name="Lower"
-                      value="1.N" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="c7e7c427-186c-44ca-b255-43877d16a29d"
-                      name="Upper"
-                      value="1.N" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="45d114cf-81d5-4151-8d3b-1c8814f1fd64"
-                  name="Rutina"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="b5bdc905-8d4d-4162-a33e-d3db65d8818d"
-                      name="Lower"
-                      value="1,1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="2277c333-0b64-497d-816c-553b55e9bad0"
-                      name="Upper"
-                      value="1,1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="805ab03e-b177-4c6f-8a55-bfd6c1c399c9"
             name="nombre"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -753,6 +832,7 @@
           <property
             Id="7408234c-cdb6-4739-83a3-1356cf73275f"
             name="dia"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -764,6 +844,7 @@
           <property
             Id="9c991bbe-aba9-455c-acc5-fb4ee9b25f33"
             name="detalle"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -783,71 +864,6 @@
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
-          <association
-            Id="78bc45b4-da6c-4944-a527-0dbb74ec0251"
-            isDerived="false"
-            sourceEndRoleName="Sala"
-            targetEndRoleName="Fitness"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="d70663f0-d0d4-411a-a5c5-a464bd5d42cc"
-              LastKnownName="Fitness"
-              LastKnownLocation="Package_1537.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="bf25b83e-16e0-4217-a116-6da36154000a"
-                  name="Sala"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="d27cf1c6-4165-4bb2-bbdc-e09e81f0968a"
-                      name="Lower"
-                      value="1,1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="6a60f730-916e-4cce-a175-dfde0d8d3c67"
-                      name="Upper"
-                      value="1,1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="799b64f5-b772-4979-8b4d-75b0234d94d6"
-                  name="Fitness"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="f4a9328c-c650-4633-ae42-3dcd21465346"
-                      name="Lower"
-                      value="1,N" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="12cdfa44-fe03-42c1-a27b-c10ded1ec54a"
-                      name="Upper"
-                      value="1,N" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="d4ec2ae8-ee52-44ad-a088-6da9f30b8c8e"
             isDerived="false"
@@ -901,13 +917,13 @@
                     <literalString
                       Id="ad13839b-3bf7-4aaf-a1dd-33f54a35832b"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="5ad67353-36b3-412d-99ea-94d31d437e25"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -918,6 +934,7 @@
           <property
             Id="2cf7f5af-3fe9-4f03-b82a-ae885ad4f1c1"
             name="numero"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -929,6 +946,7 @@
           <property
             Id="cdd54ad1-ba55-40ed-a5d7-0fd6e60d39d5"
             name="horario"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -940,6 +958,7 @@
           <property
             Id="b4340989-ef1f-4e0a-9566-18df5f1a991b"
             name="cupo"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1019,13 +1038,13 @@
                     <literalString
                       Id="3be185db-2b25-45cd-8107-bc6130adad37"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="766bec28-c602-4e84-8513-403accc06bdf"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1036,6 +1055,7 @@
           <property
             Id="745ba2ab-a88b-4859-9762-0f5966bc079e"
             name="nombre"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1047,83 +1067,7 @@
           <property
             Id="a173bdb7-127d-4938-a95a-7e9286b9ee5d"
             name="rango"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="74613a79-fba8-4172-a626-53a1ada37694"
-        name="Membresia"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="aafe4b26-5d86-488b-aea4-ded60b392f1a"
-            name="nombre"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="9a4be9fe-cb4e-44a4-beeb-48ab04b1efce"
-            name="apellido"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="eaa3d6ec-b209-434d-99bc-fd7d18d85f0e"
-            name="idtarjeta"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="44672f9f-316d-4bac-8dfa-b4b9663c058b"
-            name="nombreclase"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="01d636b8-52ad-406c-a099-40a5132b4ccc"
-            name="fechapago"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="a8c92c89-d339-4351-83d7-9e43b1c031c9"
-            name="cantidadclases"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1142,10 +1086,143 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6427eab7-3096-4354-a950-4de7db4b83f0"
+            isDerived="false"
+            sourceEndRoleName="Deporte"
+            targetEndRoleName="Ticket"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9d645a35-9733-4fd5-a1ec-48f04c86ffaa"
+              LastKnownName="Ticket"
+              LastKnownLocation="Package_1537.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e89a824-4dc5-4992-b262-0321f18e182a"
+                  name="Deporte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="259e8355-6015-4056-9592-4ded479fa82f"
+                      name="Lower"
+                      value="1,1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="115af839-0261-48a3-99e5-d48501fbf8aa"
+                      name="Upper"
+                      value="1,1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40c2e5e7-1cb4-4031-91ee-945546c09b3b"
+                  name="Ticket"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7d398ce4-d325-4afa-a74b-18fbf75c2f1d"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="58a689f9-74f5-4d34-8a09-b80f5c5f2c26"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cff871c7-7c29-4d52-92f3-1ce994d11ed2"
+            isDerived="false"
+            sourceEndRoleName="Deporte"
+            targetEndRoleName="Sala"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b6a49c93-042e-4cf9-8eff-81ba2959222d"
+              LastKnownName="Sala"
+              LastKnownLocation="Package_1537.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aef12380-0c9b-4b84-a7e5-8fc202e77fcb"
+                  name="Deporte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="954262be-8737-47eb-beee-720e5f5ea48c"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8d8181d4-4de9-4c61-9644-7fbc2f00b51d"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="312ac44c-1a9c-4457-b2c9-98835ae769c1"
+                  name="Sala"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2bdd47a5-411e-4420-af29-44accbb59299"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5d8bf480-7f3d-4e89-8099-dd030aa6c13a"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="cc45502f-901b-42e4-9019-a0844d155b9c"
-            name="fechaPago"
+            name="nombre"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1156,7 +1233,111 @@
             isComposite="false" />
           <property
             Id="0dd566ba-3e3f-4bfd-8e7b-0aaa5a693622"
+            name="tipo"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1dc20714-01fa-4ff2-9da9-7fd209d6bed1"
+            name="precioStandar"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9d645a35-9733-4fd5-a1ec-48f04c86ffaa"
+        name="Ticket"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="6ecdce36-e2aa-4586-ad36-bb8e181e2f53"
+            name="fechaPago"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="aa35a8bb-627c-4945-935d-4fa063966e1b"
             name="monto"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c46e2fa2-b16e-42a8-81af-3a85c1164ba1"
+        name="Membresia"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="2113ecf1-bc86-4be7-ab40-98514a20206e"
+            name="asistencia"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="30a4d37c-0818-4c61-a0a6-e4da9b6bc6ac"
+        name="Actividad"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="276d81d7-11d2-45be-8a0b-089cd05e88a1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="e07a06f1-2c8e-4779-8bb4-c92cf03e4846"
+              LastKnownName="Deporte"
+              LastKnownLocation="Package_1537.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="0e98dd3a-701f-45bd-b7b7-692848bc4fe6"
+            name="precioStandar"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

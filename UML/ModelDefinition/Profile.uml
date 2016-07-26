@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
   dslVersion="1.0.0.0"
   Id="c3051cc4-66c5-41d9-a9f0-1614a9d54ebe"
   name="Profiles" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -34,6 +34,7 @@
           <property
             Id="c93aec0c-dcf9-4eb0-a8b2-b5b9b706094c"
             name="codigo"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -45,6 +46,7 @@
           <property
             Id="45cbae7f-935a-4cd6-8b71-d5bc8f1aa627"
             name="description"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -56,6 +58,7 @@
           <property
             Id="aee0c51f-8764-4dde-b893-a98fbeffdae5"
             name="nombre"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -103,13 +106,13 @@
                     <literalString
                       Id="0c9507b6-bc8b-4630-8e24-5af0be79bdbd"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="1047cf9d-f9b7-4e61-b62d-bc9142a1efef"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -128,13 +131,13 @@
                     <literalString
                       Id="b666e1ac-465f-4657-a9b9-9e62a7bdb567"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="7a0b51a2-0df0-44a4-87f9-fbc9a02303a1"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -193,13 +196,13 @@
                     <literalString
                       Id="bb11c2d4-2ffe-4ef4-b861-2b48ac38203e"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="009eb47e-e853-4c47-bc26-32df190f239f"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -258,13 +261,13 @@
                     <literalString
                       Id="e9ef9b25-2063-4d3c-a978-53397030e0fa"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="68e0a47f-0d55-4169-99de-674edb685eb5"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -275,6 +278,7 @@
           <property
             Id="5ad80739-5617-40fe-8f41-b9644678d34e"
             name="name"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -286,6 +290,7 @@
           <property
             Id="4a7076cd-18ac-41c6-9a6e-9d7d0ac1c054"
             name="password"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -368,13 +373,13 @@
                     <literalString
                       Id="f0f9b893-f81b-4fd1-95eb-fec0c0370cbb"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="2e248d78-83e9-446d-85e4-79958b3ac42d"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -393,13 +398,13 @@
                     <literalString
                       Id="e26cea90-342a-493a-8cd4-2644eb300a73"
                       name="Lower"
-                      value="1,N" />
+                      value="1,*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="05552256-706f-4bf4-8e0b-822dd7d5a67c"
                       name="Upper"
-                      value="1,N" />
+                      value="1,*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>

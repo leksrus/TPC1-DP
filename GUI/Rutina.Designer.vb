@@ -32,6 +32,9 @@ Partial Class Rutina
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -103,7 +106,7 @@ Partial Class Rutina
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(26, 313)
+        Me.Button1.Location = New System.Drawing.Point(404, 317)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(131, 38)
         Me.Button1.TabIndex = 8
@@ -112,18 +115,47 @@ Partial Class Rutina
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(220, 313)
+        Me.Button2.Location = New System.Drawing.Point(404, 398)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(131, 38)
         Me.Button2.TabIndex = 9
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(389, 22)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(168, 251)
+        Me.ListBox1.TabIndex = 10
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(29, 317)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(131, 38)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Agregar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(220, 317)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(131, 38)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "Modificar"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Rutina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(405, 383)
+        Me.ClientSize = New System.Drawing.Size(577, 448)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox3)
@@ -151,4 +183,7 @@ Partial Class Rutina
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class

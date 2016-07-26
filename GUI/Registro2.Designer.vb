@@ -70,7 +70,7 @@ Partial Class Registro2
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(93, 96)
+        Me.Label3.Location = New System.Drawing.Point(92, 127)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 13)
         Me.Label3.TabIndex = 4
@@ -79,7 +79,7 @@ Partial Class Registro2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(111, 135)
+        Me.Label4.Location = New System.Drawing.Point(118, 159)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 5
@@ -88,11 +88,11 @@ Partial Class Registro2
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(111, 172)
+        Me.Label5.Location = New System.Drawing.Point(101, 93)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 13)
+        Me.Label5.Size = New System.Drawing.Size(66, 13)
         Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Cantidad"
+        Me.Label5.Text = "TipoDeporte"
         '
         'Registro2
         '

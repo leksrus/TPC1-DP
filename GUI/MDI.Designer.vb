@@ -50,7 +50,7 @@ Partial Class MDI
         Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RecepcionToolStripMenuItem, Me.ToolStripMenuItem2, Me.ProfesoresToolStripMenuItem, Me.CoordinacionToolStripMenuItem, Me.ToolStripMenuItem3, Me.SalirToolStripMenuItem})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
-        Me.MenuToolStripMenuItem.Text = "Menu"
+        Me.MenuToolStripMenuItem.Text = "&Menu"
         '
         'RecepcionToolStripMenuItem
         '
@@ -92,7 +92,7 @@ Partial Class MDI
         Me.IdiomasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SeleccionDeIdiomaToolStripMenuItem})
         Me.IdiomasToolStripMenuItem.Name = "IdiomasToolStripMenuItem"
         Me.IdiomasToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.IdiomasToolStripMenuItem.Text = "Idiomas"
+        Me.IdiomasToolStripMenuItem.Text = "&Idiomas"
         '
         'SeleccionDeIdiomaToolStripMenuItem
         '
@@ -103,8 +103,8 @@ Partial Class MDI
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(24, 20)
+        Me.HelpToolStripMenuItem.Text = "&?"
         '
         'MDI
         '
