@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="45a60b8e-f2fb-447e-8ee9-e5f7d2068819" name="UMLSequenceFicharIngreso" linkedPackageId="e4f7b25c-61c6-4f61-a652-fee7d9a55fd7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="45a60b8e-f2fb-447e-8ee9-e5f7d2068819" name="UMLSequenceFicharIngreso" linkedPackageId="e4f7b25c-61c6-4f61-a652-fee7d9a55fd7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="7d361995-8c14-4833-9e00-d2340da533ff" name="UMLSequenceFicharIngreso" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -159,16 +159,16 @@
               <lifelineMoniker Id="9236f6d5-e886-4553-be90-8c4a75423240" LastKnownName="DAL : Acceso" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="555ba01e-9615-4b71-9d4d-90b12b9ae21c" name="MessageOccurrenceSpecification37">
-            <elementDefinition Id="32e75415-79bd-4e84-9af7-6966adc60968" />
-            <covered>
-              <lifelineMoniker Id="1b667c06-d68e-49d1-8518-e0099eaaed12" LastKnownName="DAL : MP_Cliente" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="00729c3e-f806-4153-8836-241cedab3847" name="MessageOccurrenceSpecification38">
             <elementDefinition Id="b735750b-dd17-4ffb-ab82-804b0f63c54b" />
             <covered>
               <lifelineMoniker Id="9236f6d5-e886-4553-be90-8c4a75423240" LastKnownName="DAL : Acceso" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="555ba01e-9615-4b71-9d4d-90b12b9ae21c" name="MessageOccurrenceSpecification37">
+            <elementDefinition Id="32e75415-79bd-4e84-9af7-6966adc60968" />
+            <covered>
+              <lifelineMoniker Id="1b667c06-d68e-49d1-8518-e0099eaaed12" LastKnownName="DAL : MP_Cliente" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="b63d9905-9471-48f9-8e03-de6c800b3d07" name="MessageOccurrenceSpecification40">
@@ -699,7 +699,7 @@
               <messageOccurrenceSpecificationMoniker Id="72ec3496-6d9f-4331-9afb-d0b59bde64da" LastKnownName="MessageOccurrenceSpecification32" />
             </receiveEvent>
           </message>
-          <message Id="06afcac9-a9c0-4d23-a338-cb64e1d5d51c" name="ActualizarFicha(cliente): membresia" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ ActualizarFicha(cliente) : membresia">
+          <message Id="06afcac9-a9c0-4d23-a338-cb64e1d5d51c" name="ActualizarFicha(cliente, membresia): membresia" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ ActualizarFicha(cliente, membresia) : membresia">
             <elementDefinition Id="5f765deb-1ad1-4e97-99f4-653084805974" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="9f4b0222-1365-4e6f-a8fc-190dee86c4f5" LastKnownName="MessageOccurrenceSpecification45" />
@@ -708,7 +708,7 @@
               <messageOccurrenceSpecificationMoniker Id="2abd709c-2abf-4734-ba03-59e8fd72509e" LastKnownName="MessageOccurrenceSpecification46" />
             </receiveEvent>
           </message>
-          <message Id="8a66e598-4194-49e0-9efd-e1de140b3dc9" name="+ Actualizar(cliente) : boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ Actualizar(cliente) : boolean">
+          <message Id="8a66e598-4194-49e0-9efd-e1de140b3dc9" name="+ Actualizar(cliente, membresia) : boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ Actualizar(cliente, membresia) : boolean">
             <elementDefinition Id="0dd4ed1e-8f8c-453a-a4ce-5a3d44de244b" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="89bad220-ddf1-42dc-8c8a-18e3fc4a6ff6" LastKnownName="MessageOccurrenceSpecification49" />

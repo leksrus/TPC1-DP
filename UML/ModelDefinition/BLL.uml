@@ -837,82 +837,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="4d89e162-5f52-4473-9b2a-9239bdd2f9fc"
-            name="ValidarDisponibilidad"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8e90c18f-d2ef-4047-8057-ae9d377f6c7b"
-                  name="fitness"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a0ada54f-d543-4f2c-9670-bff26656bc15"
-                  name="turno"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="8f6c22b7-b033-4098-8053-f67f88cf62a1"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="36800ed9-9b54-4af0-aa4a-e785b3febc0e"
-                      LastKnownName="sala[]"
-                      LastKnownLocation="UML.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="a1e5a4e7-18ec-46b2-a546-a06d6686b539"
-            name="InscribirClienteGYM"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="78e297a1-dd04-4c46-9bd0-4bb075da8856"
-                  name="cliente"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7f86ef04-1de2-4a18-906e-3aac1f24648d"
-                  name="gym"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="394acab1-8356-46c9-a93f-b5038f927e2f"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="1e653444-a71d-4595-8422-6811bc23a638"
-                      LastKnownName="string"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="c1d006be-566d-4f3c-877f-f70a39cc0141"
             name="ValidarCurso"
             isLeaf="false"
@@ -962,44 +886,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="4c7963d1-7d0d-4391-9e60-0f43f81d7943"
-            name="RealizarValidacion"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="45a76249-c8d0-460d-b0cd-6f8a61eb542e"
-                  name="GYM"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d6c18592-2af4-4c06-91ed-03ec711812c8"
-                  name="cliente"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="0c19efb6-0f71-4078-9920-ad7b7f5f65ab"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="af6b1f26-ba04-4bc0-a424-7acb54d9ed22"
-                      LastKnownName="membresia"
-                      LastKnownLocation="UML.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="6339127d-6590-4871-9c97-a3fbd9647e2f"
             name="RegistrarCliente"
             isLeaf="false"
@@ -1018,44 +904,6 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="7d2df5d1-b246-4b02-8f9c-3f47cf351777"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="1e653444-a71d-4595-8422-6811bc23a638"
-                      LastKnownName="string"
-                      LastKnownLocation="BLL.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="e69575f0-a01d-472b-9508-cff207c85163"
-            name="InscribirCliente"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="13119cff-022a-482c-b285-77c6367439eb"
-                  name="cliente"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="4ed5a3da-665b-4f74-880c-4d707697cecb"
-                  name="turno"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ead9fa25-d104-419e-a7a8-802d9ee7eea8"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -1176,7 +1024,128 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="cde99489-734e-4359-b941-e86da54862c7"
+            Id="ba93c3d6-b828-45de-9f07-4ec6dcf2d84c"
+            name="ValidarDisponibilidad"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4d1121b2-5c94-4300-b995-1c32b15538e9"
+                  name="deporte"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="efdaeb54-1a73-4696-b47e-85c9bbf18b02"
+                  name="turno"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b73e9e1b-7e3b-4c42-b6f3-ce5ecc1caaa0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="36800ed9-9b54-4af0-aa4a-e785b3febc0e"
+                      LastKnownName="sala[]"
+                      LastKnownLocation="UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ec6309a2-346d-4dfd-8718-97ce33074b6b"
+            name="InscribirCliente"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5275e75a-1b6e-4f98-a2a1-1bc6a47bd42a"
+                  name="cliente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b3aa426e-0773-4623-b2d4-1d21bb2fa07e"
+                  name="deporte"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0909fad5-7aee-456f-89ef-74f6942d7c28"
+                  name="turno"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d01313f-12f4-4fa1-8390-f638e5784e0a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c733064c-7f1a-470f-9a6d-ebd7992d9374"
+            name="InscribirClienteGYM"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9865d850-d874-4fdc-a938-4765bb4a7ad1"
+                  name="cliente"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b8c1060-4bc8-4ca6-933e-0d8301a42437"
+                  name="deporte"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cdaf94b8-f4d3-40ce-848a-3f5bd8c82e0f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="1e653444-a71d-4595-8422-6811bc23a638"
+                      LastKnownName="string"
+                      LastKnownLocation="BLL.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="43cbc13e-6dc1-442e-bca5-c38395829cfb"
             name="ActualizarFicha"
             isLeaf="false"
             isStatic="false"
@@ -1186,14 +1155,21 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ad46da1f-fd8d-4cd1-bca1-b48225b9a560"
+                  Id="9fc85e72-01cc-45a3-ab03-7cb4a3527cde"
                   name="cliente"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="17f5e775-7b87-4d85-bd21-b16321b9b077"
+                  Id="29a140b7-c6c4-4681-b9ed-3f593ddc8807"
+                  name="membresia"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1bab5d97-5e33-49c2-b59f-fa272d8f9388"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="d69793f5-4b40-4e4c-9cb9-3350efe40ac9" name="UMLSequenceRegistrarPago" linkedPackageId="4ef7b014-69ee-4b8f-8a2b-e6eecc7552ff" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="d69793f5-4b40-4e4c-9cb9-3350efe40ac9" name="UMLSequenceRegistrarPago" linkedPackageId="4ef7b014-69ee-4b8f-8a2b-e6eecc7552ff" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="b8652e24-4037-4932-98fd-404ef1575672" name="UMLSequenceRegistrarPago" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -137,16 +137,16 @@
               <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="3d9a9676-71c9-4c91-8285-e3db86d033e7" name="MessageOccurrenceSpecification21">
-            <elementDefinition Id="09e5a1d0-21ec-4312-a802-222339f43886" />
-            <covered>
-              <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="cdb85508-aaa3-462d-a030-f5cecdb8450e" name="MessageOccurrenceSpecification22">
             <elementDefinition Id="017524ad-4a50-4377-8bf8-69bf3c77e7fc" />
             <covered>
               <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="3d9a9676-71c9-4c91-8285-e3db86d033e7" name="MessageOccurrenceSpecification21">
+            <elementDefinition Id="09e5a1d0-21ec-4312-a802-222339f43886" />
+            <covered>
+              <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="9c938570-b6cb-4103-bc05-17c595f83e15" name="BehaviorExecutionSpecification7">
@@ -275,16 +275,16 @@
               <lifelineMoniker Id="1ff45abf-6b56-4470-bfcd-2a61e58d8a50" LastKnownName="DAL : MP_Cliente" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="94c8b307-5ddc-420b-83ce-4d0c39f94b74" name="MessageOccurrenceSpecification23">
-            <elementDefinition Id="870c7720-6bf7-4bb2-b21e-5e122d6f7d6f" />
-            <covered>
-              <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="e11e1b86-f02a-42e5-97c2-fd965db09f80" name="MessageOccurrenceSpecification24">
             <elementDefinition Id="9919c406-dd81-40df-9b37-a29bd8ff3f9e" />
             <covered>
               <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="94c8b307-5ddc-420b-83ce-4d0c39f94b74" name="MessageOccurrenceSpecification23">
+            <elementDefinition Id="870c7720-6bf7-4bb2-b21e-5e122d6f7d6f" />
+            <covered>
+              <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="1534f066-d516-47e8-9e74-5172d377bc6c" name="ExecutionOccurrenceSpecification12">
@@ -678,16 +678,16 @@
               <lifelineMoniker Id="a3ce4303-f6a5-4d84-9cd8-6f5ef60b9b4f" LastKnownName="BLL : Recepcion" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="4684522f-5778-4e62-a4b9-df1c2f26939c" name="MessageOccurrenceSpecification52">
-            <elementDefinition Id="acc9b90d-efa2-4efe-86e6-b9825aa096c2" />
-            <covered>
-              <lifelineMoniker Id="ee522875-30b2-4c8e-8c0e-7857214362d6" LastKnownName="User" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="e1e3f7ee-7f8c-485a-9ab7-1d0ad92d1e5e" name="MessageOccurrenceSpecification51">
             <elementDefinition Id="ded04502-1b4a-44be-a03c-9025033d0269" />
             <covered>
               <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4684522f-5778-4e62-a4b9-df1c2f26939c" name="MessageOccurrenceSpecification52">
+            <elementDefinition Id="acc9b90d-efa2-4efe-86e6-b9825aa096c2" />
+            <covered>
+              <lifelineMoniker Id="ee522875-30b2-4c8e-8c0e-7857214362d6" LastKnownName="User" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="b2e5f3d9-f54a-42a7-83cf-0aaaa5fde0da" name="ExecutionOccurrenceSpecification26">
@@ -961,16 +961,16 @@
               <lifelineMoniker Id="ee1ff5dd-2c37-4951-acbb-d6de5813d44e" LastKnownName="BLL : LogManagement" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b6b3315b-c3c2-4dcd-99ce-07526b918725" name="MessageOccurrenceSpecification87">
-            <elementDefinition Id="95dca143-c93c-428e-97ca-3ed3341fc2e9" />
-            <covered>
-              <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4224d761-6c58-4c72-b926-277bcab415ed" name="MessageOccurrenceSpecification88">
             <elementDefinition Id="7181c37f-863d-430f-b63b-927722be6bb3" />
             <covered>
               <lifelineMoniker Id="ee1ff5dd-2c37-4951-acbb-d6de5813d44e" LastKnownName="BLL : LogManagement" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b6b3315b-c3c2-4dcd-99ce-07526b918725" name="MessageOccurrenceSpecification87">
+            <elementDefinition Id="95dca143-c93c-428e-97ca-3ed3341fc2e9" />
+            <covered>
+              <lifelineMoniker Id="9684f125-9280-40a4-925c-aace2a173393" LastKnownName="Frm Registro" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="5fc00674-aad2-4685-a1d5-a4f8bb57665a" name="ExecutionOccurrenceSpecification46">
@@ -1411,7 +1411,7 @@
               <messageOccurrenceSpecificationMoniker Id="4684522f-5778-4e62-a4b9-df1c2f26939c" LastKnownName="MessageOccurrenceSpecification52" />
             </receiveEvent>
           </message>
-          <message Id="ed8d37b6-bcd0-4d72-b26b-1d85a06165b7" name="ConfirmarPago(cliente): string" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+          <message Id="ed8d37b6-bcd0-4d72-b26b-1d85a06165b7" name="ConfirmarPago(cliente, deporte, ticket): string" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
             <elementDefinition Id="2e876627-4afc-43ef-b13d-d175630c0805" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="0342f21f-c930-434c-86e2-8cc5a9c70609" LastKnownName="MessageOccurrenceSpecification71" />
@@ -1429,7 +1429,7 @@
               <messageOccurrenceSpecificationMoniker Id="1c43f094-c65e-450a-8a3c-9638073da765" LastKnownName="MessageOccurrenceSpecification76" />
             </receiveEvent>
           </message>
-          <message Id="2bcb6182-b7cd-461f-90dd-9944a0358813" name="Actualizar(cliente): boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ Actualizar(cliente) : boolean">
+          <message Id="2bcb6182-b7cd-461f-90dd-9944a0358813" name="Actualizar(cliente, deporte, ticket): boolean" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="+ Actualizar(cliente, deporte, ticket) : boolean">
             <elementDefinition Id="6cbff5a3-bbd0-4ff8-94b1-6eacf8fca380" />
             <sendEvent>
               <messageOccurrenceSpecificationMoniker Id="50fb3b49-4410-490a-b21a-e77bbdad1eb5" LastKnownName="MessageOccurrenceSpecification79" />
