@@ -929,62 +929,71 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-        </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="2cf7f5af-3fe9-4f03-b82a-ae885ad4f1c1"
-            name="numero"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
+          <association
+            Id="cff871c7-7c29-4d52-92f3-1ce994d11ed2"
             isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="cdd54ad1-ba55-40ed-a5d7-0fd6e60d39d5"
-            name="horario"
-            visibility="Private"
+            sourceEndRoleName="Deporte"
+            targetEndRoleName="Sala"
             isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="b4340989-ef1f-4e0a-9566-18df5f1a991b"
-            name="cupo"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="0a98cbe1-d9ea-4397-8f37-9fc5989a88f7"
-        name="Interface1"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="ae2077f4-caa7-4528-bb5c-3fa076858f0e"
-        name="Turno"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
+            isAbstract="false">
+            <classMoniker
+              Id="e07a06f1-2c8e-4779-8bb4-c92cf03e4846"
+              LastKnownName="Deporte"
+              LastKnownLocation="Package_1537.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aef12380-0c9b-4b84-a7e5-8fc202e77fcb"
+                  name="Deporte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="954262be-8737-47eb-beee-720e5f5ea48c"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8d8181d4-4de9-4c61-9644-7fbc2f00b51d"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="312ac44c-1a9c-4457-b2c9-98835ae769c1"
+                  name="Sala"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2bdd47a5-411e-4420-af29-44accbb59299"
+                      name="Lower"
+                      value="1,*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5d8bf480-7f3d-4e89-8099-dd030aa6c13a"
+                      name="Upper"
+                      value="1,*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
           <association
             Id="8da1dd43-f99b-46f4-9c1e-1e6c2bebe7c2"
             isDerived="false"
@@ -993,8 +1002,8 @@
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="b6a49c93-042e-4cf9-8eff-81ba2959222d"
-              LastKnownName="Sala"
+              Id="ae2077f4-caa7-4528-bb5c-3fa076858f0e"
+              LastKnownName="Turno"
               LastKnownLocation="Package_1537.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1053,8 +1062,38 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
+            Id="2cf7f5af-3fe9-4f03-b82a-ae885ad4f1c1"
+            name="numero"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0a98cbe1-d9ea-4397-8f37-9fc5989a88f7"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ae2077f4-caa7-4528-bb5c-3fa076858f0e"
+        name="Turno"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
             Id="745ba2ab-a88b-4859-9762-0f5966bc079e"
-            name="nombre"
+            name="horainicio"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1065,8 +1104,20 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="a173bdb7-127d-4938-a95a-7e9286b9ee5d"
-            name="rango"
+            Id="81f424cf-0e85-43ab-9e07-4f009e253f6e"
+            name="cupomax"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="48d7e7a6-1da0-4938-930c-dfbdfb3927fe"
+            name="cupoactual"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1145,71 +1196,6 @@
                   <upperValueInternal>
                     <literalString
                       Id="58a689f9-74f5-4d34-8a09-b80f5c5f2c26"
-                      name="Upper"
-                      value="1,*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="cff871c7-7c29-4d52-92f3-1ce994d11ed2"
-            isDerived="false"
-            sourceEndRoleName="Deporte"
-            targetEndRoleName="Sala"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="b6a49c93-042e-4cf9-8eff-81ba2959222d"
-              LastKnownName="Sala"
-              LastKnownLocation="Package_1537.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="aef12380-0c9b-4b84-a7e5-8fc202e77fcb"
-                  name="Deporte"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="954262be-8737-47eb-beee-720e5f5ea48c"
-                      name="Lower"
-                      value="1,*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="8d8181d4-4de9-4c61-9644-7fbc2f00b51d"
-                      name="Upper"
-                      value="1,*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="312ac44c-1a9c-4457-b2c9-98835ae769c1"
-                  name="Sala"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="2bdd47a5-411e-4420-af29-44accbb59299"
-                      name="Lower"
-                      value="1,*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="5d8bf480-7f3d-4e89-8099-dd030aa6c13a"
                       name="Upper"
                       value="1,*" />
                   </upperValueInternal>
