@@ -119,6 +119,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLSequenceGenerarOferta.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceIngresarRutina.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceIngresarRutina.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceIngresarRutina.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLSequenceInscribirCliente.sequencediagram">
       <SubType>Content</SubType>
     </Content>

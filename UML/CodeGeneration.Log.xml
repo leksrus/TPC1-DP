@@ -6,9 +6,9 @@
   <MessageClass Name="Error" Label="Error" Option="Show errors" />
   <MessageClass Name="Property" Label="Property" Option="Show metadata" />
   <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
-  <Message Timestamp="2016-07-05T14:10:51" Importance="High" Text="Code generation or text transformation started." />
-  <Error Timestamp="2016-07-05T14:10:51" Importance="High" Text="No templates were found to process.  Configure templates by choosing 'Configure Default Code Generation Settings...' from the 'Architecture' menu, or change the selection for which code generation is launched." />
-  <Message Timestamp="2016-07-05T14:10:51" Importance="Diagnostic" Text="The selection included 1 elements which were not bound to a template." />
-  <Warning Timestamp="2016-07-05T14:10:51" Importance="Medium" Text="'UML::BLL::LogManagement' -  (Class): no bound template." />
-  <Message Timestamp="2016-07-05T14:10:51" Importance="High" Text="Code generation complete. Errors: 1. Warnings: 1." />
+  <Message Timestamp="2016-07-28T16:57:36" Importance="High" Text="Code generation or text transformation started." />
+  <Error Timestamp="2016-07-28T16:57:36" Importance="High" Text="No templates were found to process.  Configure templates by choosing 'Configure Default Code Generation Settings...' from the 'Architecture' menu, or change the selection for which code generation is launched." />
+  <Message Timestamp="2016-07-28T16:57:37" Importance="Diagnostic" Text="The selection included 1 elements which were not bound to a template." />
+  <Warning Timestamp="2016-07-28T16:57:37" Importance="Medium" Text="'UML::DAL::MP_Cliente' -  (Class): no bound template." />
+  <Message Timestamp="2016-07-28T16:57:37" Importance="High" Text="Code generation complete. Errors: 1. Warnings: 1." />
 </Log>

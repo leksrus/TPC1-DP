@@ -2011,6 +2011,24 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="fd6ecab4-7291-459b-8710-5e5e6a099965" name="BuscarCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="15c0e95b-5d88-4dbd-a15d-94739397db9f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c65c10b8-78a7-4874-898f-ebf83674f2ba" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="2569cad2-1473-4916-ba27-63049697fddf" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="cc18178e-62a9-4b8c-9d80-11f625f7458e" direction="Return" isUnique="false">
+                        <elementDefinition Id="78f294aa-4e96-49f5-aee0-cb77832b9073" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="b5bed9a1-f061-4e3f-8527-21f16c4211c7" LastKnownName="cliente[]" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
