@@ -3,6 +3,88 @@
   dslVersion="1.0.0.0"
   Id="c3db1c35-4d50-4ac6-bfd0-5b5a118686c0"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="3eeb3686-27e1-4726-afe4-052c31688f47"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b9f6cd9a-e891-4ed4-9611-dab16ee6935c">
+          <propertyInstance
+            Id="a6839d4c-bd6e-4878-8f14-f0b33201346d"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="05f79582-9ecd-4a8d-81d7-184b5b718d9a">
+          <propertyInstance
+            Id="6583d522-75af-4e84-a077-2378109a7565"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="93fd1805-202c-448e-8a02-f926f8d9f606">
+          <propertyInstance
+            Id="c0852773-42a9-4e14-9162-83bf0e46475a"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="81200a26-2b79-4919-bcb2-2dd424e473e8"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8cb252f2-1ec8-4937-bcee-f90de08f5a4d">
+          <propertyInstance
+            Id="ae69c688-5fd2-4510-8b58-efde4f451579"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="58a0911e-799e-41d5-b70c-edbd1cc27525">
+          <propertyInstance
+            Id="f3b47dfb-18ff-4ab3-906d-bf60932a5cda"
+            name="TemplateFilePath"
+            value="ClassTemplate=C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="f58ccad0-6037-48ed-aeeb-7464ebff941f">
+          <propertyInstance
+            Id="8cb55fb7-b5da-4a66-bfd3-eae78e72284a"
+            name="ProjectPath"
+            value="ClassTemplate=..\UMLLib\UMLLib.csproj|EnumTemplate=..\UMLLib\UMLLib.csproj|InterfaceTemplate=..\UMLLib\UMLLib.csproj|StructTemplate=..\UMLLib\UMLLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="7af428f4-ebe8-4d79-81ce-60fd7963c35b">
+          <propertyInstance
+            Id="aadc9543-f77c-446f-8914-9bf7039d8f49"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="111a888c-ad6a-41f2-8312-9cebdce568c5">
+          <propertyInstance
+            Id="e9d9ea71-cbee-4ec2-8411-40f0076bb0d5"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="21b52dbb-37d4-4111-946c-3cca1082ae04">
+          <propertyInstance
+            Id="09c87507-c91b-4d3d-9e1e-e195969fbb9e"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="78905e60-342e-47a5-a328-4a4764213277">
+          <propertyInstance
+            Id="069db32f-823d-412a-8d5d-81a05e1af75a"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -15,6 +97,18 @@
       <profileInstance
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="673d551b-814a-4076-961b-2fbe8f35a655">
+      <profileInstance
+        Id="aeed6982-83ce-43f0-b10f-d8462b0f0cf5"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="7b229d35-6520-4199-9d89-1da6389d892e">
+      <profileInstance
+        Id="d030acd4-f5be-4d1b-92fd-ad1c1ec6f43a"
+        name="TextTemplateBindings" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -48474,7 +48568,7 @@
           <operationMoniker
             Id="15c0e95b-5d88-4dbd-a15d-94739397db9f"
             LastKnownName="BuscarCliente"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </sendOperationEvent>
     </packageHasNamedElement>
@@ -48485,7 +48579,7 @@
           <operationMoniker
             Id="15c0e95b-5d88-4dbd-a15d-94739397db9f"
             LastKnownName="BuscarCliente"
-            LastKnownLocation="UML.uml" />
+            LastKnownLocation="BLL.uml" />
         </operation>
       </receiveOperationEvent>
     </packageHasNamedElement>
