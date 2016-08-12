@@ -105,7 +105,7 @@ Partial Class Bitacora
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Name = "Bitacora"
-        Me.Text = "Bitacora"
+        Me.Text = "Gestion de Bitacora"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -106,9 +106,9 @@
       <Project>{dff0d233-b92e-4383-b3c2-12b743989733}</Project>
       <Name>BE</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SEC\SEC.vbproj">
+    <ProjectReference Include="..\SEC\INFRA.vbproj">
       <Project>{a5fd15fe-1e3f-4232-8485-64170ffba67c}</Project>
-      <Name>SEC</Name>
+      <Name>INFRA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

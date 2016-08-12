@@ -1,11 +1,142 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SEC.CryptoManager">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Position X="8.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>CryptoManager.vb</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SEC.SesionManager">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SesionManager.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEC.User">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>User.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Componente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.Patente">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Patente.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEC.Componente">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Componente.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.Familia">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <AssociationLine Name="Componente" Type="SEC.Componente" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.406" Y="2.75" />
+        <Point X="7.406" Y="1.062" />
+        <Point X="6.75" Y="1.062" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Familia.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Componente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.UserData">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserData.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.Language">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Language.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.ExeprionMsg">
+    <Position X="2.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExeprionMsg.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Language" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.InterfaceMsg">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InterfaceMsg.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Language" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.Log">
+    <Position X="4.25" Y="5.25" Width="1.5" />
+    <AssociationLine Name="User" Type="SEC.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="5.591" />
+        <Point X="4.01" Y="5.591" />
+        <Point X="4.01" Y="1.5" />
+        <Point X="2" Y="1.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Log.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="TypeError" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SEC.Backup">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Backup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SEC.DVV">
+    <Position X="3" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DVV.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SEC.TypeError">
+    <Position X="7.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAgAA=</HashCode>
+      <FileName>TypeError.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

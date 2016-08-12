@@ -18,4 +18,12 @@
             _password = value
         End Set
     End Property
+
+    Public Property Componente As Componente
+        Get
+            Return Nothing
+        End Get
+        Set(value As Componente)
+        End Set
+    End Property
 End Class

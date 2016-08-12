@@ -33,7 +33,7 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(64, 36)
+        Me.Label1.Location = New System.Drawing.Point(29, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(64, 95)
+        Me.Label2.Location = New System.Drawing.Point(29, 88)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 13)
         Me.Label2.TabIndex = 1
@@ -50,41 +50,41 @@ Partial Class Login
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(121, 159)
+        Me.Button1.Location = New System.Drawing.Point(32, 142)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(118, 40)
+        Me.Button1.Size = New System.Drawing.Size(114, 40)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(208, 29)
+        Me.TextBox1.Location = New System.Drawing.Point(122, 29)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
         Me.TextBox1.TabIndex = 3
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(208, 88)
+        Me.TextBox2.Location = New System.Drawing.Point(122, 81)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(186, 20)
         Me.TextBox2.TabIndex = 4
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(121, 235)
+        Me.Button2.Location = New System.Drawing.Point(190, 142)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(118, 40)
         Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Crear Usuario"
+        Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(377, 300)
+        Me.ClientSize = New System.Drawing.Size(341, 192)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)

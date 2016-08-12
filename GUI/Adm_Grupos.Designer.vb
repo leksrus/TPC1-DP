@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Usuarios
+Partial Class Adm_Grupos
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -32,17 +32,17 @@ Partial Class Usuarios
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -156,41 +156,59 @@ Partial Class Usuarios
         Me.TabPage2.Text = "Gestion Usuarios y Grupos"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'RadioButton3
         '
-        Me.Button3.Location = New System.Drawing.Point(433, 481)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(109, 45)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Salir"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(361, 61)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(54, 17)
+        Me.RadioButton3.TabIndex = 14
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Grupo"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
-        'Label4
+        'TextBox2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(34, 26)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 13)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Nombre de Usuario"
+        Me.TextBox2.Location = New System.Drawing.Point(44, 281)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(155, 20)
+        Me.TextBox2.TabIndex = 13
         '
-        'TextBox1
+        'Label3
         '
-        Me.TextBox1.Location = New System.Drawing.Point(37, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(155, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(41, 240)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(91, 13)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Nombre de Grupo"
         '
-        'RadioButton1
+        'Button6
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(253, 24)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(96, 17)
-        Me.RadioButton1.TabIndex = 2
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Usuario Nuevo"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Button6.Location = New System.Drawing.Point(387, 147)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(109, 45)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "Crear"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(209, 147)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(109, 45)
+        Me.Button5.TabIndex = 10
+        Me.Button5.Text = "Desabilitar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(37, 147)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(109, 45)
+        Me.Button4.TabIndex = 9
+        Me.Button4.Text = "Buscar"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'RadioButton2
         '
@@ -203,69 +221,51 @@ Partial Class Usuarios
         Me.RadioButton2.Text = "Usuario Existente"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
-        'Button4
+        'RadioButton1
         '
-        Me.Button4.Location = New System.Drawing.Point(37, 147)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(109, 45)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "Buscar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(253, 24)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(96, 17)
+        Me.RadioButton1.TabIndex = 2
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Usuario Nuevo"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'Button5
+        'TextBox1
         '
-        Me.Button5.Location = New System.Drawing.Point(209, 147)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(109, 45)
-        Me.Button5.TabIndex = 10
-        Me.Button5.Text = "Desabilitar"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.TextBox1.Location = New System.Drawing.Point(37, 58)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(155, 20)
+        Me.TextBox1.TabIndex = 1
         '
-        'Button6
+        'Label4
         '
-        Me.Button6.Location = New System.Drawing.Point(387, 147)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(109, 45)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "Crear"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(34, 26)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(98, 13)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Nombre de Usuario"
         '
-        'Label3
+        'Button3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(41, 240)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 13)
-        Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Nombre de Grupo"
+        Me.Button3.Location = New System.Drawing.Point(433, 481)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(109, 45)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = "Salir"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(44, 281)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(155, 20)
-        Me.TextBox2.TabIndex = 13
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(361, 61)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(54, 17)
-        Me.RadioButton3.TabIndex = 14
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Grupo"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'Usuarios
+        'Adm_Grupos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(577, 535)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TabControl1)
-        Me.Name = "Usuarios"
-        Me.Text = "Usuarios"
+        Me.Name = "Adm_Grupos"
+        Me.Text = "Gestion de Grupos"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()

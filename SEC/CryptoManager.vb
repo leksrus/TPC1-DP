@@ -43,4 +43,19 @@ Public Class CryptoManager
         Return cipherText
     End Function
 
+    Public Function ConvertToHash(code As String) As String
+        Dim sb As StringBuilder = New StringBuilder
+        'Se genera el objeto mds5
+        Using mds5 As MD5 = MD5.Create
+            Dim inputbyte As Byte() = Encoding.ASCII.GetBytes(code)
+            Dim hash As Byte() = mds5.ComputeHash(inputbyte)
+            'convierto array inputbyte a hexa usando  stringbuilder
+            For i = 0 To hash.Length - 1
+                sb.Append(hash(i).ToString("X2"))
+                i += 1
+            Next
+        End Using
+        'devuelvo el codigo hash
+        Return sb.ToString
+    End Function
 End Class

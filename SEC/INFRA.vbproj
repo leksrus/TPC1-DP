@@ -63,6 +63,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backup.vb" />
+    <Compile Include="Componente.vb" />
+    <Compile Include="DVV.vb" />
+    <Compile Include="TypeError.vb" />
+    <Compile Include="ExeprionMsg.vb" />
+    <Compile Include="Familia.vb" />
+    <Compile Include="InterfaceMsg.vb" />
+    <Compile Include="Language.vb" />
+    <Compile Include="Log.vb" />
+    <Compile Include="Patente.vb" />
     <Compile Include="CryptoManager.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -79,6 +89,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SesionManager.vb" />
+    <Compile Include="User.vb" />
+    <Compile Include="UserData.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
