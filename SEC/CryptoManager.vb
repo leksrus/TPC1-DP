@@ -58,4 +58,5 @@ Public Class CryptoManager
         'devuelvo el codigo hash
         Return sb.ToString
     End Function
+
 End Class

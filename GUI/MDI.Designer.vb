@@ -32,16 +32,16 @@ Partial Class MDI
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IdiomasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SeleccionDeIdiomaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EspañolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IdiomasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestorUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestorGruposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IdiomasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -106,25 +106,19 @@ Partial Class MDI
         'SeleccionDeIdiomaToolStripMenuItem
         '
         Me.SeleccionDeIdiomaToolStripMenuItem.Name = "SeleccionDeIdiomaToolStripMenuItem"
-        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.SeleccionDeIdiomaToolStripMenuItem.Text = "Русский"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(24, 20)
-        Me.HelpToolStripMenuItem.Text = "&?"
         '
         'EnglishToolStripMenuItem
         '
         Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.EnglishToolStripMenuItem.Text = "English"
         '
         'EspañolToolStripMenuItem
         '
         Me.EspañolToolStripMenuItem.Name = "EspañolToolStripMenuItem"
-        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.EspañolToolStripMenuItem.Text = "Español"
         '
         'MantenimientoToolStripMenuItem
@@ -134,41 +128,47 @@ Partial Class MDI
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.MantenimientoToolStripMenuItem.Text = "&Mantenimiento"
         '
-        'PermisosToolStripMenuItem
-        '
-        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PermisosToolStripMenuItem.Text = "&Permisos"
-        '
-        'GestorUsuariosToolStripMenuItem
-        '
-        Me.GestorUsuariosToolStripMenuItem.Name = "GestorUsuariosToolStripMenuItem"
-        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.GestorUsuariosToolStripMenuItem.Text = "&Usuarios"
-        '
-        'GestorGruposToolStripMenuItem
-        '
-        Me.GestorGruposToolStripMenuItem.Name = "GestorGruposToolStripMenuItem"
-        Me.GestorGruposToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.GestorGruposToolStripMenuItem.Text = "&Grupos"
-        '
-        'BackupToolStripMenuItem
-        '
-        Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
-        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.BackupToolStripMenuItem.Text = "&Backups"
-        '
-        'LogsToolStripMenuItem
-        '
-        Me.LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
-        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.LogsToolStripMenuItem.Text = "&Logs"
-        '
         'IdiomasToolStripMenuItem1
         '
         Me.IdiomasToolStripMenuItem1.Name = "IdiomasToolStripMenuItem1"
         Me.IdiomasToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
         Me.IdiomasToolStripMenuItem1.Text = "&Administrar Idiomas"
+        '
+        'PermisosToolStripMenuItem
+        '
+        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.PermisosToolStripMenuItem.Text = "&Permisos"
+        '
+        'GestorUsuariosToolStripMenuItem
+        '
+        Me.GestorUsuariosToolStripMenuItem.Name = "GestorUsuariosToolStripMenuItem"
+        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.GestorUsuariosToolStripMenuItem.Text = "&Usuarios"
+        '
+        'GestorGruposToolStripMenuItem
+        '
+        Me.GestorGruposToolStripMenuItem.Name = "GestorGruposToolStripMenuItem"
+        Me.GestorGruposToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.GestorGruposToolStripMenuItem.Text = "&Grupos"
+        '
+        'BackupToolStripMenuItem
+        '
+        Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
+        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.BackupToolStripMenuItem.Text = "&Backups"
+        '
+        'LogsToolStripMenuItem
+        '
+        Me.LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
+        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.LogsToolStripMenuItem.Text = "&Logs"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(24, 20)
+        Me.HelpToolStripMenuItem.Text = "&?"
         '
         'MDI
         '

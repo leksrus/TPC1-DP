@@ -1,3 +1,3 @@
-﻿Public Class Bitacora
+﻿Public Class Adm_Logs
 
 End Class

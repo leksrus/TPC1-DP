@@ -1,37 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="SEC.CryptoManager">
-    <Position X="8.5" Y="2.5" Width="1.5" />
+  <Class Name="INFRA.CryptoManager">
+    <Position X="8.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>CryptoManager.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SEC.SesionManager">
+  <Class Name="INFRA.SesionManager">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SesionManager.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SEC.User">
+  <Class Name="INFRA.User">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAIAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AQQAKAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAgAAAAA=</HashCode>
       <FileName>User.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Componente" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SEC.Patente">
+  <Class Name="INFRA.Patente">
     <Position X="4.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Patente.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SEC.Componente">
+  <Class Name="INFRA.Componente">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -41,9 +42,9 @@
       <Property Name="User" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SEC.Familia">
+  <Class Name="INFRA.Familia">
     <Position X="6.25" Y="2.75" Width="1.5" />
-    <AssociationLine Name="Componente" Type="SEC.Componente" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="Componente" Type="INFRA.Componente" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="7.406" Y="2.75" />
         <Point X="7.406" Y="1.062" />
@@ -51,14 +52,14 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAABAAAAAAAAAg=</HashCode>
       <FileName>Familia.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Componente" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SEC.UserData">
+  <Class Name="INFRA.UserData">
     <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -68,7 +69,7 @@
       <Property Name="User" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SEC.Language">
+  <Class Name="INFRA.Language">
     <Position X="2.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -78,7 +79,7 @@
       <Property Name="User" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SEC.ExeprionMsg">
+  <Class Name="INFRA.ExeprionMsg">
     <Position X="2.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -88,7 +89,7 @@
       <Property Name="Language" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SEC.InterfaceMsg">
+  <Class Name="INFRA.InterfaceMsg">
     <Position X="0.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -98,18 +99,18 @@
       <Property Name="Language" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SEC.Log">
+  <Class Name="INFRA.Log">
     <Position X="4.25" Y="5.25" Width="1.5" />
-    <AssociationLine Name="User" Type="SEC.User" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="User" Type="INFRA.User" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.25" Y="5.591" />
-        <Point X="4.01" Y="5.591" />
-        <Point X="4.01" Y="1.5" />
-        <Point X="2" Y="1.5" />
+        <Point X="4.25" Y="5.683" />
+        <Point X="4.01" Y="5.683" />
+        <Point X="4.01" Y="1.797" />
+        <Point X="2" Y="1.797" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Log.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -117,21 +118,21 @@
       <Property Name="TypeError" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SEC.Backup">
+  <Class Name="INFRA.Backup">
     <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Backup.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SEC.DVV">
+  <Class Name="INFRA.DVV">
     <Position X="3" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DVV.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="SEC.TypeError">
+  <Enum Name="INFRA.TypeError">
     <Position X="7.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAgAA=</HashCode>

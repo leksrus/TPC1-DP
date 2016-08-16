@@ -1,17 +1,19 @@
 ﻿Public Class Log
+
+    Private _user As User
     Public Property User As User
         Get
-            Return Nothing
+            Return _user
         End Get
         Set(value As User)
+            _user = value
         End Set
     End Property
 
-    Public Property TypeError As TypeError
+    Private _typeError As TypeError
+    Public ReadOnly Property TypeError As TypeError
         Get
-            Return Nothing
+            Return _typeError
         End Get
-        Set(value As TypeError)
-        End Set
     End Property
 End Class
