@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Adm_Backups
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Adm_Backups
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,6 +30,10 @@ Partial Class Adm_Backups
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,7 +60,7 @@ Partial Class Adm_Backups
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(336, 25)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(286, 266)
+        Me.DataGridView1.Size = New System.Drawing.Size(199, 266)
         Me.DataGridView1.TabIndex = 2
         '
         'Button1
@@ -79,7 +83,7 @@ Partial Class Adm_Backups
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(15, 151)
+        Me.Button3.Location = New System.Drawing.Point(15, 201)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(98, 35)
         Me.Button3.TabIndex = 5
@@ -88,7 +92,7 @@ Partial Class Adm_Backups
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(185, 151)
+        Me.Button4.Location = New System.Drawing.Point(185, 201)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(98, 35)
         Me.Button4.TabIndex = 6
@@ -97,18 +101,51 @@ Partial Class Adm_Backups
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(98, 246)
+        Me.Button5.Location = New System.Drawing.Point(97, 263)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(98, 35)
         Me.Button5.TabIndex = 7
         Me.Button5.Text = "Cerrar"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 143)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 15)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Archivo Backup: "
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(12, 161)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(271, 20)
+        Me.TextBox1.TabIndex = 9
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(289, 161)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(26, 20)
+        Me.Button6.TabIndex = 10
+        Me.Button6.Text = "..."
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'Adm_Backups
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(637, 310)
+        Me.ClientSize = New System.Drawing.Size(556, 310)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -133,4 +170,8 @@ Partial Class Adm_Backups
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button6 As Button
 End Class

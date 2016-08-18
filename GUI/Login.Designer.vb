@@ -50,10 +50,10 @@ Partial Class Login
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(32, 142)
+        Me.Button1.Location = New System.Drawing.Point(32, 140)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 40)
-        Me.Button1.TabIndex = 2
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -62,21 +62,21 @@ Partial Class Login
         Me.TextBox1.Location = New System.Drawing.Point(122, 29)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.TextBox1.TabIndex = 1
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(122, 81)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.TextBox2.TabIndex = 2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(190, 142)
+        Me.Button2.Location = New System.Drawing.Point(190, 140)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(118, 40)
-        Me.Button2.TabIndex = 5
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '

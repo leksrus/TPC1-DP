@@ -1,9 +1,13 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports Microsoft.SqlServer.Management.Common
+Imports Microsoft.SqlServer.Management.Smo
 
 Public Class Acceso
     Private CN As SqlConnection
     Private TX As SqlTransaction
+    Private servcon As ServerConnection
+    Private srv As Server
 
     Public Sub AbrirConeccion()
         If CN Is Nothing Then
@@ -80,6 +84,40 @@ Public Class Acceso
         End Using
         CerrarConeccion()
         Return filas
+    End Function
+
+    Public Sub GenerarConexion(backup As Backup, restore As Restore)
+        'genero la conexion a SQL para DDL
+        AbrirConeccion()
+        If servcon Is Nothing AndAlso srv Is Nothing Then
+            servcon = New ServerConnection(CN)
+            srv = New Server(servcon)
+        End If
+        'tomo backup o ejecuto restore segun el objeto como parametro
+        If backup IsNot Nothing Then
+            backup.SqlBackup(srv)
+        ElseIf restore IsNot Nothing Then
+            restore.SqlRestore(srv)
+        End If
+        MatarConexion()
+    End Sub
+
+    Private Sub MatarConexion()
+        'cierro la conexion a SQL para DDL y limpio la memoria
+        If servcon IsNot Nothing AndAlso srv IsNot Nothing Then
+            servcon = Nothing
+            srv = Nothing
+            CerrarConeccion()
+            GC.Collect()
+        End If
+    End Sub
+
+    Public Function CrearParametros(name As String, value As DateTime) As SqlParameter
+        Dim parametros As New SqlParameter
+        parametros.ParameterName = name
+        parametros.SqlDbType = SqlDbType.Date
+        parametros.Value = value
+        Return parametros
     End Function
 
     Public Function CrearParametros(name As String, value As String) As SqlParameter
