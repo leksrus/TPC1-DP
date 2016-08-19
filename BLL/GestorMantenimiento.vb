@@ -42,7 +42,7 @@
         Return "Backup Fallo: " + ok
     End Function
 
-    Public Function HacerRestore() As String
+    Public Function HacerRestore(restorefile As Microsoft.SqlServer.Management.Smo.Restore) As String
 
     End Function
 

@@ -18,8 +18,22 @@
   <Class Name="DAL.Mp_backup">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAACAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_backup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_lenguaje_interface">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_lenguaje_interface.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_lenguaje">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_lenguaje.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

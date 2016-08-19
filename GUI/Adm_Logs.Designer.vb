@@ -61,9 +61,10 @@ Partial Class Adm_Logs
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(137, 70)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(218, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(138, 20)
         Me.DateTimePicker1.TabIndex = 3
         '
         'DataGridView1

@@ -62,7 +62,7 @@
   <Class Name="INFRA.UserData">
     <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ASABAAABAAQAAASAAACAAQCAAAgAAIAAAAAAAQIACAI=</HashCode>
       <FileName>UserData.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -70,9 +70,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.Language">
-    <Position X="2.25" Y="5.25" Width="1.5" />
+    <Position X="2.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAACAAAAAAAAAAIAAAIAAAAAAAAJAAAA=</HashCode>
       <FileName>Language.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -80,7 +80,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.ExeprionMsg">
-    <Position X="2.75" Y="7" Width="1.5" />
+    <Position X="5.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ExeprionMsg.vb</FileName>
@@ -90,9 +90,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.InterfaceMsg">
-    <Position X="0.5" Y="7" Width="1.5" />
+    <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAQAACCAQAAAAAAACBAAAAACAAAAAIAAAAAAAACAA=</HashCode>
       <FileName>InterfaceMsg.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -101,11 +101,11 @@
   </Class>
   <Class Name="INFRA.Log">
     <Position X="4.5" Y="5.25" Width="1.5" />
-    <AssociationLine Name="User" Type="INFRA.User" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="User" Type="INFRA.User" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="4.5" Y="5.683" />
-        <Point X="4" Y="5.683" />
-        <Point X="4" Y="1.797" />
+        <Point X="3.677" Y="5.683" />
+        <Point X="3.677" Y="1.797" />
         <Point X="2" Y="1.797" />
       </Path>
     </AssociationLine>
@@ -119,14 +119,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.BackupDB">
-    <Position X="0.5" Y="9.25" Width="1.5" />
+    <Position X="7.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>gAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>BackupDB.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="INFRA.DVV">
-    <Position X="3" Y="9.25" Width="1.5" />
+    <Position X="4.75" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DVV.vb</FileName>

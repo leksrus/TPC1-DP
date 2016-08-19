@@ -22,7 +22,8 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim backupDB As New INFRA.BackupDB
-
+        Dim gestor_manten As New BLL.GestorMantenimiento
+        gestor_manten.HacerRestore(backupDB.SetRestore(TextBox1.Text.ToString))
         TextBox1.Clear()
         Button4.Enabled = False
     End Sub
