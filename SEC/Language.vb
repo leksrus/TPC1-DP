@@ -1,13 +1,5 @@
 ﻿Public Class Language
     Private _user As User
-    Public Property User As User
-        Get
-            Return _user
-        End Get
-        Set(value As User)
-            _user = value
-        End Set
-    End Property
 
     Private _id_idioma As String
     Public Property id_idioma() As String
@@ -27,4 +19,8 @@
             _nombre = value
         End Set
     End Property
+
+    Public Overrides Function ToString() As String
+        Return nombre
+    End Function
 End Class

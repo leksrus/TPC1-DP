@@ -16,17 +16,27 @@
   </Class>
   <Class Name="INFRA.User">
     <Position X="0.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Componente" Type="INFRA.Componente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="1.688" />
+        <Point X="3.625" Y="1.688" />
+        <Point X="3.625" Y="1.688" />
+        <Point X="5.25" Y="1.688" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AQQALAAAACAAAAAAACCAAAAAAAAEAAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AQQAbAAACCAAAAAAACCQAAAAAAAEAAAAAAAAAgAIAAA=</HashCode>
       <FileName>User.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Componente" />
+      <Property Name="UserData" />
+      <Property Name="Language" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="INFRA.Patente">
-    <Position X="4.25" Y="2.75" Width="1.5" />
+    <Position X="4.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Patente.vb</FileName>
@@ -35,7 +45,7 @@
   <Class Name="INFRA.Componente">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAQAAAEAAEAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Componente.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -43,41 +53,25 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.Familia">
-    <Position X="6.25" Y="2.75" Width="1.5" />
-    <AssociationLine Name="Componente" Type="INFRA.Componente" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="7.406" Y="2.75" />
-        <Point X="7.406" Y="1.062" />
-        <Point X="6.75" Y="1.062" />
-      </Path>
-    </AssociationLine>
+    <Position X="6.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAABAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Familia.vb</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Componente" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.UserData">
-    <Position X="0.5" Y="4.25" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ASABAAABAAQAAASAAACAAQCAAAgAAIAAAAAAAQIACAI=</HashCode>
+      <HashCode>ASAAAAABAAQAAASAAACAAQCAAAgAAAAAAAAAAQIACAI=</HashCode>
       <FileName>UserData.vb</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="User" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.Language">
     <Position X="2.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAACAAAAAAAAAAIAAAIAAAAAAAAJAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAIAAAIAAAAAAAAJAAAA=</HashCode>
       <FileName>Language.vb</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="User" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.ExeprionMsg">
     <Position X="5.25" Y="7.75" Width="1.5" />
@@ -105,8 +99,8 @@
       <Path>
         <Point X="4.5" Y="5.683" />
         <Point X="3.677" Y="5.683" />
-        <Point X="3.677" Y="1.797" />
-        <Point X="2" Y="1.797" />
+        <Point X="3.677" Y="2.52" />
+        <Point X="2" Y="2.52" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>

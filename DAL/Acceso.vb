@@ -93,7 +93,7 @@ Public Class Acceso
             servcon = New ServerConnection(CN)
             srv = New Server(servcon)
         End If
-        'tomo backup o ejecuto restore segun el objeto como parametro
+        'tomo backup o ejecuto restore segun el objeto en el parametro
         If backup IsNot Nothing Then
             backup.SqlBackup(srv)
         ElseIf restore IsNot Nothing Then

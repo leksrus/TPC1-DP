@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Acceso.vb" />
     <Compile Include="Mp_backup.vb" />
+    <Compile Include="Mp_familia.vb" />
     <Compile Include="Mp_lenguaje.vb" />
     <Compile Include="Mp_lenguaje_interface.vb" />
     <Compile Include="Mp_usuario.vb" />

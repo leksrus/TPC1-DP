@@ -34,7 +34,12 @@ Public Class Mp_backup
     End Function
 
     Public Function Restore(restorefile As Microsoft.SqlServer.Management.Smo.Restore) As String
-
+        Try
+            _acceso.GenerarConexion(Nothing, restorefile)
+            Return ""
+        Catch ex As Exception
+            Return ex.Message.ToString()
+        End Try
     End Function
 
     Public Function Backup(fullbk As Microsoft.SqlServer.Management.Smo.Backup) As String

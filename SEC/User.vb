@@ -47,6 +47,29 @@
             _dvh = value
         End Set
     End Property
+
+    Private _userdata As UserData
+    Public Property UserData As UserData
+        Get
+            Return _userdata
+        End Get
+        Set(value As UserData)
+            _userdata = value
+        End Set
+    End Property
+
+    Private _lenguage As Language
+    Public Property Language As Language
+        Get
+            Return _lenguage
+        End Get
+        Set(value As Language)
+            _lenguage = value
+        End Set
+    End Property
+
+
+
 #Region "IDisposable Support"
     Private disposedValue As Boolean ' To detect redundant calls
 
@@ -77,6 +100,9 @@
         ' TODO: uncomment the following line if Finalize() is overridden above.
         ' GC.SuppressFinalize(Me)
     End Sub
+
+
+
 #End Region
 
 End Class

@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Mp_usuario
-    Implements IDisposable
 
     Private _acceso As Acceso
 
@@ -24,44 +23,24 @@ Public Class Mp_usuario
     End Function
 
     Public Function Insertar(usuario As INFRA.User) As Integer
-        Dim parametros(3) As SqlParameter
+        Dim parametros(10) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@user", usuario.name)
         parametros(1) = _acceso.CrearParametros("@password", usuario.password)
         parametros(2) = _acceso.CrearParametros("@estado", usuario.estado)
         parametros(3) = _acceso.CrearParametros("@dvh", usuario.dvh)
+        parametros(4) = _acceso.CrearParametros("@nombre", usuario.UserData.nombre)
+        parametros(5) = _acceso.CrearParametros("@apellido", usuario.UserData.apellido)
+        parametros(6) = _acceso.CrearParametros("@dni", usuario.UserData.dni)
+        parametros(7) = _acceso.CrearParametros("@telefono", usuario.UserData.telefono)
+        parametros(8) = _acceso.CrearParametros("@cargo", usuario.UserData.cargo)
+        parametros(9) = _acceso.CrearParametros("@fecha_ingreso", usuario.UserData.fecha_ingreso)
+        parametros(10) = _acceso.CrearParametros("@id_idioma", usuario.Language.id_idioma)
         Return _acceso.Escribir("Crear_usuario", parametros)
     End Function
 
-#Region "IDisposable Support"
-    Private disposedValue As Boolean ' To detect redundant calls
+    Public Function Modificar(usuario As INFRA.User) As Integer
 
-    ' IDisposable
-    Protected Overridable Sub Dispose(disposing As Boolean)
-        If Not disposedValue Then
-            If disposing Then
-                ' TODO: dispose managed state (managed objects).
-            End If
+    End Function
 
-            ' TODO: free unmanaged resources (unmanaged objects) and override Finalize() below.
-            ' TODO: set large fields to null.
-        End If
-        disposedValue = True
-    End Sub
-
-    ' TODO: override Finalize() only if Dispose(disposing As Boolean) above has code to free unmanaged resources.
-    'Protected Overrides Sub Finalize()
-    '    ' Do not change this code.  Put cleanup code in Dispose(disposing As Boolean) above.
-    '    Dispose(False)
-    '    MyBase.Finalize()
-    'End Sub
-
-    ' This code added by Visual Basic to correctly implement the disposable pattern.
-    Public Sub Dispose() Implements IDisposable.Dispose
-        ' Do not change this code.  Put cleanup code in Dispose(disposing As Boolean) above.
-        Dispose(True)
-        ' TODO: uncomment the following line if Finalize() is overridden above.
-        ' GC.SuppressFinalize(Me)
-    End Sub
-#End Region
 
 End Class

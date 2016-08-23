@@ -1,14 +1,4 @@
 ﻿Public Class UserData
-    Private _user As User
-    Public Property User As User
-        Get
-            Return _user
-        End Get
-        Set(value As User)
-            _user = value
-        End Set
-    End Property
-
     Private _nombre As String
     Public Property nombre() As String
         Get
@@ -78,5 +68,4 @@
             _fecha_ingreso = value
         End Set
     End Property
-
 End Class

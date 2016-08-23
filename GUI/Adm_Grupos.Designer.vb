@@ -71,7 +71,6 @@ Partial Class Adm_Grupos
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(89, 17)
         Me.RadioButton1.TabIndex = 2
-        Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Grupo Nuevo"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
@@ -130,12 +129,10 @@ Partial Class Adm_Grupos
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Checked = True
         Me.RadioButton2.Location = New System.Drawing.Point(211, 213)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(100, 17)
         Me.RadioButton2.TabIndex = 18
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Modificar Grupo"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '

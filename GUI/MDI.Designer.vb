@@ -106,19 +106,19 @@ Partial Class MDI
         'SeleccionDeIdiomaToolStripMenuItem
         '
         Me.SeleccionDeIdiomaToolStripMenuItem.Name = "SeleccionDeIdiomaToolStripMenuItem"
-        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SeleccionDeIdiomaToolStripMenuItem.Text = "Русский"
         '
         'EnglishToolStripMenuItem
         '
         Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EnglishToolStripMenuItem.Text = "English"
         '
         'EspañolToolStripMenuItem
         '
         Me.EspañolToolStripMenuItem.Name = "EspañolToolStripMenuItem"
-        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EspañolToolStripMenuItem.Text = "Español"
         '
         'MantenimientoToolStripMenuItem

@@ -2,28 +2,39 @@
     Public Function ValidarUsuario(usuario As INFRA.User) As Boolean
         Dim acceso As Boolean = False
         Dim encriptador As New INFRA.CryptoManager
-        Using mp_usuario = New DAL.Mp_usuario
-            Dim nickname As INFRA.User = mp_usuario.Seleccionar(usuario)
+        Dim mp_usuario = New DAL.Mp_usuario
+        Dim nickname As INFRA.User = mp_usuario.Seleccionar(usuario)
             If nickname IsNot Nothing Then
                 If nickname.name = usuario.name AndAlso encriptador.Decrypt(nickname.password) = usuario.password _
                     AndAlso nickname.estado = True Then
                     acceso = True
                 End If
             End If
-        End Using
         Return acceso
     End Function
 
-    Public Function RegistrarUsuario(usuario As INFRA.User) As Boolean
-        Dim estado As Boolean = False
+    Public Function RegistrarUsuario(usuario As INFRA.User) As String
+        Dim crypto As New INFRA.CryptoManager
+        Dim dvh As New INFRA.DVV
+        Dim cadena(2) As String
+        cadena(0) = usuario.name
+        cadena(1) = usuario.password
+        cadena(2) = usuario.estado.ToString
+        usuario.dvh = crypto.ConvertToHash(dvh.ConcatString(cadena))
+        usuario.password = crypto.Encrypt(usuario.password)
         Dim ok As Integer = 0
-        Using mp_user = New DAL.Mp_usuario
-            ok = mp_user.Insertar(usuario)
-            If ok = 1 Then
-                estado = True
-            End If
-        End Using
-        Return estado
+        Dim mp_user = New DAL.Mp_usuario
+        ok = mp_user.Insertar(usuario)
+        If ok = 2 Then
+            Return "Usuario Registrado"
+
+        Else
+            Return "Registro de Usuario Fallo"
+        End If
+    End Function
+
+    Public Function RegistrarGrupo(ungrupo As INFRA.Familia) As String
+
     End Function
 
     Public Function HacerBackup(fullbk As Microsoft.SqlServer.Management.Smo.Backup, bklog As INFRA.BackupDB) As String
@@ -36,14 +47,20 @@
             If oklog = 1 Then
                 Return "Backup Completado y log guardado "
             Else
-                Return "Backup Completado y guardado de log fallo "
+                Return "Backup Completado pero guardado de log fallo "
             End If
         End If
-        Return "Backup Fallo: " + ok
+        Return "Fallo: " + ok
     End Function
 
     Public Function HacerRestore(restorefile As Microsoft.SqlServer.Management.Smo.Restore) As String
-
+        Dim mp_backup As New DAL.Mp_backup
+        Dim ok As String
+        ok = mp_backup.Restore(restorefile)
+        If ok.Equals("") Then
+            Return "Restore Completado con Exito "
+        End If
+        Return "Fallo: " + ok
     End Function
 
     Public Function ListarBackups(bklog As INFRA.BackupDB) As List(Of INFRA.BackupDB)
