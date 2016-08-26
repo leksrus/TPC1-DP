@@ -10,6 +10,10 @@ Public Class Mp_usuario
 
     Public Function Seleccionar(usuario As INFRA.User) As INFRA.User
         Dim nickname As New INFRA.User
+        Dim userdate As New INFRA.UserData
+        nickname.UserData = userdate
+        Dim mp_lng As New Mp_lenguaje(_acceso)
+        Dim lngmessages As List(Of INFRA.Language) = mp_lng.Seleccionar
         Dim tabla As DataTable
         Dim parametros(0) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@user", usuario.name)
@@ -18,6 +22,15 @@ Public Class Mp_usuario
             nickname.name = row("nickname")
             nickname.password = row("password")
             nickname.estado = row("estado")
+            nickname.Language = (From lng In lngmessages Where lng.id_idioma = row("id_idioma")
+                                 Select lng).FirstOrDefault
+            nickname.dvh = row("dvh")
+            nickname.UserData.nombre = row("nombre")
+            nickname.UserData.apellido = row("apellido")
+            nickname.UserData.dni = row("DNI")
+            nickname.UserData.telefono = row("telefono")
+            nickname.UserData.cargo = row("cargo")
+            nickname.UserData.fecha_ingreso = row("fecha_ingreso")
         Next
         Return nickname
     End Function

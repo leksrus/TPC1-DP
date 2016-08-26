@@ -1,12 +1,14 @@
-﻿Imports System.Text
+﻿
 Public Class DVV
+    Private _dvv As String
+    Public Property dvv() As String
+        Get
+            Return _dvv
+        End Get
+        Set(ByVal value As String)
+            _dvv = value
+        End Set
+    End Property
 
-    Public Function ConcatString(cadena() As String) As String
-        Dim sb As New StringBuilder
-        Dim encriptador As New CryptoManager
-        For i = 0 To cadena.Length - 1
-            sb.Append(cadena(i))
-        Next
-        Return encriptador.ConvertToHash(sb.ToString)
-    End Function
+
 End Class

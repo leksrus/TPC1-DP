@@ -72,6 +72,7 @@
     <Compile Include="Mp_familia.vb" />
     <Compile Include="Mp_lenguaje.vb" />
     <Compile Include="Mp_lenguaje_interface.vb" />
+    <Compile Include="Mp_lenguaje_msg.vb" />
     <Compile Include="Mp_usuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

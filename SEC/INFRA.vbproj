@@ -70,6 +70,7 @@
     <Compile Include="BackupDB.vb" />
     <Compile Include="Componente.vb" />
     <Compile Include="DVV.vb" />
+    <Compile Include="Sistema.vb" />
     <Compile Include="TypeError.vb" />
     <Compile Include="ExeprionMsg.vb" />
     <Compile Include="Familia.vb" />

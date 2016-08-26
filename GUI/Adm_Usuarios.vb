@@ -80,7 +80,7 @@
         Button1.Enabled = False
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         carga()
         Me.Hide()
     End Sub

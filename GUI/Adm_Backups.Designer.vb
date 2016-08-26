@@ -29,11 +29,12 @@ Partial Class Adm_Backups
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,39 +75,30 @@ Partial Class Adm_Backups
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(185, 80)
+        Me.Button2.Location = New System.Drawing.Point(15, 201)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(98, 35)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Listar Todos"
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Realizar Backup"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(15, 201)
+        Me.Button3.Location = New System.Drawing.Point(185, 201)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(98, 35)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Realizar Backup"
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Realizar Restore"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(185, 201)
+        Me.Button4.Location = New System.Drawing.Point(97, 263)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(98, 35)
-        Me.Button4.TabIndex = 6
-        Me.Button4.Text = "Realizar Restore"
+        Me.Button4.TabIndex = 7
+        Me.Button4.Text = "Cerrar"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(97, 263)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(98, 35)
-        Me.Button5.TabIndex = 7
-        Me.Button5.Text = "Cerrar"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
         '
@@ -129,24 +121,47 @@ Partial Class Adm_Backups
         Me.TextBox1.Size = New System.Drawing.Size(271, 20)
         Me.TextBox1.TabIndex = 9
         '
-        'Button6
+        'Button5
         '
-        Me.Button6.Location = New System.Drawing.Point(289, 161)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(26, 20)
-        Me.Button6.TabIndex = 10
-        Me.Button6.Text = "..."
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button5.Location = New System.Drawing.Point(289, 161)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(26, 20)
+        Me.Button5.TabIndex = 10
+        Me.Button5.Text = "..."
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(172, 69)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(74, 17)
+        Me.RadioButton1.TabIndex = 11
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Por Fecha"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(172, 108)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(55, 17)
+        Me.RadioButton2.TabIndex = 12
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Todos"
+        Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'Adm_Backups
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(556, 310)
-        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.RadioButton2)
+        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -169,9 +184,10 @@ Partial Class Adm_Backups
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
 End Class

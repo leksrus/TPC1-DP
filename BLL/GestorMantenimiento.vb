@@ -1,21 +1,23 @@
 ﻿Public Class GestorMantenimiento
     Public Function ValidarUsuario(usuario As INFRA.User) As Boolean
-        Dim acceso As Boolean = False
         Dim encriptador As New INFRA.CryptoManager
         Dim mp_usuario = New DAL.Mp_usuario
         Dim nickname As INFRA.User = mp_usuario.Seleccionar(usuario)
-            If nickname IsNot Nothing Then
-                If nickname.name = usuario.name AndAlso encriptador.Decrypt(nickname.password) = usuario.password _
+        If nickname IsNot Nothing Then
+            If nickname.name = usuario.name AndAlso encriptador.Decrypt(nickname.password) = usuario.password _
                     AndAlso nickname.estado = True Then
-                    acceso = True
-                End If
+                'se guarda el usuario logeado en el sesion manager
+                INFRA.SesionManager.CrearSesion(nickname)
+                Return True
             End If
-        Return acceso
+        End If
+        'devuelvo V anteriormente o F si no se cumple la condicion
+        Return False
     End Function
 
     Public Function RegistrarUsuario(usuario As INFRA.User) As String
         Dim crypto As New INFRA.CryptoManager
-        Dim dvh As New INFRA.DVV
+        Dim dvh As New INFRA.Sistema
         Dim cadena(2) As String
         cadena(0) = usuario.name
         cadena(1) = usuario.password
@@ -31,6 +33,14 @@
         Else
             Return "Registro de Usuario Fallo"
         End If
+    End Function
+
+    Public Function ModificarUsuario(usuario As INFRA.User) As String
+
+    End Function
+
+    Public Function BuscarUsuario(usuario As INFRA.User) As INFRA.User
+
     End Function
 
     Public Function RegistrarGrupo(ungrupo As INFRA.Familia) As String

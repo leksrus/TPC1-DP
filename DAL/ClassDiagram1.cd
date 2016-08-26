@@ -43,5 +43,12 @@
       <NewMemberFileName>Mp_Familia.vb</NewMemberFileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="DAL.Mp_lenguaje_msg">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_lenguaje_msg.vb</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

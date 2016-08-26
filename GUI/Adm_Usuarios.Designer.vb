@@ -23,7 +23,7 @@ Partial Class Adm_Usuarios
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,33 +39,32 @@ Partial Class Adm_Usuarios
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(25, 355)
+        Me.Button1.Location = New System.Drawing.Point(25, 386)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 44)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Salvar Datos"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Button3
         '
-        Me.Button4.Location = New System.Drawing.Point(679, 398)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(142, 57)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "Cerrar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button3.Location = New System.Drawing.Point(679, 398)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(142, 57)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Cerrar"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -199,15 +198,6 @@ Partial Class Adm_Usuarios
         Me.DataGridView1.Size = New System.Drawing.Size(363, 305)
         Me.DataGridView1.TabIndex = 17
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(170, 355)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(114, 44)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Modificar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
@@ -249,14 +239,14 @@ Partial Class Adm_Usuarios
         Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
         Me.ComboBox2.TabIndex = 22
         '
-        'Button3
+        'Button2
         '
-        Me.Button3.Location = New System.Drawing.Point(94, 411)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(114, 44)
-        Me.Button3.TabIndex = 23
-        Me.Button3.Text = "Buscar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(170, 386)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(114, 44)
+        Me.Button2.TabIndex = 23
+        Me.Button2.Text = "Buscar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'RadioButton3
         '
@@ -275,12 +265,11 @@ Partial Class Adm_Usuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(833, 467)
         Me.Controls.Add(Me.RadioButton3)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.ComboBox1)
@@ -296,7 +285,7 @@ Partial Class Adm_Usuarios
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Adm_Usuarios"
         Me.Text = "Gestion de Usuarios"
@@ -307,7 +296,7 @@ Partial Class Adm_Usuarios
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
@@ -323,11 +312,10 @@ Partial Class Adm_Usuarios
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button2 As Button
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents Label8 As Label
     Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents RadioButton3 As RadioButton
 End Class

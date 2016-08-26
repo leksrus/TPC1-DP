@@ -25,7 +25,7 @@ Partial Class MDI
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecepcionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministrativoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProfesoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CoordinacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
@@ -56,7 +56,7 @@ Partial Class MDI
         '
         'MenuToolStripMenuItem
         '
-        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RecepcionToolStripMenuItem, Me.ToolStripMenuItem2, Me.ProfesoresToolStripMenuItem, Me.CoordinacionToolStripMenuItem, Me.ToolStripMenuItem3, Me.SalirToolStripMenuItem})
+        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RecepcionToolStripMenuItem, Me.AdministrativoToolStripMenuItem, Me.ProfesoresToolStripMenuItem, Me.CoordinacionToolStripMenuItem, Me.ToolStripMenuItem3, Me.SalirToolStripMenuItem})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.MenuToolStripMenuItem.Text = "&Menu"
@@ -67,11 +67,11 @@ Partial Class MDI
         Me.RecepcionToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.RecepcionToolStripMenuItem.Text = "&Recepcion"
         '
-        'ToolStripMenuItem2
+        'AdministrativoToolStripMenuItem
         '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(157, 22)
-        Me.ToolStripMenuItem2.Text = "&Administrativos"
+        Me.AdministrativoToolStripMenuItem.Name = "AdministrativoToolStripMenuItem"
+        Me.AdministrativoToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.AdministrativoToolStripMenuItem.Text = "&Administrativos"
         '
         'ProfesoresToolStripMenuItem
         '
@@ -106,19 +106,19 @@ Partial Class MDI
         'SeleccionDeIdiomaToolStripMenuItem
         '
         Me.SeleccionDeIdiomaToolStripMenuItem.Name = "SeleccionDeIdiomaToolStripMenuItem"
-        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.SeleccionDeIdiomaToolStripMenuItem.Text = "Русский"
         '
         'EnglishToolStripMenuItem
         '
         Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.EnglishToolStripMenuItem.Text = "English"
         '
         'EspañolToolStripMenuItem
         '
         Me.EspañolToolStripMenuItem.Name = "EspañolToolStripMenuItem"
-        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.EspañolToolStripMenuItem.Text = "Español"
         '
         'MantenimientoToolStripMenuItem
@@ -191,7 +191,7 @@ Partial Class MDI
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MenuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RecepcionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents AdministrativoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProfesoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CoordinacionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As ToolStripSeparator

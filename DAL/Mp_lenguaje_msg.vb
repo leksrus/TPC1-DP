@@ -1,4 +1,4 @@
-﻿Public Class Mp_lenguaje_interface
+﻿Public Class Mp_lenguaje_msg
     Private _acceso As Acceso
     Public Sub New()
         _acceso = New Acceso
@@ -7,16 +7,15 @@
     Public Sub Seleccionar()
         Dim mp_lenguajes As New Mp_lenguaje(_acceso)
         Dim lenguajes As List(Of INFRA.Language) = mp_lenguajes.Seleccionar
-        Dim tabla As DataTable = _acceso.Leer("Traer_traduccion", Nothing)
+        Dim tabla As DataTable = _acceso.Leer("Traer_mensajes", Nothing)
         For Each reg In tabla.Rows
-            Dim control As New INFRA.InterfaceMsg
+            Dim msg As New INFRA.ExeprionMsg
             Dim l As INFRA.Language = (From ln In lenguajes Where ln.id_idioma = reg("id_idioma") Select ln).FirstOrDefault
-            control.Language = l
-            control.id_control = reg("id_control")
-            control.id_form = reg("id_form")
-            control.texto = reg("texto")
-            INFRA.Sistema.interlanguages.Add(control)
+            msg.Language = l
+            msg.funcName = reg("function_name")
+            msg.id_msg = reg("id_exepmsg")
+            msg.text = reg("texto")
+            INFRA.Sistema.msglanguages.Add(msg)
         Next
     End Sub
-
 End Class

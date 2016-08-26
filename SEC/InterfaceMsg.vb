@@ -29,16 +29,6 @@
         End Set
     End Property
 
-    Private _dvh As String
-    Public Property dvh() As String
-        Get
-            Return _dvh
-        End Get
-        Set(ByVal value As String)
-            _dvh = value
-        End Set
-    End Property
-
     Private _id_form As String
     Public Property id_form() As String
         Get

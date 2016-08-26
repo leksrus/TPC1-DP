@@ -123,7 +123,7 @@ Public Class Acceso
     Public Function CrearParametros(name As String, value As String) As SqlParameter
         Dim parametros As New SqlParameter
         parametros.ParameterName = name
-        parametros.SqlDbType = SqlDbType.VarChar
+        parametros.SqlDbType = SqlDbType.NVarChar
         parametros.Value = value
         Return parametros
     End Function
