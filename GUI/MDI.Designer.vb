@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MDI
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MDI
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,7 +35,6 @@ Partial Class MDI
         Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EspañolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IdiomasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestorUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestorGruposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -106,69 +105,63 @@ Partial Class MDI
         'SeleccionDeIdiomaToolStripMenuItem
         '
         Me.SeleccionDeIdiomaToolStripMenuItem.Name = "SeleccionDeIdiomaToolStripMenuItem"
-        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SeleccionDeIdiomaToolStripMenuItem.Text = "Русский"
         '
         'EnglishToolStripMenuItem
         '
         Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EnglishToolStripMenuItem.Text = "English"
         '
         'EspañolToolStripMenuItem
         '
         Me.EspañolToolStripMenuItem.Name = "EspañolToolStripMenuItem"
-        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EspañolToolStripMenuItem.Text = "Español"
         '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IdiomasToolStripMenuItem1, Me.PermisosToolStripMenuItem, Me.GestorUsuariosToolStripMenuItem, Me.GestorGruposToolStripMenuItem, Me.BackupToolStripMenuItem, Me.LogsToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PermisosToolStripMenuItem, Me.GestorUsuariosToolStripMenuItem, Me.GestorGruposToolStripMenuItem, Me.BackupToolStripMenuItem, Me.LogsToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.MantenimientoToolStripMenuItem.Text = "&Mantenimiento"
         '
-        'IdiomasToolStripMenuItem1
-        '
-        Me.IdiomasToolStripMenuItem1.Name = "IdiomasToolStripMenuItem1"
-        Me.IdiomasToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
-        Me.IdiomasToolStripMenuItem1.Text = "&Administrar Idiomas"
-        '
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PermisosToolStripMenuItem.Text = "&Permisos"
         '
         'GestorUsuariosToolStripMenuItem
         '
         Me.GestorUsuariosToolStripMenuItem.Name = "GestorUsuariosToolStripMenuItem"
-        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GestorUsuariosToolStripMenuItem.Text = "&Usuarios"
         '
         'GestorGruposToolStripMenuItem
         '
         Me.GestorGruposToolStripMenuItem.Name = "GestorGruposToolStripMenuItem"
-        Me.GestorGruposToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.GestorGruposToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GestorGruposToolStripMenuItem.Text = "&Grupos"
         '
         'BackupToolStripMenuItem
         '
         Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
-        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BackupToolStripMenuItem.Text = "&Backups"
         '
         'LogsToolStripMenuItem
         '
         Me.LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
-        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.LogsToolStripMenuItem.Text = "&Logs"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(24, 20)
-        Me.HelpToolStripMenuItem.Text = "&?"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.HelpToolStripMenuItem.Text = "&Ayuda"
         '
         'MDI
         '
@@ -207,5 +200,4 @@ Partial Class MDI
     Friend WithEvents GestorGruposToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BackupToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents IdiomasToolStripMenuItem1 As ToolStripMenuItem
 End Class

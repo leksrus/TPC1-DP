@@ -125,7 +125,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.BackupDB">
-    <Position X="7.5" Y="7.5" Width="1.5" />
+    <Position X="5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>BackupDB.vb</FileName>
@@ -134,7 +134,7 @@
   <Class Name="INFRA.DVV">
     <Position X="2.75" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAACAAAIAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>DVV.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -148,7 +148,7 @@
   <Enum Name="INFRA.TypeError">
     <Position X="7.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAgAA=</HashCode>
+      <HashCode>SAAEEAIAAAAAAAQAAAADAAAAAAACAAAAAAAAAAAAEAA=</HashCode>
       <FileName>TypeError.vb</FileName>
     </TypeIdentifier>
   </Enum>

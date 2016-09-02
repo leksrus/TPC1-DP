@@ -3,15 +3,22 @@
   <Class Name="BLL.GestorMantenimiento">
     <Position X="0.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAIAgAAAAAAAAAAAAAAAAAAAAIQAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAIIgAAAAAAAQAAAAAAAAAAAAIQAA=</HashCode>
       <FileName>GestorMantenimiento.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BLL.GestorLenguaje">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAACEAAAAAAAAAAAAABAAAAAAAACA=</HashCode>
       <FileName>GestorLenguaje.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.GestorSistema">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GestorSistema.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

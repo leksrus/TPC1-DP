@@ -20,10 +20,13 @@
     End Property
 
     Private _typeError As TypeError
-    Public ReadOnly Property TypeError As TypeError
+    Public Property TypeError As TypeError
         Get
             Return _typeError
         End Get
+        Set(ByVal value As TypeError)
+            _typeError = value
+        End Set
     End Property
 
     Private _fechahora As DateTime

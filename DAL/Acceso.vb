@@ -108,14 +108,13 @@ Public Class Acceso
             servcon = Nothing
             srv = Nothing
             CerrarConeccion()
-            GC.Collect()
         End If
     End Sub
 
     Public Function CrearParametros(name As String, value As DateTime) As SqlParameter
         Dim parametros As New SqlParameter
         parametros.ParameterName = name
-        parametros.SqlDbType = SqlDbType.Date
+        parametros.SqlDbType = SqlDbType.DateTime
         parametros.Value = value
         Return parametros
     End Function

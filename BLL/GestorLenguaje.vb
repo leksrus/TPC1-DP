@@ -15,19 +15,21 @@
         Return tipodelenguajes
     End Function
 
-    Public Function ChangeLanguage(id As Integer, id_form As String, id_control As String) As String
-        Dim tmp As String = (From ln In INFRA.Sistema.interlanguages Where id = ln.Language.id_idioma AndAlso
-                             id_form = ln.id_form AndAlso id_control = ln.id_control
-                             Select ln.texto).FirstOrDefault
-        Return tmp
+    Public Function ChangeLanguage(id_idioma As Integer, id_form As String, id_control As String) As String
+        Dim temp As INFRA.InterfaceMsg = INFRA.Sistema.interlanguages.Where(Function(lng) lng.Language.id_idioma = id_idioma AndAlso lng.id_form = id_form AndAlso lng.id_control = id_control).FirstOrDefault
+
+        'Dim tmp As String = (From ln In INFRA.Sistema.interlanguages Where id = ln.Language.id_idioma AndAlso
+        '                     id_form = ln.id_form AndAlso id_control = ln.id_control
+        '                     Select ln.texto).FirstOrDefault
+        Return temp.texto
     End Function
 
     Public Function ChangeLangMsg(funcname As String, id_msg As Integer, id_idioma As Integer) As String
-        'Dim txt As String = INFRA.Sistema.msglanguages.Where(Function(lnmsg) lnmsg.funcName = funcname AndAlso
-        '                       lnmsg.id_msg = id_msg AndAlso lnmsg.Language.id_idioma = id_idioma).Select(Function(text) text)
-        Dim tmp As String = (From lnmsg In INFRA.Sistema.msglanguages Where lnmsg.funcName = funcname AndAlso
-                             lnmsg.id_msg = id_msg AndAlso lnmsg.Language.id_idioma = id_idioma
-                             Select lnmsg.text).FirstOrDefault
-        Return tmp
+        Dim temp As INFRA.ExeprionMsg = INFRA.Sistema.msglanguages.Where(Function(msg) msg.funcName = funcname AndAlso msg.id_msg = id_msg AndAlso msg.Language.id_idioma = id_idioma).FirstOrDefault
+
+        'Dim tmp As String = (From lnmsg In INFRA.Sistema.msglanguages Where lnmsg.funcName = funcname AndAlso
+        '                     lnmsg.id_msg = id_msg AndAlso lnmsg.Language.id_idioma = id_idioma
+        '                     Select lnmsg.text).FirstOrDefault
+        Return temp.text
     End Function
 End Class

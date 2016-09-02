@@ -1,73 +1,70 @@
 ﻿Public Class MDI
-    'Dim forms As List(Of Form) = Nothing
     Dim gest_lng As BLL.GestorLenguaje = Nothing
-    Dim login As Login = Nothing
-    Dim idioma As Adm_Idiomas = Nothing
-    Dim backup As Adm_Backups = Nothing
-    Dim grupo As Adm_Grupos = Nothing
-    Dim permiso As Adm_Permisos = Nothing
-    Dim bitacora As Adm_Logs = Nothing
-    Dim usuario As Adm_Usuarios = Nothing
+    Dim frmlogin As Login = Nothing
+    Dim frmbackup As Adm_Backups = Nothing
+    Dim frmgrupo As Adm_Grupos = Nothing
+    Dim frmpermiso As Adm_Permisos = Nothing
+    Dim frmbitacora As Adm_Logs = Nothing
+    Dim frmusuario As Adm_Usuarios = Nothing
+
+    Private Sub RefrescarVar()
+        frmbackup = Nothing
+        frmgrupo = Nothing
+        frmpermiso = Nothing
+        frmbitacora = Nothing
+        frmusuario = Nothing
+    End Sub
     Private Sub MDI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         gest_lng = New BLL.GestorLenguaje
         gest_lng.GetLanguages()
         gest_lng.GetMsgLanguages()
-        If login Is Nothing Then
-            login = New Login
+        If frmlogin Is Nothing Then
+            frmlogin = New Login
         End If
         CambiarIdioma()
-        login.MdiParent = Me
-        login.Show()
-    End Sub
-
-    Private Sub IdiomasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles IdiomasToolStripMenuItem1.Click
-        If idioma Is Nothing Then
-            idioma = New Adm_Idiomas
-        End If
-        idioma.MdiParent = Me
-        idioma.Show()
+        Login.MdiParent = Me
+        Login.Show()
     End Sub
 
     Private Sub PermisosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PermisosToolStripMenuItem.Click
-        If permiso Is Nothing Then
-            permiso = New Adm_Permisos
+        If frmpermiso Is Nothing Then
+            frmpermiso = New Adm_Permisos
         End If
-        permiso.MdiParent = Me
-        permiso.Show()
+        frmpermiso.MdiParent = Me
+        frmpermiso.Show()
     End Sub
 
     Private Sub GestorUsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestorUsuariosToolStripMenuItem.Click
-        If usuario Is Nothing Then
-            usuario = New Adm_Usuarios
+        If frmusuario Is Nothing Then
+            frmusuario = New Adm_Usuarios
         End If
-        usuario.MdiParent = Me
-        usuario.Show()
+        frmusuario.MdiParent = Me
+        frmusuario.Show()
     End Sub
 
     Private Sub GestorGruposToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestorGruposToolStripMenuItem.Click
-        If grupo Is Nothing Then
-            grupo = New Adm_Grupos
-
+        If frmgrupo Is Nothing Then
+            frmgrupo = New Adm_Grupos
         End If
-        grupo.MdiParent = Me
-        grupo.Show()
-        grupo = Nothing
+        frmgrupo.MdiParent = Me
+        frmgrupo.Show()
+        frmgrupo = Nothing
     End Sub
 
     Private Sub BackupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackupToolStripMenuItem.Click
-        If backup Is Nothing Then
-            backup = New Adm_Backups
+        If frmbackup Is Nothing Then
+            frmbackup = New Adm_Backups
         End If
-        backup.MdiParent = Me
-        backup.Show()
+        frmbackup.MdiParent = Me
+        frmbackup.Show()
     End Sub
 
     Private Sub LogsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogsToolStripMenuItem.Click
-        If bitacora Is Nothing Then
-            bitacora = New Adm_Logs
+        If frmbitacora Is Nothing Then
+            frmbitacora = New Adm_Logs
         End If
-        bitacora.MdiParent = Me
-        bitacora.Show()
+        frmbitacora.MdiParent = Me
+        frmbitacora.Show()
     End Sub
 
     Private Sub SeleccionDeIdiomaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SeleccionDeIdiomaToolStripMenuItem.Click
@@ -85,17 +82,6 @@
         CambiarIdioma()
     End Sub
 
-    Private Sub CerrarTodo()
-        usuario.Close()
-        grupo.Close()
-        permiso.Close()
-        bitacora.Close()
-        idioma.Close()
-        backup.Close()
-        usuario = Nothing
-        grupo = Nothing
-
-    End Sub
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Dim fname As String = "SalirToolStripMenuItem_Click"
@@ -103,8 +89,8 @@
         If result = DialogResult.Yes Then
             ResetLang()
             LimpiarMemoria()
-            login.MdiParent = Me
-            login.Show()
+            Login.MdiParent = Me
+            Login.Show()
         ElseIf result = DialogResult.No Then
 
         End If
@@ -113,18 +99,13 @@
     Private Sub LimpiarMemoria()
         INFRA.SesionManager.CrearSesion.User = Nothing
         INFRA.SesionManager.CerrarSesion()
-        'For Each frm In forms
-        '    If TypeOf frm IsNot Login Then
-        '        frm.Close()
-        '        frm = Nothing
-        '    End If
-        'Next
         For Each frm In Me.MdiChildren
             If TypeOf frm IsNot Login Then
                 frm.Close()
-
             End If
         Next
+        RefrescarVar()
+        GC.Collect()
     End Sub
 
     Private Sub ResetLang()

@@ -8,6 +8,10 @@ Public Class Mp_usuario
         _acceso = New Acceso
     End Sub
 
+    Public Function Seleccionar() As List(Of INFRA.User)
+
+    End Function
+
     Public Function Seleccionar(usuario As INFRA.User) As INFRA.User
         Dim nickname As New INFRA.User
         Dim userdate As New INFRA.UserData
@@ -22,8 +26,9 @@ Public Class Mp_usuario
             nickname.name = row("nickname")
             nickname.password = row("password")
             nickname.estado = row("estado")
-            nickname.Language = (From lng In lngmessages Where lng.id_idioma = row("id_idioma")
-                                 Select lng).FirstOrDefault
+            nickname.Language = lngmessages.Where(Function(lng) lng.id_idioma = row("id_idioma")).FirstOrDefault
+            'nickname.Language = (From lng In lngmessages Where lng.id_idioma = row("id_idioma")
+            '                     Select lng).FirstOrDefault
             nickname.dvh = row("dvh")
             nickname.UserData.nombre = row("nombre")
             nickname.UserData.apellido = row("apellido")
@@ -48,7 +53,13 @@ Public Class Mp_usuario
         parametros(8) = _acceso.CrearParametros("@cargo", usuario.UserData.cargo)
         parametros(9) = _acceso.CrearParametros("@fecha_ingreso", usuario.UserData.fecha_ingreso)
         parametros(10) = _acceso.CrearParametros("@id_idioma", usuario.Language.id_idioma)
-        Return _acceso.Escribir("Crear_usuario", parametros)
+        Dim ok As Integer = _acceso.Escribir("Crear_usuario", parametros)
+        If ok > 0 Then
+            _acceso.ConfirmarTransaccion()
+        Else
+            _acceso.CancelarTransaccion()
+        End If
+        Return ok
     End Function
 
     Public Function Modificar(usuario As INFRA.User) As Integer

@@ -17,19 +17,18 @@
 
     Public Function RegistrarUsuario(usuario As INFRA.User) As String
         Dim crypto As New INFRA.CryptoManager
-        Dim dvh As New INFRA.Sistema
+        Dim sistema As New INFRA.Sistema
+        Dim mp_user = New DAL.Mp_usuario
         Dim cadena(2) As String
         cadena(0) = usuario.name
         cadena(1) = usuario.password
         cadena(2) = usuario.estado.ToString
-        usuario.dvh = crypto.ConvertToHash(dvh.ConcatString(cadena))
+        usuario.dvh = crypto.ConvertToHash(sistema.ConcatString(cadena))
         usuario.password = crypto.Encrypt(usuario.password)
         Dim ok As Integer = 0
-        Dim mp_user = New DAL.Mp_usuario
         ok = mp_user.Insertar(usuario)
         If ok = 2 Then
             Return "Usuario Registrado"
-
         Else
             Return "Registro de Usuario Fallo"
         End If

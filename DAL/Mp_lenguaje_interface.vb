@@ -10,8 +10,9 @@
         Dim tabla As DataTable = _acceso.Leer("Traer_traduccion", Nothing)
         For Each reg In tabla.Rows
             Dim control As New INFRA.InterfaceMsg
-            Dim l As INFRA.Language = (From ln In lenguajes Where ln.id_idioma = reg("id_idioma") Select ln).FirstOrDefault
-            control.Language = l
+            Dim lng As INFRA.Language = (lenguajes.Where(Function(ln) ln.id_idioma = reg("id_idioma"))).FirstOrDefault
+            'Dim l As INFRA.Language = (From ln In lenguajes Where ln.id_idioma = reg("id_idioma") Select ln).FirstOrDefault
+            control.Language = lng
             control.id_control = reg("id_control")
             control.id_form = reg("id_form")
             control.texto = reg("texto")

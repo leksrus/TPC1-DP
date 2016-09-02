@@ -8,28 +8,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.Mp_usuario">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_usuario.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.Mp_backup">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAACAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_backup.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.Mp_lenguaje_interface">
-    <Position X="5.75" Y="0.5" Width="2" />
+    <Position X="6" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_lenguaje_interface.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.Mp_lenguaje">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_lenguaje.vb</FileName>
@@ -48,6 +48,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_lenguaje_msg.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_DVV">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_DVV.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_Log">
+    <Position X="4.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_Log.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

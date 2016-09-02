@@ -10,8 +10,9 @@
         Dim tabla As DataTable = _acceso.Leer("Traer_mensajes", Nothing)
         For Each reg In tabla.Rows
             Dim msg As New INFRA.ExeprionMsg
-            Dim l As INFRA.Language = (From ln In lenguajes Where ln.id_idioma = reg("id_idioma") Select ln).FirstOrDefault
-            msg.Language = l
+            Dim lng As INFRA.Language = (lenguajes.Where(Function(ln) ln.id_idioma = reg("id_idioma"))).FirstOrDefault
+            'Dim l As INFRA.Language = (From ln In lenguajes Where ln.id_idioma = reg("id_idioma") Select ln).FirstOrDefault
+            msg.Language = lng
             msg.funcName = reg("function_name")
             msg.id_msg = reg("id_exepmsg")
             msg.text = reg("texto")
