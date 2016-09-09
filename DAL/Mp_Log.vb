@@ -7,14 +7,29 @@ Public Class Mp_Log
     End Sub
 
     Public Function Seleccionar(log As INFRA.Log) As List(Of INFRA.Log)
-
+        Dim logs As New List(Of INFRA.Log)
+        Dim mp_user As New Mp_usuario(_acceso)
+        Dim usuarios As List(Of INFRA.User) = mp_user.Seleccionar
+        Dim parametros(0) As SqlParameter
+        parametros(0) = _acceso.CrearParametros("@datetimestart", log.fechahora)
+        Dim tabla As DataTable = _acceso.Leer("Check_logs", parametros)
+        For Each reg In tabla.Rows
+            Dim bitac As New INFRA.Log
+            bitac.fechahora = reg("fecha_hora")
+            bitac.TypeError = reg("type_event")
+            bitac.descripcion = reg("detalles")
+            bitac.dvh = reg("dvh")
+            bitac.User = usuarios.Where(Function(usr) usr.name = reg("nickname")).FirstOrDefault
+            logs.Add(bitac)
+        Next
+        Return logs
     End Function
 
 
     Public Function Insertar(log As INFRA.Log) As Integer
         Dim parametros(4) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@date_time", log.fechahora)
-        parametros(1) = _acceso.CrearParametros("@type_error", log.TypeError.ToString)
+        parametros(1) = _acceso.CrearParametros("@type_error", log.TypeError)
         parametros(2) = _acceso.CrearParametros("@detalle", log.descripcion)
         parametros(3) = _acceso.CrearParametros("@userid", log.User.name)
         parametros(4) = _acceso.CrearParametros("@dvh", log.dvh)

@@ -73,6 +73,7 @@
     <Compile Include="Mp_familia.vb" />
     <Compile Include="Mp_lenguaje.vb" />
     <Compile Include="Mp_lenguaje_interface.vb" />
+    <Compile Include="Mp_lenguaje_log.vb" />
     <Compile Include="Mp_lenguaje_msg.vb" />
     <Compile Include="Mp_Log.vb" />
     <Compile Include="Mp_usuario.vb" />

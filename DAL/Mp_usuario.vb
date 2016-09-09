@@ -8,8 +8,25 @@ Public Class Mp_usuario
         _acceso = New Acceso
     End Sub
 
-    Public Function Seleccionar() As List(Of INFRA.User)
+    Friend Sub New(_ac As Acceso)
+        _acceso = _ac
+    End Sub
 
+    Public Function Seleccionar() As List(Of INFRA.User)
+        Dim users As New List(Of INFRA.User)
+        Dim mp_leng As New Mp_lenguaje(_acceso)
+        Dim lenguajes As List(Of INFRA.Language) = mp_leng.Seleccionar
+        Dim tabla As DataTable = _acceso.Leer("Seleccionar_usuarios", Nothing)
+        For Each reg In tabla.Rows
+            Dim usr As New INFRA.User
+            usr.name = reg("nickname")
+            usr.password = reg("password")
+            usr.estado = reg("estado")
+            usr.dvh = reg("dvh")
+            usr.Language = lenguajes.Where(Function(lng) lng.id_idioma = reg("id_idioma")).FirstOrDefault
+            users.Add(usr)
+        Next
+        Return users
     End Function
 
     Public Function Seleccionar(usuario As INFRA.User) As INFRA.User

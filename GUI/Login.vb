@@ -7,14 +7,8 @@
             usuario.password = TextBox2.Text
             If ValidarText(TextBox1) AndAlso ValidarText(TextBox2) Then
                 If ges_manten.ValidarUsuario(usuario) Then
-                    'Dim log As New INFRA.Log
                     'Dim gestsistema As New BLL.GestorSistema
-                    'log.fechahora = DateTime.Now
-                    'log.TypeError = INFRA.TypeError.login
-                    'log.descripcion = MDI.Text
-                    'log.dvh = ""
-                    'log.User = INFRA.SesionManager.CrearSesion.User
-                    'gestsistema.GrabarBitacora(log)
+                    'gestsistema.GrabarBitacora(INFRA.TypeError.login, Me.Name)
                     MessageBox.Show(ges_lng.ChangeLangMsg("Login", 1, GlobalVar.tipodelenguaje))
                     Me.Hide()
                 Else
@@ -39,6 +33,5 @@
         End If
         Return False
     End Function
-
 
 End Class

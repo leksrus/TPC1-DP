@@ -65,7 +65,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.Familia">
-    <Position X="6.25" Y="3.25" Width="1.5" />
+    <Position X="6.25" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Familia.vb</FileName>
@@ -132,17 +132,34 @@
     </TypeIdentifier>
   </Class>
   <Class Name="INFRA.DVV">
-    <Position X="2.75" Y="11" Width="1.5" />
+    <Position X="0.5" Y="12.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAACAAAIAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>DVV.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="INFRA.Sistema">
-    <Position X="7.5" Y="10.25" Width="1.5" />
+    <Position X="7.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAIAAAAAAIAY=</HashCode>
       <FileName>Sistema.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="INFRA.LogMsg">
+    <Position X="3" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAACAAAABAAAAAAAAAAAAAAAAAAAACAAgAAAAg=</HashCode>
+      <FileName>LogMsg.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Language" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="INFRA.LogInterface">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAEDAEAAAAAAAAAAAAIAAAAQAABAAA=</HashCode>
+      <FileName>LogInterface.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="INFRA.TypeError">

@@ -1,14 +1,14 @@
 ﻿Public Enum TypeError
-    login = 0
-    logout = 1
-    open_form = 2
-    backup = 3
-    retore = 4
-    lng_change = 5
-    create_user = 6
-    modify_user = 7
-    disable_user = 8
-    pass_change = 9
+    login = 1
+    logout = 2
+    open_form = 3
+    backup = 4
+    retore = 5
+    lng_change = 6
+    create_user = 7
+    modify_user = 8
+    disable_user = 9
+    pass_change = 10
 
 
 End Enum

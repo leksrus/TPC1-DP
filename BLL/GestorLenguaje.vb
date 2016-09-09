@@ -4,6 +4,11 @@
         mp_control.Seleccionar()
     End Sub
 
+    Public Sub GetLogLng()
+        Dim mp_loglng As New DAL.Mp_lenguaje_log
+        mp_loglng.Seleccionar()
+    End Sub
+
     Public Sub GetMsgLanguages()
         Dim mp_msg As New DAL.Mp_lenguaje_msg
         mp_msg.Seleccionar()

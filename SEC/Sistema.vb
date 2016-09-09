@@ -26,7 +26,20 @@ Public Class Sistema
         End Set
     End Property
 
-    Public Function ConcatString(cadena() As String) As String
+    Private Shared _loglanguages As List(Of LogMsg)
+    Public Shared Property loglanguages As List(Of LogMsg)
+        Get
+            If _loglanguages Is Nothing Then
+                _loglanguages = New List(Of LogMsg)
+            End If
+            Return _loglanguages
+        End Get
+        Set(ByVal value As List(Of LogMsg))
+            _loglanguages = value
+        End Set
+    End Property
+
+    Public Shared Function ConcatString(cadena() As String) As String
         Dim sb As New StringBuilder
         Dim encriptador As New CryptoManager
         For i = 0 To cadena.Length - 1

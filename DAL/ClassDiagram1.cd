@@ -58,10 +58,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.Mp_Log">
-    <Position X="4.25" Y="3.5" Width="1.5" />
+    <Position X="2.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_Log.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_lenguaje_log">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_lenguaje_log.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

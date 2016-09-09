@@ -65,7 +65,7 @@ Partial Class Adm_Logs
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(41, 99)
-        Me.DateTimePicker1.MaxDate = New Date(2016, 8, 31, 0, 0, 0, 0)
+        Me.DateTimePicker1.MaxDate = New Date(2020, 8, 31, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(138, 20)
         Me.DateTimePicker1.TabIndex = 3
