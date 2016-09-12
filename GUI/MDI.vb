@@ -1,4 +1,7 @@
 ﻿Public Class MDI
+
+#Region "Declaracion de Variables"
+    Public loginok As Boolean = False
     Dim gest_lng As BLL.GestorLenguaje = Nothing
     Dim frmlogin As Login = Nothing
     Dim frmbackup As Adm_Backups = Nothing
@@ -6,15 +9,23 @@
     Dim frmpermiso As Adm_Permisos = Nothing
     Dim frmbitacora As Adm_Logs = Nothing
     Dim frmusuario As Adm_Usuarios = Nothing
+#End Region
 
+#Region "Cerrar Sesion"
     Private Sub RefrescarVar()
         frmbackup = Nothing
         frmgrupo = Nothing
         frmpermiso = Nothing
         frmbitacora = Nothing
         frmusuario = Nothing
+        loginok = False
     End Sub
+#End Region
+
     Private Sub MDI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Hide()
+        Dim splash As New WelcomeForm
+        splash.ShowDialog()
         gest_lng = New BLL.GestorLenguaje
         gest_lng.GetLanguages()
         gest_lng.GetMsgLanguages()
@@ -22,8 +33,13 @@
             frmlogin = New Login
         End If
         CambiarIdioma()
-        Login.MdiParent = Me
-        Login.Show()
+        frmlogin.ShowDialog()
+        'frmlogin.MdiParent = Me
+        If loginok Then
+            Me.Show()
+        Else
+            Application.Exit()
+        End If
     End Sub
 
     Private Sub PermisosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PermisosToolStripMenuItem.Click

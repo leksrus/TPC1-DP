@@ -207,6 +207,12 @@
     <Compile Include="Adm_Grupos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WelcomeForm.Designer.vb">
+      <DependentUpon>WelcomeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administrativo.resx">
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Adm_Grupos.resx">
       <DependentUpon>Adm_Grupos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

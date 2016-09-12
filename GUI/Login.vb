@@ -10,7 +10,8 @@
                     'Dim gestsistema As New BLL.GestorSistema
                     'gestsistema.GrabarBitacora(INFRA.TypeError.login, Me.Name)
                     MessageBox.Show(ges_lng.ChangeLangMsg("Login", 1, GlobalVar.tipodelenguaje))
-                    Me.Hide()
+                    MDI.loginok = True
+                    Me.Close()
                 Else
                     MessageBox.Show(ges_lng.ChangeLangMsg("Login", 2, GlobalVar.tipodelenguaje))
                 End If
@@ -24,7 +25,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        MdiParent.Close()
+        Me.Close()
     End Sub
 
     Private Function ValidarText(text As TextBox) As Boolean
