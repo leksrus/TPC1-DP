@@ -34,8 +34,6 @@ Partial Class Adm_Usuarios
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -45,6 +43,8 @@ Partial Class Adm_Usuarios
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,16 +53,16 @@ Partial Class Adm_Usuarios
         Me.Button1.Location = New System.Drawing.Point(25, 386)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(114, 44)
-        Me.Button1.TabIndex = 0
+        Me.Button1.TabIndex = 12
         Me.Button1.Text = "Salvar Datos"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(679, 398)
+        Me.Button3.Location = New System.Drawing.Point(761, 369)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(142, 57)
-        Me.Button3.TabIndex = 2
+        Me.Button3.TabIndex = 14
         Me.Button3.Text = "Cerrar"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -140,36 +140,22 @@ Partial Class Adm_Usuarios
         '
         Me.TextBox1.Location = New System.Drawing.Point(170, 18)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(254, 20)
-        Me.TextBox1.TabIndex = 10
+        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
+        Me.TextBox1.TabIndex = 1
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(170, 57)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(254, 20)
-        Me.TextBox2.TabIndex = 11
+        Me.TextBox2.Size = New System.Drawing.Size(200, 20)
+        Me.TextBox2.TabIndex = 2
         '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(170, 97)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(254, 20)
-        Me.TextBox3.TabIndex = 12
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(170, 136)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(254, 20)
-        Me.TextBox4.TabIndex = 13
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(170, 179)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(254, 20)
-        Me.TextBox5.TabIndex = 14
+        Me.TextBox3.Size = New System.Drawing.Size(200, 20)
+        Me.TextBox3.TabIndex = 3
         '
         'ComboBox1
         '
@@ -178,7 +164,7 @@ Partial Class Adm_Usuarios
         Me.ComboBox1.Location = New System.Drawing.Point(170, 214)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox1.TabIndex = 15
+        Me.ComboBox1.TabIndex = 6
         '
         'DateTimePicker1
         '
@@ -187,15 +173,18 @@ Partial Class Adm_Usuarios
         Me.DateTimePicker1.MaxDate = New Date(2016, 8, 19, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 16
+        Me.DateTimePicker1.TabIndex = 7
         Me.DateTimePicker1.Value = New Date(2016, 8, 19, 0, 0, 0, 0)
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(459, 18)
+        Me.DataGridView1.Location = New System.Drawing.Point(408, 18)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(363, 305)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(572, 305)
         Me.DataGridView1.TabIndex = 17
         '
         'RadioButton1
@@ -204,7 +193,7 @@ Partial Class Adm_Usuarios
         Me.RadioButton1.Location = New System.Drawing.Point(330, 369)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(124, 17)
-        Me.RadioButton1.TabIndex = 19
+        Me.RadioButton1.TabIndex = 9
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Crear Nuevo Usuario"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -215,7 +204,7 @@ Partial Class Adm_Usuarios
         Me.RadioButton2.Location = New System.Drawing.Point(489, 369)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(137, 17)
-        Me.RadioButton2.TabIndex = 20
+        Me.RadioButton2.TabIndex = 10
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Desabilitar a un Usuario"
         Me.RadioButton2.UseVisualStyleBackColor = True
@@ -237,14 +226,14 @@ Partial Class Adm_Usuarios
         Me.ComboBox2.Location = New System.Drawing.Point(170, 302)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox2.TabIndex = 22
+        Me.ComboBox2.TabIndex = 8
         '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(170, 386)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(114, 44)
-        Me.Button2.TabIndex = 23
+        Me.Button2.TabIndex = 13
         Me.Button2.Text = "Buscar"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -254,16 +243,38 @@ Partial Class Adm_Usuarios
         Me.RadioButton3.Location = New System.Drawing.Point(408, 425)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(151, 17)
-        Me.RadioButton3.TabIndex = 24
+        Me.RadioButton3.TabIndex = 11
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "Modificar datos de Usuario"
         Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.BeepOnError = True
+        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(170, 134)
+        Me.MaskedTextBox1.Mask = "__-___-___"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(84, 21)
+        Me.MaskedTextBox1.TabIndex = 4
+        '
+        'MaskedTextBox2
+        '
+        Me.MaskedTextBox2.BeepOnError = True
+        Me.MaskedTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaskedTextBox2.Location = New System.Drawing.Point(170, 174)
+        Me.MaskedTextBox2.Mask = "_-___-__-__"
+        Me.MaskedTextBox2.Name = "MaskedTextBox2"
+        Me.MaskedTextBox2.Size = New System.Drawing.Size(84, 21)
+        Me.MaskedTextBox2.TabIndex = 5
         '
         'Adm_Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(833, 467)
+        Me.ClientSize = New System.Drawing.Size(992, 467)
+        Me.Controls.Add(Me.MaskedTextBox2)
+        Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox2)
@@ -273,8 +284,6 @@ Partial Class Adm_Usuarios
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
@@ -307,8 +316,6 @@ Partial Class Adm_Usuarios
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
@@ -318,4 +325,6 @@ Partial Class Adm_Usuarios
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Button2 As Button
     Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents MaskedTextBox2 As MaskedTextBox
 End Class

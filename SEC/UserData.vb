@@ -19,22 +19,22 @@
         End Set
     End Property
 
-    Private _dni As Integer
-    Public Property dni As Integer
+    Private _dni As String
+    Public Property dni As String
         Get
             Return _dni
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _dni = value
         End Set
     End Property
 
-    Private _telefono As Integer
-    Public Property telefono() As Integer
+    Private _telefono As String
+    Public Property telefono() As String
         Get
             Return _telefono
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _telefono = value
         End Set
     End Property

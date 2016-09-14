@@ -1,13 +1,13 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-Imports Microsoft.SqlServer.Management.Common
-Imports Microsoft.SqlServer.Management.Smo
+'Imports Microsoft.SqlServer.Management.Common
+'Imports Microsoft.SqlServer.Management.Smo
 
 Public Class Acceso
     Private CN As SqlConnection
     Private TX As SqlTransaction
-    Private servcon As ServerConnection
-    Private srv As Server
+    'Private servcon As ServerConnection
+    'Private srv As Server
 
     Public Sub AbrirConeccion()
         If CN Is Nothing Then
@@ -17,7 +17,7 @@ Public Class Acceso
     End Sub
 
     Public Sub CerrarConeccion()
-        If TX IsNot Nothing Then
+        If TX Is Nothing Then
             CN.Close()
             CN = Nothing
             GC.Collect()
@@ -33,11 +33,13 @@ Public Class Acceso
 
     Public Sub ConfirmarTransaccion()
         TX.Commit()
+        TX = Nothing
         CerrarConeccion()
     End Sub
 
     Public Sub CancelarTransaccion()
         TX.Rollback()
+        TX = Nothing
         CerrarConeccion()
     End Sub
 
@@ -77,7 +79,7 @@ Public Class Acceso
                 End If
                 Try
                     filas = .ExecuteNonQuery
-                Catch ex As Exception
+                Catch ex As SqlException
                     filas = -1
                 End Try
             End With
@@ -86,31 +88,34 @@ Public Class Acceso
         Return filas
     End Function
 
-    Public Sub GenerarConexion(backup As Backup, restore As Restore)
-        'genero la conexion a SQL para DDL
-        AbrirConeccion()
-        If servcon Is Nothing AndAlso srv Is Nothing Then
-            servcon = New ServerConnection(CN)
-            srv = New Server(servcon)
-        End If
-        'tomo backup o ejecuto restore segun el objeto en el parametro
-        If backup IsNot Nothing Then
-            backup.SqlBackup(srv)
-        ElseIf restore IsNot Nothing Then
-            restore.SqlRestore(srv)
-        End If
-        MatarConexion()
-    End Sub
+    'Public Sub GenerarConexion(backup As Backup, restore As Restore)
+    '    'genero la conexion a SQL para DDL
+    '    AbrirConeccion()
+    '    If servcon Is Nothing AndAlso srv Is Nothing Then
+    '        servcon = New ServerConnection(CN)
+    '        srv = New Server(servcon)
+    '    End If
+    '    'tomo backup o ejecuto restore segun el objeto en el parametro
+    '    If backup IsNot Nothing Then
+    '        backup.SqlBackup(srv)
+    '    ElseIf restore IsNot Nothing Then
+    '        restore.SqlRestore(srv)
+    '    End If
+    '    MatarConexion()
+    'End Sub
 
-    Private Sub MatarConexion()
-        'cierro la conexion a SQL para DDL y limpio la memoria
-        If servcon IsNot Nothing AndAlso srv IsNot Nothing Then
-            servcon = Nothing
-            srv = Nothing
-            CerrarConeccion()
-        End If
-    End Sub
+    'Private Sub MatarConexion()
+    '    'cierro la conexion a SQL para DDL y limpio la memoria
+    '    If servcon IsNot Nothing AndAlso srv IsNot Nothing Then
+    '        servcon = Nothing
+    '        srv = Nothing
+    '        CerrarConeccion()
+    '    End If
+    'End Sub
 
+
+    'creacion de diferentes parametros para pasarlos a la base de datos
+#Region "Creacion de parametros"
     Public Function CrearParametros(name As String, value As DateTime) As SqlParameter
         Dim parametros As New SqlParameter
         parametros.ParameterName = name
@@ -150,4 +155,6 @@ Public Class Acceso
         parametros.Value = value
         Return parametros
     End Function
+#End Region
+
 End Class

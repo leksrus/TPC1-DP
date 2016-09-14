@@ -105,19 +105,19 @@ Partial Class MDI
         'SeleccionDeIdiomaToolStripMenuItem
         '
         Me.SeleccionDeIdiomaToolStripMenuItem.Name = "SeleccionDeIdiomaToolStripMenuItem"
-        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SeleccionDeIdiomaToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.SeleccionDeIdiomaToolStripMenuItem.Text = "Русский"
         '
         'EnglishToolStripMenuItem
         '
         Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EnglishToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.EnglishToolStripMenuItem.Text = "English"
         '
         'EspañolToolStripMenuItem
         '
         Me.EspañolToolStripMenuItem.Name = "EspañolToolStripMenuItem"
-        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EspañolToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
         Me.EspañolToolStripMenuItem.Text = "Español"
         '
         'MantenimientoToolStripMenuItem
@@ -130,31 +130,31 @@ Partial Class MDI
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.PermisosToolStripMenuItem.Text = "&Permisos"
         '
         'GestorUsuariosToolStripMenuItem
         '
         Me.GestorUsuariosToolStripMenuItem.Name = "GestorUsuariosToolStripMenuItem"
-        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.GestorUsuariosToolStripMenuItem.Text = "&Usuarios"
         '
         'GestorGruposToolStripMenuItem
         '
         Me.GestorGruposToolStripMenuItem.Name = "GestorGruposToolStripMenuItem"
-        Me.GestorGruposToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GestorGruposToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.GestorGruposToolStripMenuItem.Text = "&Grupos"
         '
         'BackupToolStripMenuItem
         '
         Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
-        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.BackupToolStripMenuItem.Text = "&Backups"
         '
         'LogsToolStripMenuItem
         '
         Me.LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
-        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.LogsToolStripMenuItem.Text = "&Logs"
         '
         'HelpToolStripMenuItem

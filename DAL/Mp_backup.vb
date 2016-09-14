@@ -6,48 +6,69 @@ Public Class Mp_backup
     End Sub
 
     Public Function Insertar(bklog As INFRA.BackupDB) As Integer
-        Dim parametros(0) As SqlParameter
+        'graba el log al momento de hacer el bk con datos como fecha, nomre de base y tamaño
+        Dim parametros(2) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@fecha_hora", bklog.fecha)
+        parametros(1) = _acceso.CrearParametros("@dbname", bklog.dbname)
+        parametros(2) = _acceso.CrearParametros("@dbsize", bklog.dbsize)
         Return _acceso.Escribir("Crear_bkplog", parametros)
     End Function
 
     Public Function Seleccionar(bklog As INFRA.BackupDB) As List(Of INFRA.BackupDB)
         Dim logs As New List(Of INFRA.BackupDB)
-        Dim parametros(0) As SqlParameter
+        Dim tabla As DataTable
         If bklog IsNot Nothing Then
+            Dim parametros(0) As SqlParameter
             parametros(0) = _acceso.CrearParametros("@fecha_hora", bklog.fecha)
-            Dim tabla As DataTable = _acceso.Leer("Seleccionar_bkplogs", parametros)
-            For Each row In tabla.Rows
-                Dim log As New INFRA.BackupDB
-                log.fecha = row("fecha_hora")
-                logs.Add(log)
-            Next
+            tabla = _acceso.Leer("Seleccionar_bkplogs", parametros)
         Else
-            Dim tabla As DataTable = _acceso.Leer("Seleccionartodos_bkplogs", Nothing)
-            For Each row In tabla.Rows
-                Dim log As New INFRA.BackupDB
-                log.fecha = row("fecha_hora")
-                logs.Add(log)
-            Next
+            tabla = _acceso.Leer("Seleccionartodos_bkplogs", Nothing)
         End If
+        For Each row In tabla.Rows
+            Dim log As New INFRA.BackupDB
+            log.fecha = row("fecha_hora")
+            log.dbname = row("dbname")
+            log.dbsize = row("dbsize")
+            logs.Add(log)
+        Next
         Return logs
     End Function
 
-    Public Function Restore(restorefile As Microsoft.SqlServer.Management.Smo.Restore) As String
-        Try
-            _acceso.GenerarConexion(Nothing, restorefile)
-            Return ""
-        Catch ex As Exception
-            Return ex.Message.ToString()
-        End Try
+    Public Function Seleccionar() As List(Of INFRA.BackupDB)
+        Dim databases As New List(Of INFRA.BackupDB)
+        Dim tablas As DataTable = _acceso.Leer("sp_databases", Nothing)
+        For Each reg As DataRow In tablas.Rows
+            Dim db As New INFRA.BackupDB
+            db.dbname = reg("DATABASE_NAME")
+            db.dbsize = reg("DATABASE_SIZE")
+            databases.Add(db)
+        Next
+        Return databases
     End Function
 
-    Public Function Backup(fullbk As Microsoft.SqlServer.Management.Smo.Backup) As String
-        Try
-            _acceso.GenerarConexion(fullbk, Nothing)
-            Return ""
-        Catch ex As Exception
-            Return ex.Message.ToString()
-        End Try
+    Public Function Restore(restorefile As INFRA.BackupDB, path As String) As String
+        Dim parametros(1) As SqlParameter
+        parametros(0) = _acceso.CrearParametros("@DBName", restorefile.dbname)
+        parametros(1) = _acceso.CrearParametros("@Location", path)
+        'se realiza el restore pasando los parametros a store procedure tales como el nombre de la base y la ruta del archivo del backup
+        Dim tabla As DataTable = _acceso.Leer("", parametros)
+        If tabla.Rows.Count > 0 Then
+            'el store devuelve el nombre de la base que se restauro, por lo tanto si hay registros en datatable entonces se restauro Ok
+            Return True
+        End If
+        Return False
+    End Function
+
+    Public Function Backup(bk As INFRA.BackupDB, path As String) As Boolean
+        Dim parametros(1) As SqlParameter
+        parametros(0) = _acceso.CrearParametros("@DBName", bk.dbname)
+        parametros(1) = _acceso.CrearParametros("@Location", path)
+        'se realiza el backup usando store procedure y pasandole la ruta a dejar el file .bak y el nombre de la base
+        Dim tabla As DataTable = _acceso.Leer("sp_Backup_Database", parametros)
+        If tabla.Rows.Count > 0 Then
+            'el store devuelve el nombre de la base a la que se realizo el backup, por lo tanto si hay registros en datatable entonces termino Ok
+            Return True
+        End If
+        Return False
     End Function
 End Class

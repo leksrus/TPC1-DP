@@ -1,12 +1,12 @@
 ﻿Public Class Language
     Private _user As User
 
-    Private _id_idioma As String
-    Public Property id_idioma() As String
+    Private _id_idioma As Integer
+    Public Property id_idioma() As Integer
         Get
             Return _id_idioma
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             _id_idioma = value
         End Set
     End Property

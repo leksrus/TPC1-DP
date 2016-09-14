@@ -1,5 +1,7 @@
 ﻿Public NotInheritable Class WelcomeForm
+    Dim gestorlng As BLL.GestorLenguaje = Nothing
 
+#Region "eventos y carga"
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
     '  of the Project Designer ("Properties" under the "Project" menu).
 
@@ -30,10 +32,41 @@
 
         'Copyright info
         Copyright.Text = My.Application.Info.Copyright
+
+        'muestra texto segun idioma del usuario
+        CambioIdioma()
     End Sub
+    Private Sub CambioIdioma()
+        gestorlng = New BLL.GestorLenguaje
+        'recorre todos los controles del form hasta encontrar a los labels y cambia el texto en cada uno
+        For Each ctrl In Me.Controls
+            If TypeOf ctrl Is TableLayoutPanel Then
+                Dim tmpcontrols = DirectCast(ctrl, TableLayoutPanel).Controls
+                For Each ctrs In tmpcontrols
+                    If TypeOf ctrs Is TableLayoutPanel Then
+                        Dim tmp = DirectCast(ctrs, TableLayoutPanel).Controls
+                        For Each ct In tmp
+                            If TypeOf ct Is Label Then
+                                Dim it = DirectCast(ct, Label)
+                                it.Text = gestorlng.ChangeLanguage(GlobalVar.tipodelenguaje, Me.Name, it.Name)
+                            End If
+                        Next
+                    End If
+                    If TypeOf ctrs Is Label Then
+                        Dim lb = DirectCast(ctrs, Label)
+                        lb.Text = gestorlng.ChangeLanguage(GlobalVar.tipodelenguaje, Me.Name, lb.Name)
+                    End If
+                Next
+            End If
+        Next
+    End Sub
+
+#End Region
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Enabled = False
         Me.Close()
     End Sub
+
+
 End Class

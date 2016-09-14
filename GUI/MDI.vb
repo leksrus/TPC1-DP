@@ -1,8 +1,11 @@
-﻿Public Class MDI
+﻿Imports System.ComponentModel
+
+Public Class MDI
 
 #Region "Declaracion de Variables"
     Public loginok As Boolean = False
     Dim gest_lng As BLL.GestorLenguaje = Nothing
+    Dim gestor_mant As BLL.GestorMantenimiento = Nothing
     Dim frmlogin As Login = Nothing
     Dim frmbackup As Adm_Backups = Nothing
     Dim frmgrupo As Adm_Grupos = Nothing
@@ -20,97 +23,6 @@
         frmusuario = Nothing
         loginok = False
     End Sub
-#End Region
-
-    Private Sub MDI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Hide()
-        Dim splash As New WelcomeForm
-        splash.ShowDialog()
-        gest_lng = New BLL.GestorLenguaje
-        gest_lng.GetLanguages()
-        gest_lng.GetMsgLanguages()
-        If frmlogin Is Nothing Then
-            frmlogin = New Login
-        End If
-        CambiarIdioma()
-        frmlogin.ShowDialog()
-        'frmlogin.MdiParent = Me
-        If loginok Then
-            Me.Show()
-        Else
-            Application.Exit()
-        End If
-    End Sub
-
-    Private Sub PermisosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PermisosToolStripMenuItem.Click
-        If frmpermiso Is Nothing Then
-            frmpermiso = New Adm_Permisos
-        End If
-        frmpermiso.MdiParent = Me
-        frmpermiso.Show()
-    End Sub
-
-    Private Sub GestorUsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestorUsuariosToolStripMenuItem.Click
-        If frmusuario Is Nothing Then
-            frmusuario = New Adm_Usuarios
-        End If
-        frmusuario.MdiParent = Me
-        frmusuario.Show()
-    End Sub
-
-    Private Sub GestorGruposToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestorGruposToolStripMenuItem.Click
-        If frmgrupo Is Nothing Then
-            frmgrupo = New Adm_Grupos
-        End If
-        frmgrupo.MdiParent = Me
-        frmgrupo.Show()
-        frmgrupo = Nothing
-    End Sub
-
-    Private Sub BackupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackupToolStripMenuItem.Click
-        If frmbackup Is Nothing Then
-            frmbackup = New Adm_Backups
-        End If
-        frmbackup.MdiParent = Me
-        frmbackup.Show()
-    End Sub
-
-    Private Sub LogsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogsToolStripMenuItem.Click
-        If frmbitacora Is Nothing Then
-            frmbitacora = New Adm_Logs
-        End If
-        frmbitacora.MdiParent = Me
-        frmbitacora.Show()
-    End Sub
-
-    Private Sub SeleccionDeIdiomaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SeleccionDeIdiomaToolStripMenuItem.Click
-        GlobalVar.tipodelenguaje = 2
-        CambiarIdioma()
-    End Sub
-
-    Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
-        GlobalVar.tipodelenguaje = 1
-        CambiarIdioma()
-    End Sub
-
-    Private Sub EspañolToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EspañolToolStripMenuItem.Click
-        GlobalVar.tipodelenguaje = 3
-        CambiarIdioma()
-    End Sub
-
-
-    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Dim fname As String = "SalirToolStripMenuItem_Click"
-        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg(fname, 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg(fname, 2, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo)
-        If result = DialogResult.Yes Then
-            ResetLang()
-            LimpiarMemoria()
-            Login.MdiParent = Me
-            Login.Show()
-        ElseIf result = DialogResult.No Then
-
-        End If
-    End Sub
 
     Private Sub LimpiarMemoria()
         INFRA.SesionManager.CrearSesion.User = Nothing
@@ -124,9 +36,161 @@
         GC.Collect()
     End Sub
 
+    Private Sub SaveDVV()
+
+    End Sub
+
+#End Region
+
+#Region "Eventos"
+    Private Sub MDI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        gest_lng = New BLL.GestorLenguaje
+        gest_lng.GetLanguages()
+        gest_lng.GetMsgLanguages()
+        Me.Hide()
+        Dim splash As New WelcomeForm
+        splash.ShowDialog()
+        If frmlogin Is Nothing Then
+            frmlogin = New Login
+        End If
+        CambiarIdioma()
+        frmlogin.ShowDialog()
+        'frmlogin.MdiParent = Me
+        If loginok Then
+            CambiarIdioma()
+            ValidarPermisos()
+            Me.Show()
+        Else
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub MDI_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("MDI_Closing", 2, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("MDI_Closing", 1, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            SaveDVV()
+            GC.Collect()
+        ElseIf result = DialogResult.No Then
+            e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub ValidarPermisos()
+
+    End Sub
+
+#End Region
+
+#Region "MenuTool"
+    Private Sub PermisosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PermisosToolStripMenuItem.Click
+        If frmpermiso Is Nothing Then
+            frmpermiso = New Adm_Permisos
+            frmpermiso.MdiParent = Me
+            CambiarIdioma()
+        End If
+        frmpermiso.Show()
+    End Sub
+
+    Private Sub GestorUsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestorUsuariosToolStripMenuItem.Click
+        If frmusuario Is Nothing Then
+            frmusuario = New Adm_Usuarios
+            frmusuario.MdiParent = Me
+            CambiarIdioma()
+        End If
+        frmusuario.Show()
+    End Sub
+
+    Private Sub GestorGruposToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestorGruposToolStripMenuItem.Click
+        If frmgrupo Is Nothing Then
+            frmgrupo = New Adm_Grupos
+            frmgrupo.MdiParent = Me
+            CambiarIdioma()
+        End If
+        frmgrupo.Show()
+        frmgrupo = Nothing
+    End Sub
+
+    Private Sub BackupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackupToolStripMenuItem.Click
+        If frmbackup Is Nothing Then
+            frmbackup = New Adm_Backups
+            frmbackup.MdiParent = Me
+            CambiarIdioma()
+        End If
+        frmbackup.Show()
+    End Sub
+
+    Private Sub LogsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogsToolStripMenuItem.Click
+        If frmbitacora Is Nothing Then
+            frmbitacora = New Adm_Logs
+            frmbitacora.MdiParent = Me
+            CambiarIdioma()
+        End If
+        frmbitacora.Show()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Dim fname As String = "SalirToolStripMenuItem_Click"
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg(fname, 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg(fname, 2, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            SaveDVV()
+            LimpiarMemoria()
+            If frmlogin Is Nothing Then
+                frmlogin = New Login
+            End If
+            ResetLang()
+            Me.Hide()
+            frmlogin.ShowDialog()
+            If loginok Then
+                CambiarIdioma()
+                Me.Show()
+            Else
+                Application.Exit()
+            End If
+            'Login.MdiParent = Me
+            'Login.Show()
+
+        End If
+    End Sub
+
+    Private Sub RecepcionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecepcionToolStripMenuItem.Click
+
+    End Sub
+#End Region
+
+#Region "Idioma"
+
+    Private Function SetUser(id_idioma As Integer) As INFRA.User
+        Dim user As INFRA.User
+        user = INFRA.SesionManager.CrearSesion.User
+        user.Language.id_idioma = id_idioma
+        Dim q = INFRA.SesionManager.CrearSesion.User
+        Return user
+    End Function
+
+    Private Sub SeleccionDeIdiomaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SeleccionDeIdiomaToolStripMenuItem.Click
+        GlobalVar.tipodelenguaje = 2
+        CambiarIdioma()
+        gestor_mant = New BLL.GestorMantenimiento
+        MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
+    End Sub
+
+    Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
+        GlobalVar.tipodelenguaje = 1
+        CambiarIdioma()
+        gestor_mant = New BLL.GestorMantenimiento
+        MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
+    End Sub
+
+    Private Sub EspañolToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EspañolToolStripMenuItem.Click
+        GlobalVar.tipodelenguaje = 3
+        CambiarIdioma()
+    End Sub
+
     Private Sub ResetLang()
         GlobalVar.tipodelenguaje = 3
         CambiarIdioma()
+        gestor_mant = New BLL.GestorMantenimiento
+        MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
     End Sub
 
     Private Sub CambiarIdioma()
@@ -161,7 +225,6 @@
         Next
     End Sub
 
-    Private Sub RecepcionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecepcionToolStripMenuItem.Click
+#End Region
 
-    End Sub
 End Class

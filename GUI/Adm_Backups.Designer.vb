@@ -35,6 +35,11 @@ Partial Class Adm_Backups
         Me.Button5 = New System.Windows.Forms.Button()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,45 +63,48 @@ Partial Class Adm_Backups
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(336, 25)
+        Me.DataGridView1.Location = New System.Drawing.Point(335, 25)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(199, 266)
-        Me.DataGridView1.TabIndex = 2
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(352, 308)
+        Me.DataGridView1.TabIndex = 13
         '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(15, 80)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(98, 35)
-        Me.Button1.TabIndex = 3
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(15, 201)
+        Me.Button2.Location = New System.Drawing.Point(15, 246)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(98, 35)
-        Me.Button2.TabIndex = 5
+        Me.Button2.TabIndex = 9
         Me.Button2.Text = "Realizar Backup"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(185, 201)
+        Me.Button3.Location = New System.Drawing.Point(187, 246)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(98, 35)
-        Me.Button3.TabIndex = 6
+        Me.Button3.TabIndex = 10
         Me.Button3.Text = "Realizar Restore"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(97, 263)
+        Me.Button4.Location = New System.Drawing.Point(187, 298)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(98, 35)
-        Me.Button4.TabIndex = 7
+        Me.Button4.TabIndex = 12
         Me.Button4.Text = "Cerrar"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -108,7 +116,7 @@ Partial Class Adm_Backups
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 143)
+        Me.Label2.Location = New System.Drawing.Point(12, 133)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 15)
         Me.Label2.TabIndex = 8
@@ -116,17 +124,17 @@ Partial Class Adm_Backups
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 161)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 151)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(271, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.TextBox1.TabIndex = 5
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(289, 161)
+        Me.Button5.Location = New System.Drawing.Point(289, 151)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(26, 20)
-        Me.Button5.TabIndex = 10
+        Me.Button5.TabIndex = 6
         Me.Button5.Text = "..."
         Me.Button5.UseVisualStyleBackColor = True
         '
@@ -136,7 +144,7 @@ Partial Class Adm_Backups
         Me.RadioButton1.Location = New System.Drawing.Point(172, 69)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(74, 17)
-        Me.RadioButton1.TabIndex = 11
+        Me.RadioButton1.TabIndex = 2
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Por Fecha"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -147,16 +155,55 @@ Partial Class Adm_Backups
         Me.RadioButton2.Location = New System.Drawing.Point(172, 108)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(55, 17)
-        Me.RadioButton2.TabIndex = 12
+        Me.RadioButton2.TabIndex = 3
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Todos"
         Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(15, 298)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(98, 35)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "Listar Bases"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 183)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(83, 15)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Ruta Backup: "
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(12, 208)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(271, 20)
+        Me.TextBox2.TabIndex = 7
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(289, 207)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(26, 20)
+        Me.Button7.TabIndex = 8
+        Me.Button7.Text = "..."
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Adm_Backups
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(556, 310)
+        Me.ClientSize = New System.Drawing.Size(704, 355)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.Button5)
@@ -190,4 +237,9 @@ Partial Class Adm_Backups
     Friend WithEvents Button5 As Button
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents Button6 As Button
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button7 As Button
 End Class
