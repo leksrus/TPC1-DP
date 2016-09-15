@@ -67,9 +67,9 @@
 
 #End Region
 
-    Public Function RegistrarGrupo(ungrupo As INFRA.Familia) As String
+    'Public Function RegistrarGrupo(ungrupo As INFRA.Familia) As String
 
-    End Function
+    'End Function
 
 #Region "Gestion de Backup/Restore"
     Public Function HacerBackup(bk As INFRA.BackupDB, path As String) As String
@@ -82,13 +82,17 @@
         Else
             Return gest_lng.ChangeLangMsg("HacerBackup", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma)
         End If
-
     End Function
 
-    Public Function HacerRestore(restorefile As INFRA.BackupDB) As String
+    Public Function HacerRestore(restorefile As INFRA.BackupDB, path As String) As String
         Dim mp_backup As New DAL.Mp_backup
-
-
+        Dim gest_lng As New GestorLenguaje
+        Dim res = mp_backup.Restore(restorefile, path)
+        If res Then
+            Return ""
+        Else
+            Return ""
+        End If
     End Function
 
     Public Function ListarBases() As List(Of INFRA.BackupDB)

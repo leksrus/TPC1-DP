@@ -13,7 +13,7 @@ Public Class Mp_DVV
         For Each reg In tabla.Rows
             Dim dvv As New INFRA.DVV
             dvv.id_tabla = reg("id_table")
-            dvv.dvv = reg("hash")
+            dvv.code = reg("hash")
             codesdvv.Add(dvv)
         Next
         Return codesdvv
@@ -22,14 +22,14 @@ Public Class Mp_DVV
     Public Function Insertar(dvv As INFRA.DVV) As Integer
         Dim parametros(1) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@id_tabla", dvv.id_tabla)
-        parametros(1) = _acceso.CrearParametros("@codigo", dvv.dvv)
+        parametros(1) = _acceso.CrearParametros("@codigo", dvv.code)
         Return _acceso.Escribir("Insertar_DVV", parametros)
     End Function
 
     Public Function Modificar(dvv As INFRA.DVV) As Integer
         Dim parametros(1) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@id_tabla", dvv.id_tabla)
-        parametros(1) = _acceso.CrearParametros("@codigo", dvv.dvv)
+        parametros(1) = _acceso.CrearParametros("@codigo", dvv.code)
         Return _acceso.Escribir("Modificar_DVV", parametros)
     End Function
 

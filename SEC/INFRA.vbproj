@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="BackupDB.vb" />
     <Compile Include="Componente.vb" />
+    <Compile Include="DV.vb" />
     <Compile Include="DVV.vb" />
     <Compile Include="LogInterface.vb" />
     <Compile Include="LogMsg.vb" />

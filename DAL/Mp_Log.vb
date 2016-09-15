@@ -6,6 +6,23 @@ Public Class Mp_Log
         _acceso = New Acceso
     End Sub
 
+    Public Function Seleccionar() As List(Of INFRA.Log)
+        Dim logs As New List(Of INFRA.Log)
+        Dim mp_user As New Mp_usuario(_acceso)
+        Dim usuarios As List(Of INFRA.User) = mp_user.Seleccionar
+        Dim tabla As DataTable = _acceso.Leer("Seleccionar_logs", Nothing)
+        For Each reg In tabla.Rows
+            Dim bitac As New INFRA.Log
+            bitac.fechahora = reg("fecha_hora")
+            bitac.TypeError = reg("type_event")
+            bitac.descripcion = reg("detalles")
+            bitac.dvh = reg("dvh")
+            bitac.User = usuarios.Where(Function(usr) usr.name = reg("nickname")).FirstOrDefault
+            logs.Add(bitac)
+        Next
+        Return logs
+    End Function
+
     Public Function Seleccionar(log As INFRA.Log) As List(Of INFRA.Log)
         Dim logs As New List(Of INFRA.Log)
         Dim mp_user As New Mp_usuario(_acceso)

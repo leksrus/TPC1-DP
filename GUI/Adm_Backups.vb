@@ -86,7 +86,7 @@
             Dim tmp() = TextBox1.Text.Split("_"c)
             restore.dbname = tmp(tmp.Length - 1).Replace(".bak", "")
             Dim path As String = TextBox1.Text
-
+            MessageBox.Show(gest_manten.HacerRestore(restore, path))
         End If
     End Sub
 
