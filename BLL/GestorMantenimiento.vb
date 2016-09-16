@@ -22,12 +22,10 @@
         Dim crypto As New INFRA.CryptoManager
         Dim mp_user = New DAL.Mp_usuario
         Dim gestorlng As New GestorLenguaje
-        Dim cadena(2) As String
-        cadena(0) = usuario.name
-        cadena(1) = usuario.password
-        cadena(2) = usuario.estado.ToString
-        usuario.dvh = crypto.ConvertToHash(INFRA.Sistema.ConcatString(cadena))
+        Dim dv As New INFRA.DV
         usuario.password = crypto.Encrypt(usuario.password)
+        dv.code = crypto.ConvertToHash(usuario.name & usuario.password & usuario.estado & usuario.Language.id_idioma)
+        usuario.dvh = dv.code
         Dim ok As Integer = 0
         ok = mp_user.Insertar(usuario)
         If ok = 2 Then
@@ -41,11 +39,10 @@
         Dim crypto As New INFRA.CryptoManager
         Dim mp_user = New DAL.Mp_usuario
         Dim gestorlng As New GestorLenguaje
-        Dim cadena(2) As String
-        cadena(0) = usuario.name
-        cadena(1) = usuario.password
-        cadena(2) = usuario.estado.ToString
-        usuario.dvh = crypto.ConvertToHash(INFRA.Sistema.ConcatString(cadena))
+        Dim dv As New INFRA.DV
+        usuario.password = crypto.Encrypt(usuario.password)
+        dv.code = crypto.ConvertToHash(usuario.name & usuario.password & usuario.estado & usuario.Language.id_idioma)
+        usuario.dvh = dv.code
         Dim ok As Integer = 0
         ok = mp_user.Modificar(usuario)
         If ok = 2 Then

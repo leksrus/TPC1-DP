@@ -32,8 +32,8 @@
       <Path>
         <Point X="2" Y="1.688" />
         <Point X="3.625" Y="1.688" />
-        <Point X="3.625" Y="1.688" />
-        <Point X="5.25" Y="1.688" />
+        <Point X="3.625" Y="1.902" />
+        <Point X="5.25" Y="1.902" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -48,7 +48,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="INFRA.Patente">
-    <Position X="4.25" Y="3.25" Width="1.5" />
+    <Position X="4.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Patente.vb</FileName>
@@ -57,7 +57,7 @@
   <Class Name="INFRA.Componente">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAQAAAEAAEAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQABAAAAAAAQAAAEAAGAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Componente.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -65,7 +65,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.Familia">
-    <Position X="6.25" Y="3.25" Width="1.75" />
+    <Position X="6.25" Y="3.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Familia.vb</FileName>

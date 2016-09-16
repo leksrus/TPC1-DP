@@ -42,10 +42,10 @@ Public Class MDI
 
 #Region "Eventos"
     Private Sub MDI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        gest_lng = New BLL.GestorLenguaje
+        gest_lng.GetLanguages()
+        gest_lng.GetMsgLanguages()
         If gest_sistem.ValidarIntegridad Then
-            gest_lng = New BLL.GestorLenguaje
-            gest_lng.GetLanguages()
-            gest_lng.GetMsgLanguages()
             Me.Hide()
             Dim splash As New WelcomeForm
             splash.ShowDialog()
@@ -69,9 +69,10 @@ Public Class MDI
     End Sub
 
     Private Sub MDI_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("MDI_Closing", 2, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("MDI_Closing", 1, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("MDI_Closing", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("MDI_Closing", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
-
+            gest_sistem.GrabarDVV()
+            LimpiarMemoria()
             GC.Collect()
         ElseIf result = DialogResult.No Then
             e.Cancel = True
@@ -133,7 +134,7 @@ Public Class MDI
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Dim fname As String = "SalirToolStripMenuItem_Click"
-        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg(fname, 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg(fname, 2, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg(fname, 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg(fname, 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
             gest_sistem.GrabarDVV()
             LimpiarMemoria()
@@ -176,41 +177,44 @@ Public Class MDI
     End Function
 
     Private Sub SeleccionDeIdiomaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SeleccionDeIdiomaToolStripMenuItem.Click
-        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("CambioIdioma", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
+            GlobalVar.tipodelenguaje = 2
             If GlobalVar.tipodelenguaje <> INFRA.SesionManager.CrearSesion.User.Language.id_idioma Then
-                GlobalVar.tipodelenguaje = 2
                 CambiarIdioma()
                 gestor_mant = New BLL.GestorMantenimiento
                 MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
+            Else
+                MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
-            MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("CambioIdioma", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
     Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
-        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("CambioIdioma", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
+            GlobalVar.tipodelenguaje = 1
             If GlobalVar.tipodelenguaje <> INFRA.SesionManager.CrearSesion.User.Language.id_idioma Then
-                GlobalVar.tipodelenguaje = 1
                 CambiarIdioma()
                 gestor_mant = New BLL.GestorMantenimiento
                 MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
+            Else
+                MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
-            MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("CambioIdioma", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
     Private Sub EspañolToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EspañolToolStripMenuItem.Click
-        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("CambioIdioma", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
+            GlobalVar.tipodelenguaje = 3
             If GlobalVar.tipodelenguaje <> INFRA.SesionManager.CrearSesion.User.Language.id_idioma Then
-                GlobalVar.tipodelenguaje = 3
                 CambiarIdioma()
                 gestor_mant = New BLL.GestorMantenimiento
                 MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
+            Else
+                MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
-            MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("CambioIdioma", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 

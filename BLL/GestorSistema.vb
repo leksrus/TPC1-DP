@@ -1,6 +1,5 @@
 ﻿Imports System.Text
 Public Class GestorSistema
-    Dim id_dvv As List(Of String) = Nothing
 #Region "Integridad DB"
     Public Sub GrabarDVV()
         Dim mp_dvv As New DAL.Mp_DVV
@@ -39,49 +38,87 @@ Public Class GestorSistema
     End Sub
 
     Public Function ValidarIntegridad() As Boolean
-        If CompararDVV() Then
+        Dim dvvlist As List(Of String) = CompararDVV()
+        If dvvlist.Count = 0 Then
             Return True
         End If
-
-
-        Try
-            Dim writer As New System.IO.StreamWriter(System.IO.Directory.GetCurrentDirectory + "\log.txt", True)
-            Dim errores As String = ""
-        Catch ex As Exception
-
-        End Try
+        Dim errorsintegrity As List(Of String) = BuscarFalloIntegridad(dvvlist)
+        If errorsintegrity.Count > 0 Then
+            Try
+                Dim path As String = System.IO.Directory.GetCurrentDirectory + "\log_integridad.txt"
+                If Not System.IO.File.Exists(path) Then
+                    System.IO.File.Create(path).Dispose()
+                End If
+                Using writer = New System.IO.StreamWriter(path, True)
+                    For Each er As String In errorsintegrity
+                        Dim myerror As String = "Fallo de integridad en registro: " & er
+                        writer.WriteLine(myerror)
+                    Next
+                    writer.Close()
+                End Using
+                errorsintegrity = Nothing
+            Catch ex As Exception
+            End Try
+        End If
         Return False
     End Function
 
-    Private Function BuscarFalloIntegridad() As String
-        For Each dvv As String In id_dvv
+    Private Function BuscarFalloIntegridad(dvvlist As List(Of String)) As List(Of String)
+        Dim crypto As New INFRA.CryptoManager
+        Dim errorsintegrity As New List(Of String)
+        For Each dvv As String In dvvlist
             Select Case dvv
                 Case "user"
-
+                    Dim mp_user As New DAL.Mp_usuario
+                    Dim users As List(Of INFRA.User) = mp_user.Seleccionar
+                    For Each usr As INFRA.User In users
+                        Dim dv As New INFRA.DV
+                        dv.code = crypto.ConvertToHash(usr.name & usr.password & usr.estado & usr.Language.id_idioma)
+                        If usr.dvh <> dv.code Then
+                            errorsintegrity.Add(dvv & "; " & usr.name & "; " & usr.password & "; " & usr.estado & "; " & usr.Language.id_idioma & "; " & usr.dvh)
+                        End If
+                        dv = Nothing
+                    Next
+                    users = Nothing
                 Case "log"
-
+                    Dim mp_log As New DAL.Mp_Log
+                    Dim logs As List(Of INFRA.Log) = mp_log.Seleccionar
+                    For Each log In logs
+                        Dim dv As New INFRA.DV
+                        dv.code = crypto.ConvertToHash(log.fechahora & log.descripcion & log.TypeError & log.User.name)
+                        If log.dvh <> dv.code Then
+                            errorsintegrity.Add(dvv & "; " & log.fechahora & "; " & log.descripcion & "; " & log.TypeError & "; " & log.User.name & "; " & log.dvh)
+                        End If
+                        dv = Nothing
+                    Next
+                    logs = Nothing
             End Select
         Next
+        Return errorsintegrity
     End Function
 
-    Private Function CompararDVV() As Boolean
+    Private Function CompararDVV() As List(Of String)
         Dim mp_dvv As New DAL.Mp_DVV
         Dim sb As StringBuilder = Nothing
-        id_dvv = Nothing
+        Dim id_dvv As New List(Of String)
         Dim crypto As New INFRA.CryptoManager
         Dim listadvv As List(Of INFRA.DVV) = mp_dvv.Seleccionar
         'compara cada registro dvv de la tabla con la columna de dvh de cada tabla que trae y encripta de la base
         For Each tmpdvv As INFRA.DVV In listadvv
-            id_dvv = New List(Of String)
             Select Case tmpdvv.id_tabla
                 Case "user"
                     Dim mp_user As New DAL.Mp_usuario
                     Dim dv As New INFRA.DV
                     sb = New StringBuilder
                     Dim users As List(Of INFRA.User) = mp_user.Seleccionar
+                    'se verifica dvv recorriendo registro por registro y encriptando nuevamente todos los dvh
                     For Each usr In users
-                        sb.Append(usr.dvh)
+                        Dim dv2 As New INFRA.DV
+                        dv2.code = crypto.ConvertToHash(usr.name & usr.password & usr.estado & usr.Language.id_idioma)
+                        sb.Append(dv2.code)
+                        dv2 = Nothing
                     Next
+                    'se encripta el total obtenido de dvh para hacer dvv y comprar el actual de la base
                     dv.code = crypto.ConvertToHash(sb.ToString)
                     If tmpdvv.code <> dv.code Then
                         id_dvv.Add(tmpdvv.id_tabla)
@@ -93,7 +130,10 @@ Public Class GestorSistema
                     sb = New StringBuilder
                     Dim logs As List(Of INFRA.Log) = mp_log.Seleccionar
                     For Each log In logs
-                        sb.Append(log.dvh)
+                        Dim dv2 As New INFRA.DV
+                        dv2.code = crypto.ConvertToHash(log.User.name & log.descripcion & log.fechahora & log.TypeError)
+                        sb.Append(dv2.code)
+                        dv2 = Nothing
                     Next
                     dv.code = crypto.ConvertToHash(sb.ToString)
                     If tmpdvv.code <> dv.code Then
@@ -102,10 +142,7 @@ Public Class GestorSistema
                     sb.Clear()
             End Select
         Next
-        If id_dvv.Count > 0 Then
-            Return False
-        End If
-        Return True
+        Return id_dvv
     End Function
 
 #End Region
@@ -114,16 +151,14 @@ Public Class GestorSistema
     Public Sub GrabarBitacora(id_error As Integer, origen As String)
         Dim mp_log As New DAL.Mp_Log
         Dim log As New INFRA.Log
-        Dim cadena(3) As String
+        Dim dv As New INFRA.DV
+        Dim crypto As New INFRA.CryptoManager
         log.User = INFRA.SesionManager.CrearSesion.User
         log.fechahora = DateTime.Now
         log.TypeError = id_error
         log.descripcion = origen
-        cadena(0) = log.User.name
-        cadena(1) = log.descripcion
-        cadena(2) = log.fechahora
-        cadena(3) = log.TypeError
-        log.dvh = INFRA.Sistema.ConcatString(cadena)
+        dv.code = crypto.ConvertToHash(log.User.name & log.descripcion & log.fechahora & log.TypeError)
+        log.dvh = dv.code
         mp_log.Insertar(log)
     End Sub
 

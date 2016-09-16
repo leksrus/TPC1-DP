@@ -140,13 +140,13 @@ Public Class Acceso
         Return parametros
     End Function
 
-    Public Function CrearParametros(name As String, value As Char) As SqlParameter
-        Dim parametros As New SqlParameter
-        parametros.ParameterName = name
-        parametros.SqlDbType = SqlDbType.Char
-        parametros.Value = value
-        Return parametros
-    End Function
+    'Public Function CrearParametros(name As String, value As Char) As SqlParameter
+    '    Dim parametros As New SqlParameter
+    '    parametros.ParameterName = name
+    '    parametros.SqlDbType = SqlDbType.Char
+    '    parametros.Value = value
+    '    Return parametros
+    'End Function
 
     Public Function CrearParametros(name As String, value As Boolean) As SqlParameter
         Dim parametros As New SqlParameter

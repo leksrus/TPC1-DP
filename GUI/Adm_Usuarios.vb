@@ -7,10 +7,10 @@
 
 #Region "botones"
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim usuario As New INFRA.User
+        Dim userdata As New INFRA.UserData
+        Dim lenguaje As New INFRA.Language
         If RadioButton1.Checked Then
-            Dim usuario As New INFRA.User
-            Dim userdata As New INFRA.UserData
-            Dim lenguaje As New INFRA.Language
             usuario.Language = lenguaje
             usuario.UserData = userdata
             Dim gest_manten As New BLL.GestorMantenimiento
@@ -40,6 +40,11 @@
                 MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End If
             RadioButton1.Checked = False
+        ElseIf RadioButton2.Checked Then
+            If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox2) AndAlso ValidarTextbox(TextBox3) AndAlso MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
+                usuario.name = TextBox1.Text
+
+            End If
         End If
         Button1.Enabled = False
         Limpiarcontrols()
@@ -144,8 +149,10 @@
             MaskedTextBox2.Text = dr.Cells(3).Value.ToString
             DateTimePicker1.Value = dr.Cells(5).Value
             ComboBox1.SelectedItem = dr.Cells(4).Value
+            Button1.Enabled = True
         End If
     End Sub
+
 #End Region
 
 End Class
