@@ -4,9 +4,9 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         DataGridView1.DataSource = Nothing
-        Dim gest_lng As New BLL.GestorLenguaje
+        Dim gest_lng As New SL.GestorLenguaje
         Dim log As New INFRA.BackupDB
-        Dim gest_manten As New BLL.GestorMantenimiento
+        Dim gest_manten As New SL.GestorMantenimiento
         If RadioButton1.Checked Then
             log.fecha = DateTimePicker1.Value
             DataGridView1.DataSource = gest_manten.ListarBackups(log)
@@ -19,9 +19,9 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim gest_lng As New BLL.GestorLenguaje
+        Dim gest_lng As New SL.GestorLenguaje
         If Not tmpdbname Is Nothing AndAlso ValidarTextbox(TextBox2) Then
-            Dim gest_manten As New BLL.GestorMantenimiento
+            Dim gest_manten As New SL.GestorMantenimiento
             Dim bk As New INFRA.BackupDB
             bk.dbname = tmpdbname
             bk.dbsize = tmpdbsize
@@ -37,7 +37,7 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim gestor_manten As New BLL.GestorMantenimiento
+        Dim gestor_manten As New SL.GestorMantenimiento
         DataGridView1.DataSource = Nothing
         DataGridView1.DataSource = gestor_manten.ListarBases
     End Sub
@@ -82,7 +82,7 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If ValidarTextbox(TextBox1) Then
             Dim restore As New INFRA.BackupDB
-            Dim gest_manten As New BLL.GestorMantenimiento
+            Dim gest_manten As New SL.GestorMantenimiento
             Dim tmp() = TextBox1.Text.Split("_"c)
             restore.dbname = tmp(tmp.Length - 1).Replace(".bak", "")
             Dim path As String = TextBox1.Text

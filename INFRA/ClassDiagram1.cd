@@ -32,8 +32,8 @@
       <Path>
         <Point X="2" Y="1.688" />
         <Point X="3.625" Y="1.688" />
-        <Point X="3.625" Y="1.902" />
-        <Point X="5.25" Y="1.902" />
+        <Point X="3.625" Y="2.154" />
+        <Point X="5.25" Y="2.154" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -48,16 +48,16 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="INFRA.Patente">
-    <Position X="4.25" Y="3.5" Width="1.5" />
+    <Position X="4.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Patente.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="INFRA.Componente">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQABAAAAAAAQAAAEAAGAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIBAAAAAAAQAAAEAAEABAAAAAAAAIAAAAAAAAAAAAI=</HashCode>
       <FileName>Componente.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -65,9 +65,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.Familia">
-    <Position X="6.25" Y="3.5" Width="1.75" />
+    <Position X="6.25" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AQIAAAAAAAAAAAAAAAAABAAAAAAAAAAABAAAAAAAAAI=</HashCode>
       <FileName>Familia.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -106,12 +106,12 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="INFRA.Log">
-    <Position X="4.5" Y="5.25" Width="1.5" />
+    <Position X="8.75" Y="5.5" Width="1.5" />
     <AssociationLine Name="User" Type="INFRA.User" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.5" Y="6.066" />
-        <Point X="3.677" Y="6.066" />
-        <Point X="3.677" Y="2.52" />
+        <Point X="8.75" Y="7.5" />
+        <Point X="4.229" Y="7.5" />
+        <Point X="4.229" Y="2.52" />
         <Point X="2" Y="2.52" />
       </Path>
     </AssociationLine>
@@ -132,7 +132,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="INFRA.DVV">
-    <Position X="9.75" Y="8.5" Width="1.5" />
+    <Position X="9.75" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAAA=</HashCode>
       <FileName>DVV.vb</FileName>
@@ -163,14 +163,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="INFRA.DV">
-    <Position X="9.75" Y="5.25" Width="1.5" />
+    <Position X="9.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>DV.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="INFRA.TypeError">
-    <Position X="7.25" Y="5.25" Width="1.5" />
+    <Position X="11.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>SAAEEAIAAAAAAAQAAAADAAAAAAACAAAAAAAAAAAAEAA=</HashCode>
       <FileName>TypeError.vb</FileName>

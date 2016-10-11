@@ -1,5 +1,18 @@
 ﻿Imports System.Text
 Public Class GestorSistema
+
+#Region "Manejo de permisos"
+
+    Public Function TraerPermisos() As List(Of INFRA.Componente)
+        Dim mp_permiso As New DAL.Mp_familia
+        Dim permisos As List(Of INFRA.Componente) = mp_permiso.Seleccionar
+        Return permisos
+    End Function
+
+
+
+#End Region
+
 #Region "Integridad DB"
     Public Sub GrabarDVV()
         Dim mp_dvv As New DAL.Mp_DVV
@@ -124,6 +137,7 @@ Public Class GestorSistema
                         id_dvv.Add(tmpdvv.id_tabla)
                     End If
                     sb.Clear()
+                    dv = Nothing
                 Case "log"
                     Dim mp_log As New DAL.Mp_Log
                     Dim dv As New INFRA.DV
@@ -140,6 +154,7 @@ Public Class GestorSistema
                         id_dvv.Add(tmpdvv.id_tabla)
                     End If
                     sb.Clear()
+                    dv = Nothing
             End Select
         Next
         Return id_dvv

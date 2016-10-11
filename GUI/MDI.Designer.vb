@@ -37,8 +37,6 @@ Partial Class MDI
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestorUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestorGruposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
@@ -122,7 +120,7 @@ Partial Class MDI
         '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PermisosToolStripMenuItem, Me.GestorUsuariosToolStripMenuItem, Me.GestorGruposToolStripMenuItem, Me.BackupToolStripMenuItem, Me.LogsToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PermisosToolStripMenuItem, Me.GestorUsuariosToolStripMenuItem, Me.LogsToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
         Me.MantenimientoToolStripMenuItem.Text = "&Mantenimiento"
@@ -130,31 +128,19 @@ Partial Class MDI
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PermisosToolStripMenuItem.Text = "&Permisos"
         '
         'GestorUsuariosToolStripMenuItem
         '
         Me.GestorUsuariosToolStripMenuItem.Name = "GestorUsuariosToolStripMenuItem"
-        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GestorUsuariosToolStripMenuItem.Text = "&Usuarios"
-        '
-        'GestorGruposToolStripMenuItem
-        '
-        Me.GestorGruposToolStripMenuItem.Name = "GestorGruposToolStripMenuItem"
-        Me.GestorGruposToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.GestorGruposToolStripMenuItem.Text = "&Grupos"
-        '
-        'BackupToolStripMenuItem
-        '
-        Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
-        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.BackupToolStripMenuItem.Text = "&Backups"
         '
         'LogsToolStripMenuItem
         '
         Me.LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
-        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.LogsToolStripMenuItem.Text = "&Logs"
         '
         'HelpToolStripMenuItem
@@ -197,7 +183,5 @@ Partial Class MDI
     Friend WithEvents MantenimientoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GestorUsuariosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GestorGruposToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BackupToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogsToolStripMenuItem As ToolStripMenuItem
 End Class

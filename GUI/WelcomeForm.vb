@@ -1,5 +1,5 @@
 ﻿Public NotInheritable Class WelcomeForm
-    Dim gestorlng As BLL.GestorLenguaje = Nothing
+    Dim gestorlng As SL.GestorLenguaje = Nothing
 
 #Region "eventos y carga"
     'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
@@ -37,7 +37,7 @@
         CambioIdioma()
     End Sub
     Private Sub CambioIdioma()
-        gestorlng = New BLL.GestorLenguaje
+        gestorlng = New SL.GestorLenguaje
         'recorre todos los controles del form hasta encontrar a los labels y cambia el texto en cada uno
         For Each ctrl In Me.Controls
             If TypeOf ctrl Is TableLayoutPanel Then

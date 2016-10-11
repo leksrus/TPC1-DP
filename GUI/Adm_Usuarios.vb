@@ -2,7 +2,7 @@
 
 #Region "variables"
     'Dim cargos As New List(Of String)
-    Dim gestor_leng As New BLL.GestorLenguaje
+    Dim gestor_leng As New SL.GestorLenguaje
 #End Region
 
 #Region "botones"
@@ -13,7 +13,7 @@
         If RadioButton1.Checked Then
             usuario.Language = lenguaje
             usuario.UserData = userdata
-            Dim gest_manten As New BLL.GestorMantenimiento
+            Dim gest_manten As New SL.GestorMantenimiento
             'valida si los datos son ingresados correctamente
             If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox2) AndAlso ValidarTextbox(TextBox3) AndAlso MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
                 usuario.name = TextBox1.Text
@@ -128,7 +128,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim usuario As New INFRA.User
-        Dim gestormanten As New BLL.GestorMantenimiento
+        Dim gestormanten As New SL.GestorMantenimiento
         If ValidarTextbox(TextBox1) Then
             usuario.name = TextBox1.Text
             DataGridView1.DataSource = Nothing

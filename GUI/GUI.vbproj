@@ -295,17 +295,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BE\BE.vbproj">
-      <Project>{dff0d233-b92e-4383-b3c2-12b743989733}</Project>
-      <Name>BE</Name>
+    <ProjectReference Include="..\BL\BL.vbproj">
+      <Project>{14f4e511-d670-4685-bfe8-1d7f199e5a96}</Project>
+      <Name>BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BLL\BLL.vbproj">
-      <Project>{2171acb4-eb85-47ca-9767-fdef833c522f}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SEC\INFRA.vbproj">
+    <ProjectReference Include="..\INFRA\INFRA.vbproj">
       <Project>{a5fd15fe-1e3f-4232-8485-64170ffba67c}</Project>
       <Name>INFRA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.vbproj">
+      <Project>{dff0d233-b92e-4383-b3c2-12b743989733}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SL\SL.vbproj">
+      <Project>{2171acb4-eb85-47ca-9767-fdef833c522f}</Project>
+      <Name>SL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

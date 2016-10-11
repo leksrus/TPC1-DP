@@ -1,8 +1,8 @@
 ﻿Public Class Login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Using usuario = New INFRA.User
-            Dim ges_manten As New BLL.GestorMantenimiento
-            Dim ges_lng As New BLL.GestorLenguaje
+            Dim ges_manten As New SL.GestorMantenimiento
+            Dim ges_lng As New SL.GestorLenguaje
             usuario.name = TextBox1.Text
             usuario.password = TextBox2.Text
             If ValidarText(TextBox1) AndAlso ValidarText(TextBox2) Then
