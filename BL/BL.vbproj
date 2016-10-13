@@ -113,6 +113,10 @@
       <Project>{dff0d233-b92e-4383-b3c2-12b743989733}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SL\SL.vbproj">
+      <Project>{2171acb4-eb85-47ca-9767-fdef833c522f}</Project>
+      <Name>SL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

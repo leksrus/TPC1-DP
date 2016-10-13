@@ -40,7 +40,6 @@
         Dim mp_user = New DAL.Mp_usuario
         Dim gestorlng As New GestorLenguaje
         Dim dv As New INFRA.DV
-        usuario.password = crypto.Encrypt(usuario.password)
         dv.code = crypto.ConvertToHash(usuario.name & usuario.password & usuario.estado & usuario.Language.id_idioma)
         usuario.dvh = dv.code
         Dim ok As Integer = 0

@@ -1,4 +1,6 @@
 ﻿Imports System.Text
+Imports System.Text.RegularExpressions
+
 Public Class GestorSistema
 
 #Region "Manejo de permisos"
@@ -201,4 +203,22 @@ Public Class GestorSistema
 
 #End Region
 
+
+#Region "Validaciones"
+    Public Shared Function ValidarNombreApellido(text As String) As Boolean
+        Return Regex.IsMatch(text, "^[a-zA-Z]\S*$")
+    End Function
+
+    Public Shared Function ValidarEmail(text As String) As Boolean
+        Return Regex.IsMatch(text, "\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z")
+    End Function
+
+    Public Shared Function ValidarEspacio(text As String) As Boolean
+        If String.IsNullOrWhiteSpace(text) Then
+            Return False
+        End If
+        Return True
+    End Function
+
+#End Region
 End Class

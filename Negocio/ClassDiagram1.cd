@@ -1,11 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BE.Cliente">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="Negocio.Cliente">
+    <Position X="0.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAgAAABCAQAIASgAAgAAQAAAAgAAAAAAAAAAEIAQAM=</HashCode>
+      <HashCode>IAAgAAABCAQAIASgAAgAAQAAAAgAABAAAAAAAEIAQAM=</HashCode>
       <FileName>Cliente.vb</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Rutina" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Negocio.Deporte">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAQAAAACEAAgAAAAAAAABEAAAAAAAAAIAAEA=</HashCode>
+      <FileName>Deporte.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Negocio.Ticket">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAIAAiQACEAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Ticket.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+      <Property Name="Deporte" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Negocio.Membresia">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAACACAACAAAAAAAAAAAACAAAAAIAA=</HashCode>
+      <FileName>Membresia.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+      <Property Name="Deporte" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Negocio.Turno">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAAAAAAAAAACEAAAAAAAAAAAAAAAAAIEA=</HashCode>
+      <FileName>Turno.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Deporte" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Negocio.Rutina">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rutina.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Negocio.Ejercicio">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAiAAAAAAAAAAACEAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ejercicio.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Rutina" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -140,6 +140,14 @@ Public Class Acceso
         Return parametros
     End Function
 
+    Public Function CrearParametros(name As String, value As Single) As SqlParameter
+        Dim parametros As New SqlParameter
+        parametros.ParameterName = name
+        parametros.SqlDbType = SqlDbType.Decimal
+        parametros.Value = value
+        Return parametros
+    End Function
+
     'Public Function CrearParametros(name As String, value As Char) As SqlParameter
     '    Dim parametros As New SqlParameter
     '    parametros.ParameterName = name

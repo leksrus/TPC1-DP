@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Registro
+Partial Class Ne_Rec_Pago
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -136,7 +136,7 @@ Partial Class Registro
         Me.Button2.Text = "Validar Ofertas"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Registro
+        'Ne_Rec_Cli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -149,8 +149,8 @@ Partial Class Registro
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Registro"
-        Me.Text = "Registro"
+        Me.Name = "Ne_Rec_Cli"
+        Me.Text = "Registro de Cliente"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()

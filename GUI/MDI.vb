@@ -7,12 +7,16 @@ Public Class MDI
     Public loginok As Boolean = False
     Dim gest_lng As SL.GestorLenguaje = Nothing
     Dim gestor_mant As SL.GestorMantenimiento = Nothing
+    'formularios de sistema
     Dim frmlogin As Login = Nothing
     Dim frmbackup As Adm_Backups = Nothing
     'Dim frmgrupo As Adm_Grupos = Nothing
     Dim frmpermiso As Adm_Permisos = Nothing
     Dim frmbitacora As Adm_Logs = Nothing
     Dim frmusuario As Adm_Usuarios = Nothing
+    'formularios de negocio
+    Dim frmrecepcion As Ne_Recepcion = Nothing
+
 #End Region
 
 #Region "Cerrar Sesion"
@@ -161,7 +165,12 @@ Public Class MDI
 #Region "MenuTool Negocio"
 
     Private Sub RecepcionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecepcionToolStripMenuItem.Click
-
+        If frmrecepcion Is Nothing Then
+            frmrecepcion = New Ne_Recepcion
+            frmrecepcion.MdiParent = Me
+            CambiarIdioma()
+        End If
+        frmrecepcion.Show()
     End Sub
 #End Region
 

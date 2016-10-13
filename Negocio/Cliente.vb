@@ -1,4 +1,14 @@
 ﻿Public Class Cliente
+    Private _idtarjeta As String
+    Public Property idtarjeta() As String
+        Get
+            Return _idtarjeta
+        End Get
+        Set(ByVal value As String)
+            _idtarjeta = value
+        End Set
+    End Property
+
     Private _nombre As String
     Public Property nombre() As String
         Get
@@ -29,6 +39,16 @@
         End Set
     End Property
 
+    Private _fecha_nacimiento As DateTime
+    Public Property fecha_nacimiento() As DateTime
+        Get
+            Return _fecha_nacimiento
+        End Get
+        Set(ByVal value As DateTime)
+            _fecha_nacimiento = value
+        End Set
+    End Property
+
     Private _telefono As String
     Public Property telefono() As String
         Get
@@ -49,16 +69,6 @@
         End Set
     End Property
 
-    Private _fecha_nacimiento As DateTime
-    Public Property fecha_nacimiento() As DateTime
-        Get
-            Return _fecha_nacimiento
-        End Get
-        Set(ByVal value As DateTime)
-            _fecha_nacimiento = value
-        End Set
-    End Property
-
     Private _direccion As String
     Public Property direccion() As String
         Get
@@ -69,14 +79,13 @@
         End Set
     End Property
 
-    Private _idtarjeta As String
-    Public Property idtarjeta() As String
+    Private _rutina As Rutina
+    Public Property Rutina As Rutina
         Get
-            Return _idtarjeta
+            Return _rutina
         End Get
-        Set(ByVal value As String)
-            _idtarjeta = value
+        Set(value As Rutina)
+            _rutina = value
         End Set
     End Property
-
 End Class

@@ -73,8 +73,22 @@
   <Class Name="DAL.Mp_cliente">
     <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_cliente.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_deporte">
+    <Position X="2.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_deporte.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_turno">
+    <Position X="4.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_turno.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
