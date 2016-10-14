@@ -40,7 +40,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Turno">
-    <Position X="7.5" Y="5.25" Width="1.5" />
+    <Position X="7.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAACAAAAAAAAAAACEAAAAAAAAAAAAAAAAAIEA=</HashCode>
       <FileName>Turno.vb</FileName>
@@ -66,5 +66,30 @@
       <Property Name="Rutina" />
     </ShowAsAssociation>
   </Class>
+  <Class Name="Negocio.Oferta">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAIAAAAICBAAAAAABAAAMAAAAAAAIAAg=</HashCode>
+      <FileName>Oferta.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TipoOferta" />
+      <Property Name="Estado" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Negocio.TipoOferta">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAEAAAAAAAIBAAAAAAAAIBAAAAAAA=</HashCode>
+      <FileName>TipoOferta.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Negocio.Estado">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Estado.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
