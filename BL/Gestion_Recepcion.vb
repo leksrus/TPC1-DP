@@ -1,4 +1,4 @@
-﻿Public Class Recepcion
+﻿Public Class Gestion_Recepcion
 
 #Region "Cliente"
     Public Function RegistrarCliente(uncliente As Negocio.Cliente) As String

@@ -1,4 +1,14 @@
 ﻿Public Class Oferta
+    Private _id_oferta As Integer
+    Public Property id_oferta() As Integer
+        Get
+            Return _id_oferta
+        End Get
+        Set(ByVal value As Integer)
+            _id_oferta = value
+        End Set
+    End Property
+
     Private _tipoOferta As TipoOferta
     Public Property TipoOferta As TipoOferta
         Get
@@ -46,6 +56,16 @@
         End Get
         Set(value As Estado)
             _estado = value
+        End Set
+    End Property
+
+    Private _deporte As Deporte
+    Public Property Deporte As Deporte
+        Get
+            Return _deporte
+        End Get
+        Set(value As Deporte)
+            _deporte = value
         End Set
     End Property
 End Class

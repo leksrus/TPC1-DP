@@ -1,5 +1,5 @@
-﻿Public Class Ne_Rec_Insc
-    Dim gest_recep As BL.Recepcion = Nothing
+﻿Public Class Ne_Recepcion_Insc
+    Dim gest_recep As BL.Gestion_Recepcion = Nothing
 
 #Region "Cambio de Idioma"
     Private Sub CambioIdioma()
@@ -35,14 +35,14 @@
         CambioIdioma()
         TabControl1.TabPages.Remove(TabPage2)
         MaskedTextBox1.Mask = "00000"
-        gest_recep = New BL.Recepcion
+        gest_recep = New BL.Gestion_Recepcion
         ComboBox1.DataSource = Nothing
         ComboBox1.DataSource = gest_recep.ListarDeportes
         gest_recep = Nothing
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        gest_recep = New BL.Recepcion
+        gest_recep = New BL.Gestion_Recepcion
         DataGridView2.DataSource = Nothing
         DataGridView2.DataSource = gest_recep.ListarHorarios(DirectCast(ComboBox1.SelectedItem, Negocio.Deporte))
         DataGridView2.Columns.Remove("Deporte")
@@ -50,7 +50,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button5.Click
         If MaskedTextBox1.MaskCompleted Then
-            gest_recep = New BL.Recepcion
+            gest_recep = New BL.Gestion_Recepcion
             Dim cliente As New Negocio.Cliente
             cliente.idtarjeta = MaskedTextBox1.Text
             DataGridView1.DataSource = Nothing

@@ -1,5 +1,5 @@
 ﻿Public Enum Estado
     pendiente
     aprobado
-    rechazado
+    suspendido
 End Enum

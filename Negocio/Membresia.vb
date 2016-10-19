@@ -28,4 +28,8 @@
             _deporte = value
         End Set
     End Property
+
+    Public Overrides Function ToString() As String
+        Return _asistencia
+    End Function
 End Class

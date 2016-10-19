@@ -3,12 +3,9 @@
   <Class Name="Negocio.Cliente">
     <Position X="0.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>IAAgAAABCAQAIASgAAgAAQAAAAgAABAAAAAAAEIAQAM=</HashCode>
+      <HashCode>AAAgAAABCAQAIASkAAgAAQAAAAgAAAAAAAAAAEIAQAM=</HashCode>
       <FileName>Cliente.vb</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Rutina" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Deporte">
     <Position X="7.5" Y="1.75" Width="1.5" />
@@ -31,7 +28,7 @@
   <Class Name="Negocio.Membresia">
     <Position X="4" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAAAAACACAACAAAAAAAAAAAACAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAAAAECACAACAAAAAAAAAAAACAAAAAIAA=</HashCode>
       <FileName>Membresia.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -40,7 +37,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Turno">
-    <Position X="7.5" Y="5.5" Width="1.5" />
+    <Position X="7.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAACAAAAAAAAAAACEAAAAAAAAAAAAAAAAAIEA=</HashCode>
       <FileName>Turno.vb</FileName>
@@ -50,14 +47,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Rutina">
-    <Position X="0.5" Y="5.5" Width="1.5" />
+    <Position X="0.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Rutina.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Negocio.Ejercicio">
-    <Position X="0.5" Y="8" Width="1.5" />
+    <Position X="0.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAgAAAiAAAAAAAAAAACEAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>Ejercicio.vb</FileName>
@@ -69,25 +66,26 @@
   <Class Name="Negocio.Oferta">
     <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAAAIAAAAICBAAAAAABAAAMAAAAAAAIAAg=</HashCode>
+      <HashCode>AAAABAAAAAAAAIAAAAIDBCAAAAABAAAMAAAAAAAMIAg=</HashCode>
       <FileName>Oferta.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TipoOferta" />
       <Property Name="Estado" />
+      <Property Name="Deporte" />
     </ShowAsAssociation>
   </Class>
   <Enum Name="Negocio.TipoOferta">
     <Position X="10.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAQAEAAAAAAAIBAAAAAAAAIBAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAACYAwAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TipoOferta.vb</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Negocio.Estado">
     <Position X="13" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Estado.vb</FileName>
     </TypeIdentifier>
   </Enum>

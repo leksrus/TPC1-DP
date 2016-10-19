@@ -77,10 +77,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrativo.Designer.vb">
-      <DependentUpon>Administrativo.vb</DependentUpon>
+    <Compile Include="Ne_Administrativo.Designer.vb">
+      <DependentUpon>Ne_Administrativo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrativo.vb">
+    <Compile Include="Ne_Administrativo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Adm_Backups.Designer.vb">
@@ -95,10 +95,10 @@
     <Compile Include="Adm_Permisos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ne_Rec_AltaCli.Designer.vb">
-      <DependentUpon>Ne_Rec_AltaCli.vb</DependentUpon>
+    <Compile Include="Ne_Recepcion_AltaCli.Designer.vb">
+      <DependentUpon>Ne_Recepcion_AltaCli.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ne_Rec_AltaCli.vb">
+    <Compile Include="Ne_Recepcion_AltaCli.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Adm_Logs.Designer.vb">
@@ -107,16 +107,16 @@
     <Compile Include="Adm_Logs.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Coordinacion.Designer.vb">
-      <DependentUpon>Coordinacion.vb</DependentUpon>
+    <Compile Include="Ne_Coordinacion.Designer.vb">
+      <DependentUpon>Ne_Coordinacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Coordinacion.vb">
+    <Compile Include="Ne_Coordinacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ne_Rec_Insc.Designer.vb">
-      <DependentUpon>Ne_Rec_Insc.vb</DependentUpon>
+    <Compile Include="Ne_Recepcion_Insc.Designer.vb">
+      <DependentUpon>Ne_Recepcion_Insc.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ne_Rec_Insc.vb">
+    <Compile Include="Ne_Recepcion_Insc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Adm_Usuarios.Designer.vb">
@@ -154,10 +154,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Ofertas.Designer.vb">
-      <DependentUpon>Ofertas.vb</DependentUpon>
+    <Compile Include="Ne_Administrativo_Oferta.Designer.vb">
+      <DependentUpon>Ne_Administrativo_Oferta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ofertas.vb">
+    <Compile Include="Ne_Administrativo_Oferta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OrdenCompra.Designer.vb">
@@ -178,16 +178,16 @@
     <Compile Include="Ne_Recepcion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ne_Rec_Pago.Designer.vb">
-      <DependentUpon>Ne_Rec_Pago.vb</DependentUpon>
+    <Compile Include="Ne_Recepcion_Pago.Designer.vb">
+      <DependentUpon>Ne_Recepcion_Pago.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ne_Rec_Pago.vb">
+    <Compile Include="Ne_Recepcion_Pago.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ne_Rec_Pago_Conf.Designer.vb">
-      <DependentUpon>Ne_Rec_Pago_Conf.vb</DependentUpon>
+    <Compile Include="Ne_Recepcion_Pago_Conf.Designer.vb">
+      <DependentUpon>Ne_Recepcion_Pago_Conf.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ne_Rec_Pago_Conf.vb">
+    <Compile Include="Ne_Recepcion_Pago_Conf.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Rutina.Designer.vb">
@@ -216,8 +216,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Administrativo.resx">
-      <DependentUpon>Administrativo.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Administrativo.resx">
+      <DependentUpon>Ne_Administrativo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Adm_Backups.resx">
       <DependentUpon>Adm_Backups.vb</DependentUpon>
@@ -225,17 +225,17 @@
     <EmbeddedResource Include="Adm_Permisos.resx">
       <DependentUpon>Adm_Permisos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ne_Rec_AltaCli.resx">
-      <DependentUpon>Ne_Rec_AltaCli.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Recepcion_AltaCli.resx">
+      <DependentUpon>Ne_Recepcion_AltaCli.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Adm_Logs.resx">
       <DependentUpon>Adm_Logs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Coordinacion.resx">
-      <DependentUpon>Coordinacion.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Coordinacion.resx">
+      <DependentUpon>Ne_Coordinacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ne_Rec_Insc.resx">
-      <DependentUpon>Ne_Rec_Insc.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Recepcion_Insc.resx">
+      <DependentUpon>Ne_Recepcion_Insc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -252,8 +252,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ofertas.resx">
-      <DependentUpon>Ofertas.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Administrativo_Oferta.resx">
+      <DependentUpon>Ne_Administrativo_Oferta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenCompra.resx">
       <DependentUpon>OrdenCompra.vb</DependentUpon>
@@ -264,11 +264,11 @@
     <EmbeddedResource Include="Ne_Recepcion.resx">
       <DependentUpon>Ne_Recepcion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ne_Rec_Pago.resx">
-      <DependentUpon>Ne_Rec_Pago.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Recepcion_Pago.resx">
+      <DependentUpon>Ne_Recepcion_Pago.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ne_Rec_Pago_Conf.resx">
-      <DependentUpon>Ne_Rec_Pago_Conf.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Recepcion_Pago_Conf.resx">
+      <DependentUpon>Ne_Recepcion_Pago_Conf.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rutina.resx">
       <DependentUpon>Rutina.vb</DependentUpon>

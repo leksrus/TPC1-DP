@@ -91,5 +91,12 @@
       <FileName>Mp_turno.vb</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="DAL.Mp_oferta">
+    <Position X="6.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAIAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_oferta.vb</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -1,8 +1,8 @@
 ﻿Public Enum TipoOferta
-    O2x1
-    Odescuento10
-    Odescuento20
-    Odecuento30
-    Odescuento40
-    Odescuento50
+    descuento_2x1
+    descuento10%
+    descuento20%
+    descuento30%
+    descuento40%
+    descuento50%
 End Enum

@@ -1,14 +1,14 @@
 ﻿Public Class Ne_Rec_AltaCl
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim cliente As Negocio.Cliente = Nothing
-        Dim gest_recep As BL.Recepcion = Nothing
+        Dim gest_recep As BL.Gestion_Recepcion = Nothing
         Dim gestor_leng As New SL.GestorLenguaje
         If SL.GestorSistema.ValidarNombreApellido(TextBox1.Text) AndAlso SL.GestorSistema.ValidarNombreApellido(TextBox2.Text) Then
             If MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
                 If SL.GestorSistema.ValidarEspacio(TextBox3.Text) Then
                     If SL.GestorSistema.ValidarEmail(TextBox4.Text) Then
                         cliente = New Negocio.Cliente
-                        gest_recep = New BL.Recepcion
+                        gest_recep = New BL.Gestion_Recepcion
                         If RadioButton1.Checked Then
                             If MaskedTextBox3.MaskCompleted Then
                                 cliente.idtarjeta = MaskedTextBox3.Text
@@ -60,11 +60,11 @@
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim gest_recep As BL.Recepcion = Nothing
+        Dim gest_recep As BL.Gestion_Recepcion = Nothing
         Dim gestor_leng As SL.GestorLenguaje = Nothing
         Dim cliente As Negocio.Cliente = Nothing
         If MaskedTextBox3.MaskCompleted Then
-            gest_recep = New BL.Recepcion
+            gest_recep = New BL.Gestion_Recepcion
             cliente = New Negocio.Cliente
             cliente.idtarjeta = MaskedTextBox3.Text
             DataGridView1.DataSource = Nothing

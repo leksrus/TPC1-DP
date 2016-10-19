@@ -128,19 +128,19 @@ Partial Class MDI
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.PermisosToolStripMenuItem.Text = "&Permisos"
         '
         'GestorUsuariosToolStripMenuItem
         '
         Me.GestorUsuariosToolStripMenuItem.Name = "GestorUsuariosToolStripMenuItem"
-        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.GestorUsuariosToolStripMenuItem.Text = "&Usuarios"
         '
         'LogsToolStripMenuItem
         '
         Me.LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
-        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.LogsToolStripMenuItem.Text = "&Logs"
         '
         'HelpToolStripMenuItem

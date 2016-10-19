@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Ne_Rec_Insc
+Partial Class Ne_Recepcion_Insc
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

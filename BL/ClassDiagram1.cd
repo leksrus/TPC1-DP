@@ -1,10 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BL.Recepcion">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="BL.Gestion_Recepcion">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAABAABAIAQAA=</HashCode>
+      <FileName>Gestion_Recepcion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.Gestion_Coordinacion">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Gestion_Coordinacion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.Gestion_Administracion">
+    <Position X="5.5" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Recepcion.vb</FileName>
+      <FileName>Gestion_Administracion.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

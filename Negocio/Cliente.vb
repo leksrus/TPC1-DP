@@ -79,13 +79,8 @@
         End Set
     End Property
 
-    Private _rutina As Rutina
-    Public Property Rutina As Rutina
-        Get
-            Return _rutina
-        End Get
-        Set(value As Rutina)
-            _rutina = value
-        End Set
-    End Property
+
+    Public Overrides Function ToString() As String
+        Return _idtarjeta & " " & _nombre & " " & _apellido
+    End Function
 End Class

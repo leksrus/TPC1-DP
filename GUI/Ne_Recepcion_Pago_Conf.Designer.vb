@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ne_Rec_Pago_Conf
+Partial Class Ne_Recepcion_Pago_Conf
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

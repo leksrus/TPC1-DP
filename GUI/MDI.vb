@@ -16,6 +16,8 @@ Public Class MDI
     Dim frmusuario As Adm_Usuarios = Nothing
     'formularios de negocio
     Dim frmrecepcion As Ne_Recepcion = Nothing
+    Dim frmcoordinacion As Ne_Coordinacion = Nothing
+    Dim frmadministrat As Ne_Administrativo = Nothing
 
 #End Region
 
@@ -27,6 +29,9 @@ Public Class MDI
         frmbitacora = Nothing
         frmusuario = Nothing
         loginok = False
+        frmcoordinacion = Nothing
+        frmrecepcion = Nothing
+        frmadministrat = Nothing
     End Sub
 
     Private Sub LimpiarMemoria()
@@ -172,6 +177,24 @@ Public Class MDI
         End If
         frmrecepcion.Show()
     End Sub
+
+    Private Sub AdministrativoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdministrativoToolStripMenuItem.Click
+        If frmadministrat Is Nothing Then
+            frmadministrat = New Ne_Administrativo
+            frmadministrat.MdiParent = Me
+
+        End If
+        frmadministrat.Show()
+    End Sub
+
+    Private Sub CoordinacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CoordinacionToolStripMenuItem.Click
+        If frmcoordinacion Is Nothing Then
+            frmcoordinacion = New Ne_Coordinacion
+            frmcoordinacion.MdiParent = Me
+            CambiarIdioma()
+        End If
+        frmcoordinacion.Show()
+    End Sub
 #End Region
 
 
@@ -263,6 +286,10 @@ Public Class MDI
             frm.Text = gest_lng.ChangeLanguage(GlobalVar.tipodelenguaje, frm.Name, "Form")
         Next
     End Sub
+
+
+
+
 
 #End Region
 

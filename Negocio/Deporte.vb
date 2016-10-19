@@ -42,4 +42,5 @@
     Public Overrides Function ToString() As String
         Return _nombre
     End Function
+
 End Class

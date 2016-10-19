@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BLL.GestorMantenimiento">
+  <Class Name="SL.GestorMantenimiento">
     <Position X="0.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIABAAAAAAIIgAAAAAAAAAAAAAAAAAAAAIQAA=</HashCode>
       <FileName>GestorMantenimiento.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BLL.GestorLenguaje">
+  <Class Name="SL.GestorLenguaje">
     <Position X="2.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAgAAIAAAAAAAAAAACEAAAAAAAAAAAAABAAAAAAAACA=</HashCode>
       <FileName>GestorLenguaje.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BLL.GestorSistema">
-    <Position X="4.5" Y="0.5" Width="2" />
+  <Class Name="SL.GestorSistema">
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAQAAAAABAAABAAAAAAACAAAAAEAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>oAAQAAAAABACABAAAAAAACAAAAAEAAAAIAAEAAABAAA=</HashCode>
       <FileName>GestorSistema.vb</FileName>
     </TypeIdentifier>
   </Class>
