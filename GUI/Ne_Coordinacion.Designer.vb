@@ -123,7 +123,7 @@ Partial Class Ne_Coordinacion
         Me.ComboBox1.Size = New System.Drawing.Size(157, 21)
         Me.ComboBox1.TabIndex = 11
         '
-        'Ne_Coord
+        'Ne_Coordinacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -137,7 +137,8 @@ Partial Class Ne_Coordinacion
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "Ne_Coord"
+        Me.MaximizeBox = False
+        Me.Name = "Ne_Coordinacion"
         Me.Text = "Coordinacion"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

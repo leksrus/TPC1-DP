@@ -7,17 +7,10 @@
       <FileName>Gestion_Recepcion.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BL.Gestion_Coordinacion">
-    <Position X="3" Y="0.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
-      <FileName>Gestion_Coordinacion.vb</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="BL.Gestion_Administracion">
-    <Position X="5.5" Y="0.5" Width="2" />
+    <Position X="3" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgA=</HashCode>
       <FileName>Gestion_Administracion.vb</FileName>
     </TypeIdentifier>
   </Class>

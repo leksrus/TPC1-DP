@@ -38,4 +38,14 @@
             _monto = value
         End Set
     End Property
+
+    Private _cantidad_clases As Integer
+    Public Property cantidad_clases() As Integer
+        Get
+            Return _cantidad_clases
+        End Get
+        Set(ByVal value As Integer)
+            _cantidad_clases = value
+        End Set
+    End Property
 End Class

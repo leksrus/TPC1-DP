@@ -1,4 +1,4 @@
-﻿Public Class Ne_Rec_AltaCl
+﻿Public Class Ne_Recepcion_AltaCli
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim cliente As Negocio.Cliente = Nothing
         Dim gest_recep As BL.Gestion_Recepcion = Nothing

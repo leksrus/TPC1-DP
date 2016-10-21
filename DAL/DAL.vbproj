@@ -78,7 +78,9 @@
     <Compile Include="Mp_lenguaje_log.vb" />
     <Compile Include="Mp_lenguaje_msg.vb" />
     <Compile Include="Mp_Log.vb" />
+    <Compile Include="Mp_membresia.vb" />
     <Compile Include="Mp_oferta.vb" />
+    <Compile Include="Mp_ticket.vb" />
     <Compile Include="Mp_turno.vb" />
     <Compile Include="Mp_usuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

@@ -15,7 +15,7 @@
             Return _tipoOferta
         End Get
         Set(value As TipoOferta)
-            value = _tipoOferta
+            _tipoOferta = value
         End Set
     End Property
 
@@ -68,4 +68,9 @@
             _deporte = value
         End Set
     End Property
+
+    Public Overrides Function ToString() As String
+        Return _tipoOferta.ToString
+    End Function
+
 End Class

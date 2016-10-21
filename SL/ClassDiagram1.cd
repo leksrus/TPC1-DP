@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SL.GestorSistema">
-    <Position X="5" Y="0.5" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>oAAQAAAAABACABAAAAAAACAAAAAEAAAAIAAEAAABAAA=</HashCode>
       <FileName>GestorSistema.vb</FileName>

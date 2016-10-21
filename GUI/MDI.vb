@@ -174,6 +174,8 @@ Public Class MDI
             frmrecepcion = New Ne_Recepcion
             frmrecepcion.MdiParent = Me
             CambiarIdioma()
+        Else
+            frmrecepcion.BringToFront()
         End If
         frmrecepcion.Show()
     End Sub
@@ -182,7 +184,9 @@ Public Class MDI
         If frmadministrat Is Nothing Then
             frmadministrat = New Ne_Administrativo
             frmadministrat.MdiParent = Me
-
+            CambiarIdioma()
+        Else
+            frmadministrat.BringToFront()
         End If
         frmadministrat.Show()
     End Sub
@@ -192,6 +196,8 @@ Public Class MDI
             frmcoordinacion = New Ne_Coordinacion
             frmcoordinacion.MdiParent = Me
             CambiarIdioma()
+        Else
+            frmcoordinacion.BringToFront()
         End If
         frmcoordinacion.Show()
     End Sub

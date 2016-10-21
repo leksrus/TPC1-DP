@@ -1,4 +1,6 @@
-﻿Public Class Ne_Coordinacion
+﻿Imports System.ComponentModel
+
+Public Class Ne_Coordinacion
     Dim oferta As Negocio.Oferta = Nothing
 
 #Region "Eventos"
@@ -31,7 +33,7 @@
 #End Region
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim gest_coor As New BL.Gestion_Coordinacion
+        Dim gest_coor As New BL.Gestion_Administracion
         Dim ges_lng As New SL.GestorLenguaje
         If RadioButton1.Checked Then
             DataGridView1.DataSource = Nothing
@@ -61,7 +63,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim gest_lng As New SL.GestorLenguaje
         If oferta.Estado = Negocio.Estado.pendiente OrElse oferta.Estado = Negocio.Estado.suspendido Then
-            Dim gest_coor As New BL.Gestion_Coordinacion
+            Dim gest_coor As New BL.Gestion_Administracion
             oferta.Estado = Negocio.Estado.aprobado
             MessageBox.Show(gest_coor.CambiarEstadoOferta(oferta))
             gest_coor = Nothing
@@ -78,7 +80,7 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim gest_lng As New SL.GestorLenguaje
         If oferta.Estado <> Negocio.Estado.suspendido Then
-            Dim gest_coor As New BL.Gestion_Coordinacion
+            Dim gest_coor As New BL.Gestion_Administracion
             oferta.Estado = Negocio.Estado.suspendido
             MessageBox.Show(gest_coor.CambiarEstadoOferta(oferta))
             gest_coor = Nothing
@@ -90,5 +92,9 @@
         Button1.Enabled = False
         Button3.Enabled = False
         DataGridView1.DataSource = Nothing
+    End Sub
+
+    Private Sub Ne_Coordinacion_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        e.Cancel = True
     End Sub
 End Class

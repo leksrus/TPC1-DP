@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Ne_Rec_AltaCl
+Partial Class Ne_Recepcion_AltaCli
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -245,7 +245,7 @@ Partial Class Ne_Rec_AltaCl
         Me.Button2.Text = "Buscar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Ne_Rec_AltaCl
+        'Ne_Recepcion_AltaCli
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -272,7 +272,7 @@ Partial Class Ne_Rec_AltaCl
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "Ne_Rec_AltaCl"
+        Me.Name = "Ne_Recepcion_AltaCli"
         Me.Text = "Registro de Cliente"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

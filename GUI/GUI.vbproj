@@ -184,10 +184,10 @@
     <Compile Include="Ne_Recepcion_Pago.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ne_Recepcion_Pago_Conf.Designer.vb">
-      <DependentUpon>Ne_Recepcion_Pago_Conf.vb</DependentUpon>
+    <Compile Include="Ne_Recepcion_Insc_Conf.Designer.vb">
+      <DependentUpon>Ne_Recepcion_Insc_Conf.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ne_Recepcion_Pago_Conf.vb">
+    <Compile Include="Ne_Recepcion_Insc_Conf.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Rutina.Designer.vb">
@@ -267,8 +267,8 @@
     <EmbeddedResource Include="Ne_Recepcion_Pago.resx">
       <DependentUpon>Ne_Recepcion_Pago.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ne_Recepcion_Pago_Conf.resx">
-      <DependentUpon>Ne_Recepcion_Pago_Conf.vb</DependentUpon>
+    <EmbeddedResource Include="Ne_Recepcion_Insc_Conf.resx">
+      <DependentUpon>Ne_Recepcion_Insc_Conf.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rutina.resx">
       <DependentUpon>Rutina.vb</DependentUpon>

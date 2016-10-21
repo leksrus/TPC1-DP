@@ -30,30 +30,32 @@ Partial Class Ne_Recepcion
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(159, 305)
+        Me.Button1.Location = New System.Drawing.Point(159, 320)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 57)
+        Me.Button1.Size = New System.Drawing.Size(120, 42)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Registrar Cliente"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(353, 305)
+        Me.Button2.Location = New System.Drawing.Point(353, 320)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(125, 57)
+        Me.Button2.Size = New System.Drawing.Size(119, 42)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Inscribir Cliente"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(15, 131)
+        Me.Button3.Location = New System.Drawing.Point(12, 99)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(113, 35)
         Me.Button3.TabIndex = 12
@@ -81,10 +83,13 @@ Partial Class Ne_Recepcion
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(159, 6)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(525, 160)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(525, 128)
         Me.DataGridView1.TabIndex = 14
         '
         'ListBox1
@@ -97,18 +102,30 @@ Partial Class Ne_Recepcion
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(559, 305)
+        Me.Button4.Location = New System.Drawing.Point(559, 320)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 57)
+        Me.Button4.Size = New System.Drawing.Size(125, 42)
         Me.Button4.TabIndex = 17
         Me.Button4.Text = "Marcar Ingreso"
         Me.Button4.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(159, 158)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(525, 129)
+        Me.DataGridView2.TabIndex = 18
         '
         'Ne_Recepcion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(996, 384)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button3)
@@ -117,9 +134,11 @@ Partial Class Ne_Recepcion
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.MaximizeBox = False
         Me.Name = "Ne_Recepcion"
         Me.Text = "Recepcion"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -132,4 +151,5 @@ Partial Class Ne_Recepcion
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button4 As Button
+    Friend WithEvents DataGridView2 As DataGridView
 End Class
