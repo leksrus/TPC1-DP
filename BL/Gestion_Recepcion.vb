@@ -1,7 +1,8 @@
 ﻿Public Class Gestion_Recepcion
     Public Event ValidarPagoVencido(msg As String)
-    Public Event ValidarPagoActivo(dep As List(Of Negocio.Deporte))
-
+    Public Event ValidarPagoActivo(deps As List(Of Negocio.Deporte))
+    Public Event ValidarClasesDisp(msg As String)
+    Public Event ValidarIngresoRealizado(cli As Negocio.VistaRecep)
 
 #Region "Cliente"
     Public Function RegistrarCliente(uncliente As Negocio.Cliente) As String
@@ -167,30 +168,73 @@
 #End Region
 
 #Region "Ingreso a Clases"
-    Public Function ValidarIngreso(uncliente As Negocio.Cliente) As List(Of Negocio.Ticket)
+    Public Function ValidarIngreso(uncliente As Negocio.Cliente) As List(Of Negocio.Cliente)
         Dim mp_tk As New DAL.Mp_ticket
+        Dim gestorlng As New SL.GestorLenguaje
+        Dim mp_cliente As New DAL.Mp_cliente
+        Dim clientes As List(Of Negocio.Cliente) = mp_cliente.Seleccionar(uncliente)
         Dim tickets As List(Of Negocio.Ticket) = mp_tk.Seleccionar(uncliente)
         If tickets.Count > 0 Then
             Dim tmp = tickets.Where(Function(tkv) tkv.fecha_pago.Month = DateTime.Now.Month AndAlso tkv.fecha_pago.Year = DateTime.Now.Year).ToList
             If tmp.Count > 0 Then
+                Dim deportes As New List(Of Negocio.Deporte)
                 For Each tk As Negocio.Ticket In tmp
-
+                    deportes.Add(tk.Deporte)
                 Next
-                RaiseEvent ValidarPagoActivo(tmp)
-                Return tmp
+                Dim deps As New List(Of Negocio.Deporte)
+                For Each dp As Negocio.Deporte In deportes.Distinct(New SL.DeporteComparer)
+                    deps.Add(dp)
+                Next
+                RaiseEvent ValidarPagoActivo(deps)
             Else
-                RaiseEvent ValidarPagoVencido("Todos los pagos estan vencidos")
+                RaiseEvent ValidarPagoVencido(gestorlng.ChangeLangMsg("MarcarIngreso", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma))
             End If
         End If
-        Return tickets
+        Return clientes
     End Function
 
-    Public Function ValidarCuota() As String
-
+    Public Function ValidarCuota(uncliente As Negocio.Cliente, undeporte As Negocio.Deporte) As Boolean
+        Dim mp_tk As New DAL.Mp_ticket
+        Dim mp_mem As New DAL.Mp_membresia
+        Dim gestorlng As New SL.GestorLenguaje
+        Dim asistencias As List(Of Negocio.Membresia) = mp_mem.Seleccionar(uncliente)
+        Dim tickets As List(Of Negocio.Ticket) = mp_tk.Seleccionar(uncliente)
+        Dim asists = asistencias.Where(Function(day) day.asistencia.Month = DateTime.Now.Month AndAlso day.Deporte.id_deporte = undeporte.id_deporte).ToList
+        Dim pagos = tickets.Where(Function(dp) dp.fecha_pago.Month = DateTime.Now.Month AndAlso dp.Deporte.id_deporte = undeporte.id_deporte).ToList
+        If undeporte.tipo.Equals("Fitness") Then
+            If pagos IsNot Nothing Then
+                Dim cant As Integer = 0
+                For Each pg In pagos
+                    cant += pg.cantidad_clases
+                Next
+                If asists.Count < cant Then
+                    Return True
+                Else
+                    RaiseEvent ValidarClasesDisp(gestorlng.ChangeLangMsg("MarcarIngreso", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma))
+                End If
+            End If
+        Else
+            Return True
+            End If
+        Return False
     End Function
 
-    Public Function RegistrarIngreso() As String
-
+    Public Function RegistrarIngreso(memb As Negocio.Membresia) As String
+        Dim mp_mem As New DAL.Mp_membresia
+        Dim gestorlng As New SL.GestorLenguaje
+        Dim ok = mp_mem.Insertar(memb)
+        If ok > 0 Then
+            Dim vr As New Negocio.VistaRecep
+            vr.nombre = memb.Cliente.nombre
+            vr.apellido = memb.Cliente.apellido
+            vr.dni = memb.Cliente.dni
+            vr.fecha_ingreso = memb.asistencia
+            vr.nombre_clase = memb.Deporte.nombre
+            RaiseEvent ValidarIngresoRealizado(vr)
+            Return gestorlng.ChangeLangMsg("MarcarIngreso", 4, INFRA.SesionManager.CrearSesion.User.Language.id_idioma)
+        Else
+            Return gestorlng.ChangeLangMsg("MarcarIngreso", 5, INFRA.SesionManager.CrearSesion.User.Language.id_idioma)
+        End If
     End Function
 #End Region
 

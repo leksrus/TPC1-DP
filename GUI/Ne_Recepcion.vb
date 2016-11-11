@@ -1,6 +1,9 @@
 ﻿Imports System.ComponentModel
 
 Public Class Ne_Recepcion
+    Private cliente As Negocio.Cliente = Nothing
+    Private deporte As Negocio.Deporte = Nothing
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim frm_alta_cliente As Ne_Recepcion_AltaCli = Nothing
         frm_alta_cliente = New Ne_Recepcion_AltaCli
@@ -20,16 +23,19 @@ Public Class Ne_Recepcion
             AddHandler gest_recep.ValidarPagoActivo, AddressOf ValidacionPagoActivo
             Dim cliente As New Negocio.Cliente
             cliente.idtarjeta = MaskedTextBox1.Text
-            Dim tickets As List(Of Negocio.Ticket) = gest_recep.ValidarIngreso(cliente)
-            Dim clientes As New List(Of Negocio.Cliente)
-            For Each tk As Negocio.Ticket In tickets
-                clientes.Add(tk.Cliente)
-                DataGridView1.DataSource = Nothing
-                DataGridView1.DataSource = clientes
-            Next
+            DataGridView1.DataSource = Nothing
+            DataGridView1.DataSource = gest_recep.ValidarIngreso(cliente)
+            'Dim clientes As New List(Of Negocio.Cliente)
+            'For Each tk As Negocio.Ticket In tickets
+            '    clientes.Add(tk.Cliente)
+            '    DataGridView1.DataSource = Nothing
+            '    DataGridView1.DataSource = clientes
+            'Next
             DataGridView1.ClearSelection()
+            DataGridView2.ClearSelection()
             RemoveHandler gest_recep.ValidarPagoVencido, AddressOf ValidacionPagoVencido
             RemoveHandler gest_recep.ValidarPagoActivo, AddressOf ValidacionPagoActivo
+            Button4.Enabled = Enabled
         Else
             Dim gestor_leng As New SL.GestorLenguaje
             MessageBox.Show(gestor_leng.ChangeLangMsg("BuscarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -42,21 +48,73 @@ Public Class Ne_Recepcion
         e.Cancel = False
     End Sub
 
-    Private Sub ValidacionPagoActivo(tks As List(Of Negocio.Ticket))
+    Private Sub ValidacionPagoActivo(dep As List(Of Negocio.Deporte))
         DataGridView2.DataSource = Nothing
-        DataGridView2.DataSource = tks
+        DataGridView2.DataSource = dep
         DataGridView2.Columns(0).Visible = False
     End Sub
 
     Private Sub ValidacionPagoVencido(msg As String)
         Button4.Enabled = False
-        MessageBox.Show(msg)
+        Dim gestor_leng As New SL.GestorLenguaje
+        MessageBox.Show(msg, gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        gestor_leng = Nothing
     End Sub
     Private Sub Ne_Recepcion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MaskedTextBox1.Mask = "00000"
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        If e.RowIndex >= 0 Then
+            cliente = Nothing
+            cliente = DirectCast(DataGridView1.DataSource(e.RowIndex), Negocio.Cliente)
+        End If
+    End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim ok As Boolean = False
+        Dim gest_recep As New BL.Gestion_Recepcion
+        Dim gestor_leng As New SL.GestorLenguaje
+        AddHandler gest_recep.ValidarClasesDisp, AddressOf ValidarClasesDisp
+        If cliente IsNot Nothing AndAlso deporte IsNot Nothing Then
+            ok = gest_recep.ValidarCuota(cliente, deporte)
+        Else
+            MessageBox.Show(gestor_leng.ChangeLangMsg("MarcarIngreso", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
+        If ok Then
+            AddHandler gest_recep.ValidarIngresoRealizado, AddressOf ValidarIngresoRealizado
+            Dim mem As New Negocio.Membresia
+            mem.Cliente = cliente
+            mem.Deporte = deporte
+            mem.asistencia = DateTime.Now
+            MessageBox.Show(gest_recep.RegistrarIngreso(mem), gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            RemoveHandler gest_recep.ValidarIngresoRealizado, AddressOf ValidarIngresoRealizado
+        End If
+        RemoveHandler gest_recep.ValidarClasesDisp, AddressOf ValidarClasesDisp
+        cliente = Nothing
+        deporte = Nothing
+        gest_recep = Nothing
+        gestor_leng = Nothing
+        DataGridView1.DataSource = Nothing
+        DataGridView2.DataSource = Nothing
+    End Sub
+
+    Private Sub ValidarClasesDisp(msg As String)
+        Dim gestor_leng As New SL.GestorLenguaje
+        MessageBox.Show(msg, gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        gestor_leng = Nothing
+    End Sub
+
+    Public Sub ValidarIngresoRealizado(vr As Negocio.VistaRecep)
+        ListBox1.Items.Add(vr)
+    End Sub
+
+    Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        If e.RowIndex >= 0 Then
+            deporte = Nothing
+            deporte = DirectCast(DataGridView2.DataSource(e.RowIndex), Negocio.Deporte)
+        End If
     End Sub
 End Class

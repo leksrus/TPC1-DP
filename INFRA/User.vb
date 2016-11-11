@@ -1,5 +1,14 @@
 ﻿Public Class User
     Implements IDisposable
+    Private _permisos As New List(Of INFRA.Componente)
+    Public Property permisos() As List(Of INFRA.Componente)
+        Get
+            Return _permisos
+        End Get
+        Set(ByVal value As List(Of INFRA.Componente))
+            _permisos = value
+        End Set
+    End Property
     Private _name As String
     Public Property name() As String
         Get
@@ -17,14 +26,6 @@
         End Get
         Set(ByVal value As String)
             _password = value
-        End Set
-    End Property
-
-    Public Property Componente As Componente
-        Get
-            Return Nothing
-        End Get
-        Set(value As Componente)
         End Set
     End Property
 
@@ -68,7 +69,9 @@
         End Set
     End Property
 
-
+    Public Overrides Function ToString() As String
+        Return _name
+    End Function
 
 #Region "IDisposable Support"
     Private disposedValue As Boolean ' To detect redundant calls

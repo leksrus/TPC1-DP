@@ -1,4 +1,5 @@
-﻿Public Class Gestion_Administracion
+﻿
+Public Class Gestion_Administracion
     Public Function VerOfertas(unaoferta As Negocio.Oferta, undeporte As Negocio.Deporte) As List(Of Negocio.Oferta)
         Dim mp_ofer As New DAL.Mp_oferta
         If unaoferta Is Nothing Then
@@ -34,9 +35,16 @@
         End If
     End Function
 
-    Public Function HacerReporte(fech1 As DateTime, fech2 As DateTime) As List(Of Negocio.Ticket)
+    Public Function HacerReporte(fech1 As DateTime, fech2 As DateTime) As Dictionary(Of Negocio.Deporte, Integer)
         Dim mp_tk As New DAL.Mp_ticket
+        Dim mp_dep As New DAL.Mp_deporte
+        Dim reporte As New Dictionary(Of Negocio.Deporte, Integer)
+        Dim deportes As List(Of Negocio.Deporte) = mp_dep.Seleccionar
         Dim tickets As List(Of Negocio.Ticket) = mp_tk.Seleccionar(fech1, fech2)
-        Return tickets
+        For Each dp As Negocio.Deporte In deportes
+            Dim c = tickets.Where(Function(money) money.Deporte.id_deporte = dp.id_deporte).Count
+            reporte.Add(dp, c)
+        Next
+        Return reporte
     End Function
 End Class

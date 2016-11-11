@@ -39,7 +39,7 @@
   <Class Name="Negocio.Turno">
     <Position X="7.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAACAAAAAAAAAAACEAAAAAAAAAAAAAAAAAIEA=</HashCode>
+      <HashCode>EAAAAAAAACAAAAAAAAAAACEAAAAAAABAAAAAAAAAIAA=</HashCode>
       <FileName>Turno.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -74,6 +74,13 @@
       <Property Name="Estado" />
       <Property Name="Deporte" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="Negocio.VistaRecep">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAABAAQAAASEAAAAAQCABAAAAACAAAAAAAIAAAA=</HashCode>
+      <FileName>VistaRecep.vb</FileName>
+    </TypeIdentifier>
   </Class>
   <Enum Name="Negocio.TipoOferta">
     <Position X="10.25" Y="5.25" Width="1.5" />

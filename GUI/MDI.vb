@@ -52,29 +52,34 @@ Public Class MDI
 #Region "Eventos"
     Private Sub MDI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         gest_lng = New SL.GestorLenguaje
-        gest_lng.GetLanguages()
-        gest_lng.GetMsgLanguages()
-        If gest_sistem.ValidarIntegridad Then
-            Me.Hide()
-            Dim splash As New WelcomeForm
-            splash.ShowDialog()
-            If frmlogin Is Nothing Then
-                frmlogin = New Login
+        Try
+            gest_lng.GetLanguages()
+            gest_lng.GetMsgLanguages()
+            If gest_sistem.ValidarIntegridad Then
+                Me.Hide()
+                Dim splash As New WelcomeForm
+                splash.ShowDialog()
+                If frmlogin Is Nothing Then
+                    frmlogin = New Login
+                End If
+                CambiarIdioma()
+                frmlogin.ShowDialog()
+                'frmlogin.MdiParent = Me
+                If loginok Then
+                    CambiarIdioma()
+                    ValidarPermisos()
+                    Me.Show()
+                Else
+                    Application.Exit()
+                End If
+            Else
+                MessageBox.Show(gest_lng.ChangeLangMsg("MDI_Load", 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("MDI_Load", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Question)
+                Application.Exit()
             End If
-            CambiarIdioma()
-            frmlogin.ShowDialog()
-        'frmlogin.MdiParent = Me
-        If loginok Then
-            CambiarIdioma()
-            ValidarPermisos()
-            Me.Show()
-        Else
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
             Application.Exit()
-        End If
-        Else
-        MessageBox.Show(gest_lng.ChangeLangMsg("MDI_Load", 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("MDI_Load", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Question)
-        Application.Exit()
-        End If
+        End Try
     End Sub
 
     Private Sub MDI_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -122,8 +127,7 @@ Public Class MDI
     '    frmgrupo.Show()
     '    frmgrupo = Nothing
     'End Sub
-
-    Private Sub BackupToolStripMenuItem_Click(sender As Object, e As EventArgs)
+    Private Sub BackupToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles BackupToolStripMenuItem.Click
         If frmbackup Is Nothing Then
             frmbackup = New Adm_Backups
             frmbackup.MdiParent = Me
@@ -292,7 +296,6 @@ Public Class MDI
             frm.Text = gest_lng.ChangeLanguage(GlobalVar.tipodelenguaje, frm.Name, "Form")
         Next
     End Sub
-
 
 
 

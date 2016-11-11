@@ -67,6 +67,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeporteComparer.vb" />
     <Compile Include="GestorLenguaje.vb" />
     <Compile Include="GestorMantenimiento.vb" />
     <Compile Include="GestorSistema.vb" />

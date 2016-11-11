@@ -46,6 +46,8 @@
 
             End If
         End If
+        DataGridView1.DataSource = Nothing
+        DataGridView2.DataSource = Nothing
         Button1.Enabled = False
         Limpiarcontrols()
     End Sub
@@ -124,6 +126,7 @@
         DateTimePicker1.MaxDate = Date.Now
         DateTimePicker1.Value = Date.Now
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -133,6 +136,10 @@
             usuario.name = TextBox1.Text
             DataGridView1.DataSource = Nothing
             DataGridView1.DataSource = gestormanten.BuscarUsuario(usuario)
+            DataGridView1.Columns(2).Visible = False
+            DataGridView1.Columns(3).Visible = False
+            DataGridView1.Columns(4).Visible = False
+            DataGridView1.Columns(5).Visible = False
         End If
 
     End Sub
@@ -142,7 +149,18 @@
 #Region "Eventos"
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         If e.RowIndex >= 0 Then
-            Dim dr As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+            Dim usersdata As New List(Of INFRA.UserData)
+            For Each usr In DataGridView1.DataSource
+                usersdata.Add(DirectCast(usr, INFRA.User).UserData)
+            Next
+            DataGridView2.DataSource = Nothing
+            DataGridView2.DataSource = usersdata
+        End If
+    End Sub
+
+    Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        If e.RowIndex >= 0 Then
+            Dim dr As DataGridViewRow = DataGridView2.Rows(e.RowIndex)
             TextBox2.Text = dr.Cells(0).Value.ToString
             TextBox3.Text = dr.Cells(1).Value.ToString
             MaskedTextBox1.Text = dr.Cells(2).Value.ToString

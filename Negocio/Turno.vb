@@ -20,7 +20,7 @@
     End Property
 
     Private _hora As TimeSpan
-    Property hora As TimeSpan
+    Public Property hora As TimeSpan
         Get
             Return _hora
         End Get

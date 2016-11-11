@@ -97,7 +97,7 @@ Partial Class Ne_Recepcion
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(711, 6)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(273, 368)
+        Me.ListBox1.Size = New System.Drawing.Size(385, 368)
         Me.ListBox1.TabIndex = 16
         '
         'Button4
@@ -124,7 +124,7 @@ Partial Class Ne_Recepcion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(996, 384)
+        Me.ClientSize = New System.Drawing.Size(1106, 384)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.ListBox1)

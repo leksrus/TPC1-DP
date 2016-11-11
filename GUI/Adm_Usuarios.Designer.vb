@@ -45,7 +45,9 @@ Partial Class Adm_Usuarios
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -184,7 +186,7 @@ Partial Class Adm_Usuarios
         Me.DataGridView1.Location = New System.Drawing.Point(408, 18)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(572, 305)
+        Me.DataGridView1.Size = New System.Drawing.Size(572, 137)
         Me.DataGridView1.TabIndex = 17
         '
         'RadioButton1
@@ -268,11 +270,23 @@ Partial Class Adm_Usuarios
         Me.MaskedTextBox2.Size = New System.Drawing.Size(84, 21)
         Me.MaskedTextBox2.TabIndex = 5
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(408, 189)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(572, 134)
+        Me.DataGridView2.TabIndex = 22
+        '
         'Adm_Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(992, 467)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.MaskedTextBox2)
         Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(Me.RadioButton3)
@@ -299,6 +313,7 @@ Partial Class Adm_Usuarios
         Me.Name = "Adm_Usuarios"
         Me.Text = "Gestion de Usuarios"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -327,4 +342,5 @@ Partial Class Adm_Usuarios
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents MaskedTextBox1 As MaskedTextBox
     Friend WithEvents MaskedTextBox2 As MaskedTextBox
+    Friend WithEvents DataGridView2 As DataGridView
 End Class

@@ -16,6 +16,7 @@ Public Class Mp_usuario
         'sobrecargo en caso de necesitar traer todos los usuarios de la base de datos
         Dim users As New List(Of INFRA.User)
         Dim mp_leng As New Mp_lenguaje(_acceso)
+        Dim mp_perm As New Mp_familia(_acceso)
         Dim lenguajes As List(Of INFRA.Language) = mp_leng.Seleccionar
         Dim tabla As DataTable = _acceso.Leer("Seleccionar_usuarios", Nothing)
         For Each reg In tabla.Rows
@@ -25,6 +26,7 @@ Public Class Mp_usuario
             usr.estado = reg("estado")
             usr.dvh = reg("dvh")
             usr.Language = lenguajes.Where(Function(lng) lng.id_idioma = reg("id_idioma")).FirstOrDefault
+            usr.permisos = mp_perm.Seleccionar(usr)
             users.Add(usr)
         Next
         Return users
@@ -34,6 +36,7 @@ Public Class Mp_usuario
         'busco usuario especifico en la base de datos
         Dim usrs As New List(Of INFRA.User)
         Dim mp_lng As New Mp_lenguaje(_acceso)
+        Dim mp_familia As New Mp_familia(_acceso)
         Dim lngmessages As List(Of INFRA.Language) = mp_lng.Seleccionar
         Dim tabla As DataTable
         Dim parametros(0) As SqlParameter
@@ -56,6 +59,7 @@ Public Class Mp_usuario
             nickname.UserData.telefono = row("telefono")
             nickname.UserData.cargo = row("cargo")
             nickname.UserData.fecha_ingreso = row("fecha_ingreso")
+            nickname.permisos = mp_familia.Seleccionar(usuario)
             usrs.Add(nickname)
         Next
         Return usrs

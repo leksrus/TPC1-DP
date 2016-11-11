@@ -14,8 +14,8 @@
         <Point X="9.25" Y="0.5" />
         <Point X="9.25" Y="0.438" />
         <Point X="2.094" Y="0.438" />
-        <Point X="2.094" Y="0.625" />
-        <Point X="2" Y="0.625" />
+        <Point X="2.094" Y="0.631" />
+        <Point X="2" Y="0.631" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -28,20 +28,11 @@
   </Class>
   <Class Name="INFRA.User">
     <Position X="0.5" Y="0.5" Width="1.5" />
-    <AssociationLine Name="Componente" Type="INFRA.Componente" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2" Y="1.688" />
-        <Point X="3.625" Y="1.688" />
-        <Point X="3.625" Y="2.154" />
-        <Point X="5.25" Y="2.154" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AQQAbAAACCAAAAAAACCQAAAAAAAEAAAAAAAAAgAIAAA=</HashCode>
+      <HashCode>AQQAbABACCAAAAAEAACQAAAAAAAEAAAAAAAAAgAIAAA=</HashCode>
       <FileName>User.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Componente" />
       <Property Name="UserData" />
       <Property Name="Language" />
     </ShowAsAssociation>
@@ -67,12 +58,12 @@
   <Class Name="INFRA.Familia">
     <Position X="6.25" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AQIAAAAAAAAAAAAAAAAABAAAAAAAAAAABAAAAAAAAAI=</HashCode>
+      <HashCode>AQIAAAAAAAAAAAAAAACABAAAAAAAAAAABAAAAAAAAAI=</HashCode>
       <FileName>Familia.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="INFRA.UserData">
-    <Position X="0.5" Y="5" Width="1.5" />
+    <Position X="0.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAABAAQAAASAAAAAAQCAAAgAAAAAAAAAAQIACAI=</HashCode>
       <FileName>UserData.vb</FileName>
@@ -111,8 +102,8 @@
       <Path>
         <Point X="8.75" Y="7.5" />
         <Point X="4.229" Y="7.5" />
-        <Point X="4.229" Y="2.52" />
-        <Point X="2" Y="2.52" />
+        <Point X="4.229" Y="2.619" />
+        <Point X="2" Y="2.619" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>

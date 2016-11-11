@@ -11,6 +11,6 @@ Public Class Patente
     End Sub
 
     Public Overrides Function List() As List(Of Componente)
-        Throw New NotImplementedException()
+        Return New List(Of Componente)
     End Function
 End Class

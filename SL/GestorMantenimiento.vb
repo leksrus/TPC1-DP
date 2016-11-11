@@ -51,14 +51,16 @@
         End If
     End Function
 
-    Public Function BuscarUsuario(usuario As INFRA.User) As List(Of INFRA.UserData)
+    Public Function BuscarUsuario(usuario As INFRA.User) As List(Of INFRA.User)
         Dim mp_user As New DAL.Mp_usuario
         Dim users As List(Of INFRA.User) = mp_user.Seleccionar(usuario)
-        Dim usersdata As New List(Of INFRA.UserData)
-        For Each usr In users
-            usersdata.Add(usr.UserData)
-        Next
-        Return usersdata
+        Return users
+    End Function
+
+    Public Function ListarUsuarios() As List(Of INFRA.User)
+        Dim mp_user As New DAL.Mp_usuario
+        Dim users As List(Of INFRA.User) = mp_user.Seleccionar
+        Return users
     End Function
 
 #End Region

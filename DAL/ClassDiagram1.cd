@@ -64,7 +64,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DAL.Mp_familia">
-    <Position X="2.25" Y="3.25" Width="1.5" />
+    <Position X="2.25" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
       <FileName>Mp_familia.vb</FileName>

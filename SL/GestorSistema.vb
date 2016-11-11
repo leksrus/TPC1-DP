@@ -11,6 +11,48 @@ Public Class GestorSistema
         Return permisos
     End Function
 
+    'validacion de permiso para cualqueir usuario, valido los permisos en la lista permisos del usuario contra el permiso en si (lista de todos los permisos en la db)
+    Public Function IsInRol(permiso As INFRA.Componente, user As INFRA.User) As Boolean
+        If user Is Nothing Then
+            Return False
+        Else
+            Dim valid As Boolean = False
+            For Each per As INFRA.Componente In user.permisos
+                If TypeOf per Is INFRA.Patente Then
+                    If DirectCast(per, INFRA.Patente).codigo.Equals(permiso.codigo) Then
+                        valid = True
+                    End If
+                Else
+                    If DirectCast(per, INFRA.Familia).codigo.Equals(permiso.codigo) Then
+                        valid = True
+                    End If
+                    If per.List.Count > 0 Then
+                        valid = IsInRolRecursive(permiso, per, valid)
+                    End If
+                End If
+            Next
+            Return valid
+        End If
+    End Function
+
+    Private Function IsInRolRecursive(p As INFRA.Componente, per As INFRA.Componente, valid As Boolean) As Boolean
+        For Each perm As INFRA.Componente In per.List
+            If TypeOf perm Is INFRA.Patente Then
+                If DirectCast(perm, INFRA.Patente).codigo.Equals(p.codigo) Then
+                    valid = True
+                End If
+            Else
+                If DirectCast(perm, INFRA.Familia).codigo.Equals(p.codigo) Then
+                    valid = True
+                End If
+                If perm.List.Count > 0 Then
+                    valid = IsInRolRecursive(p, perm, valid)
+                End If
+            End If
+        Next
+        Return valid
+    End Function
+
 
 
 #End Region
@@ -202,7 +244,6 @@ Public Class GestorSistema
 
 
 #End Region
-
 
 #Region "Validaciones"
     Public Shared Function ValidarNombreApellido(text As String) As Boolean

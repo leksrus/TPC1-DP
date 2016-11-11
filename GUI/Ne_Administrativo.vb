@@ -10,28 +10,13 @@ Public Class Ne_Administrativo
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim gest_administ As New BL.Gestion_Administracion
         Dim gest_recep As New BL.Gestion_Recepcion
-        Chart1.DataSource = gest_administ.HacerReporte(DateTimePicker1.Value, DateTimePicker2.Value)
-        'Chart1.Series("Cantidad Total").XValueMember = "fecha_pago"
-        'Chart1.Series("Cantidad Total").YValueMembers = "monto"
-        Dim deportes As List(Of Negocio.Deporte) = gest_recep.ListarDeportes
-        Chart1.DataSource = deportes
-        Chart1.Series("Cantidad Total").XValueMember = "nombre"
-        Chart1.Series("Cantidad Total").YValueMembers = "precio"
+        Dim reporte As Dictionary(Of Negocio.Deporte, Integer) = gest_administ.HacerReporte(DateTimePicker1.Value, DateTimePicker2.Value)
+        For Each rp As KeyValuePair(Of Negocio.Deporte, Integer) In reporte
+            Chart1.Series("Cantidad Total").Points.AddXY(rp.Key.nombre, rp.Value)
+            Chart1.Series("Cantidad Total")("PixelPointWidth") = "20"
+            Chart1.ChartAreas("ChartArea1").AxisX.Interval = 1
+        Next
 
-
-
-        Chart1.DataBind()
-
-        'For Each tk In tickets
-        '    Dim serie As Series = Chart1.Series.Add(tk.Deporte.nombre)
-        '    serie.Points.Add(tk.monto)
-        '    'Chart1.Series("Cantidad Total").Points.AddXY(tk.Deporte.nombre, tk.monto)
-
-        'Next
-        'Chart1.Series(0).XValueMember = "nombre"
-        'Chart1.Series(0).YValueMembers = "monto"
-        'Chart1.Titles.Add("Cantidad de Inscripciones")
-        'Chart1.DataBind()
 
     End Sub
 

@@ -38,7 +38,11 @@ Public Class Mp_membresia
     End Function
 
     Public Function Insertar(unmem As Negocio.Membresia) As Integer
-
+        Dim parametros(2) As SqlParameter
+        parametros(0) = _acceso.CrearParametros("@id_cliente", unmem.Cliente.idtarjeta)
+        parametros(1) = _acceso.CrearParametros("@id_deporte", unmem.Deporte.id_deporte)
+        parametros(2) = _acceso.CrearParametros("@fecha", unmem.asistencia)
+        Return _acceso.Escribir("Marcar_ingreso", parametros)
     End Function
 
 End Class
