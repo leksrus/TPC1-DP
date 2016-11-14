@@ -48,20 +48,29 @@
   </Class>
   <Class Name="Negocio.Rutina">
     <Position X="0.5" Y="6.25" Width="1.5" />
+    <AssociationLine Name="Tipo_rutina" Type="Negocio.Tipo_rutina" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.875" Y="8.382" />
+        <Point X="1.875" Y="8.839" />
+        <Point X="3.25" Y="8.839" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAAAAAgAAAAgBACAAAgAAAAAAAACAAAAgAAAAAA=</HashCode>
       <FileName>Rutina.vb</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+      <Property Name="Dificult_rutina" />
+      <Property Name="Tipo_rutina" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Ejercicio">
-    <Position X="0.5" Y="9" Width="1.5" />
+    <Position X="3.25" Y="10" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>IAAAAgAAAiAAAAAAAAAAACEAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAgAAAgAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Ejercicio.vb</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Rutina" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Oferta">
     <Position X="10.25" Y="0.5" Width="1.5" />
@@ -76,11 +85,29 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.VistaRecep">
-    <Position X="4" Y="6.75" Width="1.5" />
+    <Position X="5.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAABAAQAAASEAAAAAQCABAAAAACAAAAAAAIAAAA=</HashCode>
       <FileName>VistaRecep.vb</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="Negocio.dia">
+    <Position X="0.5" Y="9.75" Width="1.5" />
+    <AssociationLine Name="Rutina" Type="Negocio.Rutina" FixedToPoint="true">
+      <Path>
+        <Point X="1.188" Y="9.75" />
+        <Point X="1.188" Y="8.382" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAgAAAAAEAAAAAQFAAAAAAAAAAAAA=</HashCode>
+      <FileName>dia.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Rutina" />
+      <Property Name="Ejercicio" />
+      <Property Name="num_dia" />
+    </ShowAsAssociation>
   </Class>
   <Enum Name="Negocio.TipoOferta">
     <Position X="10.25" Y="5.25" Width="1.5" />
@@ -94,6 +121,27 @@
     <TypeIdentifier>
       <HashCode>AAABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Estado.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Negocio.Dificult_rutina">
+    <Position X="3.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAABAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dificult_rutina.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Negocio.Tipo_rutina">
+    <Position X="3.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tipo_rutina.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Negocio.num_dia">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAA0AsAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>num_dia.vb</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

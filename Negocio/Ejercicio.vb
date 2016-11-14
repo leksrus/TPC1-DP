@@ -1,20 +1,11 @@
 ﻿Public Class Ejercicio
-    Private _rutina As Rutina
-    Public Property Rutina As Rutina
+    Private _id_ejercicio As Integer
+    Public Property id_ejercicio As Integer
         Get
-            Return Nothing
+            Return _id_ejercicio
         End Get
-        Set(value As Rutina)
-        End Set
-    End Property
-
-    Private _dia As String
-    Public Property dia() As String
-        Get
-            Return _dia
-        End Get
-        Set(ByVal value As String)
-            _dia = value
+        Set(ByVal value As Integer)
+            _id_ejercicio = value
         End Set
     End Property
 
