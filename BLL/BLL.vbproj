@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DFF0D233-B92E-4383-B3C2-12B743989733}</ProjectGuid>
+    <ProjectGuid>{2171ACB4-EB85-47CA-9767-FDEF833C522F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Negocio</RootNamespace>
-    <AssemblyName>Negocio</AssemblyName>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -18,7 +18,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Negocio.xml</DocumentationFile>
+    <DocumentationFile>BLL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -27,7 +27,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Negocio.xml</DocumentationFile>
+    <DocumentationFile>BLL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -43,6 +43,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -63,12 +67,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.vb" />
-    <Compile Include="Deporte.vb" />
-    <Compile Include="Dificult_rutina.vb" />
-    <Compile Include="Ejercicio.vb" />
-    <Compile Include="Estado.vb" />
-    <Compile Include="Membresia.vb" />
+    <Compile Include="GestorLenguaje.vb" />
+    <Compile Include="GestorMantenimiento.vb" />
+    <Compile Include="GestorSistema.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -84,14 +85,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="num_dia.vb" />
-    <Compile Include="Oferta.vb" />
-    <Compile Include="Rutina.vb" />
-    <Compile Include="Ticket.vb" />
-    <Compile Include="TipoOferta.vb" />
-    <Compile Include="Tipo_rutina.vb" />
-    <Compile Include="Turno.vb" />
-    <Compile Include="VistaRecep.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -112,6 +105,20 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.vbproj">
+      <Project>{dff0d233-b92e-4383-b3c2-12b743989733}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.vbproj">
+      <Project>{8b435706-6a77-49dc-8a98-12e07efd5c0c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEC\INFRA.vbproj">
+      <Project>{a5fd15fe-1e3f-4232-8485-64170ffba67c}</Project>
+      <Name>INFRA</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

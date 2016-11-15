@@ -28,4 +28,24 @@
             _observacion = value
         End Set
     End Property
+
+    Private _numero_dia As num_dia
+    Public Property num_dia As num_dia
+        Get
+            Return _numero_dia
+        End Get
+        Set(value As num_dia)
+            value = _numero_dia
+        End Set
+    End Property
+
+    Private _rutina As Rutina
+    Public Property Rutina As Rutina
+        Get
+            Return _rutina
+        End Get
+        Set(value As Rutina)
+            value = _rutina
+        End Set
+    End Property
 End Class

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.GestorMantenimiento">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIABAAAAAAIIgAAAAAAAAAAAAAAAAAAAAIQAA=</HashCode>
+      <FileName>GestorMantenimiento.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.GestorLenguaje">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIAAAAAAAAAAACEAAAAAAAAAAAAABAAAAAAAACA=</HashCode>
+      <FileName>GestorLenguaje.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.GestorSistema">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAAABAAABAAAAAAACAAAAAEAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>GestorSistema.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
