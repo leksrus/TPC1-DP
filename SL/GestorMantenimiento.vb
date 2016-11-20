@@ -10,9 +10,7 @@
                         AndAlso usr.estado = True Then
                     Dim mp_fam As New DAL.Mp_familia
                     Dim permisosusr As List(Of INFRA.Componente) = mp_fam.Seleccionar(usr)
-                    For Each p As INFRA.Componente In permisosusr
-                        usr.permisos = ValidarPerUsr(p)
-                    Next
+                    usr.permisos = ValidarPerUsr(permisosusr)
                     'se guarda el usuario logeado en el sesion manager
                     INFRA.SesionManager.CrearSesion(usr)
                     Return True
@@ -24,20 +22,20 @@
     End Function
 
 
-    Private Function ValidarPerUsr(perusr As INFRA.Componente) As List(Of INFRA.Componente)
+    Private Function ValidarPerUsr(pusr As List(Of INFRA.Componente)) As List(Of INFRA.Componente)
         Dim mp_fam As New DAL.Mp_familia
         Dim permisossusr As New List(Of INFRA.Componente)
         Dim permisos As List(Of INFRA.Componente) = mp_fam.Seleccionar
         For Each per As INFRA.Componente In permisos
-            If TypeOf per Is INFRA.Patente Then
-                If DirectCast(per, INFRA.Patente).codigo.Equals(perusr.codigo) Then
-                    permisos.Remove(per)
-                End If
-            Else
-                If per.List.Count > 0 Then
-                    permisos = ValidarPerUsrRec(permisos, per, perusr)
-                End If
+            Dim q = pusr.Where(Function(compare) compare.codigo = per.codigo).FirstOrDefault
+            If q IsNot Nothing Then
+                permisos.Remove(q)
             End If
+
+            If per.List.Count > 0 Then
+                'permisos = ValidarPerUsrRec(permisos, per, perusr)
+            End If
+
         Next
         Return permisos
 
