@@ -29,6 +29,16 @@
         End Set
     End Property
 
+    Private _principal As Boolean
+    Public Property principal As Boolean
+        Get
+            Return _principal
+        End Get
+        Set(ByVal value As Boolean)
+            _principal = value
+        End Set
+    End Property
+
     Public MustOverride Function List() As List(Of Componente)
 
     Public MustOverride Sub Add(p As Componente)

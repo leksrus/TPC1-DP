@@ -13,7 +13,7 @@ Public Class Mp_familia
 
     Public Function Seleccionar(user As INFRA.User) As List(Of INFRA.Componente)
         Dim p As INFRA.Componente = Nothing
-        Dim p1 As INFRA.Componente = Nothing
+        'Dim p1 As INFRA.Componente = Nothing
         Dim permisos As New List(Of INFRA.Componente)
         Dim parametros(0) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@nickname", user.name)
@@ -22,10 +22,11 @@ Public Class Mp_familia
             p = New INFRA.Familia
             p.codigo = reg("id_familia")
             p.descripcion = reg("descripcion")
-            p1 = Seleccionar(p)
-            If p1 IsNot Nothing Then
-                permisos.Add(p)
-            End If
+            p.principal = reg("principal")
+            'p1 = Seleccionar(p)
+            'If p1 IsNot Nothing AndAlso p1.principal Then
+            permisos.Add(p)
+            'End If
         Next
         Return permisos
     End Function
@@ -39,10 +40,11 @@ Public Class Mp_familia
             p = New INFRA.Familia
             p.codigo = reg("id_familia")
             p.descripcion = reg("descripcion")
+            p.principal = reg("principal")
             p1 = Seleccionar(p)
-            If p1 IsNot Nothing Then
+            If p1 IsNot Nothing AndAlso p1.principal Then
                 'p.Add(p1)
-                permisos.Add(p1)
+                permisos.Add(p)
             End If
         Next
         Return permisos
@@ -79,4 +81,17 @@ Public Class Mp_familia
         End If
         Return per
     End Function
+
+    Public Function Insertar(permisos As List(Of INFRA.Componente), user As INFRA.User) As Integer
+        Dim ok As Integer = 0
+        For Each per As INFRA.Componente In permisos
+            Dim parametros(1) As SqlParameter
+            parametros(0) = _acceso.CrearParametros("@id_name", user.name)
+            parametros(1) = _acceso.CrearParametros("@id_familia", per.codigo)
+            ok += _acceso.Escribir("Generar_permisos", parametros)
+            parametros = Nothing
+        Next
+        Return ok
+    End Function
+
 End Class

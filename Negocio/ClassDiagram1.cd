@@ -48,20 +48,18 @@
   </Class>
   <Class Name="Negocio.Rutina">
     <Position X="0.5" Y="6.25" Width="1.5" />
-    <AssociationLine Name="Tipo_rutina" Type="Negocio.Tipo_rutina" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="Tipo_rutina" Type="Negocio.Tipo_rutina" FixedToPoint="true">
       <Path>
-        <Point X="1.875" Y="8.382" />
-        <Point X="1.875" Y="8.839" />
-        <Point X="3.25" Y="8.839" />
+        <Point X="2" Y="7.125" />
+        <Point X="3.5" Y="7.125" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAgAAAAgBACAAAgAAAAAAAACAAAAgAAAAAA=</HashCode>
+      <HashCode>AABAAAAAAAgAAAAgAICAAAgAAAAAAAACAAAAAAAAgAA=</HashCode>
       <FileName>Rutina.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Cliente" />
-      <Property Name="Dificult_rutina" />
       <Property Name="Tipo_rutina" />
     </ShowAsAssociation>
   </Class>
@@ -109,15 +107,8 @@
       <FileName>Estado.vb</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Negocio.Dificult_rutina">
-    <Position X="3.25" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAABAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Dificult_rutina.vb</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Enum Name="Negocio.Tipo_rutina">
-    <Position X="3.25" Y="8.25" Width="1.5" />
+    <Position X="3.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Tipo_rutina.vb</FileName>
@@ -126,7 +117,7 @@
   <Enum Name="Negocio.num_dia">
     <Position X="3.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAA0AsAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAQAAAAAAAIIAAAAAAEEAAA=</HashCode>
       <FileName>num_dia.vb</FileName>
     </TypeIdentifier>
   </Enum>

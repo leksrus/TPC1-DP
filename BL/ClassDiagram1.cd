@@ -3,15 +3,22 @@
   <Class Name="BL.Gestion_Recepcion">
     <Position X="0.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAABAABAIAQAA=</HashCode>
+      <HashCode>ABAgAAkAAAABAAAAAAAAAEBQAAQgAAAAABAABQJAQAA=</HashCode>
       <FileName>Gestion_Recepcion.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BL.Gestion_Administracion">
     <Position X="3" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAIAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAACgA=</HashCode>
       <FileName>Gestion_Administracion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.Gestion_Prof">
+    <Position X="6" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gestion_Prof.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

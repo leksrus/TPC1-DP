@@ -1,11 +1,11 @@
 ﻿Public Class Adm_Permisos
-
+    Dim usuario As INFRA.User = Nothing
     Private Sub LoadPermisos()
         Dim gestsistema As New SL.GestorSistema
         Dim nodo As TreeNode = Nothing
-        Dim percomponente As INFRA.Componente = Nothing
-        Dim familia As INFRA.Familia = Nothing
-        Dim patente As INFRA.Patente = Nothing
+        'Dim percomponente As INFRA.Componente = Nothing
+        'Dim familia As INFRA.Familia = Nothing
+        'Dim patente As INFRA.Patente = Nothing
         Dim permisos As List(Of INFRA.Componente) = gestsistema.TraerPermisos
         For Each per As INFRA.Componente In permisos
             nodo = New TreeNode
@@ -57,7 +57,9 @@
 #Region "eventos"
     Private Sub ListBox1_Click(sender As Object, e As EventArgs) Handles ListBox1.Click
         If ListBox1.SelectedItem IsNot Nothing Then
+            usuario = Nothing
             ValidateNode()
+            usuario = DirectCast(sender, ListBox).SelectedItem
         End If
     End Sub
 
@@ -87,37 +89,48 @@
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim permisos As List(Of INFRA.Componente) = checkPermiso()
+        Dim gest_sistem As New SL.GestorSistema
+        If permisos IsNot Nothing Then
+            MessageBox.Show(gest_sistem.AsignarPermisos(permisos, usuario))
+        End If
+
+        gest_sistem = Nothing
+    End Sub
+
+    Private Function checkPermiso() As List(Of INFRA.Componente)
         Dim p As INFRA.Componente = Nothing
         Dim p1 As INFRA.Componente = Nothing
-        Dim permisos As New List(Of INFRA.Componente)
+        Dim permisos As List(Of INFRA.Componente) = Nothing
         Dim gest_sistem As New SL.GestorSistema
         For Each node As TreeNode In TreeView1.Nodes
             If node.Checked AndAlso gest_sistem.IsInRol(DirectCast(node.Tag, INFRA.Componente), DirectCast(ListBox1.SelectedItem, INFRA.User)) = False Then
+                permisos = New List(Of INFRA.Componente)
                 p = New INFRA.Familia
                 p.codigo = DirectCast(node.Tag, INFRA.Familia).codigo
                 p.descripcion = DirectCast(node.Tag, INFRA.Familia).descripcion
                 If node.Nodes.Count > 0 Then
-                    p1 = (SavePerRec(p, node, DirectCast(ListBox1.SelectedItem, INFRA.User)))
+                    p1 = (CheckPermisoRec(p, node, DirectCast(ListBox1.SelectedItem, INFRA.User)))
                 End If
                 If p1 IsNot Nothing Then
                     permisos.Add(p1)
                 End If
             End If
         Next
+        Return permisos
+    End Function
 
-    End Sub
-
-    Private Function SavePerRec(p As INFRA.Componente, node As TreeNode, user As INFRA.User) As INFRA.Componente
+    Private Function CheckPermisoRec(p As INFRA.Componente, node As TreeNode, user As INFRA.User) As INFRA.Componente
         Dim per As INFRA.Componente = Nothing
         Dim perad As INFRA.Componente = Nothing
         Dim gest_sistem As New SL.GestorSistema
         For Each nd As TreeNode In node.Nodes
-            If node.Checked AndAlso gest_sistem.IsInRol(DirectCast(node.Tag, INFRA.Componente), DirectCast(ListBox1.SelectedItem, INFRA.User)) = False Then
+            If nd.Checked AndAlso gest_sistem.IsInRol(DirectCast(node.Tag, INFRA.Componente), DirectCast(ListBox1.SelectedItem, INFRA.User)) = False Then
                 If TypeOf nd.Tag Is INFRA.Familia Then
                     per = New INFRA.Familia
                     per.codigo = DirectCast(nd.Tag, INFRA.Familia).codigo
                     per.descripcion = DirectCast(nd.Tag, INFRA.Familia).descripcion
-                    perad = SavePerRec(per, nd, user)
+                    perad = CheckPermisoRec(per, nd, user)
                     p.Add(per)
                 Else
                     per = New INFRA.Patente
@@ -125,10 +138,32 @@
                     per.descripcion = DirectCast(nd.Tag, INFRA.Patente).descripcion
                     p.Add(per)
                 End If
-            Else
-                Return Nothing
+
             End If
         Next
         Return p
     End Function
+
+    'Private Sub Unchecknodes()
+    '    For Each nd As TreeNode In TreeView1.Nodes
+    '        DirectCast(nd, TreeNode).Checked = False
+    '        If nd.Nodes.Count > 0 Then
+    '            uncheckChildren(nd, False)
+    '        End If
+    '    Next
+    'End Sub
+
+    'Private Sub uncheckChildren(node As TreeNode, check As Boolean)
+    '    For Each nd In node.Nodes
+    '        DirectCast(nd, TreeNode).Checked = check
+    '        If DirectCast(nd, TreeNode).Nodes.Count > 0 Then
+    '            uncheckChildren(nd, False)
+    '        End If
+    '    Next
+
+    'End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+    End Sub
 End Class

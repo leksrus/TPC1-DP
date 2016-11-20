@@ -72,6 +72,7 @@
     <Compile Include="Mp_cliente.vb" />
     <Compile Include="Mp_deporte.vb" />
     <Compile Include="Mp_DVV.vb" />
+    <Compile Include="Mp_ejercicio.vb" />
     <Compile Include="Mp_familia.vb" />
     <Compile Include="Mp_lenguaje.vb" />
     <Compile Include="Mp_lenguaje_interface.vb" />
@@ -80,6 +81,7 @@
     <Compile Include="Mp_Log.vb" />
     <Compile Include="Mp_membresia.vb" />
     <Compile Include="Mp_oferta.vb" />
+    <Compile Include="Mp_rutina.vb" />
     <Compile Include="Mp_ticket.vb" />
     <Compile Include="Mp_turno.vb" />
     <Compile Include="Mp_usuario.vb" />

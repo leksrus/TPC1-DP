@@ -8,6 +8,11 @@
             If usr IsNot Nothing Then
                 If usr.name = usuario.name AndAlso encriptador.Decrypt(usr.password) = usuario.password _
                         AndAlso usr.estado = True Then
+                    Dim mp_fam As New DAL.Mp_familia
+                    Dim permisosusr As List(Of INFRA.Componente) = mp_fam.Seleccionar(usr)
+                    For Each p As INFRA.Componente In permisosusr
+                        usr.permisos = ValidarPerUsr(p)
+                    Next
                     'se guarda el usuario logeado en el sesion manager
                     INFRA.SesionManager.CrearSesion(usr)
                     Return True
@@ -16,6 +21,42 @@
         Next
         'devuelvo V anteriormente o F si no se cumple la condicion
         Return False
+    End Function
+
+
+    Private Function ValidarPerUsr(perusr As INFRA.Componente) As List(Of INFRA.Componente)
+        Dim mp_fam As New DAL.Mp_familia
+        Dim permisossusr As New List(Of INFRA.Componente)
+        Dim permisos As List(Of INFRA.Componente) = mp_fam.Seleccionar
+        For Each per As INFRA.Componente In permisos
+            If TypeOf per Is INFRA.Patente Then
+                If DirectCast(per, INFRA.Patente).codigo.Equals(perusr.codigo) Then
+                    permisos.Remove(per)
+                End If
+            Else
+                If per.List.Count > 0 Then
+                    permisos = ValidarPerUsrRec(permisos, per, perusr)
+                End If
+            End If
+        Next
+        Return permisos
+
+    End Function
+
+
+    Private Function ValidarPerUsrRec(permisos As List(Of INFRA.Componente), per As INFRA.Componente, pusr As INFRA.Componente) As List(Of INFRA.Componente)
+        For Each perm As INFRA.Componente In per.List
+            If TypeOf perm Is INFRA.Patente Then
+                If DirectCast(perm, INFRA.Patente).codigo.Equals(pusr.codigo) Then
+                    permisos.Remove(perm)
+                End If
+            Else
+                If perm.List.Count > 0 Then
+                    ValidarPerUsrRec(permisos, perm, pusr)
+                End If
+            End If
+        Next
+        Return permisos
     End Function
 
     Public Function RegistrarUsuario(usuario As INFRA.User) As String

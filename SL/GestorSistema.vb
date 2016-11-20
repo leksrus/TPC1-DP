@@ -4,6 +4,15 @@ Imports System.Text.RegularExpressions
 Public Class GestorSistema
 
 #Region "Manejo de permisos"
+    Public Function AsignarPermisos(permisos As List(Of INFRA.Componente), user As INFRA.User) As String
+        Dim mp_familia As New DAL.Mp_familia
+        Dim ok = mp_familia.Insertar(permisos, user)
+        If ok > 0 Then
+            Return "joya"
+        Else
+            Return "cagada"
+        End If
+    End Function
 
     Public Function TraerPermisos() As List(Of INFRA.Componente)
         Dim mp_permiso As New DAL.Mp_familia

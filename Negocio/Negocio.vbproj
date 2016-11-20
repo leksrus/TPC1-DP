@@ -65,7 +65,6 @@
   <ItemGroup>
     <Compile Include="Cliente.vb" />
     <Compile Include="Deporte.vb" />
-    <Compile Include="Dificult_rutina.vb" />
     <Compile Include="Ejercicio.vb" />
     <Compile Include="Estado.vb" />
     <Compile Include="Membresia.vb" />

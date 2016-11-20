@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Gestion_Administracion.vb" />
+    <Compile Include="Gestion_Prof.vb" />
     <Compile Include="Gestion_Recepcion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

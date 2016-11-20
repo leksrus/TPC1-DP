@@ -18,6 +18,7 @@ Public Class MDI
     Dim frmrecepcion As Ne_Recepcion = Nothing
     Dim frmcoordinacion As Ne_Coordinacion = Nothing
     Dim frmadministrat As Ne_Administrativo = Nothing
+    Dim frmprofesores As Ne_Profesores = Nothing
 
 #End Region
 
@@ -32,6 +33,7 @@ Public Class MDI
         frmcoordinacion = Nothing
         frmrecepcion = Nothing
         frmadministrat = Nothing
+        frmprofesores = Nothing
     End Sub
 
     Private Sub LimpiarMemoria()
@@ -205,6 +207,17 @@ Public Class MDI
         End If
         frmcoordinacion.Show()
     End Sub
+
+    Private Sub ProfesoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfesoresToolStripMenuItem.Click
+        If frmprofesores Is Nothing Then
+            frmprofesores = New Ne_Profesores
+            frmprofesores.MdiParent = Me
+            CambiarIdioma()
+        Else
+            frmprofesores.BringToFront()
+        End If
+        frmprofesores.Show()
+    End Sub
 #End Region
 
 
@@ -296,6 +309,8 @@ Public Class MDI
             frm.Text = gest_lng.ChangeLanguage(GlobalVar.tipodelenguaje, frm.Name, "Form")
         Next
     End Sub
+
+
 
 
 

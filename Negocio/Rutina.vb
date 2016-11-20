@@ -9,6 +9,16 @@
         End Set
     End Property
 
+    Private _nombre_profesor As String
+    Public Property nombre_profesor As String
+        Get
+            Return _nombre_profesor
+        End Get
+        Set(ByVal value As String)
+            _nombre_profesor = value
+        End Set
+    End Property
+
     Private _cliente As Cliente
     Public Property Cliente As Cliente
         Get
@@ -16,16 +26,6 @@
         End Get
         Set(value As Cliente)
             _cliente = value
-        End Set
-    End Property
-
-    Private _dif_rutina As Dificult_rutina
-    Public Property Dificult_rutina As Dificult_rutina
-        Get
-            Return _dif_rutina
-        End Get
-        Set(value As Dificult_rutina)
-            value = _dif_rutina
         End Set
     End Property
 

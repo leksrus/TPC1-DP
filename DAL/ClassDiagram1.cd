@@ -112,5 +112,19 @@
       <FileName>Mp_membresia.vb</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="DAL.Mp_rutina">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAAAAA=</HashCode>
+      <FileName>Mp_rutina.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Mp_ejercicio">
+    <Position X="2.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mp_ejercicio.vb</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

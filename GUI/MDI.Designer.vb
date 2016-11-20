@@ -38,8 +38,8 @@ Partial Class MDI
         Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestorUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -129,32 +129,32 @@ Partial Class MDI
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.PermisosToolStripMenuItem.Text = "&Permisos"
         '
         'GestorUsuariosToolStripMenuItem
         '
         Me.GestorUsuariosToolStripMenuItem.Name = "GestorUsuariosToolStripMenuItem"
-        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GestorUsuariosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.GestorUsuariosToolStripMenuItem.Text = "&Usuarios"
         '
         'LogsToolStripMenuItem
         '
         Me.LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
-        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LogsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.LogsToolStripMenuItem.Text = "&Logs"
+        '
+        'BackupToolStripMenuItem
+        '
+        Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
+        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.BackupToolStripMenuItem.Text = "&Backups"
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.HelpToolStripMenuItem.Text = "&Ayuda"
-        '
-        'BackupToolStripMenuItem
-        '
-        Me.BackupToolStripMenuItem.Name = "BackupToolStripMenuItem"
-        Me.BackupToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.BackupToolStripMenuItem.Text = "&Backups"
         '
         'MDI
         '
