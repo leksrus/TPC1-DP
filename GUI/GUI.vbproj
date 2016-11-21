@@ -166,12 +166,6 @@
     <Compile Include="Ne_Administrativo_Oferta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrdenCompra.Designer.vb">
-      <DependentUpon>OrdenCompra.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OrdenCompra.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Ne_Profesores.Designer.vb">
       <DependentUpon>Ne_Profesores.vb</DependentUpon>
     </Compile>
@@ -194,12 +188,6 @@
       <DependentUpon>Ne_Recepcion_Insc_Conf.vb</DependentUpon>
     </Compile>
     <Compile Include="Ne_Recepcion_Insc_Conf.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stock.Designer.vb">
-      <DependentUpon>Stock.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Stock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Adm_Grupos.Designer.vb">
@@ -258,9 +246,6 @@
     <EmbeddedResource Include="Ne_Administrativo_Oferta.resx">
       <DependentUpon>Ne_Administrativo_Oferta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrdenCompra.resx">
-      <DependentUpon>OrdenCompra.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ne_Profesores.resx">
       <DependentUpon>Ne_Profesores.vb</DependentUpon>
     </EmbeddedResource>
@@ -272,9 +257,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ne_Recepcion_Insc_Conf.resx">
       <DependentUpon>Ne_Recepcion_Insc_Conf.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stock.resx">
-      <DependentUpon>Stock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Adm_Grupos.resx">
       <DependentUpon>Adm_Grupos.vb</DependentUpon>

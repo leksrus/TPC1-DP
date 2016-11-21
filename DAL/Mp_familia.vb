@@ -19,7 +19,7 @@ Public Class Mp_familia
         parametros(0) = _acceso.CrearParametros("@nickname", user.name)
         Dim tabla As DataTable = _acceso.Leer("SeleccionarPermisoUser", parametros)
         For Each reg As DataRow In tabla.Rows
-            p = New INFRA.Familia
+            p = New INFRA.Patente
             p.codigo = reg("id_familia")
             p.descripcion = reg("descripcion")
             p.principal = reg("principal")
@@ -44,7 +44,7 @@ Public Class Mp_familia
             p1 = Seleccionar(p)
             If p1 IsNot Nothing AndAlso p1.principal Then
                 'p.Add(p1)
-                permisos.Add(p)
+                permisos.Add(p1)
             End If
         Next
         Return permisos
@@ -82,15 +82,21 @@ Public Class Mp_familia
         Return per
     End Function
 
-    Public Function Insertar(permisos As List(Of INFRA.Componente), user As INFRA.User) As Integer
+    Public Function Insertar(user As INFRA.User, p As INFRA.Componente) As Integer
         Dim ok As Integer = 0
-        For Each per As INFRA.Componente In permisos
-            Dim parametros(1) As SqlParameter
-            parametros(0) = _acceso.CrearParametros("@id_name", user.name)
-            parametros(1) = _acceso.CrearParametros("@id_familia", per.codigo)
-            ok += _acceso.Escribir("Generar_permisos", parametros)
-            parametros = Nothing
-        Next
+        Dim parametros(1) As SqlParameter
+        parametros(0) = _acceso.CrearParametros("@id_name", user.name)
+        parametros(1) = _acceso.CrearParametros("@id_familia", p.codigo)
+        ok = _acceso.Escribir("Generar_permisos", parametros)
+        Return ok
+    End Function
+
+    Public Function Borrar(user As INFRA.User, p As INFRA.Componente) As Integer
+        Dim ok As Integer = 0
+        Dim parametros(1) As SqlParameter
+        parametros(0) = _acceso.CrearParametros("@id_name", user.name)
+        parametros(1) = _acceso.CrearParametros("@id_familia", p.codigo)
+        ok = _acceso.Escribir("Eleminar_permisos", parametros)
         Return ok
     End Function
 

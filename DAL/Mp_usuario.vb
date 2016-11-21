@@ -26,7 +26,7 @@ Public Class Mp_usuario
             usr.estado = reg("estado")
             usr.dvh = reg("dvh")
             usr.Language = lenguajes.Where(Function(lng) lng.id_idioma = reg("id_idioma")).FirstOrDefault
-            'usr.permisos = mp_perm.Seleccionar(usr)
+            usr.permisos = mp_perm.Seleccionar(usr)
             users.Add(usr)
         Next
         Return users

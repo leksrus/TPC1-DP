@@ -9,8 +9,6 @@
                 If usr.name = usuario.name AndAlso encriptador.Decrypt(usr.password) = usuario.password _
                         AndAlso usr.estado = True Then
                     Dim mp_fam As New DAL.Mp_familia
-                    Dim permisosusr As List(Of INFRA.Componente) = mp_fam.Seleccionar(usr)
-                    usr.permisos = ValidarPerUsr(permisosusr)
                     'se guarda el usuario logeado en el sesion manager
                     INFRA.SesionManager.CrearSesion(usr)
                     Return True
@@ -19,42 +17,6 @@
         Next
         'devuelvo V anteriormente o F si no se cumple la condicion
         Return False
-    End Function
-
-
-    Private Function ValidarPerUsr(pusr As List(Of INFRA.Componente)) As List(Of INFRA.Componente)
-        Dim mp_fam As New DAL.Mp_familia
-        Dim permisossusr As New List(Of INFRA.Componente)
-        Dim permisos As List(Of INFRA.Componente) = mp_fam.Seleccionar
-        For Each per As INFRA.Componente In permisos
-            Dim q = pusr.Where(Function(compare) compare.codigo = per.codigo).FirstOrDefault
-            If q IsNot Nothing Then
-                permisos.Remove(q)
-            End If
-
-            If per.List.Count > 0 Then
-                'permisos = ValidarPerUsrRec(permisos, per, perusr)
-            End If
-
-        Next
-        Return permisos
-
-    End Function
-
-
-    Private Function ValidarPerUsrRec(permisos As List(Of INFRA.Componente), per As INFRA.Componente, pusr As INFRA.Componente) As List(Of INFRA.Componente)
-        For Each perm As INFRA.Componente In per.List
-            If TypeOf perm Is INFRA.Patente Then
-                If DirectCast(perm, INFRA.Patente).codigo.Equals(pusr.codigo) Then
-                    permisos.Remove(perm)
-                End If
-            Else
-                If perm.List.Count > 0 Then
-                    ValidarPerUsrRec(permisos, perm, pusr)
-                End If
-            End If
-        Next
-        Return permisos
     End Function
 
     Public Function RegistrarUsuario(usuario As INFRA.User) As String

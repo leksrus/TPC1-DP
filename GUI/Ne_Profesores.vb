@@ -28,6 +28,17 @@
         End If
     End Sub
 
+    Private Sub DataGridView3_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView3.CellClick
+        If e.RowIndex >= 0 Then
+            Dim gest_prof As New BL.Gestion_Prof
+            DataGridView2.DataSource = Nothing
+            DataGridView2.DataSource = gest_prof.ListarEjercicios(DataGridView1.DataSource(e.RowIndex))
+            'DataGridView2.Columns(0).Visible = False
+            'DataGridView2.Columns(2).Visible = False
+            DataGridView2.ClearSelection()
+        End If
+    End Sub
+
     Private Sub Ne_Profesores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MaskedTextBox1.Mask = "00000"
         Button3.Enabled = False

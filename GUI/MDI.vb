@@ -54,6 +54,7 @@ Public Class MDI
 #Region "Eventos"
     Private Sub MDI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         gest_lng = New SL.GestorLenguaje
+        DesactivarMenus()
         Try
             gest_lng.GetLanguages()
             gest_lng.GetMsgLanguages()
@@ -95,11 +96,67 @@ Public Class MDI
         End If
     End Sub
 
-    Private Sub ValidarPermisos()
 
+#Region "Permisos"
+    Private Sub DesactivarMenus()
+        Me.MenuToolStripMenuItem.Enabled = False
+        Me.AdministrativoToolStripMenuItem.Enabled = False
+        Me.CoordinacionToolStripMenuItem.Enabled = False
+        Me.ProfesoresToolStripMenuItem.Enabled = False
+        Me.RecepcionToolStripMenuItem.Enabled = False
+        Me.MantenimientoToolStripMenuItem.Enabled = False
+        Me.BackupToolStripMenuItem.Enabled = False
+        Me.LogsToolStripMenuItem.Enabled = False
+        Me.PermisosToolStripMenuItem.Enabled = False
+        Me.GestorUsuariosToolStripMenuItem.Enabled = False
     End Sub
+    Private Sub ValidarPermisos()
+        Dim p1 As New INFRA.Patente
+        Dim p2 As New INFRA.Patente
+        Dim p3 As New INFRA.Patente
+        Dim p4 As New INFRA.Patente
+        Dim p5 As New INFRA.Patente
+        Dim p6 As New INFRA.Patente
+        Dim p7 As New INFRA.Patente
+        Dim p8 As New INFRA.Patente
+        Dim p9 As New INFRA.Patente
+        Dim p10 As New INFRA.Patente
+        p1.codigo = "N0001"
+        p1.descripcion = "Menu"
+        p2.codigo = "NA001"
+        p2.descripcion = "Administrativo"
+        p3.codigo = "NC001"
+        p3.descripcion = "Coordinacion"
+        p4.codigo = "NP001"
+        p4.descripcion = "Profesores"
+        p5.codigo = "NR001"
+        p5.descripcion = "Recepcion"
+        p6.codigo = "M0001"
+        p6.descripcion = "Mantenimiento"
+        p7.codigo = "MB001"
+        p7.descripcion = "Backup"
+        p8.codigo = "ML001"
+        p8.descripcion = "Log"
+        p9.codigo = "MP001"
+        p9.descripcion = "Permisos"
+        p10.codigo = "MU001"
+        p10.descripcion = "Usuarios"
+        Me.MenuToolStripMenuItem.Enabled = gest_sistem.IsInRol(p1, INFRA.SesionManager.CrearSesion.User)
+        Me.AdministrativoToolStripMenuItem.Enabled = gest_sistem.IsInRol(p2, INFRA.SesionManager.CrearSesion.User)
+        Me.CoordinacionToolStripMenuItem.Enabled = gest_sistem.IsInRol(p3, INFRA.SesionManager.CrearSesion.User)
+        Me.ProfesoresToolStripMenuItem.Enabled = gest_sistem.IsInRol(p4, INFRA.SesionManager.CrearSesion.User)
+        Me.RecepcionToolStripMenuItem.Enabled = gest_sistem.IsInRol(p5, INFRA.SesionManager.CrearSesion.User)
+        Me.MantenimientoToolStripMenuItem.Enabled = gest_sistem.IsInRol(p6, INFRA.SesionManager.CrearSesion.User)
+        Me.BackupToolStripMenuItem.Enabled = gest_sistem.IsInRol(p7, INFRA.SesionManager.CrearSesion.User)
+        Me.LogsToolStripMenuItem.Enabled = gest_sistem.IsInRol(p8, INFRA.SesionManager.CrearSesion.User)
+        Me.PermisosToolStripMenuItem.Enabled = gest_sistem.IsInRol(p9, INFRA.SesionManager.CrearSesion.User)
+        Me.GestorUsuariosToolStripMenuItem.Enabled = gest_sistem.IsInRol(p10, INFRA.SesionManager.CrearSesion.User)
+    End Sub
+#End Region
+
 
 #End Region
+
 
 #Region "MenuTool Mantenimiento"
     Private Sub PermisosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PermisosToolStripMenuItem.Click

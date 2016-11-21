@@ -4,9 +4,20 @@ Imports System.Text.RegularExpressions
 Public Class GestorSistema
 
 #Region "Manejo de permisos"
-    Public Function AsignarPermisos(permisos As List(Of INFRA.Componente), user As INFRA.User) As String
+    Public Function AsignarPermisos(user As INFRA.User, permiso As INFRA.Componente) As String
         Dim mp_familia As New DAL.Mp_familia
-        Dim ok = mp_familia.Insertar(permisos, user)
+        Dim ok As Integer = 0
+        ok = mp_familia.Insertar(user, permiso)
+        If ok > 0 Then
+            Return "joya"
+        Else
+            Return "cagada"
+        End If
+    End Function
+    Public Function RemoverPermisos(user As INFRA.User, permiso As INFRA.Componente) As String
+        Dim mp_familia As New DAL.Mp_familia
+        Dim ok As Integer = 0
+        ok = mp_familia.Borrar(user, permiso)
         If ok > 0 Then
             Return "joya"
         Else
@@ -27,40 +38,45 @@ Public Class GestorSistema
         Else
             Dim valid As Boolean = False
             For Each per As INFRA.Componente In user.permisos
-                If TypeOf per Is INFRA.Patente Then
-                    If DirectCast(per, INFRA.Patente).codigo.Equals(permiso.codigo) Then
-                        valid = True
-                    End If
-                Else
-                    If DirectCast(per, INFRA.Familia).codigo.Equals(permiso.codigo) Then
-                        valid = True
-                    End If
-                    If per.List.Count > 0 Then
-                        valid = IsInRolRecursive(permiso, per, valid)
-                    End If
+                If per.codigo.Equals(permiso.codigo) Then
+                    valid = True
                 End If
+                '       
+
+                'If TypeOf per Is INFRA.Patente Then
+                '    If DirectCast(per, INFRA.Patente).codigo.Equals(permiso.codigo) Then
+                '        valid = True
+                '    End If
+                'Else
+                '    If DirectCast(per, INFRA.Familia).codigo.Equals(permiso.codigo) Then
+                '        valid = True
+                '    End If
+                '    If per.List.Count > 0 Then
+                '        valid = IsInRolRecursive(permiso, per, valid)
+                '    End If
+                'End If
             Next
             Return valid
         End If
     End Function
 
-    Private Function IsInRolRecursive(p As INFRA.Componente, per As INFRA.Componente, valid As Boolean) As Boolean
-        For Each perm As INFRA.Componente In per.List
-            If TypeOf perm Is INFRA.Patente Then
-                If DirectCast(perm, INFRA.Patente).codigo.Equals(p.codigo) Then
-                    valid = True
-                End If
-            Else
-                If DirectCast(perm, INFRA.Familia).codigo.Equals(p.codigo) Then
-                    valid = True
-                End If
-                If perm.List.Count > 0 Then
-                    valid = IsInRolRecursive(p, perm, valid)
-                End If
-            End If
-        Next
-        Return valid
-    End Function
+    'Private Function IsInRolRecursive(p As INFRA.Componente, per As INFRA.Componente, valid As Boolean) As Boolean
+    '    For Each perm As INFRA.Componente In per.List
+    '        If TypeOf perm Is INFRA.Patente Then
+    '            If DirectCast(perm, INFRA.Patente).codigo.Equals(p.codigo) Then
+    '                valid = True
+    '            End If
+    '        Else
+    '            If DirectCast(perm, INFRA.Familia).codigo.Equals(p.codigo) Then
+    '                valid = True
+    '            End If
+    '            If perm.List.Count > 0 Then
+    '                valid = IsInRolRecursive(p, perm, valid)
+    '            End If
+    '        End If
+    '    Next
+    '    Return valid
+    'End Function
 
 
 

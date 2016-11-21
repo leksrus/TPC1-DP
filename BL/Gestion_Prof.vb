@@ -4,4 +4,10 @@
         Dim rutinas As List(Of Negocio.Rutina) = mp_rutina.Seleccionar(uncleinte)
         Return rutinas
     End Function
+
+    Public Function ListarEjercicios(unarutina As Negocio.Rutina) As List(Of Negocio.Ejercicio)
+        Dim mp_ejercicio As New DAL.Mp_ejercicio
+        Dim ejercicios As List(Of Negocio.Ejercicio) = mp_ejercicio.Seleccionar(unarutina)
+        Return ejercicios
+    End Function
 End Class
