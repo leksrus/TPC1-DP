@@ -83,16 +83,11 @@
         End If
     End Function
 
-    Public Function HacerRestore(restorefile As INFRA.BackupDB, path As String) As String
+    Public Sub HacerRestore(restorefile As INFRA.BackupDB, path As String, instancia As String)
         Dim mp_backup As New DAL.Mp_backup
         Dim gest_lng As New GestorLenguaje
-        Dim res = mp_backup.Restore(restorefile, path)
-        If res Then
-            Return ""
-        Else
-            Return ""
-        End If
-    End Function
+        mp_backup.Restore(restorefile, path, instancia)
+    End Sub
 
     Public Function ListarBases() As List(Of INFRA.BackupDB)
         Dim mp_bk As New DAL.Mp_backup

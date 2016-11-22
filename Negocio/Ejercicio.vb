@@ -9,16 +9,6 @@
         End Set
     End Property
 
-    Private _nombre_ejercicio As String
-    Public Property nombre_ejercicio() As String
-        Get
-            Return _nombre_ejercicio
-        End Get
-        Set(ByVal value As String)
-            _nombre_ejercicio = value
-        End Set
-    End Property
-
     Private _observacion As String
     Public Property observacion() As String
         Get
@@ -35,7 +25,7 @@
             Return _numero_dia
         End Get
         Set(value As num_dia)
-            value = _numero_dia
+            _numero_dia = value
         End Set
     End Property
 
@@ -45,7 +35,21 @@
             Return _rutina
         End Get
         Set(value As Rutina)
-            value = _rutina
+            _rutina = value
         End Set
     End Property
+
+    Private _tipo_ejercicio As tipo_ejercicio
+    Public Property tipo_ejercicio As tipo_ejercicio
+        Get
+            Return _tipo_ejercicio
+        End Get
+        Set(value As tipo_ejercicio)
+            _tipo_ejercicio = value
+        End Set
+    End Property
+
+    Public Overrides Function ToString() As String
+        Return _tipo_ejercicio.ToString & " - " & _numero_dia.ToString & " - " & _observacion
+    End Function
 End Class

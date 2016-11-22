@@ -152,7 +152,7 @@ Public Class Ne_Recepcion_Insc
         tk = New Negocio.Ticket
         tk.Cliente = cliente
         tk.Deporte = DirectCast(ComboBox2.SelectedItem, Negocio.Deporte)
-        tk.fecha_pago = Date.Now
+        tk.fecha_pago = Date.Now.ToShortDateString
         tk.cantidad_clases = ComboBox4.SelectedItem
         tk.monto = gest_recep.CalcularMonto(tk, DirectCast(ComboBox3.SelectedItem, Negocio.Oferta))
         Dim frmconfirm As New Ne_Recepcion_Insc_Conf(tk)

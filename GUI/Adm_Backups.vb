@@ -1,4 +1,6 @@
-﻿Public Class Adm_Backups
+﻿Imports System.ComponentModel
+
+Public Class Adm_Backups
     Dim tmpdbname As String = Nothing
     Dim tmpdbsize As Integer = Nothing
 
@@ -20,6 +22,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim gest_lng As New SL.GestorLenguaje
+        Dim gest_sistem As New SL.GestorSistema
         If Not tmpdbname Is Nothing AndAlso ValidarTextbox(TextBox2) Then
             Dim gest_manten As New SL.GestorMantenimiento
             Dim bk As New INFRA.BackupDB
@@ -30,10 +33,12 @@
             DataGridView1.DataSource = Nothing
             TextBox2.Clear()
             Button2.Enabled = False
-
+            gest_sistem.GrabarBitacora(INFRA.TypeError.backup, Me.Name)
         Else
             MessageBox.Show(gest_lng.ChangeLangMsg("Backup", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("Backup", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
+        gest_sistem = Nothing
+        gest_lng = Nothing
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -50,6 +55,8 @@
                 If result = DialogResult.OK Then
                     TextBox2.Text = .SelectedPath
                     Button2.Enabled = True
+                    TextBox1.Clear()
+                    TextBox3.Clear()
                 End If
             End With
         Catch ex As Exception
@@ -80,13 +87,22 @@
     End Function
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If ValidarTextbox(TextBox1) Then
-            Dim restore As New INFRA.BackupDB
-            Dim gest_manten As New SL.GestorMantenimiento
-            Dim tmp() = TextBox1.Text.Split("_"c)
-            restore.dbname = tmp(tmp.Length - 1).Replace(".bak", "")
-            Dim path As String = TextBox1.Text
-            MessageBox.Show(gest_manten.HacerRestore(restore, path))
+        If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox3) Then
+            Dim gest_lng As New SL.GestorLenguaje
+            Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg(Me.Name, 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("Backup", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If result = DialogResult.Yes Then
+                Dim gest_sistem As New SL.GestorSistema
+                Dim restore As New INFRA.BackupDB
+                Dim gest_manten As New SL.GestorMantenimiento
+                Dim tmp() = TextBox1.Text.Split("_"c)
+                restore.dbname = tmp(tmp.Length - 1).Replace(".bak", "")
+                Dim path As String = TextBox1.Text
+                gest_manten.HacerRestore(restore, path, TextBox3.Text)
+                gest_sistem.GrabarBitacora(INFRA.TypeError.logout, Me.Name)
+                gest_sistem = Nothing
+                gest_sistem.GrabarDVV()
+                Application.Exit()
+            End If
         End If
     End Sub
 
@@ -101,7 +117,16 @@
         If OpenFileDialog1.ShowDialog = DialogResult.OK Then
             TextBox1.Text = OpenFileDialog1.FileName
             Button3.Enabled = True
+            TextBox2.Clear()
         End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+    End Sub
+
+    Private Sub Adm_Backups_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        e.Cancel = False
     End Sub
 
     'Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button2.Click

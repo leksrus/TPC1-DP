@@ -16,12 +16,15 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim gestor_recep As BL.Gestion_Recepcion = Nothing
         Dim ges_lng As SL.GestorLenguaje = Nothing
+        Dim gest_sistem As New SL.GestorSistema
         ges_lng = New SL.GestorLenguaje
         gestor_recep = New BL.Gestion_Recepcion
+        gest_sistem.GrabarBitacora(INFRA.TypeError.client_inscription, Me.Name)
         MessageBox.Show(gestor_recep.RegistrarPago(_ticket), ges_lng.ChangeLangMsg("Login", 4, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ges_lng = Nothing
         gestor_recep = Nothing
         _ticket = Nothing
+        gest_sistem = Nothing
         Me.Close()
     End Sub
 

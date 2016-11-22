@@ -310,6 +310,7 @@ Partial Class Adm_Usuarios
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
+        Me.MaximizeBox = False
         Me.Name = "Adm_Usuarios"
         Me.Text = "Gestion de Usuarios"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

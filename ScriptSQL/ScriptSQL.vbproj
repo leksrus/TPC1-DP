@@ -4,30 +4,34 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8B435706-6A77-49DC-8A98-12E07EFD5C0C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <ProjectGuid>{0D71B28C-BF57-42C3-BFD0-48AEB21BF977}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>ScriptSQL.Module1</StartupObject>
+    <RootNamespace>ScriptSQL</RootNamespace>
+    <AssemblyName>ScriptSQL</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>Windows</MyType>
+    <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>DAL.xml</DocumentationFile>
+    <DocumentationFile>ScriptSQL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>DAL.xml</DocumentationFile>
+    <DocumentationFile>ScriptSQL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -43,13 +47,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,24 +68,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Acceso.vb" />
-    <Compile Include="Mp_backup.vb" />
-    <Compile Include="Mp_cliente.vb" />
-    <Compile Include="Mp_deporte.vb" />
-    <Compile Include="Mp_DVV.vb" />
-    <Compile Include="Mp_ejercicio.vb" />
-    <Compile Include="Mp_familia.vb" />
-    <Compile Include="Mp_lenguaje.vb" />
-    <Compile Include="Mp_lenguaje_interface.vb" />
-    <Compile Include="Mp_lenguaje_log.vb" />
-    <Compile Include="Mp_lenguaje_msg.vb" />
-    <Compile Include="Mp_Log.vb" />
-    <Compile Include="Mp_membresia.vb" />
-    <Compile Include="Mp_oferta.vb" />
-    <Compile Include="Mp_rutina.vb" />
-    <Compile Include="Mp_ticket.vb" />
-    <Compile Include="Mp_turno.vb" />
-    <Compile Include="Mp_usuario.vb" />
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -111,7 +94,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -121,16 +103,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\INFRA\INFRA.vbproj">
-      <Project>{a5fd15fe-1e3f-4232-8485-64170ffba67c}</Project>
-      <Name>INFRA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Negocio\Negocio.vbproj">
-      <Project>{dff0d233-b92e-4383-b3c2-12b743989733}</Project>
-      <Name>Negocio</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

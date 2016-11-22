@@ -7,8 +7,8 @@
             usuario.password = TextBox2.Text
             If ValidarText(TextBox1) AndAlso ValidarText(TextBox2) Then
                 If ges_manten.ValidarUsuario(usuario) Then
-                    'Dim gestsistema As New BLL.GestorSistema
-                    'gestsistema.GrabarBitacora(INFRA.TypeError.login, Me.Name)
+                    Dim gestsistema As New SL.GestorSistema
+                    gestsistema.GrabarBitacora(INFRA.TypeError.login, Me.Name)
                     MessageBox.Show(ges_lng.ChangeLangMsg("Login", 1, GlobalVar.tipodelenguaje), ges_lng.ChangeLangMsg("Login", 4, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Information)
                     MDI.loginok = True
                     GlobalVar.tipodelenguaje = INFRA.SesionManager.CrearSesion.User.Language.id_idioma

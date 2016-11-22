@@ -35,7 +35,7 @@
             Return _tipo_rutina
         End Get
         Set(value As Tipo_rutina)
-            value = _tipo_rutina
+            _tipo_rutina = value
         End Set
     End Property
 End Class

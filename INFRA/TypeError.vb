@@ -9,6 +9,11 @@
     modify_user = 8
     disable_user = 9
     pass_change = 10
-
-
+    client_registry = 11
+    client_inscription = 12
+    access_registry = 13
+    desc_registry = 14
+    desc_aprobe = 15
+    routine_reg = 16
+    reporting = 17
 End Enum

@@ -1,4 +1,6 @@
-﻿Public Class Adm_Logs
+﻿Imports System.ComponentModel
+
+Public Class Adm_Logs
     Dim gestorlng As SL.GestorLenguaje = Nothing
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
@@ -17,5 +19,9 @@
         gestorlng.GetLogLng()
         DateTimePicker1.MaxDate = Date.Now
         DateTimePicker1.Value = Date.Now
+    End Sub
+
+    Private Sub Adm_Logs_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        e.Cancel = False
     End Sub
 End Class

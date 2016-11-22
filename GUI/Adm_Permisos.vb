@@ -1,4 +1,6 @@
-﻿Public Class Adm_Permisos
+﻿Imports System.ComponentModel
+
+Public Class Adm_Permisos
     Dim usuario As INFRA.User = Nothing
     Dim estado As Boolean = False
     Private Sub LoadPermisos()
@@ -217,16 +219,19 @@
     'End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim gest_lng As New SL.GestorLenguaje
         If estado = False Then
             Me.Hide()
         Else
-            MessageBox.Show("Se realizaron cambios en los permisos. Por favor de aplicar para actualziar los mismos")
+            MessageBox.Show(gest_lng.ChangeLangMsg("GestorPermisos", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("MDI_Closing", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
+        gest_lng = Nothing
     End Sub
 
     Private Sub TreeView1_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
         If usuario IsNot Nothing Then
             Dim gest_sist As New SL.GestorSistema
+            Dim gest_lng As New SL.GestorLenguaje
             If e.Node.Checked Then
                 Dim q = usuario.permisos.Where(Function(comp) comp.codigo = DirectCast(e.Node.Tag, INFRA.Componente).codigo).FirstOrDefault
                 If q Is Nothing Then
@@ -234,7 +239,7 @@
                     p.codigo = DirectCast(e.Node.Tag, INFRA.Componente).codigo
                     p.descripcion = DirectCast(e.Node.Tag, INFRA.Componente).descripcion
                     p.principal = DirectCast(e.Node.Tag, INFRA.Componente).principal
-                    MessageBox.Show(gest_sist.AsignarPermisos(usuario, p))
+                    MessageBox.Show(gest_sist.AsignarPermisos(usuario, p), gest_lng.ChangeLangMsg("MDI_Closing", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Information)
                     LoadUsers()
                     ValidateNode(usuario)
                     estado = True
@@ -246,7 +251,7 @@
                     p.codigo = DirectCast(e.Node.Tag, INFRA.Componente).codigo
                     p.descripcion = DirectCast(e.Node.Tag, INFRA.Componente).descripcion
                     p.principal = DirectCast(e.Node.Tag, INFRA.Componente).principal
-                    MessageBox.Show(gest_sist.RemoverPermisos(usuario, p))
+                    MessageBox.Show(gest_sist.RemoverPermisos(usuario, p), gest_lng.ChangeLangMsg("MDI_Closing", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Information)
                     LoadUsers()
                     ValidateNode(usuario)
                     estado = True
@@ -257,13 +262,17 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim result As Integer = MessageBox.Show("Esta seguro que decesa cerrar la app?", "System", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim gest_lng As New SL.GestorLenguaje
+        Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg("GestorPermisos", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("MDI_Closing", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
             Dim gest_sistema As New SL.GestorSistema
-            'gest_sistema.GrabarDVV()
+            gest_sistema.GrabarDVV()
             Application.Exit()
         End If
-
+        gest_lng = Nothing
     End Sub
 
+    Private Sub Adm_Permisos_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        e.Cancel = False
+    End Sub
 End Class

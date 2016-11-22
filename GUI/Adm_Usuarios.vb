@@ -1,63 +1,125 @@
-﻿Public Class Adm_Usuarios
+﻿Imports System.ComponentModel
+
+Public Class Adm_Usuarios
 
 #Region "variables"
     'Dim cargos As New List(Of String)
     Dim gestor_leng As New SL.GestorLenguaje
+    Dim pass As String = String.Empty
 #End Region
 
 #Region "botones"
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim usuario As New INFRA.User
-        Dim userdata As New INFRA.UserData
-        Dim lenguaje As New INFRA.Language
-        If RadioButton1.Checked Then
-            usuario.Language = lenguaje
-            usuario.UserData = userdata
+        Try
+            Dim usuario As New INFRA.User
+            Dim userdata As New INFRA.UserData
+            Dim lenguaje As New INFRA.Language
             Dim gest_manten As New SL.GestorMantenimiento
-            'valida si los datos son ingresados correctamente
-            If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox2) AndAlso ValidarTextbox(TextBox3) AndAlso MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
-                usuario.name = TextBox1.Text
-                usuario.password = "password"
-                usuario.estado = True
-                Select Case ComboBox2.SelectedIndex
-                    Case 0
-                        usuario.Language.id_idioma = 1
-                    Case 1
-                        usuario.Language.id_idioma = 2
-                    Case 2
-                        usuario.Language.id_idioma = 3
-                    Case Else
-                        MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                End Select
-                usuario.UserData.nombre = TextBox2.Text
-                usuario.UserData.apellido = TextBox3.Text
-                usuario.UserData.dni = MaskedTextBox1.Text
-                usuario.UserData.telefono = MaskedTextBox2.Text
-                usuario.UserData.cargo = ComboBox1.SelectedItem
-                usuario.UserData.fecha_ingreso = DateTimePicker1.Value
-                MessageBox.Show(gest_manten.RegistrarUsuario(usuario), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Dim gest_sistem As New SL.GestorSistema
+            If RadioButton1.Checked Then
+                usuario.Language = lenguaje
+                usuario.UserData = userdata
+                'valida si los datos son ingresados correctamente
+                If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox2) AndAlso ValidarTextbox(TextBox3) AndAlso MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
+                    usuario.name = TextBox1.Text
+                    usuario.password = "password"
+                    usuario.estado = True
+                    Select Case ComboBox2.SelectedIndex
+                        Case 0
+                            usuario.Language.id_idioma = 1
+                        Case 1
+                            usuario.Language.id_idioma = 2
+                        Case 2
+                            usuario.Language.id_idioma = 3
+                        Case Else
+                            MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    End Select
+                    usuario.UserData.nombre = TextBox2.Text
+                    usuario.UserData.apellido = TextBox3.Text
+                    usuario.UserData.dni = MaskedTextBox1.Text
+                    usuario.UserData.telefono = MaskedTextBox2.Text
+                    usuario.UserData.cargo = ComboBox1.SelectedItem
+                    usuario.UserData.fecha_ingreso = DateTimePicker1.Value
+                    gest_sistem.GrabarBitacora(INFRA.TypeError.create_user, Me.Name)
+                    MessageBox.Show(gest_manten.RegistrarUsuario(usuario), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End If
+                RadioButton1.Checked = False
+                gest_sistem = Nothing
+            ElseIf RadioButton2.Checked Then
+                If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox2) AndAlso ValidarTextbox(TextBox3) AndAlso MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
+                    usuario.Language = lenguaje
+                    usuario.UserData = userdata
+                    usuario.name = TextBox1.Text
+                    usuario.password = pass
+                    usuario.estado = False
+                    Select Case ComboBox2.SelectedIndex
+                        Case 0
+                            usuario.Language.id_idioma = 1
+                        Case 1
+                            usuario.Language.id_idioma = 2
+                        Case 2
+                            usuario.Language.id_idioma = 3
+                        Case Else
+                            MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    End Select
+                    usuario.UserData.nombre = TextBox2.Text
+                    usuario.UserData.apellido = TextBox3.Text
+                    usuario.UserData.dni = MaskedTextBox1.Text
+                    usuario.UserData.telefono = MaskedTextBox2.Text
+                    usuario.UserData.cargo = ComboBox1.SelectedItem
+                    usuario.UserData.fecha_ingreso = DateTimePicker1.Value
+                    gest_sistem.GrabarBitacora(INFRA.TypeError.disable_user, Me.Name)
+                    MessageBox.Show(gest_manten.ModificarUsuario(usuario), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End If
+                RadioButton2.Checked = False
+                gest_sistem = Nothing
+            ElseIf RadioButton3.Checked Then
+                If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox2) AndAlso ValidarTextbox(TextBox3) AndAlso MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
+                    usuario.Language = lenguaje
+                    usuario.UserData = userdata
+                    usuario.name = TextBox1.Text
+                    usuario.password = pass
+                    usuario.estado = True
+                    Select Case ComboBox2.SelectedIndex
+                        Case 0
+                            usuario.Language.id_idioma = 1
+                        Case 1
+                            usuario.Language.id_idioma = 2
+                        Case 2
+                            usuario.Language.id_idioma = 3
+                        Case Else
+                            MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    End Select
+                    usuario.UserData.nombre = TextBox2.Text
+                    usuario.UserData.apellido = TextBox3.Text
+                    usuario.UserData.dni = MaskedTextBox1.Text
+                    usuario.UserData.telefono = MaskedTextBox2.Text
+                    usuario.UserData.cargo = ComboBox1.SelectedItem
+                    usuario.UserData.fecha_ingreso = DateTimePicker1.Value
+                    gest_sistem.GrabarBitacora(INFRA.TypeError.disable_user, Me.Name)
+                    MessageBox.Show(gest_manten.ModificarUsuario(usuario), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show(gestor_leng.ChangeLangMsg("Carga_usuario", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("Carga_usuario", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End If
+                RadioButton3.Checked = False
+                gest_sistem = Nothing
             End If
-            RadioButton1.Checked = False
-        ElseIf RadioButton2.Checked Then
-            If ValidarTextbox(TextBox1) AndAlso ValidarTextbox(TextBox2) AndAlso ValidarTextbox(TextBox3) AndAlso MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
-                usuario.name = TextBox1.Text
+            DataGridView1.DataSource = Nothing
+            DataGridView2.DataSource = Nothing
+            Button1.Enabled = False
+            Limpiarcontrols()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
-            End If
-        End If
-        DataGridView1.DataSource = Nothing
-        DataGridView2.DataSource = Nothing
-        Button1.Enabled = False
-        Limpiarcontrols()
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         Button1.Enabled = True
-    End Sub
-
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        Button1.Enabled = False
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -136,8 +198,8 @@
             usuario.name = TextBox1.Text
             DataGridView1.DataSource = Nothing
             DataGridView1.DataSource = gestormanten.BuscarUsuario(usuario)
-            DataGridView1.Columns(2).Visible = False
-            DataGridView1.Columns(3).Visible = False
+            'DataGridView1.Columns(2).Visible = False
+            'DataGridView1.Columns(3).Visible = False
             DataGridView1.Columns(4).Visible = False
             DataGridView1.Columns(5).Visible = False
         End If
@@ -149,6 +211,8 @@
 #Region "Eventos"
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         If e.RowIndex >= 0 Then
+            Dim dr As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+            pass = dr.Cells(1).Value.ToString
             Dim usersdata As New List(Of INFRA.UserData)
             For Each usr In DataGridView1.DataSource
                 usersdata.Add(DirectCast(usr, INFRA.User).UserData)
@@ -170,6 +234,12 @@
             Button1.Enabled = True
         End If
     End Sub
+
+    Private Sub Adm_Usuarios_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        e.Cancel = False
+    End Sub
+
+
 
 #End Region
 

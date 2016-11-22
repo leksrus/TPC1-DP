@@ -46,6 +46,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim gestor_leng As New SL.GestorLenguaje
+        Dim gest_sistem As New SL.GestorSistema
         If SL.GestorSistema.ValidarEspacio(TextBox1.Text) Then
             Dim oferta As New Negocio.Oferta
             Dim gest_coor As New BL.Gestion_Administracion
@@ -55,10 +56,12 @@
             oferta.Estado = Negocio.Estado.pendiente
             oferta.detalles = TextBox1.Text
             oferta.Deporte = DirectCast(ComboBox2.SelectedItem, Negocio.Deporte)
+            gest_sistem.GrabarBitacora(INFRA.TypeError.desc_registry, Me.Name)
             MessageBox.Show(gest_coor.CargarOferta(oferta))
         Else
             MessageBox.Show(gestor_leng.ChangeLangMsg("CargarOferta", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
         gestor_leng = Nothing
+        gest_sistem = Nothing
     End Sub
 End Class

@@ -62,9 +62,11 @@ Public Class Ne_Coordinacion
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim gest_lng As New SL.GestorLenguaje
+        Dim gest_sistem As New SL.GestorSistema
         If oferta.Estado = Negocio.Estado.pendiente OrElse oferta.Estado = Negocio.Estado.suspendido Then
             Dim gest_coor As New BL.Gestion_Administracion
             oferta.Estado = Negocio.Estado.aprobado
+            gest_sistem.GrabarBitacora(INFRA.TypeError.desc_aprobe, Me.Name)
             MessageBox.Show(gest_coor.CambiarEstadoOferta(oferta))
             gest_coor = Nothing
         Else
@@ -75,6 +77,7 @@ Public Class Ne_Coordinacion
         Button1.Enabled = False
         Button3.Enabled = False
         DataGridView1.DataSource = Nothing
+        gest_sistem = Nothing
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click

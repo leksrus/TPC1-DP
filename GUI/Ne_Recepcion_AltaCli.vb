@@ -3,6 +3,7 @@
         Dim cliente As Negocio.Cliente = Nothing
         Dim gest_recep As BL.Gestion_Recepcion = Nothing
         Dim gestor_leng As New SL.GestorLenguaje
+        Dim gest_sistem As New SL.GestorSistema
         If SL.GestorSistema.ValidarNombreApellido(TextBox1.Text) AndAlso SL.GestorSistema.ValidarNombreApellido(TextBox2.Text) Then
             If MaskedTextBox1.MaskCompleted AndAlso MaskedTextBox2.MaskCompleted Then
                 If SL.GestorSistema.ValidarEspacio(TextBox3.Text) Then
@@ -19,6 +20,7 @@
                                 cliente.fecha_nacimiento = DateTimePicker1.Value
                                 cliente.telefono = MaskedTextBox2.Text
                                 cliente.dni = MaskedTextBox1.Text
+                                gest_sistem.GrabarBitacora(INFRA.TypeError.client_registry, Me.Name)
                                 MessageBox.Show(gest_recep.RegistrarCliente(cliente))
                             Else
                                 MessageBox.Show(gestor_leng.ChangeLangMsg("CargarCliente", 6, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -36,6 +38,7 @@
                         Else
                             MessageBox.Show(gestor_leng.ChangeLangMsg("CargarCliente", 5, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         End If
+                        gest_sistem = Nothing
                         cliente = Nothing
                         gest_recep = Nothing
                     Else

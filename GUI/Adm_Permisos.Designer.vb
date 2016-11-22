@@ -106,6 +106,7 @@ Partial Class Adm_Permisos
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TreeView1)
+        Me.MaximizeBox = False
         Me.Name = "Adm_Permisos"
         Me.Text = "Gestion de Permisos"
         Me.ResumeLayout(False)

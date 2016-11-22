@@ -64,6 +64,10 @@ Public Class Ne_Recepcion
         MaskedTextBox1.Mask = "00000"
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Button1.Enabled = False
+        Button2.Enabled = False
+        Button3.Enabled = False
+        ValidarPermisos()
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -77,6 +81,7 @@ Public Class Ne_Recepcion
         Dim ok As Boolean = False
         Dim gest_recep As New BL.Gestion_Recepcion
         Dim gestor_leng As New SL.GestorLenguaje
+        Dim gest_sistem As New SL.GestorSistema
         AddHandler gest_recep.ValidarClasesDisp, AddressOf ValidarClasesDisp
         If cliente IsNot Nothing AndAlso deporte IsNot Nothing Then
             ok = gest_recep.ValidarCuota(cliente, deporte)
@@ -89,6 +94,7 @@ Public Class Ne_Recepcion
             mem.Cliente = cliente
             mem.Deporte = deporte
             mem.asistencia = DateTime.Now
+            gest_sistem.GrabarBitacora(INFRA.TypeError.access_registry, Me.Name)
             MessageBox.Show(gest_recep.RegistrarIngreso(mem), gestor_leng.ChangeLangMsg("CargarCliente", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             RemoveHandler gest_recep.ValidarIngresoRealizado, AddressOf ValidarIngresoRealizado
         End If
@@ -116,5 +122,22 @@ Public Class Ne_Recepcion
             deporte = Nothing
             deporte = DirectCast(DataGridView2.DataSource(e.RowIndex), Negocio.Deporte)
         End If
+    End Sub
+
+    Private Sub ValidarPermisos()
+        Dim gest_sistem As New SL.GestorSistema
+        Dim p1 As New INFRA.Patente
+        Dim p2 As New INFRA.Patente
+        Dim p3 As New INFRA.Patente
+        p1.codigo = "NR002"
+        p1.descripcion = "Registrar Cliente"
+        p2.codigo = "NR003"
+        p2.descripcion = "Inscribir Cliente"
+        p3.codigo = "NR004"
+        p3.descripcion = "Marcar Ingreso"
+        Button1.Enabled = gest_sistem.IsInRol(p1, INFRA.SesionManager.CrearSesion.User)
+        Button2.Enabled = gest_sistem.IsInRol(p1, INFRA.SesionManager.CrearSesion.User)
+        Button3.Enabled = gest_sistem.IsInRol(p1, INFRA.SesionManager.CrearSesion.User)
+        gest_sistem = Nothing
     End Sub
 End Class

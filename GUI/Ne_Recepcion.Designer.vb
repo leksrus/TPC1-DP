@@ -66,7 +66,7 @@ Partial Class Ne_Recepcion
         '
         Me.MaskedTextBox1.BeepOnError = True
         Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(81, 19)
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(94, 19)
         Me.MaskedTextBox1.Mask = "_____"
         Me.MaskedTextBox1.Name = "MaskedTextBox1"
         Me.MaskedTextBox1.Size = New System.Drawing.Size(44, 21)

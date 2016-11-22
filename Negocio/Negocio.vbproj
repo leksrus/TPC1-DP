@@ -88,6 +88,7 @@
     <Compile Include="Rutina.vb" />
     <Compile Include="Ticket.vb" />
     <Compile Include="TipoOferta.vb" />
+    <Compile Include="tipo_ejercicio.vb" />
     <Compile Include="Tipo_rutina.vb" />
     <Compile Include="Turno.vb" />
     <Compile Include="VistaRecep.vb" />

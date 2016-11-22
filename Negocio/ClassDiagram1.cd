@@ -17,7 +17,7 @@
   <Class Name="Negocio.Ticket">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAgAAAAIABiQACEAAAAAAAAgAAAAAAAAIAA=</HashCode>
+      <HashCode>AQAAAAAAAAgAAAAIABiQACEAAAAAAAAgAAAAAAAAIAA=</HashCode>
       <FileName>Ticket.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -26,7 +26,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Membresia">
-    <Position X="4" Y="3.5" Width="1.5" />
+    <Position X="4" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAECACAACAAAAAAAAAAAACAAAAAIAA=</HashCode>
       <FileName>Membresia.vb</FileName>
@@ -66,12 +66,13 @@
   <Class Name="Negocio.Ejercicio">
     <Position X="0.5" Y="9.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>IAAAAgAAAgAIAAAAgAAAgCAAAAAAABAAAAAAAAQAAAA=</HashCode>
+      <HashCode>IAAAAgAAAAAIAAAAgAAAgCBAAAAAABAAAAAQAAQAAAA=</HashCode>
       <FileName>Ejercicio.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="num_dia" />
       <Property Name="Rutina" />
+      <Property Name="tipo_ejercicio" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Negocio.Oferta">
@@ -119,6 +120,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAAAAAAAAAAAQAAAAAAAIIAAAAAAEEAAA=</HashCode>
       <FileName>num_dia.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Negocio.tipo_ejercicio">
+    <Position X="0.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAFAAAAAAAAgAEAlIgAAgAAAAAIAQAAAEA=</HashCode>
+      <FileName>tipo_ejercicio.vb</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

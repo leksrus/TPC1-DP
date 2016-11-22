@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports System.Configuration
 'Imports Microsoft.SqlServer.Management.Common
 'Imports Microsoft.SqlServer.Management.Smo
 
@@ -11,7 +12,8 @@ Public Class Acceso
 
     Public Sub AbrirConeccion()
         If CN Is Nothing Then
-            CN = New SqlConnection("data source=.\UAI_LUG; initial catalog=CCCP Gym && Fitness; integrated security=SSPI")
+            Dim constring as String = ConfigurationManager.ConnectionStrings("CCCP").ConnectionString
+            CN = New SqlConnection(constring)
             CN.Open()
         End If
     End Sub
@@ -88,6 +90,15 @@ Public Class Acceso
         Return filas
     End Function
 
+    Public Sub Restore(path As String, instancia As String)
+        Dim sql As String = "ALTER DATABASE [CCCP Gym-Fitness] SET SINGLE_USER WITH ROLLBACK IMMEDIATE " & "DROP Database [CCCP Gym-Fitness] " & "RESTORE DATABASE [CCCP Gym-Fitness]" & "FROM DISK = '" & path & "'"
+        Dim cn As String = "Data Source=" & ".\" & instancia & "; " & "initial catalog=master;Integrated Security=SSPI;"
+        Dim con As SqlConnection = New SqlConnection(cn)
+        con.Open()
+        Dim cmd As SqlCommand = New SqlCommand(sql, con)
+        Dim res = cmd.ExecuteScalar
+        con.Close()
+    End Sub
     'Public Sub GenerarConexion(backup As Backup, restore As Restore)
     '    'genero la conexion a SQL para DDL
     '    AbrirConeccion()

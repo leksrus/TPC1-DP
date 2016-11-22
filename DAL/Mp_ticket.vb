@@ -9,6 +9,24 @@ Public Class Mp_ticket
         _acceso = _acc
     End Sub
 
+    Public Function Seleccionar() As List(Of Negocio.Ticket)
+        Dim tickets As New List(Of Negocio.Ticket)
+        Dim tabla As DataTable = _acceso.Leer("Listar_todos_ticket", Nothing)
+        For Each reg As DataRow In tabla.Rows
+            Dim tk As New Negocio.Ticket
+            tk.Deporte = New Negocio.Deporte
+            tk.Cliente = New Negocio.Cliente
+            tk.Cliente.idtarjeta = reg("idtarjeta")
+            tk.Deporte.id_deporte = reg("id_deporte")
+            tk.cantidad_clases = reg("cantidad_clases")
+            tk.fecha_pago = reg("fecha_pago")
+            tk.monto = reg("monto")
+            tk.dvh = reg("dvh")
+            tickets.Add(tk)
+        Next
+        Return tickets
+    End Function
+
     Public Function Seleccionar(uncliente As Negocio.Cliente) As List(Of Negocio.Ticket)
         Dim parametros(0) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@id_tarjeta", uncliente.idtarjeta)
@@ -33,6 +51,7 @@ Public Class Mp_ticket
             tk.Deporte.nombre = reg(11)
             tk.Deporte.precio = reg("precio")
             tk.Deporte.tipo = reg("tipo")
+            tk.dvh = reg("dvh")
             tickets.Add(tk)
         Next
         Return tickets
@@ -64,18 +83,20 @@ Public Class Mp_ticket
             tk.Cliente.email = reg("email")
             tk.Cliente.idtarjeta = reg("idtarjeta")
             tk.Cliente.telefono = reg("telefono")
+            tk.dvh = reg("dvh")
             tickets.Add(tk)
         Next
         Return tickets
     End Function
 
     Public Function Insertar(untk As Negocio.Ticket) As Integer
-        Dim parametros(4) As SqlParameter
+        Dim parametros(5) As SqlParameter
         parametros(0) = _acceso.CrearParametros("@id_tarjeta", untk.Cliente.idtarjeta)
         parametros(1) = _acceso.CrearParametros("@id_deporte", untk.Deporte.id_deporte)
         parametros(2) = _acceso.CrearParametros("@fecha_pago", untk.fecha_pago)
         parametros(3) = _acceso.CrearParametros("@cantidad_clases", untk.cantidad_clases)
         parametros(4) = _acceso.CrearParametros("@monto", untk.monto)
+        parametros(5) = _acceso.CrearParametros("dvh", untk.dvh)
         Return _acceso.Escribir("Registrar_pago", parametros)
     End Function
 End Class

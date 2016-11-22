@@ -23,6 +23,7 @@ Partial Class Ne_Profesores
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -30,9 +31,10 @@ Partial Class Ne_Profesores
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +52,16 @@ Partial Class Ne_Profesores
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscar Cliente"
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.BeepOnError = True
+        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(105, 34)
+        Me.MaskedTextBox1.Mask = "_____"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(44, 21)
+        Me.MaskedTextBox1.TabIndex = 16
         '
         'Label1
         '
@@ -120,16 +132,6 @@ Partial Class Ne_Profesores
         Me.DataGridView3.Size = New System.Drawing.Size(283, 224)
         Me.DataGridView3.TabIndex = 11
         '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.BeepOnError = True
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(105, 34)
-        Me.MaskedTextBox1.Mask = "_____"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(44, 21)
-        Me.MaskedTextBox1.TabIndex = 16
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -148,11 +150,31 @@ Partial Class Ne_Profesores
         Me.ComboBox1.Size = New System.Drawing.Size(149, 21)
         Me.ComboBox1.TabIndex = 13
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(283, 110)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(29, 13)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "Prof:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(379, 110)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(77, 13)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Tipo de Rutina"
+        '
         'Ne_Profesores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(602, 654)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView3)
@@ -161,7 +183,7 @@ Partial Class Ne_Profesores
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.MinimizeBox = False
+        Me.MaximizeBox = False
         Me.Name = "Ne_Profesores"
         Me.Text = "Carga Rutina"
         Me.GroupBox1.ResumeLayout(False)
@@ -185,4 +207,6 @@ Partial Class Ne_Profesores
     Friend WithEvents MaskedTextBox1 As MaskedTextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

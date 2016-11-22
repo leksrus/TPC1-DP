@@ -4,22 +4,25 @@ Imports System.Security.Cryptography
 
 Public Class CryptoManager
     Public Function Encrypt(clearText As String) As String
-        Dim EncryptionKey As String = "MAKV2SPBNI99212"
-        Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(clearText)
-        Using encryptor As Aes = Aes.Create()
-            Dim pdb As New Rfc2898DeriveBytes(EncryptionKey, New Byte() {&H49, &H76, &H61, &H6E, &H20, &H4D,
-             &H65, &H64, &H76, &H65, &H64, &H65,
-             &H76})
-            encryptor.Key = pdb.GetBytes(32)
-            encryptor.IV = pdb.GetBytes(16)
-            Using ms As New MemoryStream()
-                Using cs As New CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)
-                    cs.Write(clearBytes, 0, clearBytes.Length)
-                    cs.Close()
+        Try
+            Dim EncryptionKey As String = "MAKV2SPBNI99212"
+            Dim clearBytes As Byte() = Encoding.Unicode.GetBytes(clearText)
+            Using encryptor As Aes = Aes.Create()
+                Dim pdb As New Rfc2898DeriveBytes(EncryptionKey, New Byte() {&H49, &H76, &H61, &H6E, &H20, &H4D,
+                 &H65, &H64, &H76, &H65, &H64, &H65,
+                 &H76})
+                encryptor.Key = pdb.GetBytes(32)
+                encryptor.IV = pdb.GetBytes(16)
+                Using ms As New MemoryStream()
+                    Using cs As New CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write)
+                        cs.Write(clearBytes, 0, clearBytes.Length)
+                        cs.Close()
+                    End Using
+                    clearText = Convert.ToBase64String(ms.ToArray())
                 End Using
-                clearText = Convert.ToBase64String(ms.ToArray())
             End Using
-        End Using
+        Catch ex As Exception
+        End Try
         Return clearText
     End Function
 
@@ -45,17 +48,21 @@ Public Class CryptoManager
 
     Public Function ConvertToHash(code As String) As String
         Dim sb As StringBuilder = New StringBuilder
-        'Se genera el objeto mds5
-        Using mds5 As MD5 = MD5.Create
-            Dim inputbyte As Byte() = Encoding.ASCII.GetBytes(code)
-            Dim hash As Byte() = mds5.ComputeHash(inputbyte)
-            'convierto array inputbyte a hexa usando  stringbuilder
-            For i = 0 To hash.Length - 1
-                sb.Append(hash(i).ToString("X2"))
-                i += 1
-            Next
-        End Using
-        'devuelvo el codigo hash
+        Try
+            'Se genera el objeto mds5
+            Using mds5 As MD5 = MD5.Create
+                Dim inputbyte As Byte() = Encoding.ASCII.GetBytes(code)
+                Dim hash As Byte() = mds5.ComputeHash(inputbyte)
+                'convierto array inputbyte a hexa usando  stringbuilder
+                For i = 0 To hash.Length - 1
+                    sb.Append(hash(i).ToString("X2"))
+                    i += 1
+                Next
+            End Using
+            'devuelvo el codigo hash
+        Catch ex As Exception
+
+        End Try
         Return sb.ToString
     End Function
 

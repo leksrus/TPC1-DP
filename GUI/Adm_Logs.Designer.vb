@@ -85,6 +85,7 @@ Partial Class Adm_Logs
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "Adm_Logs"
         Me.Text = "Gestion de Bitacora"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

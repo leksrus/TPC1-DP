@@ -161,9 +161,9 @@
     </TypeIdentifier>
   </Class>
   <Enum Name="INFRA.TypeError">
-    <Position X="11.25" Y="5.75" Width="1.5" />
+    <Position X="11.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>SAAEEAIAAAAAAAQAAAADAAAAAAACAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>SAAEEAIAAACAACQAAAADAAAAAAACAoAAAAAAAAAAEAA=</HashCode>
       <FileName>TypeError.vb</FileName>
     </TypeIdentifier>
   </Enum>

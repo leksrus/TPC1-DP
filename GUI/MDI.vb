@@ -71,13 +71,13 @@ Public Class MDI
                 If loginok Then
                     CambiarIdioma()
                     ValidarPermisos()
-                    Me.Show()
-                Else
-                    Application.Exit()
-                End If
+                Me.Show()
             Else
-                MessageBox.Show(gest_lng.ChangeLangMsg("MDI_Load", 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("MDI_Load", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Question)
                 Application.Exit()
+            End If
+            Else
+            MessageBox.Show(gest_lng.ChangeLangMsg("MDI_Load", 1, GlobalVar.tipodelenguaje), gest_lng.ChangeLangMsg("MDI_Load", 2, GlobalVar.tipodelenguaje), MessageBoxButtons.OK, MessageBoxIcon.Question)
+            Application.Exit()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -163,6 +163,7 @@ Public Class MDI
         If frmpermiso Is Nothing Then
             frmpermiso = New Adm_Permisos
             frmpermiso.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.open_form, frmpermiso.Name)
             CambiarIdioma()
         End If
         frmpermiso.Show()
@@ -172,6 +173,7 @@ Public Class MDI
         If frmusuario Is Nothing Then
             frmusuario = New Adm_Usuarios
             frmusuario.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, frmusuario.Name)
             CambiarIdioma()
         End If
         frmusuario.Show()
@@ -190,6 +192,7 @@ Public Class MDI
         If frmbackup Is Nothing Then
             frmbackup = New Adm_Backups
             frmbackup.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, frmbackup.Name)
             CambiarIdioma()
         End If
         frmbackup.Show()
@@ -199,6 +202,7 @@ Public Class MDI
         If frmbitacora Is Nothing Then
             frmbitacora = New Adm_Logs
             frmbitacora.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, frmbitacora.Name)
             CambiarIdioma()
         End If
         frmbitacora.Show()
@@ -208,6 +212,7 @@ Public Class MDI
         Dim fname As String = "SalirToolStripMenuItem_Click"
         Dim result As Integer = MessageBox.Show(gest_lng.ChangeLangMsg(fname, 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg(fname, 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, Me.Name)
             gest_sistem.GrabarDVV()
             LimpiarMemoria()
             If frmlogin Is Nothing Then
@@ -236,6 +241,7 @@ Public Class MDI
         If frmrecepcion Is Nothing Then
             frmrecepcion = New Ne_Recepcion
             frmrecepcion.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, frmrecepcion.Name)
             CambiarIdioma()
         Else
             frmrecepcion.BringToFront()
@@ -247,6 +253,7 @@ Public Class MDI
         If frmadministrat Is Nothing Then
             frmadministrat = New Ne_Administrativo
             frmadministrat.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, frmadministrat.Name)
             CambiarIdioma()
         Else
             frmadministrat.BringToFront()
@@ -258,6 +265,7 @@ Public Class MDI
         If frmcoordinacion Is Nothing Then
             frmcoordinacion = New Ne_Coordinacion
             frmcoordinacion.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, frmcoordinacion.Name)
             CambiarIdioma()
         Else
             frmcoordinacion.BringToFront()
@@ -269,6 +277,7 @@ Public Class MDI
         If frmprofesores Is Nothing Then
             frmprofesores = New Ne_Profesores
             frmprofesores.MdiParent = Me
+            gest_sistem.GrabarBitacora(INFRA.TypeError.logout, frmprofesores.Name)
             CambiarIdioma()
         Else
             frmprofesores.BringToFront()
@@ -295,6 +304,7 @@ Public Class MDI
             If GlobalVar.tipodelenguaje <> INFRA.SesionManager.CrearSesion.User.Language.id_idioma Then
                 CambiarIdioma()
                 gestor_mant = New SL.GestorMantenimiento
+                gest_sistem.GrabarBitacora(INFRA.TypeError.lng_change, Me.Name)
                 MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
             Else
                 MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -309,6 +319,7 @@ Public Class MDI
             If GlobalVar.tipodelenguaje <> INFRA.SesionManager.CrearSesion.User.Language.id_idioma Then
                 CambiarIdioma()
                 gestor_mant = New SL.GestorMantenimiento
+                gest_sistem.GrabarBitacora(INFRA.TypeError.lng_change, Me.Name)
                 MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
             Else
                 MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -323,6 +334,7 @@ Public Class MDI
             If GlobalVar.tipodelenguaje <> INFRA.SesionManager.CrearSesion.User.Language.id_idioma Then
                 CambiarIdioma()
                 gestor_mant = New SL.GestorMantenimiento
+                gest_sistem.GrabarBitacora(INFRA.TypeError.lng_change, Me.Name)
                 MessageBox.Show(gestor_mant.ModificarUsuario(SetUser(GlobalVar.tipodelenguaje)))
             Else
                 MessageBox.Show(gest_lng.ChangeLangMsg("CambioIdioma", 3, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), gest_lng.ChangeLangMsg("CambioIdioma", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma), MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

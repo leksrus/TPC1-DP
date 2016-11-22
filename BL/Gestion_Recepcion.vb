@@ -51,6 +51,10 @@
 #Region "Pagos"
     Public Function RegistrarPago(untk As Negocio.Ticket) As String
         Dim mp_tk As New DAL.Mp_ticket
+        Dim crypto As New INFRA.CryptoManager
+        Dim dv As New INFRA.DV
+        dv.code = crypto.ConvertToHash(untk.Cliente.idtarjeta & untk.Deporte.id_deporte & untk.cantidad_clases & untk.fecha_pago & untk.monto)
+        untk.dvh = dv.code
         Dim gestorlng As New SL.GestorLenguaje
         Dim result As Integer = 0
         result = mp_tk.Insertar(untk)

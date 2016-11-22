@@ -6,22 +6,24 @@ Public Class GestorSistema
 #Region "Manejo de permisos"
     Public Function AsignarPermisos(user As INFRA.User, permiso As INFRA.Componente) As String
         Dim mp_familia As New DAL.Mp_familia
+        Dim gestorlng As New SL.GestorLenguaje
         Dim ok As Integer = 0
         ok = mp_familia.Insertar(user, permiso)
         If ok > 0 Then
-            Return "joya"
+            Return gestorlng.ChangeLangMsg("AsignarPermisos", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma)
         Else
-            Return "cagada"
+            Return gestorlng.ChangeLangMsg("AsignarPermisos", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma)
         End If
     End Function
     Public Function RemoverPermisos(user As INFRA.User, permiso As INFRA.Componente) As String
         Dim mp_familia As New DAL.Mp_familia
+        Dim gestorlng As New SL.GestorLenguaje
         Dim ok As Integer = 0
         ok = mp_familia.Borrar(user, permiso)
         If ok > 0 Then
-            Return "joya"
+            Return gestorlng.ChangeLangMsg("RemoverPermisos", 1, INFRA.SesionManager.CrearSesion.User.Language.id_idioma)
         Else
-            Return "cagada"
+            Return gestorlng.ChangeLangMsg("AsignarPermisos", 2, INFRA.SesionManager.CrearSesion.User.Language.id_idioma)
         End If
     End Function
 
@@ -114,8 +116,19 @@ Public Class GestorSistema
                     dvv.code = crypto.ConvertToHash(sb.ToString)
                     mp_dvv.Modificar(dvv)
                     sb.Clear()
+                Case "ticket"
+                    Dim mp_tk As New DAL.Mp_ticket
+                    Dim tickets As List(Of Negocio.Ticket) = mp_tk.Seleccionar
+                    sb = New StringBuilder
+                    For Each tk As Negocio.Ticket In tickets
+                        sb.Append(tk.dvh)
+                    Next
+                    Dim dvv = New INFRA.DVV
+                    dvv.id_tabla = tmpdvv.id_tabla
+                    dvv.code = crypto.ConvertToHash(sb.ToString)
+                    mp_dvv.Modificar(dvv)
+                    sb.Clear()
             End Select
-
         Next
     End Sub
 
@@ -174,6 +187,17 @@ Public Class GestorSistema
                         dv = Nothing
                     Next
                     logs = Nothing
+                Case "ticket"
+                    Dim mp_tk As New DAL.Mp_ticket
+                    Dim tickets As List(Of Negocio.Ticket) = mp_tk.Seleccionar
+                    For Each tk As Negocio.Ticket In tickets
+                        Dim dv As New INFRA.DV
+                        dv.code = crypto.ConvertToHash(tk.Cliente.idtarjeta & tk.Deporte.id_deporte & tk.cantidad_clases & tk.fecha_pago & tk.monto)
+                        If tk.dvh <> dv.code Then
+                            errorsintegrity.Add(dvv & "; " & tk.Cliente.idtarjeta & "; " & tk.Deporte.id_deporte & "; " & tk.cantidad_clases & "; " & tk.fecha_pago & "; " & tk.monto & "; " & tk.dvh)
+                        End If
+                        dv = Nothing
+                    Next
             End Select
         Next
         Return errorsintegrity
@@ -215,6 +239,23 @@ Public Class GestorSistema
                     For Each log In logs
                         Dim dv2 As New INFRA.DV
                         dv2.code = crypto.ConvertToHash(log.User.name & log.descripcion & log.fechahora & log.TypeError)
+                        sb.Append(dv2.code)
+                        dv2 = Nothing
+                    Next
+                    dv.code = crypto.ConvertToHash(sb.ToString)
+                    If tmpdvv.code <> dv.code Then
+                        id_dvv.Add(tmpdvv.id_tabla)
+                    End If
+                    sb.Clear()
+                    dv = Nothing
+                Case "ticket"
+                    Dim mp_tk As New DAL.Mp_ticket
+                    Dim dv As New INFRA.DV
+                    Dim tickets As List(Of Negocio.Ticket) = mp_tk.Seleccionar
+                    sb = New StringBuilder
+                    For Each tk As Negocio.Ticket In tickets
+                        Dim dv2 As New INFRA.DV
+                        dv2.code = crypto.ConvertToHash(tk.Cliente.idtarjeta & tk.Deporte.id_deporte & tk.cantidad_clases & tk.fecha_pago & tk.monto)
                         sb.Append(dv2.code)
                         dv2 = Nothing
                     Next

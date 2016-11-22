@@ -46,18 +46,9 @@ Public Class Mp_backup
         Return databases
     End Function
 
-    Public Function Restore(restorefile As INFRA.BackupDB, path As String) As String
-        Dim parametros(1) As SqlParameter
-        parametros(0) = _acceso.CrearParametros("@DBName", restorefile.dbname)
-        parametros(1) = _acceso.CrearParametros("@Location", path)
-        'se realiza el restore pasando los parametros a store procedure tales como el nombre de la base y la ruta del archivo del backup
-        Dim tabla As DataTable = _acceso.Leer("", parametros)
-        If tabla.Rows.Count > 0 Then
-            'el store devuelve el nombre de la base que se restauro, por lo tanto si hay registros en datatable entonces se restauro Ok
-            Return True
-        End If
-        Return False
-    End Function
+    Public Sub Restore(restorefile As INFRA.BackupDB, path As String, instancia As String)
+        _acceso.Restore(path, instancia)
+    End Sub
 
     Public Function Backup(bk As INFRA.BackupDB, path As String) As Boolean
         Dim parametros(1) As SqlParameter
